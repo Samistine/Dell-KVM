@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.lenovo.kvm;
 
 import java.io.IOException;
@@ -6,40 +9,33 @@ import com.avocent.kvm.b.t;
 import com.avocent.kvm.b.e.a;
 import javax.swing.AbstractAction;
 
-public class g extends AbstractAction
-{
+public class g extends AbstractAction {
+
     a a;
     protected Integer b;
     protected Integer c;
     private static final String[] z;
-    
+
     public g(final a a, final Integer b, final Integer c) {
         super(a.b(g.z[7]));
         Object o = null;
         if (b == t.g) {
             if (c.equals(t.i)) {
                 o = a.b(g.z[8]);
-            }
-            else if (c.equals(t.j)) {
+            } else if (c.equals(t.j)) {
                 o = a.b(g.z[5]);
-            }
-            else if (c.equals(t.k)) {
+            } else if (c.equals(t.k)) {
                 o = a.b(g.z[3]);
-            }
-            else if (c.equals(t.l)) {
+            } else if (c.equals(t.l)) {
                 o = a.b(g.z[4]);
             }
-        }
-        else if (c.equals(t.l)) {
+        } else if (c.equals(t.l)) {
             o = a.b(g.z[0]);
-        }
-        else if (c.equals(t.m)) {
+        } else if (c.equals(t.m)) {
             o = a.b(g.z[9]);
-        }
-        else if (c.equals(t.n)) {
+        } else if (c.equals(t.n)) {
             o = a.b(g.z[1]);
-        }
-        else if (c.equals(t.o)) {
+        } else if (c.equals(t.o)) {
             o = a.b(g.z[6]);
         }
         this.putValue(g.z[2], o);
@@ -47,19 +43,19 @@ public class g extends AbstractAction
         this.b = b;
         this.c = c;
     }
-    
+
+    @Override
     public void actionPerformed(final ActionEvent actionEvent) {
         try {
             if (this.a.a().a(3, this.b, this.c) == 0) {
                 return;
             }
-        }
-        catch (IOException ex) {
+        } catch (IOException ex) {
             this.a.b().a(g.z[10] + ex.getMessage());
         }
         this.a.a(this.a.b(g.z[11]));
     }
-    
+
     static {
         final String[] z2 = new String[12];
         final int n = 0;
@@ -69,7 +65,8 @@ public class g extends AbstractAction
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -99,7 +96,7 @@ public class g extends AbstractAction
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -116,7 +113,8 @@ public class g extends AbstractAction
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -146,7 +144,7 @@ public class g extends AbstractAction
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -163,7 +161,8 @@ public class g extends AbstractAction
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -193,7 +192,7 @@ public class g extends AbstractAction
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -210,7 +209,8 @@ public class g extends AbstractAction
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0446: {
+            Label_0446:
+            {
                 if (n14 > 1) {
                     break Label_0446;
                 }
@@ -240,7 +240,7 @@ public class g extends AbstractAction
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -257,7 +257,8 @@ public class g extends AbstractAction
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0562: {
+            Label_0562:
+            {
                 if (n18 > 1) {
                     break Label_0562;
                 }
@@ -287,7 +288,7 @@ public class g extends AbstractAction
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
@@ -304,7 +305,8 @@ public class g extends AbstractAction
         final int n22 = n23 = (length6 = charArray6.length);
         int n24 = 0;
         while (true) {
-            Label_0678: {
+            Label_0678:
+            {
                 if (n22 > 1) {
                     break Label_0678;
                 }
@@ -334,7 +336,7 @@ public class g extends AbstractAction
                             break;
                         }
                     }
-                    charArray6[length6] = (char)(c11 ^ c12);
+                    charArray6[length6] = (char) (c11 ^ c12);
                     ++n24;
                 } while (n22 == 0);
             }
@@ -351,7 +353,8 @@ public class g extends AbstractAction
         final int n26 = n27 = (length7 = charArray7.length);
         int n28 = 0;
         while (true) {
-            Label_0798: {
+            Label_0798:
+            {
                 if (n26 > 1) {
                     break Label_0798;
                 }
@@ -381,7 +384,7 @@ public class g extends AbstractAction
                             break;
                         }
                     }
-                    charArray7[length7] = (char)(c13 ^ c14);
+                    charArray7[length7] = (char) (c13 ^ c14);
                     ++n28;
                 } while (n26 == 0);
             }
@@ -398,7 +401,8 @@ public class g extends AbstractAction
         final int n30 = n31 = (length8 = charArray8.length);
         int n32 = 0;
         while (true) {
-            Label_0918: {
+            Label_0918:
+            {
                 if (n30 > 1) {
                     break Label_0918;
                 }
@@ -428,7 +432,7 @@ public class g extends AbstractAction
                             break;
                         }
                     }
-                    charArray8[length8] = (char)(c15 ^ c16);
+                    charArray8[length8] = (char) (c15 ^ c16);
                     ++n32;
                 } while (n30 == 0);
             }
@@ -445,7 +449,8 @@ public class g extends AbstractAction
         final int n34 = n35 = (length9 = charArray9.length);
         int n36 = 0;
         while (true) {
-            Label_1038: {
+            Label_1038:
+            {
                 if (n34 > 1) {
                     break Label_1038;
                 }
@@ -475,7 +480,7 @@ public class g extends AbstractAction
                             break;
                         }
                     }
-                    charArray9[length9] = (char)(c17 ^ c18);
+                    charArray9[length9] = (char) (c17 ^ c18);
                     ++n36;
                 } while (n34 == 0);
             }
@@ -492,7 +497,8 @@ public class g extends AbstractAction
         final int n38 = n39 = (length10 = charArray10.length);
         int n40 = 0;
         while (true) {
-            Label_1158: {
+            Label_1158:
+            {
                 if (n38 > 1) {
                     break Label_1158;
                 }
@@ -522,7 +528,7 @@ public class g extends AbstractAction
                             break;
                         }
                     }
-                    charArray10[length10] = (char)(c19 ^ c20);
+                    charArray10[length10] = (char) (c19 ^ c20);
                     ++n40;
                 } while (n38 == 0);
             }
@@ -539,7 +545,8 @@ public class g extends AbstractAction
         final int n42 = n43 = (length11 = charArray11.length);
         int n44 = 0;
         while (true) {
-            Label_1278: {
+            Label_1278:
+            {
                 if (n42 > 1) {
                     break Label_1278;
                 }
@@ -569,7 +576,7 @@ public class g extends AbstractAction
                             break;
                         }
                     }
-                    charArray11[length11] = (char)(c21 ^ c22);
+                    charArray11[length11] = (char) (c21 ^ c22);
                     ++n44;
                 } while (n42 == 0);
             }
@@ -586,7 +593,8 @@ public class g extends AbstractAction
         final int n46 = n47 = (length12 = charArray12.length);
         int n48 = 0;
         while (true) {
-            Label_1398: {
+            Label_1398:
+            {
                 if (n46 > 1) {
                     break Label_1398;
                 }
@@ -616,14 +624,14 @@ public class g extends AbstractAction
                             break;
                         }
                     }
-                    charArray12[length12] = (char)(c23 ^ c24);
+                    charArray12[length12] = (char) (c23 ^ c24);
                     ++n48;
                 } while (n46 == 0);
             }
             if (n46 <= n48) {
                 z2[n45] = new String(charArray12).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

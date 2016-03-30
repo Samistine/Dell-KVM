@@ -1,7 +1,9 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.a.a;
 
 import java.awt.image.RenderedImage;
-import com.avocent.kvm.b.f.b;
 import java.awt.datatransfer.ClipboardOwner;
 import java.awt.datatransfer.Transferable;
 import java.awt.Image;
@@ -9,36 +11,41 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import com.avocent.a.d;
 import com.avocent.a.a.i;
+import java.awt.datatransfer.Clipboard;
 import javax.swing.AbstractAction;
 
-public class b extends AbstractAction
-{
+public class b extends AbstractAction {
+
     i a;
     private static final String[] z;
-    
+
     public b(final i a) {
-        a.d();
         super(d.b(b.z[0]));
+        a.d();
         this.a = a;
     }
-    
-    public void actionPerformed(final ActionEvent actionEvent) {
-        final RenderedImage d = this.a.o().d();
-        if (d != null) {
-            try {
-                Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new a((Image)d), null);
-                return;
-            }
-            catch (IllegalStateException ex) {
-                b.a().a(b.z[2] + ex.getMessage());
-                if (c.b == 0) {
-                    return;
+
+    @Override
+    public void actionPerformed(ActionEvent actionEvent) {
+        block3:
+        {
+            RenderedImage renderedImage = this.a.o().d();
+            if (renderedImage != null) {
+                try {
+                    Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+                    clipboard.setContents(new a((Image) renderedImage), null);
+                    break block3;
+                } catch (IllegalStateException var3_4) {
+                    com.avocent.kvm.b.f.b.a().a(z[2] + var3_4.getMessage());
+                    if (c.b == 0) {
+                        break block3;
+                    }
                 }
             }
+            com.avocent.kvm.b.f.b.a().a(z[1]);
         }
-        b.a().a(b.z[1]);
     }
-    
+
     static {
         final String[] z2 = new String[3];
         final int n = 0;
@@ -48,7 +55,8 @@ public class b extends AbstractAction
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -78,7 +86,7 @@ public class b extends AbstractAction
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -95,7 +103,8 @@ public class b extends AbstractAction
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -125,7 +134,7 @@ public class b extends AbstractAction
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -142,7 +151,8 @@ public class b extends AbstractAction
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -172,14 +182,14 @@ public class b extends AbstractAction
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
             if (n10 <= n12) {
                 z2[n9] = new String(charArray3).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

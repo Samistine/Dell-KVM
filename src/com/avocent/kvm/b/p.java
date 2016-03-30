@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.b;
 
 import java.awt.Color;
@@ -5,19 +8,19 @@ import java.awt.image.ImageObserver;
 import java.awt.Graphics2D;
 import com.avocent.kvm.b.f.c;
 
-class p implements Runnable
-{
+class p implements Runnable {
+
     protected c a;
     protected int b;
     protected int c;
     final ob d;
-    
+
     p(final ob d) {
         this.d = d;
-        super();
         this.a = new c();
     }
-    
+
+    @Override
     public void run() {
         try {
             final ob d = this.d;
@@ -35,9 +38,10 @@ class p implements Runnable
             if (!this.a.a()) {
                 this.d.b(this.a.a, this.a.b, abs, abs2);
             }
-            Label_0583: {
+            Label_0583:
+            {
                 if ((this.d.u || this.d.x) && abs > 0 && abs2 > 0 && this.d.v != null) {
-                    final Graphics2D graphics2D = (Graphics2D)this.d.v.getGraphics();
+                    final Graphics2D graphics2D = (Graphics2D) this.d.v.getGraphics();
                     graphics2D.drawImage(this.d.b, 1, 1, this.d.b.getWidth(this.d), this.d.b.getHeight(this.d), null);
                     if (this.d.u && abs > 0 && abs2 > 0) {
                         graphics2D.setColor(Color.red);
@@ -62,17 +66,16 @@ class p implements Runnable
                     }
                 }
                 if (this.d.y || !this.a.a()) {
-                    this.d.repaint((int)(this.a.a * this.d.n), (int)(this.a.b * this.d.n), (int)(abs * this.d.n), (int)(abs2 * this.d.n));
+                    this.d.repaint((int) (this.a.a * this.d.n), (int) (this.a.b * this.d.n), (int) (abs * this.d.n), (int) (abs2 * this.d.n));
                 }
             }
             this.d.y = false;
             this.d.B = false;
-        }
-        catch (Throwable t) {
+        } catch (Throwable t) {
             t.printStackTrace();
         }
     }
-    
+
     public void a(final int b, final int c) {
         this.b = b;
         this.c = c;

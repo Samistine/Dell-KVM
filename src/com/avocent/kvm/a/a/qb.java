@@ -1,34 +1,40 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.a.a;
 
 import com.avocent.kvm.b.d.a;
 
-public class qb extends b
-{
+public class qb extends b {
+
     protected String i;
     private static final String z;
-    
+
     public qb() {
         super(33841);
     }
-    
+
+    @Override
     public void a(final byte[] array, final byte[] array2) {
-        this.i = a.a(array2, 2, a.b(array2, 0));
+        this.i = com.avocent.kvm.b.d.a.a(array2, 2, com.avocent.kvm.b.d.a.b(array2, 0));
     }
-    
+
+    @Override
     public byte[] b() {
         final byte[] array = new byte[2 + this.i.length()];
-        a.a(this.i, array, a.a(this.i.length(), array, 0), this.i.length());
+        com.avocent.kvm.b.d.a.a(this.i, array, com.avocent.kvm.b.d.a.a(this.i.length(), array, 0), this.i.length());
         return array;
     }
-    
+
+    @Override
     public String e() {
         return qb.z;
     }
-    
+
     public String h() {
         return this.i;
     }
-    
+
     static {
         final char[] charArray = "c!\u000fv(D!\u0007@.B2\u0006a\u001e@ \u0002g.".toCharArray();
         int length;
@@ -36,7 +42,8 @@ public class qb extends b
         final int n = n2 = (length = charArray.length);
         int n3 = 0;
         while (true) {
-            Label_0094: {
+            Label_0094:
+            {
                 if (n > 1) {
                     break Label_0094;
                 }
@@ -66,13 +73,13 @@ public class qb extends b
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n3;
                 } while (n == 0);
             }
             if (n <= n3) {
                 z = new String(charArray).intern();
-                return;
+                break;
             }
             continue;
         }

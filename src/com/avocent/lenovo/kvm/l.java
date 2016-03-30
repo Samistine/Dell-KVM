@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.lenovo.kvm;
 
 import java.io.IOException;
@@ -5,28 +8,28 @@ import java.awt.event.ActionEvent;
 import com.avocent.kvm.b.e.a;
 import javax.swing.AbstractAction;
 
-public class l extends AbstractAction
-{
+public class l extends AbstractAction {
+
     a a;
     private static final String[] z;
-    
+
     public l(final a a) {
         super(a.b(l.z[3]));
         this.a = a;
     }
-    
+
+    @Override
     public void actionPerformed(final ActionEvent actionEvent) {
         try {
             if (this.a.a().a(1, l.z[1], null) == 0) {
                 return;
             }
-        }
-        catch (IOException ex) {
+        } catch (IOException ex) {
             this.a.b().a(l.z[2] + ex.getMessage());
         }
         this.a.a(this.a.b(l.z[0]));
     }
-    
+
     static {
         final String[] z2 = new String[4];
         final int n = 0;
@@ -36,7 +39,8 @@ public class l extends AbstractAction
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -66,7 +70,7 @@ public class l extends AbstractAction
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -83,7 +87,8 @@ public class l extends AbstractAction
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -113,7 +118,7 @@ public class l extends AbstractAction
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -130,7 +135,8 @@ public class l extends AbstractAction
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -160,7 +166,7 @@ public class l extends AbstractAction
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -177,7 +183,8 @@ public class l extends AbstractAction
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0446: {
+            Label_0446:
+            {
                 if (n14 > 1) {
                     break Label_0446;
                 }
@@ -207,14 +214,14 @@ public class l extends AbstractAction
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
             if (n14 <= n16) {
                 z2[n13] = new String(charArray4).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.a.e;
 
 import java.awt.Insets;
@@ -13,8 +16,8 @@ import javax.swing.JButton;
 import com.avocent.a.j;
 import javax.swing.JDialog;
 
-public class p extends JDialog implements j
-{
+public class p extends JDialog implements j {
+
     protected c a;
     private JButton b;
     private JPanel c;
@@ -24,7 +27,7 @@ public class p extends JDialog implements j
     private JButton g;
     private JTabbedPane h;
     private static final String[] z;
-    
+
     public p(final c a, final Frame frame, final boolean b) {
         super(frame, b);
         this.a = a;
@@ -34,7 +37,7 @@ public class p extends JDialog implements j
         this.b.setAction(this.a.f());
         this.getRootPane().setDefaultButton(this.g);
     }
-    
+
     private void b() {
         this.f = new ButtonGroup();
         this.e = new JPanel();
@@ -66,15 +69,16 @@ public class p extends JDialog implements j
         this.getContentPane().add(this.c, p.z[0]);
         this.pack();
     }
-    
+
     public void a(final k k) {
         this.h.add(k.d(), k.e());
     }
-    
+
+    @Override
     public void a() {
         this.a.p();
     }
-    
+
     static {
         final String[] z2 = new String[2];
         final int n = 0;
@@ -84,7 +88,8 @@ public class p extends JDialog implements j
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -114,7 +119,7 @@ public class p extends JDialog implements j
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -131,7 +136,8 @@ public class p extends JDialog implements j
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -161,14 +167,14 @@ public class p extends JDialog implements j
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
             if (n6 <= n8) {
                 z2[n5] = new String(charArray2).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

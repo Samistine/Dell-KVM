@@ -1,47 +1,54 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.a.a;
 
 import com.avocent.kvm.b.d.a;
 
-public class pb extends ob
-{
+public class pb extends ob {
+
     protected int j;
     protected int k;
     private static final String[] z;
-    
+
     public pb() {
         super(1);
         this.e = 16;
     }
-    
+
     public void c(final int j) {
         this.j = j;
     }
-    
+
     public void d(final int k) {
         this.k = k;
     }
-    
+
+    @Override
     public void a(final byte[] array, final byte[] array2) {
-        this.j = a.a(array2, 0);
-        this.k = a.a(array2, 4);
+        this.j = com.avocent.kvm.b.d.a.a(array2, 0);
+        this.k = com.avocent.kvm.b.d.a.a(array2, 4);
     }
-    
+
+    @Override
     public byte[] a() {
         return super.a();
     }
-    
+
+    @Override
     public byte[] b() {
         final byte[] array = new byte[8];
-        a.b(this.k, array, a.b(this.j, array, 0));
+        com.avocent.kvm.b.d.a.b(this.k, array, com.avocent.kvm.b.d.a.b(this.j, array, 0));
         System.out.println(pb.z[3] + array[4] + pb.z[2] + array[5] + pb.z[2] + array[6] + pb.z[2] + array[7]);
         System.out.println(pb.z[1] + this.j);
         return array;
     }
-    
+
+    @Override
     public String e() {
         return pb.z[0];
     }
-    
+
     static {
         final String[] z2 = new String[4];
         final int n = 0;
@@ -51,7 +58,8 @@ public class pb extends ob
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -81,7 +89,7 @@ public class pb extends ob
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -98,7 +106,8 @@ public class pb extends ob
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -128,7 +137,7 @@ public class pb extends ob
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -145,7 +154,8 @@ public class pb extends ob
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -175,7 +185,7 @@ public class pb extends ob
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -192,7 +202,8 @@ public class pb extends ob
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0446: {
+            Label_0446:
+            {
                 if (n14 > 1) {
                     break Label_0446;
                 }
@@ -222,14 +233,14 @@ public class pb extends ob
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
             if (n14 <= n16) {
                 z2[n13] = new String(charArray4).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a;
 
 import java.util.MissingResourceException;
@@ -5,15 +8,15 @@ import com.avocent.kvm.b.f.b;
 import java.text.MessageFormat;
 import java.util.ResourceBundle;
 
-public class d
-{
+public class d {
+
     static ResourceBundle a;
     private static final String[] z;
-    
+
     public void a(final String s) {
         d.a = ResourceBundle.getBundle(s);
     }
-    
+
     public static String b(final String s) {
         String s2 = c(s);
         if (s2 == null) {
@@ -21,7 +24,7 @@ public class d
         }
         return s2;
     }
-    
+
     public static String a(final String s, final Object[] array) {
         String s2 = c(s);
         if (s2 != null && array != null) {
@@ -29,20 +32,19 @@ public class d
         }
         return s2;
     }
-    
+
     private static String c(final String s) {
         String string = null;
         if (d.a != null) {
             try {
                 string = d.a.getString(s);
-            }
-            catch (MissingResourceException ex) {
+            } catch (MissingResourceException ex) {
                 b.a().a(d.z[2] + s);
             }
         }
         return string;
     }
-    
+
     static {
         final String[] z2 = new String[3];
         final int n = 0;
@@ -52,7 +54,8 @@ public class d
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0097: {
+            Label_0097:
+            {
                 if (n2 > 1) {
                     break Label_0097;
                 }
@@ -82,7 +85,7 @@ public class d
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -99,7 +102,8 @@ public class d
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0213: {
+            Label_0213:
+            {
                 if (n6 > 1) {
                     break Label_0213;
                 }
@@ -129,7 +133,7 @@ public class d
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -146,7 +150,8 @@ public class d
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0329: {
+            Label_0329:
+            {
                 if (n10 > 1) {
                     break Label_0329;
                 }
@@ -176,14 +181,14 @@ public class d
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
             if (n10 <= n12) {
                 z2[n9] = new String(charArray3).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

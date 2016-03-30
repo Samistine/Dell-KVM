@@ -1,52 +1,51 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.lenovo.kvm.a;
 
-import java.awt.Frame;
-import com.avocent.kvm.b.e.a;
-import com.avocent.a.e;
+public class a extends com.avocent.a.e {
 
-public class a extends e
-{
     protected f j;
     protected b k;
     protected e l;
     protected c m;
-    protected a n;
+    protected com.avocent.kvm.b.e.a n;
     public static int o;
     private static final String[] z;
-    
-    public a(final a n) {
-        int o = a.o;
-        super(a.z[3], (e)n);
-        this.n = n;
+
+    public a(final com.avocent.kvm.b.e.a a) {
+        super(z[3], (com.avocent.a.e) a);
+        int n = o;
+        this.n = a;
         this.k = new b(this);
         this.l = new e(this);
         this.m = new c(this);
         if (com.avocent.kvm.b.d.a.c != 0) {
-            a.o = ++o;
+            o = ++n;
         }
     }
-    
-    public a a() {
+
+    public com.avocent.kvm.b.e.a a() {
         return this.n;
     }
-    
+
     public void a(final boolean visible) {
         if (visible && this.j == null) {
             this.j = new f(this, this.n.c());
-            final String a = this.n.a(a.z[0], "");
-            final String a2 = this.n.a(a.z[1], "");
-            this.j.setTitle(a.z[2] + a);
+            final String a = this.n.a(com.avocent.lenovo.kvm.a.a.z[0], "");
+            final String a2 = this.n.a(com.avocent.lenovo.kvm.a.a.z[1], "");
+            this.j.setTitle(com.avocent.lenovo.kvm.a.a.z[2] + a);
             this.j.a(a2);
         }
         this.j.setVisible(visible);
     }
-    
+
     public void c() {
     }
-    
+
     public void f() {
     }
-    
+
     static {
         final String[] z2 = new String[4];
         final int n = 0;
@@ -56,7 +55,8 @@ public class a extends e
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -86,7 +86,7 @@ public class a extends e
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -103,7 +103,8 @@ public class a extends e
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -133,7 +134,7 @@ public class a extends e
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -150,7 +151,8 @@ public class a extends e
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -180,7 +182,7 @@ public class a extends e
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -197,7 +199,8 @@ public class a extends e
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0446: {
+            Label_0446:
+            {
                 if (n14 > 1) {
                     break Label_0446;
                 }
@@ -227,14 +230,14 @@ public class a extends e
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
             if (n14 <= n16) {
                 z2[n13] = new String(charArray4).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

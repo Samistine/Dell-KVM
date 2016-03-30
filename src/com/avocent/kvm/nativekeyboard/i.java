@@ -1,17 +1,20 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.nativekeyboard;
 
 import java.io.IOException;
 
-class i implements NativeKeyEventListener
-{
+class i implements NativeKeyEventListener {
+
     final g a;
     private static final String[] z;
-    
+
     i(final g a) {
         this.a = a;
-        super();
     }
-    
+
+    @Override
     public void keyPressed(final int n, final int n2) throws IOException {
         System.out.println(i.z[1] + this.a.a);
         if (this.a.a) {
@@ -20,13 +23,14 @@ class i implements NativeKeyEventListener
             this.a.c.d().a(a);
         }
     }
-    
+
+    @Override
     public void keyReleased(final int n, final int n2) throws IOException {
         if (this.a.a) {
             this.a.c.d().b(d.a(n));
         }
     }
-    
+
     static {
         final String[] z2 = new String[2];
         final int n = 0;
@@ -36,7 +40,8 @@ class i implements NativeKeyEventListener
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -66,7 +71,7 @@ class i implements NativeKeyEventListener
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -83,7 +88,8 @@ class i implements NativeKeyEventListener
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -113,14 +119,14 @@ class i implements NativeKeyEventListener
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
             if (n6 <= n8) {
                 z2[n5] = new String(charArray2).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

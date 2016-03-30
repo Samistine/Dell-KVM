@@ -1,23 +1,27 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.b;
 
 import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 
-class d extends AbstractAction
-{
+class d extends AbstractAction {
+
     final a a;
     private static final String z;
-    
+
     d(final a a) {
-        this.a = a;
         super(d.z);
+        this.a = a;
     }
-    
+
+    @Override
     public void actionPerformed(final ActionEvent actionEvent) {
-        a.a(this.a).setVisible(false);
+        com.avocent.a.b.a.a(this.a).setVisible(false);
         this.a.k.b();
     }
-    
+
     static {
         final char[] charArray = "\u001e:".toCharArray();
         int length;
@@ -25,7 +29,8 @@ class d extends AbstractAction
         final int n = n2 = (length = charArray.length);
         int n3 = 0;
         while (true) {
-            Label_0094: {
+            Label_0094:
+            {
                 if (n > 1) {
                     break Label_0094;
                 }
@@ -55,13 +60,13 @@ class d extends AbstractAction
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n3;
                 } while (n == 0);
             }
             if (n <= n3) {
                 z = new String(charArray).intern();
-                return;
+                break;
             }
             continue;
         }

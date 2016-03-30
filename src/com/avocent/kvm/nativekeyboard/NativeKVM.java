@@ -1,20 +1,22 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.nativekeyboard;
 
 import java.lang.reflect.InvocationTargetException;
 import java.awt.peer.WindowPeer;
-import com.avocent.kvm.b.f.e;
 import java.awt.Window;
 import com.avocent.kvm.b.f.b;
 import javax.swing.SwingUtilities;
 import java.awt.Component;
 import java.util.HashMap;
 
-public class NativeKVM
-{
+public class NativeKVM {
+
     protected static HashMap a;
     public static int b;
     private static final String[] z;
-    
+
     public static void a(final Component component, final boolean b) throws Exception {
         final Window windowAncestor = SwingUtilities.getWindowAncestor(component);
         e e = NativeKVM.a.get(windowAncestor);
@@ -24,22 +26,22 @@ public class NativeKVM
         }
         e.a(b);
     }
-    
+
     public static void a(final Component component, final int n, final int n2) {
         final Window windowAncestor = SwingUtilities.getWindowAncestor(component);
         e e = NativeKVM.a.get(windowAncestor);
         if (e == null) {
-            e = new e("", b.a());
+            e = new e("", com.avocent.kvm.b.f.b.a());
             e.a(windowAncestor, null);
         }
         e.a(n, n2);
     }
-    
-    public static void a(final Component component, final NativeKeyEventListener nativeKeyEventListener, final String s, final e e) throws Exception {
+
+    public static void a(final Component component, final NativeKeyEventListener nativeKeyEventListener, final String s, final com.avocent.kvm.b.f.e e) throws Exception {
         final Window windowAncestor = SwingUtilities.getWindowAncestor(component);
         if (windowAncestor == null) {
             System.out.println(NativeKVM.z[13]);
-            return;
+            break;
         }
         e e2 = NativeKVM.a.get(windowAncestor);
         if (e2 == null) {
@@ -48,11 +50,11 @@ public class NativeKVM
         }
         e2.a(windowAncestor, nativeKeyEventListener);
     }
-    
+
     static long a(final Component component) {
         long n = -1L;
-        final Window window = (Window)((component instanceof Window) ? component : SwingUtilities.getWindowAncestor(component));
-        final WindowPeer windowPeer = (WindowPeer)window.getPeer();
+        final Window window = (Window) ((component instanceof Window) ? component : SwingUtilities.getWindowAncestor(component));
+        final WindowPeer windowPeer = (WindowPeer) window.getPeer();
         final String property = System.getProperty(NativeKVM.z[12]);
         String s = NativeKVM.z[10];
         String s2 = NativeKVM.z[5];
@@ -68,25 +70,22 @@ public class NativeKVM
             final Class<?> forName = Class.forName(s);
             try {
                 Thread.sleep(100L);
-            }
-            catch (Exception ex) {
+            } catch (Exception ex) {
                 ex.printStackTrace();
             }
-            Label_0383: {
+            Label_0383:
+            {
                 if (forName != null && forName.isInstance(windowPeer)) {
                     try {
-                        n = (long)forName.getMethod(s2, (Class<?>[])null).invoke(windowPeer, (Object[])null);
+                        n = (long) forName.getMethod(s2, (Class<?>[]) null).invoke(windowPeer, (Object[]) null);
                         break Label_0383;
-                    }
-                    catch (NoSuchMethodException ex2) {
+                    } catch (NoSuchMethodException ex2) {
                         System.out.println(ex2.getMessage());
                         break Label_0383;
-                    }
-                    catch (IllegalAccessException ex3) {
+                    } catch (IllegalAccessException ex3) {
                         System.out.println(ex3.getMessage());
                         break Label_0383;
-                    }
-                    catch (InvocationTargetException ex4) {
+                    } catch (InvocationTargetException ex4) {
                         System.out.println(ex4.getMessage());
                         if (NativeKVM.b == 0) {
                             break Label_0383;
@@ -95,8 +94,7 @@ public class NativeKVM
                 }
                 System.out.println(NativeKVM.z[9]);
             }
-        }
-        catch (ClassNotFoundException ex5) {
+        } catch (ClassNotFoundException ex5) {
             System.out.println(NativeKVM.z[7]);
         }
         if (n < 0L) {
@@ -105,15 +103,15 @@ public class NativeKVM
         System.out.println(NativeKVM.z[4] + n);
         return n;
     }
-    
+
     static long b(final Component component) {
-        final Window window = (Window)((component instanceof Window) ? component : SwingUtilities.getWindowAncestor(component));
+        final Window window = (Window) ((component instanceof Window) ? component : SwingUtilities.getWindowAncestor(component));
         window.getPreferredSize();
         final long c = c(window);
         System.out.println(NativeKVM.z[4] + c);
         return c;
     }
-    
+
     public static long c(final Component component) {
         try {
             final k k = new k(component);
@@ -125,25 +123,24 @@ public class NativeKVM
             }
             SwingUtilities.invokeAndWait(k);
             return k.a();
-        }
-        catch (Throwable t) {
+        } catch (Throwable t) {
             t.printStackTrace();
             return -1L;
         }
     }
-    
+
     static native int getLibraryId();
-    
+
     static native long getWindowId(final Component p0);
-    
+
     static native boolean registerWindowById(final long p0, final NativeKeyEventListener p1);
-    
+
     static native void unregisterWindowById(final long p0);
-    
+
     static native void setPassthroughEnabled(final long p0, final boolean p1);
-    
+
     static native void setCursorLocation(final long p0, final int p1, final int p2);
-    
+
     static {
         final String[] z2 = new String[14];
         final int n = 0;
@@ -153,7 +150,8 @@ public class NativeKVM
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -183,7 +181,7 @@ public class NativeKVM
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -200,7 +198,8 @@ public class NativeKVM
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -230,7 +229,7 @@ public class NativeKVM
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -247,7 +246,8 @@ public class NativeKVM
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -277,7 +277,7 @@ public class NativeKVM
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -294,7 +294,8 @@ public class NativeKVM
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0446: {
+            Label_0446:
+            {
                 if (n14 > 1) {
                     break Label_0446;
                 }
@@ -324,7 +325,7 @@ public class NativeKVM
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -341,7 +342,8 @@ public class NativeKVM
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0562: {
+            Label_0562:
+            {
                 if (n18 > 1) {
                     break Label_0562;
                 }
@@ -371,7 +373,7 @@ public class NativeKVM
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
@@ -388,7 +390,8 @@ public class NativeKVM
         final int n22 = n23 = (length6 = charArray6.length);
         int n24 = 0;
         while (true) {
-            Label_0678: {
+            Label_0678:
+            {
                 if (n22 > 1) {
                     break Label_0678;
                 }
@@ -418,7 +421,7 @@ public class NativeKVM
                             break;
                         }
                     }
-                    charArray6[length6] = (char)(c11 ^ c12);
+                    charArray6[length6] = (char) (c11 ^ c12);
                     ++n24;
                 } while (n22 == 0);
             }
@@ -435,7 +438,8 @@ public class NativeKVM
         final int n26 = n27 = (length7 = charArray7.length);
         int n28 = 0;
         while (true) {
-            Label_0798: {
+            Label_0798:
+            {
                 if (n26 > 1) {
                     break Label_0798;
                 }
@@ -465,7 +469,7 @@ public class NativeKVM
                             break;
                         }
                     }
-                    charArray7[length7] = (char)(c13 ^ c14);
+                    charArray7[length7] = (char) (c13 ^ c14);
                     ++n28;
                 } while (n26 == 0);
             }
@@ -482,7 +486,8 @@ public class NativeKVM
         final int n30 = n31 = (length8 = charArray8.length);
         int n32 = 0;
         while (true) {
-            Label_0918: {
+            Label_0918:
+            {
                 if (n30 > 1) {
                     break Label_0918;
                 }
@@ -512,7 +517,7 @@ public class NativeKVM
                             break;
                         }
                     }
-                    charArray8[length8] = (char)(c15 ^ c16);
+                    charArray8[length8] = (char) (c15 ^ c16);
                     ++n32;
                 } while (n30 == 0);
             }
@@ -529,7 +534,8 @@ public class NativeKVM
         final int n34 = n35 = (length9 = charArray9.length);
         int n36 = 0;
         while (true) {
-            Label_1038: {
+            Label_1038:
+            {
                 if (n34 > 1) {
                     break Label_1038;
                 }
@@ -559,7 +565,7 @@ public class NativeKVM
                             break;
                         }
                     }
-                    charArray9[length9] = (char)(c17 ^ c18);
+                    charArray9[length9] = (char) (c17 ^ c18);
                     ++n36;
                 } while (n34 == 0);
             }
@@ -576,7 +582,8 @@ public class NativeKVM
         final int n38 = n39 = (length10 = charArray10.length);
         int n40 = 0;
         while (true) {
-            Label_1158: {
+            Label_1158:
+            {
                 if (n38 > 1) {
                     break Label_1158;
                 }
@@ -606,7 +613,7 @@ public class NativeKVM
                             break;
                         }
                     }
-                    charArray10[length10] = (char)(c19 ^ c20);
+                    charArray10[length10] = (char) (c19 ^ c20);
                     ++n40;
                 } while (n38 == 0);
             }
@@ -623,7 +630,8 @@ public class NativeKVM
         final int n42 = n43 = (length11 = charArray11.length);
         int n44 = 0;
         while (true) {
-            Label_1278: {
+            Label_1278:
+            {
                 if (n42 > 1) {
                     break Label_1278;
                 }
@@ -653,7 +661,7 @@ public class NativeKVM
                             break;
                         }
                     }
-                    charArray11[length11] = (char)(c21 ^ c22);
+                    charArray11[length11] = (char) (c21 ^ c22);
                     ++n44;
                 } while (n42 == 0);
             }
@@ -670,7 +678,8 @@ public class NativeKVM
         final int n46 = n47 = (length12 = charArray12.length);
         int n48 = 0;
         while (true) {
-            Label_1398: {
+            Label_1398:
+            {
                 if (n46 > 1) {
                     break Label_1398;
                 }
@@ -700,7 +709,7 @@ public class NativeKVM
                             break;
                         }
                     }
-                    charArray12[length12] = (char)(c23 ^ c24);
+                    charArray12[length12] = (char) (c23 ^ c24);
                     ++n48;
                 } while (n46 == 0);
             }
@@ -717,7 +726,8 @@ public class NativeKVM
         final int n50 = n51 = (length13 = charArray13.length);
         int n52 = 0;
         while (true) {
-            Label_1518: {
+            Label_1518:
+            {
                 if (n50 > 1) {
                     break Label_1518;
                 }
@@ -747,7 +757,7 @@ public class NativeKVM
                             break;
                         }
                     }
-                    charArray13[length13] = (char)(c25 ^ c26);
+                    charArray13[length13] = (char) (c25 ^ c26);
                     ++n52;
                 } while (n50 == 0);
             }
@@ -764,7 +774,8 @@ public class NativeKVM
         final int n54 = n55 = (length14 = charArray14.length);
         int n56 = 0;
         while (true) {
-            Label_1638: {
+            Label_1638:
+            {
                 if (n54 > 1) {
                     break Label_1638;
                 }
@@ -794,7 +805,7 @@ public class NativeKVM
                             break;
                         }
                     }
-                    charArray14[length14] = (char)(c27 ^ c28);
+                    charArray14[length14] = (char) (c27 ^ c28);
                     ++n56;
                 } while (n54 == 0);
             }
@@ -802,7 +813,7 @@ public class NativeKVM
                 z2[n53] = new String(charArray14).intern();
                 z = z2;
                 NativeKVM.a = new HashMap();
-                return;
+                break;
             }
             continue;
         }

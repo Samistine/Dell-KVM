@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.b;
 
 import java.io.IOException;
@@ -7,8 +10,8 @@ import java.util.List;
 import com.avocent.kvm.b.f.a;
 import java.util.ArrayList;
 
-public class k implements eb
-{
+public class k implements eb {
+
     int a;
     protected u b;
     protected ArrayList c;
@@ -32,10 +35,9 @@ public class k implements eb
     protected cb u;
     protected int v;
     protected boolean w;
-    
+
     public k(final u b) {
-        final boolean t = g.t;
-        super();
+        final boolean t = com.avocent.kvm.b.g.t;
         this.a = 100;
         this.c = new ArrayList();
         this.g = 0;
@@ -58,12 +60,12 @@ public class k implements eb
         this.b.c().a(this.u);
         this.j();
         if (com.avocent.kvm.b.d.a.c != 0) {
-            g.t = !t;
+            com.avocent.kvm.b.g.t = !t;
         }
     }
-    
+
     protected void j() {
-        final boolean t = g.t;
+        final boolean t = com.avocent.kvm.b.g.t;
         int i = 0;
         while (i < 50) {
             this.i.add(new gb(0));
@@ -73,27 +75,33 @@ public class k implements eb
             }
         }
     }
-    
+
+    @Override
     public int h() {
         return this.k;
     }
-    
+
+    @Override
     public long e() {
         return this.m;
     }
-    
+
+    @Override
     public long f() {
         return this.n;
     }
-    
+
+    @Override
     public int g() {
         return this.l;
     }
-    
+
+    @Override
     public u a() {
         return this.b;
     }
-    
+
+    @Override
     public void i() {
         this.k = 0;
         this.m = 0L;
@@ -101,7 +109,8 @@ public class k implements eb
         this.l = 0;
         this.o = 0L;
     }
-    
+
+    @Override
     public void a(final db e) {
         this.c.add(e);
         if (this.e == null) {
@@ -114,65 +123,68 @@ public class k implements eb
         e.a(this.b.c());
         e.a(this.w);
     }
-    
+
     public void k() {
-        final boolean t = g.t;
+        final boolean t = com.avocent.kvm.b.g.t;
         int i = 0;
         while (i < this.h.size()) {
-            ((c)this.h.get(i)).a(this);
+            ((c) this.h.get(i)).a(this);
             ++i;
             if (t) {
                 break;
             }
         }
     }
-    
+
     public void b(final db db) {
-        final boolean t = g.t;
+        final boolean t = com.avocent.kvm.b.g.t;
         int i = 0;
         while (i < this.h.size()) {
-            ((c)this.h.get(i)).a(this, db);
+            ((c) this.h.get(i)).a(this, db);
             ++i;
             if (t) {
                 break;
             }
         }
     }
-    
+
     public void l() {
-        final boolean t = g.t;
+        final boolean t = com.avocent.kvm.b.g.t;
         int i = 0;
         while (i < this.h.size()) {
-            ((c)this.h.get(i)).b(this);
+            ((c) this.h.get(i)).b(this);
             ++i;
             if (t) {
                 break;
             }
         }
     }
-    
+
     public boolean m() {
         return this.a == 102;
     }
-    
+
+    @Override
     public void b() {
         if (this.f != null) {
             this.f.a();
             this.f.interrupt();
         }
     }
-    
+
+    @Override
     public void c() {
         if (this.a == 101) {
             return;
         }
-        Label_0091: {
+        Label_0091:
+        {
             if (this.f != null && this.a == 103) {
                 synchronized (this.f) {
                     this.a = 101;
                     this.f.notifyAll();
                 }
-                if (!g.t) {
+                if (!com.avocent.kvm.b.g.t) {
                     break Label_0091;
                 }
             }
@@ -183,47 +195,48 @@ public class k implements eb
         }
         this.k();
     }
-    
+
     protected boolean a(final Throwable t) {
         t.printStackTrace();
         return !(t instanceof IOException);
     }
-    
+
+    @Override
     public gb d() {
-        final boolean t = g.t;
+        final boolean t = com.avocent.kvm.b.g.t;
         synchronized (this.i) {
             while (this.i.size() == 0) {
                 try {
                     this.i.wait();
                     continue;
-                }
-                catch (InterruptedException ex) {
+                } catch (InterruptedException ex) {
                     if (!t) {
                         continue;
                     }
                 }
                 break;
             }
-            return this.i.remove(0);
+            return (gb) this.i.remove(0);//Sam
         }
     }
-    
+
+    @Override
     public void a(final gb gb) {
         synchronized (this.j) {
             this.j.addElement(gb);
             this.j.notifyAll();
         }
     }
-    
+
     public void b(final gb gb) {
         synchronized (this.i) {
             this.i.add(gb);
             this.i.notifyAll();
         }
     }
-    
+
     public void n() {
-        final boolean t = g.t;
+        final boolean t = com.avocent.kvm.b.g.t;
         if (this.q != null) {
             this.b(this.q);
             this.q = null;
@@ -237,8 +250,7 @@ public class k implements eb
                     this.j.wait(1000L);
                 }
                 continue;
-            }
-            catch (InterruptedException ex) {
+            } catch (InterruptedException ex) {
                 if (!t) {
                     continue;
                 }
@@ -246,7 +258,7 @@ public class k implements eb
             break;
         }
         synchronized (this.j) {
-            this.q = this.j.remove(0);
+            this.q = (gb) this.j.remove(0); //Sam
         }
         synchronized (this.p) {
             this.p.notifyAll();
@@ -254,15 +266,15 @@ public class k implements eb
         ++this.l;
         this.m += this.q.g();
     }
-    
+
+    @Override
     public void a(final int n) {
         synchronized (this.r) {
             try {
                 if (this.j.size() != 0) {
                     this.r.wait(n);
                 }
-            }
-            catch (Throwable t) {
+            } catch (Throwable t) {
                 t.printStackTrace();
             }
         }

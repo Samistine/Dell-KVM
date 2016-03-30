@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a;
 
 import com.avocent.kvm.b.eb;
@@ -6,8 +9,8 @@ import com.avocent.kvm.b.d.a;
 import com.avocent.kvm.b.nb;
 import com.avocent.kvm.b.u;
 
-public class k extends Thread
-{
+public class k extends Thread {
+
     protected boolean a;
     protected j b;
     protected u c;
@@ -22,10 +25,10 @@ public class k extends Thread
     protected int l;
     protected i m;
     private static final String z;
-    
+
     public k(final u c, final j b) {
-        int i = e.i;
-        super(k.z);
+        super(com.avocent.a.k.z);
+        int i = com.avocent.a.e.i;
         this.a = false;
         this.d = new nb();
         this.i = 10;
@@ -36,15 +39,15 @@ public class k extends Thread
         this.c = c;
         this.b = b;
         this.a(5, 1000);
-        if (a.c != 0) {
-            e.i = ++i;
+        if (com.avocent.kvm.b.d.a.c != 0) {
+            com.avocent.a.e.i = ++i;
         }
     }
-    
+
     public nb a() {
         return this.d;
     }
-    
+
     public synchronized void a(final int i, final int j) {
         this.i = i;
         this.j = j;
@@ -55,20 +58,21 @@ public class k extends Thread
         this.h = new long[i];
         this.g = new long[i];
     }
-    
+
     public void b() {
         this.a = true;
     }
-    
+
+    @Override
     public void run() {
-        final int i = e.i;
+        final int i = com.avocent.a.e.i;
         eb b = null;
         while (!this.a) {
             try {
                 try {
                     Thread.sleep(this.j);
+                } catch (InterruptedException ex) {
                 }
-                catch (InterruptedException ex) {}
                 synchronized (this) {
                     if (this.c == null) {
                         // monitorexit(this)
@@ -118,7 +122,7 @@ public class k extends Thread
                     final double n6 = n / n5;
                     final double n7 = n2 / n5;
                     final double n8 = (n4 == 0.0) ? 0.0 : ((n4 - n3) / n4 * 100.0);
-                    final double n9 = (int)(n3 / n5);
+                    final double n9 = (int) (n3 / n5);
                     this.d.a(new Double(n6));
                     this.d.d(new Double(n7));
                     this.d.c(new Double(n8));
@@ -126,8 +130,7 @@ public class k extends Thread
                     SwingUtilities.invokeLater(this.m);
                 }
                 continue;
-            }
-            catch (Throwable t) {
+            } catch (Throwable t) {
                 t.printStackTrace();
                 if (i == 0) {
                     continue;
@@ -136,7 +139,7 @@ public class k extends Thread
             break;
         }
     }
-    
+
     static {
         final char[] charArray = "\\\u001a8<1d?\u001c\u0000:7\u001f\u0001\u000e dl \u001f0v8\u0010".toCharArray();
         int length;
@@ -144,7 +147,8 @@ public class k extends Thread
         final int n = n2 = (length = charArray.length);
         int n3 = 0;
         while (true) {
-            Label_0094: {
+            Label_0094:
+            {
                 if (n > 1) {
                     break Label_0094;
                 }
@@ -174,13 +178,13 @@ public class k extends Thread
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n3;
                 } while (n == 0);
             }
             if (n <= n3) {
                 z = new String(charArray).intern();
-                return;
+                break;
             }
             continue;
         }

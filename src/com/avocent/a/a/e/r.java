@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.a.e;
 
 import java.io.IOException;
@@ -24,8 +27,8 @@ import javax.swing.DefaultComboBoxModel;
 import com.avocent.kvm.b.e.a;
 import javax.swing.JPanel;
 
-public class r extends JPanel implements k
-{
+public class r extends JPanel implements k {
+
     protected a a;
     protected c b;
     protected boolean c;
@@ -40,9 +43,8 @@ public class r extends JPanel implements k
     private JLabel l;
     private JRadioButton m;
     private static final String[] z;
-    
+
     public r(final a a) {
-        super();
         this.c = false;
         this.d = false;
         this.e = new j(this);
@@ -59,7 +61,7 @@ public class r extends JPanel implements k
         this.k.setModel(this.f);
         this.k.addItemListener(new f(this));
     }
-    
+
     private void g() {
         this.l = new JLabel();
         this.k = new JComboBox();
@@ -70,7 +72,7 @@ public class r extends JPanel implements k
         this.setLayout(new GridBagLayout());
         this.l.setText(this.a.b(r.z[6]));
         new GridBagConstraints().insets = new Insets(5, 5, 5, 5);
-        this.k.setModel(new DefaultComboBoxModel<String>(new String[] { r.z[1], r.z[5], r.z[3], r.z[7] }));
+        this.k.setModel(new DefaultComboBoxModel<String>(new String[]{r.z[1], r.z[5], r.z[3], r.z[7]}));
         final GridBagConstraints gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.anchor = 17;
         gridBagConstraints.weightx = 1.0;
@@ -118,59 +120,60 @@ public class r extends JPanel implements k
         gridBagConstraints6.insets = new Insets(5, 5, 5, 5);
         this.add(this.j, gridBagConstraints6);
     }
-    
+
     private void a(final ActionEvent actionEvent) {
         this.d = true;
         this.b.n();
     }
-    
+
     private void b(final ActionEvent actionEvent) {
         this.d = true;
         this.b.n();
     }
-    
+
     private void c(final ActionEvent actionEvent) {
         this.d = true;
         this.b.n();
     }
-    
+
     public void h() {
         final u a = this.a.a();
         final Object a2 = a.a(r.z[10]);
         if (a2 != null && a2 instanceof Integer) {
-            this.f.setSelectedItem(e.a((int)a2));
+            this.f.setSelectedItem(com.avocent.a.c.e.a((int) a2));
         }
         this.a(a.a(r.z[11], com.avocent.kvm.c.a.a));
     }
-    
+
     protected void i() {
-        int t = c.t;
-        this.a(e.a(72), 72);
-        this.a(e.a(58), 58);
-        this.a(e.a(59), 59);
-        this.a(e.a(60), 60);
-        this.a(e.a(61), 61);
-        this.a(e.a(62), 62);
-        this.a(e.a(63), 63);
-        this.a(e.a(64), 64);
-        this.a(e.a(65), 65);
-        this.a(e.a(66), 66);
-        this.a(e.a(67), 67);
-        this.a(e.a(68), 68);
-        this.a(e.a(69), 69);
+        int t = com.avocent.a.a.e.c.t;
+        this.a(com.avocent.a.c.e.a(72), 72);
+        this.a(com.avocent.a.c.e.a(58), 58);
+        this.a(com.avocent.a.c.e.a(59), 59);
+        this.a(com.avocent.a.c.e.a(60), 60);
+        this.a(com.avocent.a.c.e.a(61), 61);
+        this.a(com.avocent.a.c.e.a(62), 62);
+        this.a(com.avocent.a.c.e.a(63), 63);
+        this.a(com.avocent.a.c.e.a(64), 64);
+        this.a(com.avocent.a.c.e.a(65), 65);
+        this.a(com.avocent.a.c.e.a(66), 66);
+        this.a(com.avocent.a.c.e.a(67), 67);
+        this.a(com.avocent.a.c.e.a(68), 68);
+        this.a(com.avocent.a.c.e.a(69), 69);
         if (com.avocent.kvm.b.d.a.c != 0) {
-            c.t = ++t;
+            com.avocent.a.a.e.c.t = ++t;
         }
     }
-    
+
     protected void a(final String s, final int n) {
         this.g.put(s, new Integer(n));
         this.f.addElement(s);
     }
-    
+
     void a(final Integer n) {
-        final int t = c.t;
-        Label_0078: {
+        final int t = com.avocent.a.a.e.c.t;
+        Label_0078:
+        {
             if (n.equals(com.avocent.kvm.c.a.a)) {
                 this.i.setSelected(true);
                 if (t == 0) {
@@ -194,27 +197,32 @@ public class r extends JPanel implements k
         this.a(true);
         this.b.n();
     }
-    
+
+    @Override
     public String e() {
         return this.a.b(r.z[9]);
     }
-    
+
+    @Override
     public JPanel d() {
         return this;
     }
-    
+
+    @Override
     public void b() {
         this.d = false;
         this.h();
     }
-    
+
+    @Override
     public void a() {
         if (this.f()) {
             Integer n = com.avocent.kvm.c.a.a;
-            Label_0045: {
+            Label_0045:
+            {
                 if (this.h.isSelected()) {
                     n = com.avocent.kvm.c.a.c;
-                    if (c.t == 0) {
+                    if (com.avocent.a.a.e.c.t == 0) {
                         break Label_0045;
                     }
                 }
@@ -227,8 +235,7 @@ public class r extends JPanel implements k
                 this.a(false);
                 this.b.a(false);
                 this.a.a().a(5, n, null);
-            }
-            catch (IOException ex) {
+            } catch (IOException ex) {
                 this.a.b().a(r.z[12] + ex.getMessage());
                 this.a(true);
                 this.b.a(true);
@@ -238,32 +245,33 @@ public class r extends JPanel implements k
                 if (value != null) {
                     this.a.a().a(r.z[10], value);
                 }
-            }
-            catch (Throwable t) {
+            } catch (Throwable t) {
                 this.a.b().a(r.z[12] + t.getMessage());
             }
             this.c = false;
         }
     }
-    
+
     public void a(final boolean enabled) {
         this.h.setEnabled(enabled);
         this.m.setEnabled(enabled);
         this.i.setEnabled(enabled);
     }
-    
+
+    @Override
     public void c() {
         if (this.f() && !this.d) {
             this.h();
         }
         this.j();
     }
-    
+
     public void j() {
     }
-    
+
+    @Override
     public boolean f() {
-        final Integer n = (Integer)this.a.a().a(r.z[11]);
+        final Integer n = (Integer) this.a.a().a(r.z[11]);
         if (n != null && ((n.equals(com.avocent.kvm.c.a.a) && !this.i.isSelected()) || (n.equals(com.avocent.kvm.c.a.c) && !this.h.isSelected()) || (n.equals(com.avocent.kvm.c.a.b) && !this.m.isSelected()))) {
             return true;
         }
@@ -271,23 +279,24 @@ public class r extends JPanel implements k
         final Object selectedItem = this.k.getSelectedItem();
         return selectedItem != null && a != null && !a.equals(this.g.get(selectedItem));
     }
-    
+
+    @Override
     public void a(final c b) {
         this.b = b;
     }
-    
+
     static void a(final r r, final ActionEvent actionEvent) {
         r.b(actionEvent);
     }
-    
+
     static void b(final r r, final ActionEvent actionEvent) {
         r.c(actionEvent);
     }
-    
+
     static void c(final r r, final ActionEvent actionEvent) {
         r.a(actionEvent);
     }
-    
+
     static {
         final String[] z2 = new String[13];
         final int n = 0;
@@ -297,7 +306,8 @@ public class r extends JPanel implements k
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -327,7 +337,7 @@ public class r extends JPanel implements k
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -344,7 +354,8 @@ public class r extends JPanel implements k
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -374,7 +385,7 @@ public class r extends JPanel implements k
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -391,7 +402,8 @@ public class r extends JPanel implements k
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -421,7 +433,7 @@ public class r extends JPanel implements k
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -438,7 +450,8 @@ public class r extends JPanel implements k
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0446: {
+            Label_0446:
+            {
                 if (n14 > 1) {
                     break Label_0446;
                 }
@@ -468,7 +481,7 @@ public class r extends JPanel implements k
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -485,7 +498,8 @@ public class r extends JPanel implements k
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0562: {
+            Label_0562:
+            {
                 if (n18 > 1) {
                     break Label_0562;
                 }
@@ -515,7 +529,7 @@ public class r extends JPanel implements k
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
@@ -532,7 +546,8 @@ public class r extends JPanel implements k
         final int n22 = n23 = (length6 = charArray6.length);
         int n24 = 0;
         while (true) {
-            Label_0678: {
+            Label_0678:
+            {
                 if (n22 > 1) {
                     break Label_0678;
                 }
@@ -562,7 +577,7 @@ public class r extends JPanel implements k
                             break;
                         }
                     }
-                    charArray6[length6] = (char)(c11 ^ c12);
+                    charArray6[length6] = (char) (c11 ^ c12);
                     ++n24;
                 } while (n22 == 0);
             }
@@ -579,7 +594,8 @@ public class r extends JPanel implements k
         final int n26 = n27 = (length7 = charArray7.length);
         int n28 = 0;
         while (true) {
-            Label_0798: {
+            Label_0798:
+            {
                 if (n26 > 1) {
                     break Label_0798;
                 }
@@ -609,7 +625,7 @@ public class r extends JPanel implements k
                             break;
                         }
                     }
-                    charArray7[length7] = (char)(c13 ^ c14);
+                    charArray7[length7] = (char) (c13 ^ c14);
                     ++n28;
                 } while (n26 == 0);
             }
@@ -626,7 +642,8 @@ public class r extends JPanel implements k
         final int n30 = n31 = (length8 = charArray8.length);
         int n32 = 0;
         while (true) {
-            Label_0918: {
+            Label_0918:
+            {
                 if (n30 > 1) {
                     break Label_0918;
                 }
@@ -656,7 +673,7 @@ public class r extends JPanel implements k
                             break;
                         }
                     }
-                    charArray8[length8] = (char)(c15 ^ c16);
+                    charArray8[length8] = (char) (c15 ^ c16);
                     ++n32;
                 } while (n30 == 0);
             }
@@ -673,7 +690,8 @@ public class r extends JPanel implements k
         final int n34 = n35 = (length9 = charArray9.length);
         int n36 = 0;
         while (true) {
-            Label_1038: {
+            Label_1038:
+            {
                 if (n34 > 1) {
                     break Label_1038;
                 }
@@ -703,7 +721,7 @@ public class r extends JPanel implements k
                             break;
                         }
                     }
-                    charArray9[length9] = (char)(c17 ^ c18);
+                    charArray9[length9] = (char) (c17 ^ c18);
                     ++n36;
                 } while (n34 == 0);
             }
@@ -720,7 +738,8 @@ public class r extends JPanel implements k
         final int n38 = n39 = (length10 = charArray10.length);
         int n40 = 0;
         while (true) {
-            Label_1158: {
+            Label_1158:
+            {
                 if (n38 > 1) {
                     break Label_1158;
                 }
@@ -750,7 +769,7 @@ public class r extends JPanel implements k
                             break;
                         }
                     }
-                    charArray10[length10] = (char)(c19 ^ c20);
+                    charArray10[length10] = (char) (c19 ^ c20);
                     ++n40;
                 } while (n38 == 0);
             }
@@ -767,7 +786,8 @@ public class r extends JPanel implements k
         final int n42 = n43 = (length11 = charArray11.length);
         int n44 = 0;
         while (true) {
-            Label_1278: {
+            Label_1278:
+            {
                 if (n42 > 1) {
                     break Label_1278;
                 }
@@ -797,7 +817,7 @@ public class r extends JPanel implements k
                             break;
                         }
                     }
-                    charArray11[length11] = (char)(c21 ^ c22);
+                    charArray11[length11] = (char) (c21 ^ c22);
                     ++n44;
                 } while (n42 == 0);
             }
@@ -814,7 +834,8 @@ public class r extends JPanel implements k
         final int n46 = n47 = (length12 = charArray12.length);
         int n48 = 0;
         while (true) {
-            Label_1398: {
+            Label_1398:
+            {
                 if (n46 > 1) {
                     break Label_1398;
                 }
@@ -844,7 +865,7 @@ public class r extends JPanel implements k
                             break;
                         }
                     }
-                    charArray12[length12] = (char)(c23 ^ c24);
+                    charArray12[length12] = (char) (c23 ^ c24);
                     ++n48;
                 } while (n46 == 0);
             }
@@ -861,7 +882,8 @@ public class r extends JPanel implements k
         final int n50 = n51 = (length13 = charArray13.length);
         int n52 = 0;
         while (true) {
-            Label_1518: {
+            Label_1518:
+            {
                 if (n50 > 1) {
                     break Label_1518;
                 }
@@ -891,14 +913,14 @@ public class r extends JPanel implements k
                             break;
                         }
                     }
-                    charArray13[length13] = (char)(c25 ^ c26);
+                    charArray13[length13] = (char) (c25 ^ c26);
                     ++n52;
                 } while (n50 == 0);
             }
             if (n50 <= n52) {
                 z2[n49] = new String(charArray13).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

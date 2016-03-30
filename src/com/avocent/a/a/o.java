@@ -1,21 +1,24 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.a;
 
 import java.awt.Dimension;
 import com.avocent.a.d;
 import java.awt.Toolkit;
 
-class o implements Runnable
-{
+class o implements Runnable {
+
     boolean a;
     final i b;
     private static final String[] z;
-    
+
     o(final i b, final boolean a) {
         this.b = b;
-        super();
         this.a = a;
     }
-    
+
+    @Override
     public void run() {
         final boolean g = i.G;
         if (!this.a) {
@@ -23,7 +26,7 @@ class o implements Runnable
             this.b.l.setVisible(false);
             this.b.k.setVisible(true);
             this.b.k.pack();
-            this.b.a(o.z[1], (Object)Boolean.FALSE);
+            this.b.a(o.z[1], (Object) Boolean.FALSE);
             if (!g) {
                 return;
             }
@@ -37,7 +40,7 @@ class o implements Runnable
             this.b.k.pack();
             this.b.l.setVisible(false);
             this.b.k.setVisible(true);
-            this.b.a(o.z[1], (Object)Boolean.FALSE);
+            this.b.a(o.z[1], (Object) Boolean.FALSE);
             this.b.f(d.b(o.z[3]));
             if (!g) {
                 return;
@@ -48,9 +51,9 @@ class o implements Runnable
         this.b.l.setSize(screenSize);
         this.b.l.validate();
         this.b.l.setVisible(true);
-        this.b.a(o.z[1], (Object)Boolean.TRUE);
+        this.b.a(o.z[1], (Object) Boolean.TRUE);
     }
-    
+
     static {
         final String[] z2 = new String[7];
         final int n = 0;
@@ -60,7 +63,8 @@ class o implements Runnable
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -90,7 +94,7 @@ class o implements Runnable
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -107,7 +111,8 @@ class o implements Runnable
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -137,7 +142,7 @@ class o implements Runnable
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -154,7 +159,8 @@ class o implements Runnable
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -184,7 +190,7 @@ class o implements Runnable
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -201,7 +207,8 @@ class o implements Runnable
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0446: {
+            Label_0446:
+            {
                 if (n14 > 1) {
                     break Label_0446;
                 }
@@ -231,7 +238,7 @@ class o implements Runnable
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -248,7 +255,8 @@ class o implements Runnable
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0562: {
+            Label_0562:
+            {
                 if (n18 > 1) {
                     break Label_0562;
                 }
@@ -278,7 +286,7 @@ class o implements Runnable
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
@@ -295,7 +303,8 @@ class o implements Runnable
         final int n22 = n23 = (length6 = charArray6.length);
         int n24 = 0;
         while (true) {
-            Label_0678: {
+            Label_0678:
+            {
                 if (n22 > 1) {
                     break Label_0678;
                 }
@@ -325,7 +334,7 @@ class o implements Runnable
                             break;
                         }
                     }
-                    charArray6[length6] = (char)(c11 ^ c12);
+                    charArray6[length6] = (char) (c11 ^ c12);
                     ++n24;
                 } while (n22 == 0);
             }
@@ -342,7 +351,8 @@ class o implements Runnable
         final int n26 = n27 = (length7 = charArray7.length);
         int n28 = 0;
         while (true) {
-            Label_0798: {
+            Label_0798:
+            {
                 if (n26 > 1) {
                     break Label_0798;
                 }
@@ -372,14 +382,14 @@ class o implements Runnable
                             break;
                         }
                     }
-                    charArray7[length7] = (char)(c13 ^ c14);
+                    charArray7[length7] = (char) (c13 ^ c14);
                     ++n28;
                 } while (n26 == 0);
             }
             if (n26 <= n28) {
                 z2[n25] = new String(charArray7).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

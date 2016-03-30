@@ -1,14 +1,17 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.a.a;
 
 import com.avocent.kvm.b.d.a;
 
-public class s extends h
-{
+public class s extends h {
+
     protected int j;
     protected String k;
     protected String l;
     private static final String z;
-    
+
     public s(final int j, final String k) {
         super(800);
         this.j = 0;
@@ -16,23 +19,26 @@ public class s extends h
         this.k = k;
         this.e = 12 + this.k.length();
     }
-    
+
+    @Override
     public void a(final byte[] array, final byte[] array2) {
     }
-    
+
+    @Override
     public String e() {
         return this.l + "(" + this.k + ")";
     }
-    
+
+    @Override
     public byte[] b() {
         final byte[] array = new byte[4 + this.k.length()];
-        a.a(this.j, array, 0);
-        a.a(this.k.length(), array, 2);
-        a.a(this.k, array, 4, this.k.length());
+        com.avocent.kvm.b.d.a.a(this.j, array, 0);
+        com.avocent.kvm.b.d.a.a(this.k.length(), array, 2);
+        com.avocent.kvm.b.d.a.a(this.k, array, 4, this.k.length());
         System.out.println(s.z);
         return array;
     }
-    
+
     static {
         final char[] charArray = "g\u000fe\u001e4UJ-\u001a4UD".toCharArray();
         int length;
@@ -40,7 +46,8 @@ public class s extends h
         final int n = n2 = (length = charArray.length);
         int n3 = 0;
         while (true) {
-            Label_0094: {
+            Label_0094:
+            {
                 if (n > 1) {
                     break Label_0094;
                 }
@@ -70,13 +77,13 @@ public class s extends h
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n3;
                 } while (n == 0);
             }
             if (n <= n3) {
                 z = new String(charArray).intern();
-                return;
+                break;
             }
             continue;
         }

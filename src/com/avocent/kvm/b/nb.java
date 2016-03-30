@@ -1,10 +1,13 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.b;
 
 import java.text.DecimalFormat;
 import java.util.Properties;
 
-public class nb extends Properties
-{
+public class nb extends Properties {
+
     protected Properties a;
     protected DecimalFormat b;
     protected DecimalFormat c;
@@ -19,56 +22,55 @@ public class nb extends Properties
     protected String l;
     protected String m;
     private static final String[] z;
-    
+
     public nb() {
-        super();
         this.a = new Properties();
         this.b = new DecimalFormat(nb.z[1]);
         this.c = new DecimalFormat(nb.z[1]);
         this.d = new DecimalFormat(nb.z[1]);
         this.e = new DecimalFormat(nb.z[1]);
     }
-    
+
     public void a(final Double f) {
         this.f = f;
-        this.j = this.b.format((double)this.f);
+        this.j = this.b.format((double) this.f);
         this.setProperty(nb.z[0], this.j);
     }
-    
+
     public void b(final Double g) {
         this.g = g;
         this.k = this.c.format(this.g / 1024.0);
         this.setProperty(nb.z[2], this.k);
     }
-    
+
     public void c(final Double h) {
         this.h = h;
-        this.l = this.d.format((double)this.h);
+        this.l = this.d.format((double) this.h);
         this.setProperty(nb.z[3], this.l);
     }
-    
+
     public void d(final Double i) {
         this.i = i;
-        this.m = this.e.format((double)this.i);
+        this.m = this.e.format((double) this.i);
         this.setProperty(nb.z[4], this.m);
     }
-    
+
     public String a() {
         return this.j;
     }
-    
+
     public String b() {
         return this.k;
     }
-    
+
     public String c() {
         return this.l;
     }
-    
+
     public String d() {
         return this.m;
     }
-    
+
     static {
         final String[] z2 = new String[5];
         final int n = 0;
@@ -78,7 +80,8 @@ public class nb extends Properties
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0096: {
+            Label_0096:
+            {
                 if (n2 > 1) {
                     break Label_0096;
                 }
@@ -108,7 +111,7 @@ public class nb extends Properties
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -125,7 +128,8 @@ public class nb extends Properties
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0212: {
+            Label_0212:
+            {
                 if (n6 > 1) {
                     break Label_0212;
                 }
@@ -155,7 +159,7 @@ public class nb extends Properties
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -172,7 +176,8 @@ public class nb extends Properties
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0328: {
+            Label_0328:
+            {
                 if (n10 > 1) {
                     break Label_0328;
                 }
@@ -202,7 +207,7 @@ public class nb extends Properties
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -219,7 +224,8 @@ public class nb extends Properties
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0444: {
+            Label_0444:
+            {
                 if (n14 > 1) {
                     break Label_0444;
                 }
@@ -249,7 +255,7 @@ public class nb extends Properties
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -266,7 +272,8 @@ public class nb extends Properties
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0560: {
+            Label_0560:
+            {
                 if (n18 > 1) {
                     break Label_0560;
                 }
@@ -296,14 +303,14 @@ public class nb extends Properties
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
             if (n18 <= n20) {
                 z2[n17] = new String(charArray5).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

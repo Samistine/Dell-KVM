@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.b;
 
 import java.awt.Rectangle;
@@ -9,15 +12,15 @@ import java.awt.image.ImageObserver;
 import java.awt.Graphics2D;
 import java.awt.image.VolatileImage;
 
-public class pb extends ob
-{
+public class pb extends ob {
+
     VolatileImage H;
-    
+
     public pb(final String s) {
         super(s);
         this.i();
     }
-    
+
     private int c(final int n, final int n2, final int n3, final int n4) {
         final GraphicsConfiguration graphicsConfiguration = this.getGraphicsConfiguration();
         if (this.H == null) {
@@ -33,12 +36,13 @@ public class pb extends ob
                 return validate;
             }
         }
-        ((Graphics2D)this.H.getGraphics()).drawImage(this.b, n, n2, n + n3, n2 + n4, n, n2, n + n3, n2 + n4, this);
+        ((Graphics2D) this.H.getGraphics()).drawImage(this.b, n, n2, n + n3, n2 + n4, n, n2, n + n3, n2 + n4, this);
         return 0;
     }
-    
+
+    @Override
     public void paintComponent(final Graphics graphics) {
-        final boolean t = g.t;
+        final boolean t = com.avocent.kvm.b.g.t;
         final Rectangle clipBounds = graphics.getClipBounds();
         if (this.b == null) {
             final Color color = graphics.getColor();
@@ -56,18 +60,19 @@ public class pb extends ob
             if (this.H.validate(this.getGraphicsConfiguration()) == 2) {
                 this.H = null;
                 if (this.c(0, 0, this.d.c(), this.d.d()) == 2) {
-                    return;
+                    break;
                 }
             }
             graphics.drawImage(this.H, clipBounds.x, clipBounds.y, clipBounds.x + clipBounds.width, clipBounds.y + clipBounds.height, clipBounds.x, clipBounds.y, clipBounds.x + clipBounds.width, clipBounds.y + clipBounds.height, this);
         } while (this.H.contentsLost());
     }
-    
+
+    @Override
     void b(final int n, final int n2, final int n3, final int n4) {
         this.a.newPixels(n, n2, n3, n4);
         this.c(n, n2, n3, n4);
     }
-    
+
     void i() {
         final GraphicsConfiguration graphicsConfiguration = this.getGraphicsConfiguration();
         if (graphicsConfiguration != null) {

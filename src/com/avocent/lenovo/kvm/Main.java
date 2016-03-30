@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.lenovo.kvm;
 
 import com.avocent.kvm.b.f.e;
@@ -5,10 +8,10 @@ import com.avocent.a.a.s;
 import com.avocent.a.d;
 import com.avocent.kvm.b.f.b;
 
-public class Main
-{
+public class Main {
+
     private static final String z;
-    
+
     void a(final String[] array) throws Exception {
         final e a = b.a();
         final f f = new f();
@@ -19,25 +22,25 @@ public class Main
         c.a(f, d, array);
         c.f();
     }
-    
+
     public static void main(final String[] array) {
         try {
             new Main().a(array);
-        }
-        catch (Throwable t) {
+        } catch (Throwable t) {
             t.printStackTrace();
             System.exit(1);
         }
     }
-    
+
     static {
         final char[] charArray = "\u0004e26\u0002\u0011e<}\r\u0013$3}\r\b|06\b\u0011gqJ\u0006\u0014".toCharArray();
-        int length;
+        int length = charArray.length;
         int n2;
-        final int n = n2 = (length = charArray.length);
+        int n = n2 = length;
         int n3 = 0;
         while (true) {
-            Label_0094: {
+            Label_0094:
+            {
                 if (n > 1) {
                     break Label_0094;
                 }
@@ -67,15 +70,14 @@ public class Main
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n3;
                 } while (n == 0);
             }
             if (n <= n3) {
                 z = new String(charArray).intern();
-                return;
+                break;
             }
-            continue;
         }
     }
 }

@@ -1,38 +1,44 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.a.a;
 
-public class x extends h
-{
+public class x extends h {
+
     boolean j;
     int k;
     private static final String z;
-    
+
     public x(final boolean j) {
         super(782);
         this.k = 1;
         this.j = j;
         this.e = 16;
     }
-    
+
     public x() {
         super(782);
         this.k = 1;
         this.e = 16;
     }
-    
+
+    @Override
     public void a(final byte[] array, final byte[] array2) {
         this.j = (array2[0] > 0);
     }
-    
+
+    @Override
     public String e() {
         return x.z;
     }
-    
+
+    @Override
     public byte[] b() {
         final byte[] array = new byte[8];
-        array[0] = (byte)(this.j ? 1 : 0);
+        array[0] = (byte) (this.j ? 1 : 0);
         return array;
     }
-    
+
     static {
         final char[] charArray = "\u001b kG_m\faCR!,/pU<<jQD".toCharArray();
         int length;
@@ -40,7 +46,8 @@ public class x extends h
         final int n = n2 = (length = charArray.length);
         int n3 = 0;
         while (true) {
-            Label_0094: {
+            Label_0094:
+            {
                 if (n > 1) {
                     break Label_0094;
                 }
@@ -70,13 +77,13 @@ public class x extends h
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n3;
                 } while (n == 0);
             }
             if (n <= n3) {
                 z = new String(charArray).intern();
-                return;
+                break;
             }
             continue;
         }

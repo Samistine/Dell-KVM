@@ -1,78 +1,80 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.b.c;
 
-import com.avocent.kvm.b.d.a;
 import com.avocent.kvm.b.f.f;
 import java.util.Hashtable;
 import java.util.Locale;
 import java.awt.Component;
 
-public class c implements a
-{
+public class c implements a {
+
     protected Component a;
     protected Locale b;
     protected Hashtable c;
     protected Locale d;
     public static boolean e;
     private static final String[] z;
-    
+
     public c(final Component a) {
-        final boolean e = c.e;
-        super();
+        final boolean e = com.avocent.kvm.b.c.c.e;
         this.d = null;
         this.a = a;
-        final String property = System.getProperty(c.z[9]);
-        Label_0335: {
+        final String property = System.getProperty(com.avocent.kvm.b.c.c.z[9]);
+        Label_0335:
+        {
             if (property != null) {
-                if (property.equalsIgnoreCase(c.z[3])) {
-                    this.d = new Locale(c.z[16], c.z[8]);
+                if (property.equalsIgnoreCase(com.avocent.kvm.b.c.c.z[3])) {
+                    this.d = new Locale(com.avocent.kvm.b.c.c.z[16], com.avocent.kvm.b.c.c.z[8]);
                     if (!e) {
                         break Label_0335;
                     }
                 }
-                if (property.equalsIgnoreCase(c.z[1])) {
-                    this.d = new Locale(c.z[7], c.z[5]);
+                if (property.equalsIgnoreCase(com.avocent.kvm.b.c.c.z[1])) {
+                    this.d = new Locale(com.avocent.kvm.b.c.c.z[7], com.avocent.kvm.b.c.c.z[5]);
                     if (!e) {
                         break Label_0335;
                     }
                 }
-                if (property.equalsIgnoreCase(c.z[2])) {
-                    this.d = new Locale(c.z[15], c.z[11]);
+                if (property.equalsIgnoreCase(com.avocent.kvm.b.c.c.z[2])) {
+                    this.d = new Locale(com.avocent.kvm.b.c.c.z[15], com.avocent.kvm.b.c.c.z[11]);
                     if (!e) {
                         break Label_0335;
                     }
                 }
-                if (property.equalsIgnoreCase(c.z[0])) {
-                    this.d = new Locale(c.z[18], c.z[19]);
+                if (property.equalsIgnoreCase(com.avocent.kvm.b.c.c.z[0])) {
+                    this.d = new Locale(com.avocent.kvm.b.c.c.z[18], com.avocent.kvm.b.c.c.z[19]);
                     if (!e) {
                         break Label_0335;
                     }
                 }
-                if (property.equalsIgnoreCase(c.z[4])) {
-                    this.d = new Locale(c.z[10], c.z[17]);
+                if (property.equalsIgnoreCase(com.avocent.kvm.b.c.c.z[4])) {
+                    this.d = new Locale(com.avocent.kvm.b.c.c.z[10], com.avocent.kvm.b.c.c.z[17]);
                     if (!e) {
                         break Label_0335;
                     }
                 }
-                if (property.equalsIgnoreCase(c.z[6])) {
-                    this.d = new Locale(c.z[20], c.z[14]);
+                if (property.equalsIgnoreCase(com.avocent.kvm.b.c.c.z[6])) {
+                    this.d = new Locale(com.avocent.kvm.b.c.c.z[20], com.avocent.kvm.b.c.c.z[14]);
                     if (!e) {
                         break Label_0335;
                     }
                 }
-                f.c().a(c.z[12] + property + c.z[13]);
+                f.c().a(com.avocent.kvm.b.c.c.z[12] + property + com.avocent.kvm.b.c.c.z[13]);
                 if (!e) {
                     break Label_0335;
                 }
             }
             if (a == null) {
-                this.d = new Locale(c.z[16], c.z[8]);
+                this.d = new Locale(com.avocent.kvm.b.c.c.z[16], com.avocent.kvm.b.c.c.z[8]);
             }
         }
-        if (a.c != 0) {
-            c.e = !e;
+        if (com.avocent.kvm.b.d.a.c != 0) {
+            com.avocent.kvm.b.c.c.e = !e;
         }
     }
-    
+
     public int a(final int n, final char c, final int n2) {
         final boolean e = c.e;
         final Locale b = (this.d != null) ? this.d : this.a.getInputContext().getLocale();
@@ -81,45 +83,47 @@ public class c implements a
         }
         if (this.b != b) {
             final String iso3Language = b.getISO3Language();
-            Label_0186: {
+            Label_0186:
+            {
                 if (iso3Language.equalsIgnoreCase(c.z[3])) {
-                    this.c = d.i;
+                    this.c = com.avocent.kvm.b.c.d.i;
                     if (!e) {
                         break Label_0186;
                     }
                 }
                 if (iso3Language.equalsIgnoreCase(c.z[0])) {
-                    this.c = d.c;
+                    this.c = com.avocent.kvm.b.c.d.c;
                     if (!e) {
                         break Label_0186;
                     }
                 }
                 if (iso3Language.equalsIgnoreCase(c.z[2])) {
-                    this.c = d.g;
+                    this.c = com.avocent.kvm.b.c.d.g;
                     if (!e) {
                         break Label_0186;
                     }
                 }
                 if (iso3Language.equalsIgnoreCase(c.z[4])) {
-                    this.c = d.a;
+                    this.c = com.avocent.kvm.b.c.d.a;
                     if (!e) {
                         break Label_0186;
                     }
                 }
                 if (iso3Language.equalsIgnoreCase(c.z[1])) {
-                    this.c = d.e;
+                    this.c = com.avocent.kvm.b.c.d.e;
                     if (!e) {
                         break Label_0186;
                     }
                 }
-                this.c = d.i;
+                this.c = com.avocent.kvm.b.c.d.i;
             }
             this.b = b;
         }
         final Integer value = this.c.get(new b(n, c, n2));
         int n3 = (value != null) ? value : 0;
         if (n3 == 0) {
-            Label_0714: {
+            Label_0714:
+            {
                 switch (n) {
                     case 414865: {
                         n3 = 102;
@@ -312,18 +316,18 @@ public class c implements a
         }
         return n3;
     }
-    
+
     public int b(final int n, final char c, final int n2) {
         final boolean e = c.e;
-        final Integer value = d.k.get(new b(n, c, n2));
-        final int n3 = (value != null) ? ((int)value) : c;
+        final Integer value = com.avocent.kvm.b.c.d.k.get(new b(n, c, n2));
+        final int n3 = (value != null) ? ((int) value) : c;
         if (e) {
-            int c2 = a.c;
-            a.c = ++c2;
+            int c2 = com.avocent.kvm.b.d.a.c;
+            com.avocent.kvm.b.d.a.c = ++c2;
         }
         return n3;
     }
-    
+
     static {
         final String[] z2 = new String[21];
         final int n = 0;
@@ -333,7 +337,8 @@ public class c implements a
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -363,7 +368,7 @@ public class c implements a
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -380,7 +385,8 @@ public class c implements a
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -410,7 +416,7 @@ public class c implements a
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -427,7 +433,8 @@ public class c implements a
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -457,7 +464,7 @@ public class c implements a
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -474,7 +481,8 @@ public class c implements a
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0446: {
+            Label_0446:
+            {
                 if (n14 > 1) {
                     break Label_0446;
                 }
@@ -504,7 +512,7 @@ public class c implements a
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -521,7 +529,8 @@ public class c implements a
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0562: {
+            Label_0562:
+            {
                 if (n18 > 1) {
                     break Label_0562;
                 }
@@ -551,7 +560,7 @@ public class c implements a
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
@@ -568,7 +577,8 @@ public class c implements a
         final int n22 = n23 = (length6 = charArray6.length);
         int n24 = 0;
         while (true) {
-            Label_0678: {
+            Label_0678:
+            {
                 if (n22 > 1) {
                     break Label_0678;
                 }
@@ -598,7 +608,7 @@ public class c implements a
                             break;
                         }
                     }
-                    charArray6[length6] = (char)(c11 ^ c12);
+                    charArray6[length6] = (char) (c11 ^ c12);
                     ++n24;
                 } while (n22 == 0);
             }
@@ -615,7 +625,8 @@ public class c implements a
         final int n26 = n27 = (length7 = charArray7.length);
         int n28 = 0;
         while (true) {
-            Label_0798: {
+            Label_0798:
+            {
                 if (n26 > 1) {
                     break Label_0798;
                 }
@@ -645,7 +656,7 @@ public class c implements a
                             break;
                         }
                     }
-                    charArray7[length7] = (char)(c13 ^ c14);
+                    charArray7[length7] = (char) (c13 ^ c14);
                     ++n28;
                 } while (n26 == 0);
             }
@@ -662,7 +673,8 @@ public class c implements a
         final int n30 = n31 = (length8 = charArray8.length);
         int n32 = 0;
         while (true) {
-            Label_0918: {
+            Label_0918:
+            {
                 if (n30 > 1) {
                     break Label_0918;
                 }
@@ -692,7 +704,7 @@ public class c implements a
                             break;
                         }
                     }
-                    charArray8[length8] = (char)(c15 ^ c16);
+                    charArray8[length8] = (char) (c15 ^ c16);
                     ++n32;
                 } while (n30 == 0);
             }
@@ -709,7 +721,8 @@ public class c implements a
         final int n34 = n35 = (length9 = charArray9.length);
         int n36 = 0;
         while (true) {
-            Label_1038: {
+            Label_1038:
+            {
                 if (n34 > 1) {
                     break Label_1038;
                 }
@@ -739,7 +752,7 @@ public class c implements a
                             break;
                         }
                     }
-                    charArray9[length9] = (char)(c17 ^ c18);
+                    charArray9[length9] = (char) (c17 ^ c18);
                     ++n36;
                 } while (n34 == 0);
             }
@@ -756,7 +769,8 @@ public class c implements a
         final int n38 = n39 = (length10 = charArray10.length);
         int n40 = 0;
         while (true) {
-            Label_1158: {
+            Label_1158:
+            {
                 if (n38 > 1) {
                     break Label_1158;
                 }
@@ -786,7 +800,7 @@ public class c implements a
                             break;
                         }
                     }
-                    charArray10[length10] = (char)(c19 ^ c20);
+                    charArray10[length10] = (char) (c19 ^ c20);
                     ++n40;
                 } while (n38 == 0);
             }
@@ -803,7 +817,8 @@ public class c implements a
         final int n42 = n43 = (length11 = charArray11.length);
         int n44 = 0;
         while (true) {
-            Label_1278: {
+            Label_1278:
+            {
                 if (n42 > 1) {
                     break Label_1278;
                 }
@@ -833,7 +848,7 @@ public class c implements a
                             break;
                         }
                     }
-                    charArray11[length11] = (char)(c21 ^ c22);
+                    charArray11[length11] = (char) (c21 ^ c22);
                     ++n44;
                 } while (n42 == 0);
             }
@@ -850,7 +865,8 @@ public class c implements a
         final int n46 = n47 = (length12 = charArray12.length);
         int n48 = 0;
         while (true) {
-            Label_1398: {
+            Label_1398:
+            {
                 if (n46 > 1) {
                     break Label_1398;
                 }
@@ -880,7 +896,7 @@ public class c implements a
                             break;
                         }
                     }
-                    charArray12[length12] = (char)(c23 ^ c24);
+                    charArray12[length12] = (char) (c23 ^ c24);
                     ++n48;
                 } while (n46 == 0);
             }
@@ -897,7 +913,8 @@ public class c implements a
         final int n50 = n51 = (length13 = charArray13.length);
         int n52 = 0;
         while (true) {
-            Label_1518: {
+            Label_1518:
+            {
                 if (n50 > 1) {
                     break Label_1518;
                 }
@@ -927,7 +944,7 @@ public class c implements a
                             break;
                         }
                     }
-                    charArray13[length13] = (char)(c25 ^ c26);
+                    charArray13[length13] = (char) (c25 ^ c26);
                     ++n52;
                 } while (n50 == 0);
             }
@@ -944,7 +961,8 @@ public class c implements a
         final int n54 = n55 = (length14 = charArray14.length);
         int n56 = 0;
         while (true) {
-            Label_1638: {
+            Label_1638:
+            {
                 if (n54 > 1) {
                     break Label_1638;
                 }
@@ -974,7 +992,7 @@ public class c implements a
                             break;
                         }
                     }
-                    charArray14[length14] = (char)(c27 ^ c28);
+                    charArray14[length14] = (char) (c27 ^ c28);
                     ++n56;
                 } while (n54 == 0);
             }
@@ -991,7 +1009,8 @@ public class c implements a
         final int n58 = n59 = (length15 = charArray15.length);
         int n60 = 0;
         while (true) {
-            Label_1758: {
+            Label_1758:
+            {
                 if (n58 > 1) {
                     break Label_1758;
                 }
@@ -1021,7 +1040,7 @@ public class c implements a
                             break;
                         }
                     }
-                    charArray15[length15] = (char)(c29 ^ c30);
+                    charArray15[length15] = (char) (c29 ^ c30);
                     ++n60;
                 } while (n58 == 0);
             }
@@ -1038,7 +1057,8 @@ public class c implements a
         final int n62 = n63 = (length16 = charArray16.length);
         int n64 = 0;
         while (true) {
-            Label_1878: {
+            Label_1878:
+            {
                 if (n62 > 1) {
                     break Label_1878;
                 }
@@ -1068,7 +1088,7 @@ public class c implements a
                             break;
                         }
                     }
-                    charArray16[length16] = (char)(c31 ^ c32);
+                    charArray16[length16] = (char) (c31 ^ c32);
                     ++n64;
                 } while (n62 == 0);
             }
@@ -1085,7 +1105,8 @@ public class c implements a
         final int n66 = n67 = (length17 = charArray17.length);
         int n68 = 0;
         while (true) {
-            Label_1998: {
+            Label_1998:
+            {
                 if (n66 > 1) {
                     break Label_1998;
                 }
@@ -1115,7 +1136,7 @@ public class c implements a
                             break;
                         }
                     }
-                    charArray17[length17] = (char)(c33 ^ c34);
+                    charArray17[length17] = (char) (c33 ^ c34);
                     ++n68;
                 } while (n66 == 0);
             }
@@ -1132,7 +1153,8 @@ public class c implements a
         final int n70 = n71 = (length18 = charArray18.length);
         int n72 = 0;
         while (true) {
-            Label_2118: {
+            Label_2118:
+            {
                 if (n70 > 1) {
                     break Label_2118;
                 }
@@ -1162,7 +1184,7 @@ public class c implements a
                             break;
                         }
                     }
-                    charArray18[length18] = (char)(c35 ^ c36);
+                    charArray18[length18] = (char) (c35 ^ c36);
                     ++n72;
                 } while (n70 == 0);
             }
@@ -1179,7 +1201,8 @@ public class c implements a
         final int n74 = n75 = (length19 = charArray19.length);
         int n76 = 0;
         while (true) {
-            Label_2238: {
+            Label_2238:
+            {
                 if (n74 > 1) {
                     break Label_2238;
                 }
@@ -1209,7 +1232,7 @@ public class c implements a
                             break;
                         }
                     }
-                    charArray19[length19] = (char)(c37 ^ c38);
+                    charArray19[length19] = (char) (c37 ^ c38);
                     ++n76;
                 } while (n74 == 0);
             }
@@ -1226,7 +1249,8 @@ public class c implements a
         final int n78 = n79 = (length20 = charArray20.length);
         int n80 = 0;
         while (true) {
-            Label_2358: {
+            Label_2358:
+            {
                 if (n78 > 1) {
                     break Label_2358;
                 }
@@ -1256,7 +1280,7 @@ public class c implements a
                             break;
                         }
                     }
-                    charArray20[length20] = (char)(c39 ^ c40);
+                    charArray20[length20] = (char) (c39 ^ c40);
                     ++n80;
                 } while (n78 == 0);
             }
@@ -1273,7 +1297,8 @@ public class c implements a
         final int n82 = n83 = (length21 = charArray21.length);
         int n84 = 0;
         while (true) {
-            Label_2478: {
+            Label_2478:
+            {
                 if (n82 > 1) {
                     break Label_2478;
                 }
@@ -1303,14 +1328,14 @@ public class c implements a
                             break;
                         }
                     }
-                    charArray21[length21] = (char)(c41 ^ c42);
+                    charArray21[length21] = (char) (c41 ^ c42);
                     ++n84;
                 } while (n82 == 0);
             }
             if (n82 <= n84) {
                 z2[n81] = new String(charArray21).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

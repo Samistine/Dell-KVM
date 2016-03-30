@@ -1,6 +1,8 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.a.a;
 
-import com.avocent.kvm.b.gb;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.io.EOFException;
@@ -11,22 +13,21 @@ import java.io.OutputStream;
 import java.io.DataInputStream;
 import com.avocent.kvm.a.l;
 
-public class a
-{
+public class a {
+
     protected byte[] a;
     protected byte[] b;
     protected int c;
     protected l d;
     private static final String[] z;
-    
+
     public a(final l d) {
-        super();
         this.a = new byte[8];
         this.b = new byte[1024];
         this.c = 1;
         this.d = d;
     }
-    
+
     public c a(final DataInputStream dataInputStream, final OutputStream outputStream, final boolean b) throws IOException {
         final int h = b.h;
         c a = null;
@@ -38,12 +39,13 @@ public class a
                     if (long1 <= 1000L) {
                         Thread.sleep(long1);
                     }
+                } catch (InterruptedException ex2) {
                 }
-                catch (InterruptedException ex2) {}
             }
             dataInputStream.readFully(this.a);
             n = (b ? ((this.a[4] & 0xFF) << 8 | (this.a[5] & 0xFF)) : (this.a[5] & 0xFF));
-            Label_0172: {
+            Label_0172:
+            {
                 if (this.d.y) {
                     if ((this.a[5] & 0xFF) == 0x8600) {
                         n = 34304;
@@ -62,12 +64,12 @@ public class a
                     }
                 }
             }
-            final int b2 = a.b(this.a, 6);
+            final int b2 = com.avocent.kvm.b.d.a.b(this.a, 6);
             if (b2 < 16) {
-                throw new IOException(a.z[7] + b2 + a.z[2]);
+                throw new IOException(com.avocent.kvm.a.a.a.z[7] + b2 + com.avocent.kvm.a.a.a.z[2]);
             }
             if (b2 > 15000) {
-                throw new IOException(a.z[10] + b2);
+                throw new IOException(com.avocent.kvm.a.a.a.z[10] + b2);
             }
             final int n2 = b2 - 8;
             if (this.b.length < n2) {
@@ -78,11 +80,11 @@ public class a
             while (i < n2) {
                 final int read = dataInputStream.read(this.b, i, n2 - i);
                 if (read < 0) {
-                    throw new EOFException(a.z[8]);
+                    throw new EOFException(com.avocent.kvm.a.a.a.z[8]);
                 }
                 i += read;
                 if (System.currentTimeMillis() - currentTimeMillis > 3000L) {
-                    System.out.println(a.z[11] + n2 + a.z[12] + (i + 1));
+                    System.out.println(com.avocent.kvm.a.a.a.z[11] + n2 + com.avocent.kvm.a.a.a.z[12] + (i + 1));
                     a = new gb();
                     return a;
                 }
@@ -99,21 +101,20 @@ public class a
                 }
             }
             if (n != 134) {
-                System.out.println(a.z[4] + n);
+                System.out.println(com.avocent.kvm.a.a.a.z[4] + n);
             }
             a = this.a(n);
             if (a != null) {
                 a.a(this.a, this.b, n2);
             }
-        }
-        catch (IOException ex) {
-            System.out.println(a.z[6] + new SimpleDateFormat(a.z[9]).format(new Date()).toString());
-            System.out.println(a.z[5] + n);
-            System.out.println(a.z[6] + ex.toString());
+        } catch (IOException ex) {
+            System.out.println(com.avocent.kvm.a.a.a.z[6] + new SimpleDateFormat(com.avocent.kvm.a.a.a.z[9]).format(new Date()).toString());
+            System.out.println(com.avocent.kvm.a.a.a.z[5] + n);
+            System.out.println(com.avocent.kvm.a.a.a.z[6] + ex.toString());
         }
         return a;
     }
-    
+
     public c a(final int n) {
         c d = null;
         switch (n) {
@@ -143,7 +144,7 @@ public class a
                 break;
             }
             case 34309: {
-                System.out.println(a.z[3]);
+                System.out.println(com.avocent.kvm.a.a.a.z[3]);
                 d = new r(n);
                 break;
             }
@@ -192,7 +193,7 @@ public class a
             case 34307:
             case 34310: {
                 d = this.d.b().d();
-                ((gb)d).a(n);
+                ((com.avocent.kvm.b.gb) d).a(n);
                 break;
             }
             case 132: {
@@ -244,7 +245,7 @@ public class a
                 break;
             }
             case 33840: {
-                d = new c();
+                d = new com.avocent.kvm.a.a.c();
                 break;
             }
             case 33841: {
@@ -264,14 +265,14 @@ public class a
                 break;
             }
             default: {
-                System.out.println(a.z[1] + Integer.toHexString(n) + a.z[0] + Integer.toHexString(n) + a.z[2]);
+                System.out.println(com.avocent.kvm.a.a.a.z[1] + Integer.toHexString(n) + com.avocent.kvm.a.a.a.z[0] + Integer.toHexString(n) + com.avocent.kvm.a.a.a.z[2]);
                 d = new gb();
                 break;
             }
         }
         return d;
     }
-    
+
     static {
         final String[] z2 = new String[13];
         final int n = 0;
@@ -281,7 +282,8 @@ public class a
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0097: {
+            Label_0097:
+            {
                 if (n2 > 1) {
                     break Label_0097;
                 }
@@ -311,7 +313,7 @@ public class a
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -328,7 +330,8 @@ public class a
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0213: {
+            Label_0213:
+            {
                 if (n6 > 1) {
                     break Label_0213;
                 }
@@ -358,7 +361,7 @@ public class a
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -375,7 +378,8 @@ public class a
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0329: {
+            Label_0329:
+            {
                 if (n10 > 1) {
                     break Label_0329;
                 }
@@ -405,7 +409,7 @@ public class a
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -422,7 +426,8 @@ public class a
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0445: {
+            Label_0445:
+            {
                 if (n14 > 1) {
                     break Label_0445;
                 }
@@ -452,7 +457,7 @@ public class a
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -469,7 +474,8 @@ public class a
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0561: {
+            Label_0561:
+            {
                 if (n18 > 1) {
                     break Label_0561;
                 }
@@ -499,7 +505,7 @@ public class a
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
@@ -516,7 +522,8 @@ public class a
         final int n22 = n23 = (length6 = charArray6.length);
         int n24 = 0;
         while (true) {
-            Label_0677: {
+            Label_0677:
+            {
                 if (n22 > 1) {
                     break Label_0677;
                 }
@@ -546,7 +553,7 @@ public class a
                             break;
                         }
                     }
-                    charArray6[length6] = (char)(c11 ^ c12);
+                    charArray6[length6] = (char) (c11 ^ c12);
                     ++n24;
                 } while (n22 == 0);
             }
@@ -563,7 +570,8 @@ public class a
         final int n26 = n27 = (length7 = charArray7.length);
         int n28 = 0;
         while (true) {
-            Label_0793: {
+            Label_0793:
+            {
                 if (n26 > 1) {
                     break Label_0793;
                 }
@@ -593,7 +601,7 @@ public class a
                             break;
                         }
                     }
-                    charArray7[length7] = (char)(c13 ^ c14);
+                    charArray7[length7] = (char) (c13 ^ c14);
                     ++n28;
                 } while (n26 == 0);
             }
@@ -610,7 +618,8 @@ public class a
         final int n30 = n31 = (length8 = charArray8.length);
         int n32 = 0;
         while (true) {
-            Label_0909: {
+            Label_0909:
+            {
                 if (n30 > 1) {
                     break Label_0909;
                 }
@@ -640,7 +649,7 @@ public class a
                             break;
                         }
                     }
-                    charArray8[length8] = (char)(c15 ^ c16);
+                    charArray8[length8] = (char) (c15 ^ c16);
                     ++n32;
                 } while (n30 == 0);
             }
@@ -657,7 +666,8 @@ public class a
         final int n34 = n35 = (length9 = charArray9.length);
         int n36 = 0;
         while (true) {
-            Label_1025: {
+            Label_1025:
+            {
                 if (n34 > 1) {
                     break Label_1025;
                 }
@@ -687,7 +697,7 @@ public class a
                             break;
                         }
                     }
-                    charArray9[length9] = (char)(c17 ^ c18);
+                    charArray9[length9] = (char) (c17 ^ c18);
                     ++n36;
                 } while (n34 == 0);
             }
@@ -704,7 +714,8 @@ public class a
         final int n38 = n39 = (length10 = charArray10.length);
         int n40 = 0;
         while (true) {
-            Label_1141: {
+            Label_1141:
+            {
                 if (n38 > 1) {
                     break Label_1141;
                 }
@@ -734,7 +745,7 @@ public class a
                             break;
                         }
                     }
-                    charArray10[length10] = (char)(c19 ^ c20);
+                    charArray10[length10] = (char) (c19 ^ c20);
                     ++n40;
                 } while (n38 == 0);
             }
@@ -751,7 +762,8 @@ public class a
         final int n42 = n43 = (length11 = charArray11.length);
         int n44 = 0;
         while (true) {
-            Label_1257: {
+            Label_1257:
+            {
                 if (n42 > 1) {
                     break Label_1257;
                 }
@@ -781,7 +793,7 @@ public class a
                             break;
                         }
                     }
-                    charArray11[length11] = (char)(c21 ^ c22);
+                    charArray11[length11] = (char) (c21 ^ c22);
                     ++n44;
                 } while (n42 == 0);
             }
@@ -798,7 +810,8 @@ public class a
         final int n46 = n47 = (length12 = charArray12.length);
         int n48 = 0;
         while (true) {
-            Label_1373: {
+            Label_1373:
+            {
                 if (n46 > 1) {
                     break Label_1373;
                 }
@@ -828,7 +841,7 @@ public class a
                             break;
                         }
                     }
-                    charArray12[length12] = (char)(c23 ^ c24);
+                    charArray12[length12] = (char) (c23 ^ c24);
                     ++n48;
                 } while (n46 == 0);
             }
@@ -845,7 +858,8 @@ public class a
         final int n50 = n51 = (length13 = charArray13.length);
         int n52 = 0;
         while (true) {
-            Label_1489: {
+            Label_1489:
+            {
                 if (n50 > 1) {
                     break Label_1489;
                 }
@@ -875,14 +889,14 @@ public class a
                             break;
                         }
                     }
-                    charArray13[length13] = (char)(c25 ^ c26);
+                    charArray13[length13] = (char) (c25 ^ c26);
                     ++n52;
                 } while (n50 == 0);
             }
             if (n50 <= n52) {
                 z2[n49] = new String(charArray13).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

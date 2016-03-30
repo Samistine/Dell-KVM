@@ -1,9 +1,11 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.a.b;
 
 import java.awt.Component;
 import java.awt.LayoutManager;
 import java.awt.GridBagLayout;
-import com.avocent.a.d;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.JScrollPane;
@@ -15,8 +17,8 @@ import javax.swing.JMenuItem;
 import com.avocent.a.a.i;
 import javax.swing.JFrame;
 
-public class d extends JFrame
-{
+public class d extends JFrame {
+
     protected i a;
     private JMenuItem b;
     private JMenuItem c;
@@ -36,24 +38,23 @@ public class d extends JFrame
     private JMenu q;
     private JMenuItem r;
     private static final String[] z;
-    
+
     public d(final i a) {
-        super();
         this.a = a;
         this.setUndecorated(true);
         this.a();
         this.setExtendedState(6);
         this.o.setBackground(Color.black);
         try {
-            this.setIconImage(new ImageIcon(i.class.getResource(d.z[14])).getImage());
+            this.setIconImage(new ImageIcon(i.class.getResource(com.avocent.a.a.b.d.z[14])).getImage());
+        } catch (Exception ex) {
         }
-        catch (Exception ex) {}
-        final String s = d.z[15];
+        final String s = com.avocent.a.a.b.d.z[15];
         this.a.d();
-        this.setTitle(a.b(s, d.b(d.z[16])).toString());
+        this.setTitle(a.b(s, com.avocent.a.d.b(com.avocent.a.a.b.d.z[16])).toString());
         this.b().add(a.p().c());
     }
-    
+
     private void a() {
         this.o = new JScrollPane();
         this.n = new JPanel();
@@ -78,73 +79,74 @@ public class d extends JFrame
         this.n.setLayout(new GridBagLayout());
         this.n.setBackground(new Color(0, 0, 0));
         this.o.setViewportView(this.n);
-        this.getContentPane().add(this.o, d.z[11]);
+        this.getContentPane().add(this.o, com.avocent.a.a.b.d.z[11]);
         final JMenu e = this.e;
         this.a.d();
-        e.setText(d.b(d.z[10]));
+        e.setText(com.avocent.a.d.b(com.avocent.a.a.b.d.z[10]));
         final JMenuItem b = this.b;
         this.a.d();
-        b.setText(d.b(d.z[13]));
+        b.setText(com.avocent.a.d.b(com.avocent.a.a.b.d.z[13]));
         this.e.add(this.b);
         final JMenuItem c = this.c;
         this.a.d();
-        c.setText(d.b(d.z[0]));
+        c.setText(com.avocent.a.d.b(com.avocent.a.a.b.d.z[0]));
         this.e.add(this.c);
         this.e.add(this.f);
         final JMenuItem d = this.d;
         this.a.d();
-        d.setText(d.b(d.z[12]));
+        d.setText(com.avocent.a.d.b(com.avocent.a.a.b.d.z[12]));
         this.e.add(this.d);
         this.k.add(this.e);
         final JMenu q = this.q;
         this.a.d();
-        q.setText(d.b(d.z[5]));
+        q.setText(com.avocent.a.d.b(com.avocent.a.a.b.d.z[5]));
         final JMenuItem r = this.r;
         this.a.d();
-        r.setText(d.b(d.z[1]));
+        r.setText(com.avocent.a.d.b(com.avocent.a.a.b.d.z[1]));
         this.q.add(this.r);
         final JMenuItem p = this.p;
         this.a.d();
-        p.setText(d.b(d.z[7]));
+        p.setText(com.avocent.a.d.b(com.avocent.a.a.b.d.z[7]));
         this.q.add(this.p);
         this.k.add(this.q);
         final JMenu j = this.j;
         this.a.d();
-        j.setText(d.b(d.z[8]));
+        j.setText(com.avocent.a.d.b(com.avocent.a.a.b.d.z[8]));
         this.k.add(this.j);
         final JMenu m = this.m;
         this.a.d();
-        m.setText(d.b(d.z[6]));
+        m.setText(com.avocent.a.d.b(com.avocent.a.a.b.d.z[6]));
         final JMenuItem l = this.l;
         this.a.d();
-        l.setText(d.b(d.z[2]));
+        l.setText(com.avocent.a.d.b(com.avocent.a.a.b.d.z[2]));
         this.m.add(this.l);
         this.k.add(this.m);
         final JMenu i = this.i;
         this.a.d();
-        i.setText(d.b(d.z[4]));
+        i.setText(com.avocent.a.d.b(com.avocent.a.a.b.d.z[4]));
         final JMenuItem h = this.h;
         this.a.d();
-        h.setText(d.b(d.z[3]));
+        h.setText(com.avocent.a.d.b(com.avocent.a.a.b.d.z[3]));
         this.i.add(this.h);
         final JMenuItem g = this.g;
         this.a.d();
-        g.setText(d.b(d.z[9]));
+        g.setText(com.avocent.a.d.b(com.avocent.a.a.b.d.z[9]));
         this.i.add(this.g);
         this.k.add(this.i);
         this.setJMenuBar(this.k);
         this.pack();
     }
-    
+
     public JPanel b() {
         return this.n;
     }
-    
+
+    @Override
     public void setVisible(final boolean visible) {
-        System.out.println(d.z[17] + visible);
+        System.out.println(com.avocent.a.a.b.d.z[17] + visible);
         super.setVisible(visible);
     }
-    
+
     static {
         final String[] z2 = new String[18];
         final int n = 0;
@@ -154,7 +156,8 @@ public class d extends JFrame
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -184,7 +187,7 @@ public class d extends JFrame
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -201,7 +204,8 @@ public class d extends JFrame
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -231,7 +235,7 @@ public class d extends JFrame
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -248,7 +252,8 @@ public class d extends JFrame
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -278,7 +283,7 @@ public class d extends JFrame
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -295,7 +300,8 @@ public class d extends JFrame
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0446: {
+            Label_0446:
+            {
                 if (n14 > 1) {
                     break Label_0446;
                 }
@@ -325,7 +331,7 @@ public class d extends JFrame
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -342,7 +348,8 @@ public class d extends JFrame
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0562: {
+            Label_0562:
+            {
                 if (n18 > 1) {
                     break Label_0562;
                 }
@@ -372,7 +379,7 @@ public class d extends JFrame
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
@@ -389,7 +396,8 @@ public class d extends JFrame
         final int n22 = n23 = (length6 = charArray6.length);
         int n24 = 0;
         while (true) {
-            Label_0678: {
+            Label_0678:
+            {
                 if (n22 > 1) {
                     break Label_0678;
                 }
@@ -419,7 +427,7 @@ public class d extends JFrame
                             break;
                         }
                     }
-                    charArray6[length6] = (char)(c11 ^ c12);
+                    charArray6[length6] = (char) (c11 ^ c12);
                     ++n24;
                 } while (n22 == 0);
             }
@@ -436,7 +444,8 @@ public class d extends JFrame
         final int n26 = n27 = (length7 = charArray7.length);
         int n28 = 0;
         while (true) {
-            Label_0798: {
+            Label_0798:
+            {
                 if (n26 > 1) {
                     break Label_0798;
                 }
@@ -466,7 +475,7 @@ public class d extends JFrame
                             break;
                         }
                     }
-                    charArray7[length7] = (char)(c13 ^ c14);
+                    charArray7[length7] = (char) (c13 ^ c14);
                     ++n28;
                 } while (n26 == 0);
             }
@@ -483,7 +492,8 @@ public class d extends JFrame
         final int n30 = n31 = (length8 = charArray8.length);
         int n32 = 0;
         while (true) {
-            Label_0918: {
+            Label_0918:
+            {
                 if (n30 > 1) {
                     break Label_0918;
                 }
@@ -513,7 +523,7 @@ public class d extends JFrame
                             break;
                         }
                     }
-                    charArray8[length8] = (char)(c15 ^ c16);
+                    charArray8[length8] = (char) (c15 ^ c16);
                     ++n32;
                 } while (n30 == 0);
             }
@@ -530,7 +540,8 @@ public class d extends JFrame
         final int n34 = n35 = (length9 = charArray9.length);
         int n36 = 0;
         while (true) {
-            Label_1038: {
+            Label_1038:
+            {
                 if (n34 > 1) {
                     break Label_1038;
                 }
@@ -560,7 +571,7 @@ public class d extends JFrame
                             break;
                         }
                     }
-                    charArray9[length9] = (char)(c17 ^ c18);
+                    charArray9[length9] = (char) (c17 ^ c18);
                     ++n36;
                 } while (n34 == 0);
             }
@@ -577,7 +588,8 @@ public class d extends JFrame
         final int n38 = n39 = (length10 = charArray10.length);
         int n40 = 0;
         while (true) {
-            Label_1158: {
+            Label_1158:
+            {
                 if (n38 > 1) {
                     break Label_1158;
                 }
@@ -607,7 +619,7 @@ public class d extends JFrame
                             break;
                         }
                     }
-                    charArray10[length10] = (char)(c19 ^ c20);
+                    charArray10[length10] = (char) (c19 ^ c20);
                     ++n40;
                 } while (n38 == 0);
             }
@@ -624,7 +636,8 @@ public class d extends JFrame
         final int n42 = n43 = (length11 = charArray11.length);
         int n44 = 0;
         while (true) {
-            Label_1278: {
+            Label_1278:
+            {
                 if (n42 > 1) {
                     break Label_1278;
                 }
@@ -654,7 +667,7 @@ public class d extends JFrame
                             break;
                         }
                     }
-                    charArray11[length11] = (char)(c21 ^ c22);
+                    charArray11[length11] = (char) (c21 ^ c22);
                     ++n44;
                 } while (n42 == 0);
             }
@@ -671,7 +684,8 @@ public class d extends JFrame
         final int n46 = n47 = (length12 = charArray12.length);
         int n48 = 0;
         while (true) {
-            Label_1398: {
+            Label_1398:
+            {
                 if (n46 > 1) {
                     break Label_1398;
                 }
@@ -701,7 +715,7 @@ public class d extends JFrame
                             break;
                         }
                     }
-                    charArray12[length12] = (char)(c23 ^ c24);
+                    charArray12[length12] = (char) (c23 ^ c24);
                     ++n48;
                 } while (n46 == 0);
             }
@@ -718,7 +732,8 @@ public class d extends JFrame
         final int n50 = n51 = (length13 = charArray13.length);
         int n52 = 0;
         while (true) {
-            Label_1518: {
+            Label_1518:
+            {
                 if (n50 > 1) {
                     break Label_1518;
                 }
@@ -748,7 +763,7 @@ public class d extends JFrame
                             break;
                         }
                     }
-                    charArray13[length13] = (char)(c25 ^ c26);
+                    charArray13[length13] = (char) (c25 ^ c26);
                     ++n52;
                 } while (n50 == 0);
             }
@@ -765,7 +780,8 @@ public class d extends JFrame
         final int n54 = n55 = (length14 = charArray14.length);
         int n56 = 0;
         while (true) {
-            Label_1638: {
+            Label_1638:
+            {
                 if (n54 > 1) {
                     break Label_1638;
                 }
@@ -795,7 +811,7 @@ public class d extends JFrame
                             break;
                         }
                     }
-                    charArray14[length14] = (char)(c27 ^ c28);
+                    charArray14[length14] = (char) (c27 ^ c28);
                     ++n56;
                 } while (n54 == 0);
             }
@@ -812,7 +828,8 @@ public class d extends JFrame
         final int n58 = n59 = (length15 = charArray15.length);
         int n60 = 0;
         while (true) {
-            Label_1758: {
+            Label_1758:
+            {
                 if (n58 > 1) {
                     break Label_1758;
                 }
@@ -842,7 +859,7 @@ public class d extends JFrame
                             break;
                         }
                     }
-                    charArray15[length15] = (char)(c29 ^ c30);
+                    charArray15[length15] = (char) (c29 ^ c30);
                     ++n60;
                 } while (n58 == 0);
             }
@@ -859,7 +876,8 @@ public class d extends JFrame
         final int n62 = n63 = (length16 = charArray16.length);
         int n64 = 0;
         while (true) {
-            Label_1878: {
+            Label_1878:
+            {
                 if (n62 > 1) {
                     break Label_1878;
                 }
@@ -889,7 +907,7 @@ public class d extends JFrame
                             break;
                         }
                     }
-                    charArray16[length16] = (char)(c31 ^ c32);
+                    charArray16[length16] = (char) (c31 ^ c32);
                     ++n64;
                 } while (n62 == 0);
             }
@@ -906,7 +924,8 @@ public class d extends JFrame
         final int n66 = n67 = (length17 = charArray17.length);
         int n68 = 0;
         while (true) {
-            Label_1998: {
+            Label_1998:
+            {
                 if (n66 > 1) {
                     break Label_1998;
                 }
@@ -936,7 +955,7 @@ public class d extends JFrame
                             break;
                         }
                     }
-                    charArray17[length17] = (char)(c33 ^ c34);
+                    charArray17[length17] = (char) (c33 ^ c34);
                     ++n68;
                 } while (n66 == 0);
             }
@@ -953,7 +972,8 @@ public class d extends JFrame
         final int n70 = n71 = (length18 = charArray18.length);
         int n72 = 0;
         while (true) {
-            Label_2118: {
+            Label_2118:
+            {
                 if (n70 > 1) {
                     break Label_2118;
                 }
@@ -983,14 +1003,14 @@ public class d extends JFrame
                             break;
                         }
                     }
-                    charArray18[length18] = (char)(c35 ^ c36);
+                    charArray18[length18] = (char) (c35 ^ c36);
                     ++n72;
                 } while (n70 == 0);
             }
             if (n70 <= n72) {
                 z2[n69] = new String(charArray18).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

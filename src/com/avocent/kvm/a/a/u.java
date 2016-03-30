@@ -1,14 +1,16 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.a.a;
 
-import com.avocent.kvm.b.f.b;
 import com.avocent.kvm.b.d.a;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.DataInputStream;
 import java.io.ByteArrayInputStream;
 
-public class u extends h
-{
+public class u extends h {
+
     protected String j;
     protected String k;
     protected String l;
@@ -20,7 +22,7 @@ public class u extends h
     protected boolean r;
     protected int s;
     private static final String[] z;
-    
+
     public u() {
         super(256);
         this.j = "";
@@ -28,7 +30,7 @@ public class u extends h
         this.m = new byte[8];
         this.r = false;
     }
-    
+
     public u(final boolean r) {
         super(r ? 258 : 256);
         this.j = "";
@@ -37,7 +39,8 @@ public class u extends h
         this.r = false;
         this.r = r;
     }
-    
+
+    @Override
     public void a(final byte[] array, final byte[] array2) throws IOException {
         this.a(array);
         final DataInputStream dataInputStream = new DataInputStream(new ByteArrayInputStream(array2));
@@ -56,25 +59,25 @@ public class u extends h
             this.r = true;
             this.s = dataInputStream.readByte();
             if (b.h == 0) {
-                return;
+                break;
             }
         }
         this.r = false;
     }
-    
+
     public void a(final String j, final String k) {
         this.j = j;
         this.k = k;
     }
-    
+
     public void c(final int o) {
         this.o = o;
     }
-    
+
     public void d(final int n) {
         this.n = n;
     }
-    
+
     public void a(final String l) {
         final int h = b.h;
         this.l = l;
@@ -88,21 +91,22 @@ public class u extends h
             int i = 0;
             while (i < bytes.length / 2) {
                 byte b = 0;
-                Label_0231: {
+                Label_0231:
+                {
                     if (bytes[i * 2] >= 48 && bytes[i * 2] <= 57) {
-                        b = (byte)(bytes[i * 2] - 48);
+                        b = (byte) (bytes[i * 2] - 48);
                         if (h == 0) {
                             break Label_0231;
                         }
                     }
                     if (bytes[i * 2] >= 65 && bytes[i * 2] <= 70) {
-                        b = (byte)(bytes[i * 2] - 65 + 10);
+                        b = (byte) (bytes[i * 2] - 65 + 10);
                         if (h == 0) {
                             break Label_0231;
                         }
                     }
                     if (bytes[i * 2] >= 97 && bytes[i * 2] <= 102) {
-                        b = (byte)(bytes[i * 2] - 97 + 10);
+                        b = (byte) (bytes[i * 2] - 97 + 10);
                         if (h == 0) {
                             break Label_0231;
                         }
@@ -110,28 +114,29 @@ public class u extends h
                     throw new RuntimeException(u.z[0]);
                 }
                 byte b2 = 0;
-                Label_0376: {
+                Label_0376:
+                {
                     if (bytes[i * 2 + 1] >= 48 && bytes[i * 2 + 1] <= 57) {
-                        b2 = (byte)(bytes[i * 2 + 1] - 48);
+                        b2 = (byte) (bytes[i * 2 + 1] - 48);
                         if (h == 0) {
                             break Label_0376;
                         }
                     }
                     if (bytes[i * 2 + 1] >= 65 && bytes[i * 2 + 1] <= 70) {
-                        b2 = (byte)(bytes[i * 2 + 1] - 65 + 10);
+                        b2 = (byte) (bytes[i * 2 + 1] - 65 + 10);
                         if (h == 0) {
                             break Label_0376;
                         }
                     }
                     if (bytes[i * 2 + 1] >= 97 && bytes[i * 2 + 1] <= 102) {
-                        b2 = (byte)(bytes[i * 2 + 1] - 97 + 10);
+                        b2 = (byte) (bytes[i * 2 + 1] - 97 + 10);
                         if (h == 0) {
                             break Label_0376;
                         }
                     }
                     throw new RuntimeException(u.z[0]);
                 }
-                this.m[i] = (byte)(b << 4 | b2);
+                this.m[i] = (byte) (b << 4 | b2);
                 ++i;
                 if (h != 0) {
                     break;
@@ -139,7 +144,7 @@ public class u extends h
             }
         }
     }
-    
+
     public void e(final int p) {
         System.out.println(u.z[4] + Integer.toHexString(p) + "\n");
         switch (p) {
@@ -153,16 +158,17 @@ public class u extends h
                 if (b.h != 0) {
                     break;
                 }
-                return;
+                break;
             }
         }
         throw new RuntimeException(u.z[5] + p);
     }
-    
+
+    @Override
     public int g() {
         return this.h();
     }
-    
+
     public int h() {
         int n = 202 + this.m.length + 1 + 1 + 4;
         if (this.r) {
@@ -170,31 +176,33 @@ public class u extends h
         }
         return n;
     }
-    
+
+    @Override
     public byte[] b() {
         final int h = b.h;
         final byte[] array = new byte[this.h() - 8];
-        final int b = a.b(this.q, array, a.c(this.o, array, a.c(this.n, array, a.b(this.m, array, a.a(this.k, array, a.c((this.k == null) ? 0 : this.k.length(), array, a.a(this.j, array, a.c((this.j == null) ? 0 : this.j.length(), array, 0), 96)), 96)))));
+        final int b = com.avocent.kvm.b.d.a.b(this.q, array, com.avocent.kvm.b.d.a.c(this.o, array, com.avocent.kvm.b.d.a.c(this.n, array, com.avocent.kvm.b.d.a.b(this.m, array, com.avocent.kvm.b.d.a.a(this.k, array, com.avocent.kvm.b.d.a.c((this.k == null) ? 0 : this.k.length(), array, com.avocent.kvm.b.d.a.a(this.j, array, com.avocent.kvm.b.d.a.c((this.j == null) ? 0 : this.j.length(), array, 0), 96)), 96)))));
         if (this.r) {
-            a.c(this.p, array, b);
+            com.avocent.kvm.b.d.a.c(this.p, array, b);
         }
-        b.a().a(u.z[2] + this.q);
+        com.avocent.kvm.b.f.b.a().a(u.z[2] + this.q);
         final byte[] array2 = array;
         if (h != 0) {
-            int c = a.c;
-            a.c = ++c;
+            int c = com.avocent.kvm.b.d.a.c;
+            com.avocent.kvm.b.d.a.c = ++c;
         }
         return array2;
     }
-    
+
+    @Override
     public String e() {
         return u.z[1];
     }
-    
+
     public void f(final int q) {
         this.q = q;
     }
-    
+
     static {
         final String[] z2 = new String[6];
         final int n = 0;
@@ -204,7 +212,8 @@ public class u extends h
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -234,7 +243,7 @@ public class u extends h
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -251,7 +260,8 @@ public class u extends h
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -281,7 +291,7 @@ public class u extends h
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -298,7 +308,8 @@ public class u extends h
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -328,7 +339,7 @@ public class u extends h
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -345,7 +356,8 @@ public class u extends h
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0446: {
+            Label_0446:
+            {
                 if (n14 > 1) {
                     break Label_0446;
                 }
@@ -375,7 +387,7 @@ public class u extends h
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -392,7 +404,8 @@ public class u extends h
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0562: {
+            Label_0562:
+            {
                 if (n18 > 1) {
                     break Label_0562;
                 }
@@ -422,7 +435,7 @@ public class u extends h
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
@@ -439,7 +452,8 @@ public class u extends h
         final int n22 = n23 = (length6 = charArray6.length);
         int n24 = 0;
         while (true) {
-            Label_0678: {
+            Label_0678:
+            {
                 if (n22 > 1) {
                     break Label_0678;
                 }
@@ -469,14 +483,14 @@ public class u extends h
                             break;
                         }
                     }
-                    charArray6[length6] = (char)(c11 ^ c12);
+                    charArray6[length6] = (char) (c11 ^ c12);
                     ++n24;
                 } while (n22 == 0);
             }
             if (n22 <= n24) {
                 z2[n21] = new String(charArray6).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

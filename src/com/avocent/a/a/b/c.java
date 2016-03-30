@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.a.b;
 
 import java.beans.PropertyChangeEvent;
@@ -16,8 +19,8 @@ import com.avocent.a.a.h;
 import java.beans.PropertyChangeListener;
 import javax.swing.JDialog;
 
-public class c extends JDialog implements PropertyChangeListener
-{
+public class c extends JDialog implements PropertyChangeListener {
+
     protected h a;
     private JPanel b;
     private JButton c;
@@ -26,15 +29,15 @@ public class c extends JDialog implements PropertyChangeListener
     private JButton f;
     private JLabel g;
     private static final String[] z;
-    
+
     public c(final h a, final Frame frame) {
         super(frame, false);
         this.a = a;
         this.a();
         this.c.setAction(this.a.c());
-        this.a.a((PropertyChangeListener)this);
+        this.a.a((PropertyChangeListener) this);
     }
-    
+
     private void a() {
         this.e = new ButtonGroup();
         this.f = new JButton();
@@ -46,30 +49,31 @@ public class c extends JDialog implements PropertyChangeListener
         this.d.setLayout(new GridBagLayout());
         final JLabel g = this.g;
         this.a.d();
-        g.setText(d.b(c.z[4]));
+        g.setText(com.avocent.a.d.b(com.avocent.a.a.b.c.z[4]));
         final GridBagConstraints gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.gridwidth = 0;
         gridBagConstraints.fill = 2;
         gridBagConstraints.insets = new Insets(20, 20, 10, 20);
         this.d.add(this.g, gridBagConstraints);
-        this.getContentPane().add(this.d, c.z[1]);
+        this.getContentPane().add(this.d, com.avocent.a.a.b.c.z[1]);
         this.b.setLayout(new GridBagLayout());
         final JButton c = this.c;
         this.a.d();
-        c.setText(d.b(c.z[2]));
+        c.setText(com.avocent.a.d.b(com.avocent.a.a.b.c.z[2]));
         final GridBagConstraints gridBagConstraints2 = new GridBagConstraints();
         gridBagConstraints2.insets = new Insets(10, 10, 10, 10);
         this.b.add(this.c, gridBagConstraints2);
-        this.getContentPane().add(this.b, c.z[3]);
+        this.getContentPane().add(this.b, com.avocent.a.a.b.c.z[3]);
         this.pack();
     }
-    
+
+    @Override
     public void propertyChange(final PropertyChangeEvent propertyChangeEvent) {
-        if (propertyChangeEvent.getPropertyName().equals(c.z[0])) {
+        if (propertyChangeEvent.getPropertyName().equals(com.avocent.a.a.b.c.z[0])) {
             this.g.setText(propertyChangeEvent.getNewValue().toString());
         }
     }
-    
+
     static {
         final String[] z2 = new String[5];
         final int n = 0;
@@ -79,7 +83,8 @@ public class c extends JDialog implements PropertyChangeListener
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -109,7 +114,7 @@ public class c extends JDialog implements PropertyChangeListener
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -126,7 +131,8 @@ public class c extends JDialog implements PropertyChangeListener
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -156,7 +162,7 @@ public class c extends JDialog implements PropertyChangeListener
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -173,7 +179,8 @@ public class c extends JDialog implements PropertyChangeListener
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -203,7 +210,7 @@ public class c extends JDialog implements PropertyChangeListener
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -220,7 +227,8 @@ public class c extends JDialog implements PropertyChangeListener
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0446: {
+            Label_0446:
+            {
                 if (n14 > 1) {
                     break Label_0446;
                 }
@@ -250,7 +258,7 @@ public class c extends JDialog implements PropertyChangeListener
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -267,7 +275,8 @@ public class c extends JDialog implements PropertyChangeListener
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0562: {
+            Label_0562:
+            {
                 if (n18 > 1) {
                     break Label_0562;
                 }
@@ -297,14 +306,14 @@ public class c extends JDialog implements PropertyChangeListener
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
             if (n18 <= n20) {
                 z2[n17] = new String(charArray5).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

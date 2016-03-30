@@ -1,12 +1,14 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.b.b;
 
 import java.io.IOException;
-import com.avocent.kvm.b.d.a;
 import java.io.OutputStream;
 import java.io.InputStream;
 
-public class c extends InputStream
-{
+public class c extends InputStream {
+
     InputStream a;
     OutputStream b;
     int c;
@@ -14,10 +16,9 @@ public class c extends InputStream
     int e;
     boolean f;
     byte[] g;
-    
+
     public c(final InputStream a) {
-        final boolean b = a.b;
-        super();
+        final boolean b = com.avocent.kvm.b.b.a.b;
         this.c = 0;
         this.d = 0;
         this.e = 0;
@@ -25,19 +26,22 @@ public class c extends InputStream
         this.g = new byte[1];
         this.a = a;
         if (b) {
-            int c = a.c;
-            a.c = ++c;
+            int c = com.avocent.kvm.b.d.a.c;
+            com.avocent.kvm.b.d.a.c = ++c;
         }
     }
-    
+
+    @Override
     public int available() throws IOException {
         return this.a.available();
     }
-    
+
+    @Override
     public void close() throws IOException {
         this.a.close();
     }
-    
+
+    @Override
     public void mark(final int e) {
         this.a.mark(e);
         this.c = 0;
@@ -45,20 +49,23 @@ public class c extends InputStream
         this.f = true;
         this.e = e;
     }
-    
+
+    @Override
     public boolean markSupported() {
         return this.a.markSupported();
     }
-    
+
+    @Override
     public int read() throws IOException {
         final int read = this.a.read();
         if (this.b != null && read != -1) {
-            this.g[0] = (byte)(read & 0xFF);
+            this.g[0] = (byte) (read & 0xFF);
             this.a(this.g, 0, 1);
         }
         return read;
     }
-    
+
+    @Override
     public int read(final byte[] array) throws IOException {
         final int read = this.a.read(array);
         if (this.b != null && read != 0) {
@@ -66,7 +73,8 @@ public class c extends InputStream
         }
         return read;
     }
-    
+
+    @Override
     public int read(final byte[] array, final int n, final int n2) throws IOException {
         final int read = this.a.read(array, n, n2);
         if (this.b != null && read != 0) {
@@ -74,10 +82,11 @@ public class c extends InputStream
         }
         return read;
     }
-    
+
     void a(final byte[] array, final int n, final int n2) throws IOException {
-        final boolean b = a.b;
-        Label_0153: {
+        final boolean b = com.avocent.kvm.b.b.a.b;
+        Label_0153:
+        {
             if (this.c > 0) {
                 if (n2 > this.c) {
                     this.b.write(array, this.c, n2 - this.c);
@@ -112,22 +121,24 @@ public class c extends InputStream
             this.b.write(array, n, n2);
         }
         this.b.flush();
-        if (a.c != 0) {
-            a.b = !b;
+        if (com.avocent.kvm.b.d.a.c != 0) {
+            com.avocent.kvm.b.b.a.b = !b;
         }
     }
-    
+
+    @Override
     public void reset() throws IOException {
         this.a.reset();
         this.c = this.d;
         this.d = 0;
         this.f = false;
     }
-    
+
+    @Override
     public long skip(final long n) throws IOException {
         return this.a.skip(n);
     }
-    
+
     public void a(final OutputStream b) {
         this.b = b;
     }

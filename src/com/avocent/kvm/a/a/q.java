@@ -1,17 +1,20 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.a.a;
 
 import com.avocent.kvm.b.t;
 
-public class q extends o
-{
+public class q extends o {
+
     private static final String[] z;
-    
+
     public q() {
         this(0);
     }
-    
+
     public q(final int n) {
-        super(1026, q.z[0], (byte)(n & 0xFF));
+        super(1026, q.z[0], (byte) (n & 0xFF));
         switch (n) {
             case 0:
             case 1:
@@ -21,47 +24,47 @@ public class q extends o
                 if (b.h != 0) {
                     break;
                 }
-                return;
+                break;
             }
         }
         throw new RuntimeException(q.z[1] + n);
     }
-    
+
     public void a(final Object o) {
         final int h = b.h;
         if (o.equals(t.a)) {
             this.j = 0;
             if (h == 0) {
-                return;
+                break;
             }
         }
         if (o.equals(t.b)) {
             this.j = 1;
             if (h == 0) {
-                return;
+                break;
             }
         }
         if (o.equals(t.c)) {
             this.j = 2;
             if (h == 0) {
-                return;
+                break;
             }
         }
         if (o.equals(t.d)) {
             this.j = 3;
             if (h == 0) {
-                return;
+                break;
             }
         }
         if (o.equals(t.e)) {
             this.j = 4;
             if (h == 0) {
-                return;
+                break;
             }
         }
         this.j = 0;
     }
-    
+
     static {
         final String[] z2 = new String[2];
         final int n = 0;
@@ -71,7 +74,8 @@ public class q extends o
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -101,7 +105,7 @@ public class q extends o
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -118,7 +122,8 @@ public class q extends o
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -148,14 +153,14 @@ public class q extends o
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
             if (n6 <= n8) {
                 z2[n5] = new String(charArray2).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

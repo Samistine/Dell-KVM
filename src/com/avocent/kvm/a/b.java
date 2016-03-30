@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.a;
 
 import java.security.PublicKey;
@@ -7,20 +10,21 @@ import java.security.cert.X509Certificate;
 import java.security.cert.CertificateException;
 import javax.net.ssl.X509TrustManager;
 
-class b implements X509TrustManager
-{
+class b implements X509TrustManager {
+
     final l a;
     private static final String[] z;
-    
+
     b(final l a) throws CertificateException {
         this.a = a;
-        super();
     }
-    
+
+    @Override
     public void checkClientTrusted(final X509Certificate[] array, final String s) throws CertificateException {
         this.a.i().a(b.z[0]);
     }
-    
+
+    @Override
     public void checkServerTrusted(final X509Certificate[] array, final String s) throws CertificateException {
         final int ab = l.Ab;
         this.a.i().a(b.z[2]);
@@ -30,14 +34,14 @@ class b implements X509TrustManager
                 int i = 0;
                 while (i < array.length) {
                     final PublicKey publicKey = array[i].getPublicKey();
-                    if (publicKey instanceof RSAPublicKey && new BigInteger(this.a.nb.trim(), 16).equals(((RSAPublicKey)publicKey).getModulus())) {
+                    if (publicKey instanceof RSAPublicKey && new BigInteger(this.a.nb.trim(), 16).equals(((RSAPublicKey) publicKey).getModulus())) {
                         if (this.a.ob == null) {
                             b = false;
                             if (ab == 0) {
                                 break;
                             }
                         }
-                        if (new BigInteger(this.a.ob.trim(), 16).equals(((RSAPublicKey)publicKey).getPublicExponent())) {
+                        if (new BigInteger(this.a.ob.trim(), 16).equals(((RSAPublicKey) publicKey).getPublicExponent())) {
                             b = true;
                             if (ab == 0) {
                                 break;
@@ -51,16 +55,17 @@ class b implements X509TrustManager
                 }
             }
             if (!b) {
-                throw new CertificateException(b.z[1]);
+                throw new CertificateException(com.avocent.kvm.a.b.z[1]);
             }
         }
     }
-    
+
+    @Override
     public X509Certificate[] getAcceptedIssuers() {
         this.a.i().a(b.z[3]);
         return new X509Certificate[0];
     }
-    
+
     static {
         final String[] z2 = new String[4];
         final int n = 0;
@@ -70,7 +75,8 @@ class b implements X509TrustManager
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -100,7 +106,7 @@ class b implements X509TrustManager
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -117,7 +123,8 @@ class b implements X509TrustManager
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -147,7 +154,7 @@ class b implements X509TrustManager
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -164,7 +171,8 @@ class b implements X509TrustManager
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -194,7 +202,7 @@ class b implements X509TrustManager
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -211,7 +219,8 @@ class b implements X509TrustManager
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0446: {
+            Label_0446:
+            {
                 if (n14 > 1) {
                     break Label_0446;
                 }
@@ -241,16 +250,15 @@ class b implements X509TrustManager
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
             if (n14 <= n16) {
                 z2[n13] = new String(charArray4).intern();
                 z = z2;
-                return;
+                break;
             }
-            continue;
         }
     }
 }

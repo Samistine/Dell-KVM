@@ -1,40 +1,46 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.a.a;
 
 import com.avocent.kvm.b.d.a;
 import com.avocent.kvm.a.j;
 
-public class rb extends b
-{
+public class rb extends b {
+
     protected j i;
     private static final String[] z;
-    
+
     public rb() {
         super(33842);
     }
-    
+
+    @Override
     public void a(final byte[] array, final byte[] array2) {
         int n = 0;
-        final int b = a.b(array2, n);
+        final int b = com.avocent.kvm.b.d.a.b(array2, n);
         n += 2;
-        this.i.a(a.a(array2, n, b));
+        this.i.a(com.avocent.kvm.b.d.a.a(array2, n, b));
         int n2 = n + b;
-        this.i.a(a.b(array2, n2));
+        this.i.a(com.avocent.kvm.b.d.a.b(array2, n2));
         n2 += 2;
-        this.i.b(a.b(array2, n2));
+        this.i.b(com.avocent.kvm.b.d.a.b(array2, n2));
         n2 += 2;
-        final int b2 = a.b(array2, n2);
+        final int b2 = com.avocent.kvm.b.d.a.b(array2, n2);
         n2 += 2;
-        this.i.b(a.a(array2, n2, b2));
+        this.i.b(com.avocent.kvm.b.d.a.a(array2, n2, b2));
     }
-    
+
+    @Override
     public byte[] b() {
         throw new RuntimeException(rb.z[0]);
     }
-    
+
+    @Override
     public String e() {
         return rb.z[1];
     }
-    
+
     static {
         final String[] z2 = new String[2];
         final int n = 0;
@@ -44,7 +50,8 @@ public class rb extends b
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -74,7 +81,7 @@ public class rb extends b
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -91,7 +98,8 @@ public class rb extends b
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -121,14 +129,14 @@ public class rb extends b
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
             if (n6 <= n8) {
                 z2[n5] = new String(charArray2).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

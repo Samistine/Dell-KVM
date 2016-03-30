@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.a;
 
 import com.avocent.kvm.b.d.g;
@@ -6,20 +9,20 @@ import java.text.SimpleDateFormat;
 import com.avocent.kvm.b.d.c;
 import com.avocent.kvm.a.a.n;
 
-class q extends Thread
-{
+class q extends Thread {
+
     boolean a;
     final l b;
     private static final String[] z;
-    
+
     q(final l b) {
         this.b = b;
-        super();
         this.a = false;
         this.setName(q.z[2]);
         this.setDaemon(true);
     }
-    
+
+    @Override
     public void run() {
         while (!this.a) {
             try {
@@ -37,16 +40,13 @@ class q extends Thread
                 }
                 Thread.currentThread();
                 Thread.sleep(5000L);
-                continue;
-            }
-            catch (Throwable t) {
+            } catch (Throwable t) {
                 this.b.a(t);
-                return;
+                break;
             }
-            break;
         }
     }
-    
+
     static {
         final String[] z2 = new String[3];
         final int n = 0;
@@ -56,7 +56,8 @@ class q extends Thread
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -86,7 +87,7 @@ class q extends Thread
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -103,7 +104,8 @@ class q extends Thread
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -133,7 +135,7 @@ class q extends Thread
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -150,7 +152,8 @@ class q extends Thread
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -180,14 +183,14 @@ class q extends Thread
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
             if (n10 <= n12) {
                 z2[n9] = new String(charArray3).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

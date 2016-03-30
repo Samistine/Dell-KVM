@@ -1,36 +1,40 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.a.a;
 
 import com.avocent.kvm.a.j;
 import com.avocent.kvm.b.d.a;
 import java.util.ArrayList;
 
-public class c extends b
-{
+public class c extends b {
+
     protected ArrayList i;
     private static final String[] z;
-    
+
     public c() {
         super(33840);
     }
-    
+
+    @Override
     public void a(final byte[] array, final byte[] array2) {
         final int h = b.h;
-        final int b = a.b(array2, 0);
+        final int b = com.avocent.kvm.b.d.a.b(array2, 0);
         int i = 0;
         while (i < b) {
             final j j = new j();
             int n = 0;
-            final int b2 = a.b(array2, n);
+            final int b2 = com.avocent.kvm.b.d.a.b(array2, n);
             n += 2;
-            j.a(a.a(array2, n, b2));
+            j.a(com.avocent.kvm.b.d.a.a(array2, n, b2));
             int n2 = n + b2;
-            j.a(a.b(array2, n2));
+            j.a(com.avocent.kvm.b.d.a.b(array2, n2));
             n2 += 2;
-            j.b(a.b(array2, n2));
+            j.b(com.avocent.kvm.b.d.a.b(array2, n2));
             n2 += 2;
-            final int b3 = a.b(array2, n2);
+            final int b3 = com.avocent.kvm.b.d.a.b(array2, n2);
             n2 += 2;
-            j.b(a.a(array2, n2, b3));
+            j.b(com.avocent.kvm.b.d.a.a(array2, n2, b3));
             this.i.add(j);
             ++i;
             if (h != 0) {
@@ -38,15 +42,17 @@ public class c extends b
             }
         }
     }
-    
+
+    @Override
     public byte[] b() {
         throw new RuntimeException(c.z[0]);
     }
-    
+
+    @Override
     public String e() {
         return c.z[1];
     }
-    
+
     static {
         final String[] z2 = new String[2];
         final int n = 0;
@@ -56,7 +62,8 @@ public class c extends b
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -86,7 +93,7 @@ public class c extends b
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -103,7 +110,8 @@ public class c extends b
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -133,14 +141,14 @@ public class c extends b
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
             if (n6 <= n8) {
                 z2[n5] = new String(charArray2).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

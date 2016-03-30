@@ -1,33 +1,31 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.c;
 
-import com.avocent.kvm.b.d.a;
 import java.io.IOException;
 import java.util.TreeMap;
 
-public class d
-{
-    protected static TreeMap a;
+public class d {
+
+    protected static TreeMap a = new TreeMap();
     public static int b;
-    
-    public static a a(final String s) {
-        return d.a.get(s);
+
+    public static a a(String s) {
+        return (a) a.get(s);
     }
-    
+
     public void a() throws IOException {
         new f(this).start();
     }
-    
-    public static void a(final String s, final b b) {
+
+    public static void a(String s, b b) {
         int b2 = d.b;
         final a a = new a(s);
         a.a(b);
         d.a.put(s, a);
-        if (a.c != 0) {
+        if (com.avocent.kvm.b.d.a.c != 0) {
             d.b = ++b2;
         }
-    }
-    
-    static {
-        d.a = new TreeMap();
     }
 }

@@ -1,32 +1,38 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.a.a;
 
-public class n extends h
-{
+public class n extends h {
+
     byte[] j;
     int k;
     private static final String z;
-    
+
     public n() {
         super(1024);
         this.j = new byte[8];
         this.e = 16;
     }
-    
+
+    @Override
     public void a(final byte[] array, final byte[] array2) {
     }
-    
+
     public void c(final int k) {
         this.k = k;
     }
-    
+
+    @Override
     public byte[] b() {
-        return new byte[] { (byte)(this.k >>> 24 & 0xFF), (byte)(this.k >>> 16 & 0xFF), (byte)(this.k >>> 8 & 0xFF), (byte)(this.k & 0xFF), 0, 0, 0, 0 };
+        return new byte[]{(byte) (this.k >>> 24 & 0xFF), (byte) (this.k >>> 16 & 0xFF), (byte) (this.k >>> 8 & 0xFF), (byte) (this.k & 0xFF), 0, 0, 0, 0};
     }
-    
+
+    @Override
     public String e() {
         return n.z;
     }
-    
+
     static {
         final char[] charArray = " }GP\u0000\u0007qTE".toCharArray();
         int length;
@@ -34,7 +40,8 @@ public class n extends h
         final int n = n2 = (length = charArray.length);
         int n3 = 0;
         while (true) {
-            Label_0094: {
+            Label_0094:
+            {
                 if (n > 1) {
                     break Label_0094;
                 }
@@ -64,13 +71,13 @@ public class n extends h
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n3;
                 } while (n == 0);
             }
             if (n <= n3) {
                 z = new String(charArray).intern();
-                return;
+                break;
             }
             continue;
         }

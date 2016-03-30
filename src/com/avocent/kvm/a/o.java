@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.a;
 
 import com.avocent.kvm.a.a.b;
@@ -6,26 +9,27 @@ import java.io.OutputStream;
 import com.avocent.kvm.b.u;
 import com.avocent.kvm.b.d.g;
 
-class o extends g
-{
+class o extends g {
+
     final l g;
     private static final String[] z;
-    
+
     o(final l g, final u u, final OutputStream outputStream) {
-        this.g = g;
         super(u, outputStream);
+        this.g = g;
     }
-    
+
+    @Override
     public void a(final c c) {
         if (this.g.yb != null) {
             this.g.yb.println(o.z[0] + Integer.toHexString(c.d()) + o.z[2] + c.e() + o.z[3] + c.f() + o.z[1]);
         }
-        if (c instanceof b && ((b)c).g() == 0) {
+        if (c instanceof b && ((b) c).g() == 0) {
             this.g.i().a(o.z[4] + c.e());
         }
         super.a(c);
     }
-    
+
     static {
         final String[] z2 = new String[5];
         final int n = 0;
@@ -35,7 +39,8 @@ class o extends g
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0097: {
+            Label_0097:
+            {
                 if (n2 > 1) {
                     break Label_0097;
                 }
@@ -65,7 +70,7 @@ class o extends g
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -82,7 +87,8 @@ class o extends g
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0213: {
+            Label_0213:
+            {
                 if (n6 > 1) {
                     break Label_0213;
                 }
@@ -112,7 +118,7 @@ class o extends g
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -129,7 +135,8 @@ class o extends g
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0329: {
+            Label_0329:
+            {
                 if (n10 > 1) {
                     break Label_0329;
                 }
@@ -159,7 +166,7 @@ class o extends g
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -176,7 +183,8 @@ class o extends g
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0445: {
+            Label_0445:
+            {
                 if (n14 > 1) {
                     break Label_0445;
                 }
@@ -206,7 +214,7 @@ class o extends g
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -223,7 +231,8 @@ class o extends g
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0561: {
+            Label_0561:
+            {
                 if (n18 > 1) {
                     break Label_0561;
                 }
@@ -253,14 +262,14 @@ class o extends g
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
             if (n18 <= n20) {
                 z2[n17] = new String(charArray5).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

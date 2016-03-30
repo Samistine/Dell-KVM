@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.a.a;
 
 import java.io.IOException;
@@ -11,74 +14,74 @@ import java.io.File;
 import java.awt.event.ActionEvent;
 import com.avocent.a.d;
 import com.avocent.a.a.i;
+import java.awt.image.RenderedImage;
 import javax.swing.AbstractAction;
 
-public class c extends AbstractAction
-{
+public class c extends AbstractAction {
+
     i a;
     public static int b;
     private static final String[] z;
-    
+
     public c(final i a) {
-        a.d();
         super(d.b(c.z[5]));
+        a.d();
+
         this.a = a;
     }
-    
+
+    @Override
     public void actionPerformed(final ActionEvent actionEvent) {
         final File a = this.a();
         if (a != null) {
             this.a(a);
         }
     }
-    
+
     public File a() {
         int b = c.b;
-        final JFileChooser jFileChooser = new JFileChooser();
-        jFileChooser.setFileFilter(new l(this));
-        jFileChooser.setAcceptAllFileFilterUsed(false);
-        final File file = (jFileChooser.showSaveDialog(this.a.c()) == 0) ? jFileChooser.getSelectedFile() : null;
-        if (a.c != 0) {
+        final JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setFileFilter(new l(this));
+        fileChooser.setAcceptAllFileFilterUsed(false);
+        final File file = (fileChooser.showSaveDialog(this.a.c()) == 0) ? fileChooser.getSelectedFile() : null;
+        if (com.avocent.kvm.b.d.a.c != 0) {
             c.b = ++b;
         }
         return file;
     }
-    
+
     void a(final File file) {
-        if (file.exists()) {
-            if (!this.b(file)) {
-                return;
+        if (!file.exists() || this.b(file)) {
+            try {
+                /*String absolutePath = file.getAbsolutePath();
+                 if (absolutePath != null && !absolutePath.endsWith(c.z[2]) && !absolutePath.endsWith(c.z[0])) {
+                 new StringBuilder().append(absolutePath).append(c.z[2]).toString();
+                 }*/
+                RenderedImage renderedImage = this.a.o().d();
+                ImageIO.write(renderedImage, c.z[4], file);
+            } catch (IOException ex) {
+                this.a.d();
+                final String string = d.b(c.z[3]);
+                this.a.d();
+                JOptionPane.showMessageDialog(this.a.r(), d.b(c.z[1]), string, 0);
             }
-        }
-        try {
-            final String absolutePath = file.getAbsolutePath();
-            if (absolutePath != null && !absolutePath.endsWith(c.z[2]) && !absolutePath.endsWith(c.z[0])) {
-                new StringBuilder().append(absolutePath).append(c.z[2]).toString();
-            }
-            ImageIO.write(this.a.o().d(), c.z[4], file);
-        }
-        catch (IOException ex) {
-            this.a.d();
-            final String b = d.b(c.z[3]);
-            this.a.d();
-            JOptionPane.showMessageDialog(this.a.r(), d.b(c.z[1]), b, 0);
         }
     }
-    
+
     boolean b(final File file) {
         final int b = c.b;
-        final Object[] array = { file.getAbsoluteFile() };
+        final Object[] array = {file.getAbsoluteFile()};
         this.a.d();
         final String a = d.a(c.z[7], array);
         this.a.d();
         final boolean b2 = JOptionPane.showConfirmDialog(this.a.r(), a, d.b(c.z[6]), 0, 3) == 0;
         if (b != 0) {
-            int c = a.c;
-            a.c = ++c;
+            int c = com.avocent.kvm.b.d.a.c;
+            com.avocent.kvm.b.d.a.c = ++c;
         }
         return b2;
     }
-    
+
     static {
         final String[] z2 = new String[8];
         final int n = 0;
@@ -88,7 +91,8 @@ public class c extends AbstractAction
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0097: {
+            Label_0097:
+            {
                 if (n2 > 1) {
                     break Label_0097;
                 }
@@ -118,7 +122,7 @@ public class c extends AbstractAction
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -135,7 +139,8 @@ public class c extends AbstractAction
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0213: {
+            Label_0213:
+            {
                 if (n6 > 1) {
                     break Label_0213;
                 }
@@ -165,7 +170,7 @@ public class c extends AbstractAction
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -182,7 +187,8 @@ public class c extends AbstractAction
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0329: {
+            Label_0329:
+            {
                 if (n10 > 1) {
                     break Label_0329;
                 }
@@ -212,7 +218,7 @@ public class c extends AbstractAction
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -229,7 +235,8 @@ public class c extends AbstractAction
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0445: {
+            Label_0445:
+            {
                 if (n14 > 1) {
                     break Label_0445;
                 }
@@ -259,7 +266,7 @@ public class c extends AbstractAction
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -276,7 +283,8 @@ public class c extends AbstractAction
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0561: {
+            Label_0561:
+            {
                 if (n18 > 1) {
                     break Label_0561;
                 }
@@ -306,7 +314,7 @@ public class c extends AbstractAction
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
@@ -323,7 +331,8 @@ public class c extends AbstractAction
         final int n22 = n23 = (length6 = charArray6.length);
         int n24 = 0;
         while (true) {
-            Label_0677: {
+            Label_0677:
+            {
                 if (n22 > 1) {
                     break Label_0677;
                 }
@@ -353,7 +362,7 @@ public class c extends AbstractAction
                             break;
                         }
                     }
-                    charArray6[length6] = (char)(c11 ^ c12);
+                    charArray6[length6] = (char) (c11 ^ c12);
                     ++n24;
                 } while (n22 == 0);
             }
@@ -370,7 +379,8 @@ public class c extends AbstractAction
         final int n26 = n27 = (length7 = charArray7.length);
         int n28 = 0;
         while (true) {
-            Label_0793: {
+            Label_0793:
+            {
                 if (n26 > 1) {
                     break Label_0793;
                 }
@@ -400,7 +410,7 @@ public class c extends AbstractAction
                             break;
                         }
                     }
-                    charArray7[length7] = (char)(c13 ^ c14);
+                    charArray7[length7] = (char) (c13 ^ c14);
                     ++n28;
                 } while (n26 == 0);
             }
@@ -417,7 +427,8 @@ public class c extends AbstractAction
         final int n30 = n31 = (length8 = charArray8.length);
         int n32 = 0;
         while (true) {
-            Label_0909: {
+            Label_0909:
+            {
                 if (n30 > 1) {
                     break Label_0909;
                 }
@@ -447,14 +458,14 @@ public class c extends AbstractAction
                             break;
                         }
                     }
-                    charArray8[length8] = (char)(c15 ^ c16);
+                    charArray8[length8] = (char) (c15 ^ c16);
                     ++n32;
                 } while (n30 == 0);
             }
             if (n30 <= n32) {
                 z2[n29] = new String(charArray8).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

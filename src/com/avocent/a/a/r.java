@@ -1,52 +1,57 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.a;
 
 import com.avocent.a.d;
 import java.beans.PropertyChangeEvent;
-import com.avocent.kvm.b.r;
 import com.avocent.kvm.b.db;
 import com.avocent.kvm.b.u;
 import com.avocent.kvm.b.a.a;
 
-public class r implements a
-{
+public class r implements a {
+
     protected i a;
     protected h b;
     protected boolean c;
     private static final String[] z;
-    
+
     r(final i a) {
-        super();
         this.c = false;
         this.a = a;
     }
-    
+
     public r() {
-        super();
         this.c = false;
     }
-    
+
+    @Override
     public void a(final u u) {
         this.a.b().a(r.z[6]);
         this.a.g();
     }
-    
+
+    @Override
     public void a(final u u, final db db) {
     }
-    
-    public void a(final u u, final r r, final r r2) {
+
+    @Override
+    public void a(final u u, final com.avocent.kvm.b.r r, final com.avocent.kvm.b.r r2) {
     }
-    
+
+    @Override
     public void b(final u u) {
         if (!this.c) {
             this.c = true;
             this.a.a(u);
         }
     }
-    
+
     public void a(final h b) {
         this.b = b;
     }
-    
+
+    @Override
     public void propertyChange(final PropertyChangeEvent propertyChangeEvent) {
         final boolean g = i.G;
         final String propertyName = propertyChangeEvent.getPropertyName();
@@ -80,7 +85,7 @@ public class r implements a
             this.a.r().pack();
         }
     }
-    
+
     static {
         final String[] z2 = new String[7];
         final int n = 0;
@@ -90,7 +95,8 @@ public class r implements a
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -120,7 +126,7 @@ public class r implements a
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -137,7 +143,8 @@ public class r implements a
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -167,7 +174,7 @@ public class r implements a
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -184,7 +191,8 @@ public class r implements a
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -214,7 +222,7 @@ public class r implements a
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -231,7 +239,8 @@ public class r implements a
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0446: {
+            Label_0446:
+            {
                 if (n14 > 1) {
                     break Label_0446;
                 }
@@ -261,7 +270,7 @@ public class r implements a
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -278,7 +287,8 @@ public class r implements a
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0562: {
+            Label_0562:
+            {
                 if (n18 > 1) {
                     break Label_0562;
                 }
@@ -308,7 +318,7 @@ public class r implements a
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
@@ -325,7 +335,8 @@ public class r implements a
         final int n22 = n23 = (length6 = charArray6.length);
         int n24 = 0;
         while (true) {
-            Label_0678: {
+            Label_0678:
+            {
                 if (n22 > 1) {
                     break Label_0678;
                 }
@@ -355,7 +366,7 @@ public class r implements a
                             break;
                         }
                     }
-                    charArray6[length6] = (char)(c11 ^ c12);
+                    charArray6[length6] = (char) (c11 ^ c12);
                     ++n24;
                 } while (n22 == 0);
             }
@@ -372,7 +383,8 @@ public class r implements a
         final int n26 = n27 = (length7 = charArray7.length);
         int n28 = 0;
         while (true) {
-            Label_0798: {
+            Label_0798:
+            {
                 if (n26 > 1) {
                     break Label_0798;
                 }
@@ -402,14 +414,14 @@ public class r implements a
                             break;
                         }
                     }
-                    charArray7[length7] = (char)(c13 ^ c14);
+                    charArray7[length7] = (char) (c13 ^ c14);
                     ++n28;
                 } while (n26 == 0);
             }
             if (n26 <= n28) {
                 z2[n25] = new String(charArray7).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

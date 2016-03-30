@@ -1,34 +1,41 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.a.a;
 
-public class eb extends y
-{
+public class eb extends y {
+
     int j;
     private static final String[] z;
-    
+
     public eb() {
         super(33026);
     }
-    
+
+    @Override
     public void a(final byte[] array, final byte[] array2) {
-        this.j = (byte)(array2[0] & 0xFF);
+        this.j = (byte) (array2[0] & 0xFF);
     }
-    
+
     public int h() {
         return this.j;
     }
-    
+
+    @Override
     public byte[] a() {
         throw new RuntimeException(eb.z[0]);
     }
-    
+
+    @Override
     public byte[] b() {
         throw new RuntimeException(eb.z[0]);
     }
-    
+
+    @Override
     public String e() {
         return eb.z[1];
     }
-    
+
     static {
         final String[] z2 = new String[2];
         final int n = 0;
@@ -38,7 +45,8 @@ public class eb extends y
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -68,7 +76,7 @@ public class eb extends y
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -85,7 +93,8 @@ public class eb extends y
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -115,14 +124,14 @@ public class eb extends y
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
             if (n6 <= n8) {
                 z2[n5] = new String(charArray2).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

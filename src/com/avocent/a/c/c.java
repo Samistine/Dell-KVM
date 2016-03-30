@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.c;
 
 import java.io.DataOutputStream;
@@ -7,37 +10,37 @@ import java.io.IOException;
 import com.avocent.kvm.b.f.b;
 import java.net.Socket;
 
-public class c
-{
+public class c {
+
     private static final String[] z;
-    
+
     public Socket a() {
         try {
             return new Socket(c.z[0], 8192);
-        }
-        catch (IOException ex) {
+        } catch (IOException ex) {
             b.a().a(c.z[1]);
             return null;
         }
     }
-    
+
     public void b() throws IOException {
         new d().a();
     }
-    
-    public boolean a(final String s, final b b) throws IOException {
+
+    public boolean a(final String s, final com.avocent.a.c.b b) throws IOException {
         final int b2 = d.b;
         final Socket a = this.a();
         boolean equalsIgnoreCase = false;
-        Label_0155: {
+        Label_0155:
+        {
             if (a == null) {
                 this.b();
                 equalsIgnoreCase = false;
                 if (b2 == 0) {
                     break Label_0155;
                 }
-                int c = a.c;
-                a.c = ++c;
+                int c = com.avocent.kvm.b.d.a.c;
+                com.avocent.kvm.b.d.a.c = ++c;
             }
             final DataInputStream dataInputStream = new DataInputStream(a.getInputStream());
             final DataOutputStream dataOutputStream = new DataOutputStream(a.getOutputStream());
@@ -54,7 +57,7 @@ public class c
         }
         return equalsIgnoreCase;
     }
-    
+
     static {
         final String[] z2 = new String[6];
         final int n = 0;
@@ -64,7 +67,8 @@ public class c
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -94,7 +98,7 @@ public class c
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -111,7 +115,8 @@ public class c
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -141,7 +146,7 @@ public class c
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -158,7 +163,8 @@ public class c
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -188,7 +194,7 @@ public class c
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -205,7 +211,8 @@ public class c
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0446: {
+            Label_0446:
+            {
                 if (n14 > 1) {
                     break Label_0446;
                 }
@@ -235,7 +242,7 @@ public class c
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -252,7 +259,8 @@ public class c
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0562: {
+            Label_0562:
+            {
                 if (n18 > 1) {
                     break Label_0562;
                 }
@@ -282,7 +290,7 @@ public class c
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
@@ -299,7 +307,8 @@ public class c
         final int n22 = n23 = (length6 = charArray6.length);
         int n24 = 0;
         while (true) {
-            Label_0678: {
+            Label_0678:
+            {
                 if (n22 > 1) {
                     break Label_0678;
                 }
@@ -329,14 +338,14 @@ public class c
                             break;
                         }
                     }
-                    charArray6[length6] = (char)(c11 ^ c12);
+                    charArray6[length6] = (char) (c11 ^ c12);
                     ++n24;
                 } while (n22 == 0);
             }
             if (n22 <= n24) {
                 z2[n21] = new String(charArray6).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

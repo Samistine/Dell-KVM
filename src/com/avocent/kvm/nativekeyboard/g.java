@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.nativekeyboard;
 
 import com.avocent.kvm.b.f.e;
@@ -8,38 +11,39 @@ import com.avocent.kvm.b.u;
 import java.util.HashMap;
 import com.avocent.kvm.b.r;
 
-public class g implements r
-{
+public class g implements r {
+
     protected boolean a;
     protected HashMap b;
     protected u c;
     protected NativeKeyEventListener d;
     protected FocusListener e;
     private static final String[] z;
-    
+
     public g() {
-        super();
         this.a = true;
         this.b = new HashMap();
         this.d = new i(this);
         this.e = new h(this);
         this.b();
     }
-    
+
     public void b() throws UnsatisfiedLinkError {
         System.loadLibrary(g.z[3]);
         System.loadLibrary(g.z[2]);
     }
-    
+
     public boolean a(final Object o) {
         final Boolean value = this.b.get(o);
         return value != null && value;
     }
-    
+
+    @Override
     public void a(final boolean a) {
         this.a = a;
     }
-    
+
+    @Override
     public void a(final hb hb, final boolean b) {
         try {
             System.out.println(g.z[0] + b + ")");
@@ -48,16 +52,17 @@ public class g implements r
             if (c.isVisible() && c.isDisplayable()) {
                 NativeKVM.a(c, b);
             }
-        }
-        catch (Exception ex) {
+        } catch (Exception ex) {
             throw new RuntimeException(ex.getMessage(), ex);
         }
     }
-    
+
+    @Override
     public void a(final u c) {
         this.c = c;
     }
-    
+
+    @Override
     public void a(final hb hb, final e e) {
         if (hb != null) {
             try {
@@ -65,21 +70,22 @@ public class g implements r
                 hb.c().setFocusable(true);
                 hb.c().addFocusListener(this.e);
                 System.out.println(g.z[1]);
-            }
-            catch (Exception ex) {
+            } catch (Exception ex) {
                 throw new RuntimeException(ex.getMessage(), ex);
             }
         }
     }
-    
+
+    @Override
     public void a(final u u, final hb hb) {
         this.a(u);
         this.a(hb, u.i());
     }
-    
+
+    @Override
     public void a() {
     }
-    
+
     static {
         final String[] z2 = new String[4];
         final int n = 0;
@@ -89,7 +95,8 @@ public class g implements r
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -119,7 +126,7 @@ public class g implements r
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -136,7 +143,8 @@ public class g implements r
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -166,7 +174,7 @@ public class g implements r
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -183,7 +191,8 @@ public class g implements r
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -213,7 +222,7 @@ public class g implements r
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -230,7 +239,8 @@ public class g implements r
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0446: {
+            Label_0446:
+            {
                 if (n14 > 1) {
                     break Label_0446;
                 }
@@ -260,14 +270,14 @@ public class g implements r
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
             if (n14 <= n16) {
                 z2[n13] = new String(charArray4).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

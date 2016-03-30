@@ -1,10 +1,13 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.d;
 
 import com.avocent.kvm.b.d.a;
 import com.avocent.kvm.b.gb;
 
-public class b extends gb
-{
+public class b extends gb {
+
     protected int m;
     protected int n;
     protected int o;
@@ -17,51 +20,51 @@ public class b extends gb
     protected int v;
     protected int w;
     private static final String[] z;
-    
+
     public b(final int n) {
         super(n);
     }
-    
+
     public int l() {
         return this.m;
     }
-    
+
     public int m() {
         return this.n;
     }
-    
+
     public int n() {
         return this.o;
     }
-    
+
     public int o() {
         return this.p;
     }
-    
+
     public int p() {
         return this.q;
     }
-    
+
     public int q() {
         return this.r;
     }
-    
+
     public int r() {
         return this.u;
     }
-    
+
     public int s() {
         return this.v;
     }
-    
+
     public void b(final int w) {
         this.w = w;
     }
-    
+
     public void t() {
         ++this.w;
     }
-    
+
     public void b(final byte[] array, final int n, final int f) {
         if (this.g == null || this.g.length <= f) {
             this.g = new byte[f];
@@ -69,9 +72,10 @@ public class b extends gb
         this.f = f;
         System.arraycopy(array, n, this.g, 0, f);
     }
-    
+
+    @Override
     public void a(final byte[] array, final byte[] array2, final int n) {
-        int xb = c.Xb;
+        int xb = com.avocent.kvm.d.c.Xb;
         this.b(array2, 12, n - 12);
         this.r = (array2[0] & 0xFF);
         final int n2 = (array2[1] & 0xFF) << 16 | (array2[2] & 0xFF) << 8 | (array2[3] & 0xFF);
@@ -89,11 +93,11 @@ public class b extends gb
         this.q = (b & 0xF);
         this.u = (array2[11] & 0xF);
         this.v = (array2[11] & 0xF0) >> 4;
-        if (a.c != 0) {
-            c.Xb = ++xb;
+        if (com.avocent.kvm.b.d.a.c != 0) {
+            com.avocent.kvm.d.c.Xb = ++xb;
         }
     }
-    
+
     public void a(final b b) {
         final int f = this.f + b.v();
         if (this.g == null || this.g.length <= f) {
@@ -106,27 +110,30 @@ public class b extends gb
         System.arraycopy(b.u(), 0, this.g, this.f, b.v());
         this.f = f;
     }
-    
+
     public byte[] u() {
         return this.g;
     }
-    
+
     public int v() {
         return this.f;
     }
-    
+
+    @Override
     public byte[] a() {
         throw new RuntimeException(b.z[1]);
     }
-    
+
+    @Override
     public byte[] b() {
         throw new RuntimeException(b.z[1]);
     }
-    
+
+    @Override
     public String e() {
         return b.z[0];
     }
-    
+
     static {
         final String[] z2 = new String[2];
         final int n = 0;
@@ -136,7 +143,8 @@ public class b extends gb
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0097: {
+            Label_0097:
+            {
                 if (n2 > 1) {
                     break Label_0097;
                 }
@@ -166,7 +174,7 @@ public class b extends gb
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -183,7 +191,8 @@ public class b extends gb
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0213: {
+            Label_0213:
+            {
                 if (n6 > 1) {
                     break Label_0213;
                 }
@@ -213,14 +222,14 @@ public class b extends gb
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
             if (n6 <= n8) {
                 z2[n5] = new String(charArray2).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

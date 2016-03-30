@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.b;
 
 import java.awt.image.RenderedImage;
@@ -21,8 +24,8 @@ import java.awt.Image;
 import java.awt.image.MemoryImageSource;
 import javax.swing.JPanel;
 
-public class ob extends JPanel implements hb, cb
-{
+public class ob extends JPanel implements hb, cb {
+
     MemoryImageSource a;
     Image b;
     Dimension c;
@@ -57,10 +60,9 @@ public class ob extends JPanel implements hb, cb
     protected Object F;
     protected String G;
     private static final String[] H;
-    
+
     public ob(final String g) {
-        final boolean t = g.t;
-        super();
+        final boolean t = com.avocent.kvm.b.g.t;
         this.c = new Dimension(1024, 768);
         this.f = new o(this);
         this.g = new Color(36864);
@@ -92,15 +94,16 @@ public class ob extends JPanel implements hb, cb
         this.setPreferredSize(this.c);
         this.setFocusTraversalKeysEnabled(false);
         if (t) {
-            int c = a.c;
-            a.c = ++c;
+            int c = com.avocent.kvm.b.d.a.c;
+            com.avocent.kvm.b.d.a.c = ++c;
         }
     }
-    
+
+    @Override
     public String getName() {
         return this.G;
     }
-    
+
     public void a(final fb d) {
         if (this.d != null) {
             this.d.b(this);
@@ -108,24 +111,26 @@ public class ob extends JPanel implements hb, cb
         (this.d = d).a(this);
         this.e();
     }
-    
+
+    @Override
     public void a(final boolean z) {
         this.z = z;
     }
-    
+
     public void e() {
         if (SwingUtilities.isEventDispatchThread()) {
             this.f();
-            if (!g.t) {
+            if (!com.avocent.kvm.b.g.t) {
                 return;
             }
         }
         SwingUtilities.invokeLater(new m(this));
     }
-    
+
     public void f() {
-        final boolean t = g.t;
-        Label_0411: {
+        final boolean t = com.avocent.kvm.b.g.t;
+        Label_0411:
+        {
             if (this.d == null) {
                 this.b = null;
                 if (!t) {
@@ -137,14 +142,15 @@ public class ob extends JPanel implements hb, cb
             this.l = d.c();
             this.m = d.d();
             final Object e = d.e();
-            Label_0137: {
+            Label_0137:
+            {
                 if (e instanceof byte[]) {
-                    this.a = new MemoryImageSource(this.l, this.m, f, (byte[])e, 0, this.l);
+                    this.a = new MemoryImageSource(this.l, this.m, f, (byte[]) e, 0, this.l);
                     if (!t) {
                         break Label_0137;
                     }
                 }
-                this.a = new MemoryImageSource(this.l, this.m, f, (int[])e, 0, this.l);
+                this.a = new MemoryImageSource(this.l, this.m, f, (int[]) e, 0, this.l);
             }
             int n = (this.l > 320) ? this.l : 320;
             int n2 = (this.m > 320) ? this.m : 320;
@@ -155,9 +161,10 @@ public class ob extends JPanel implements hb, cb
                 n += 2;
                 n2 += 2;
             }
-            this.setSize(this.c = new Dimension((int)(n * this.n), (int)(n2 * this.n)));
+            this.setSize(this.c = new Dimension((int) (n * this.n), (int) (n2 * this.n)));
             this.setPreferredSize(this.c);
-            Label_0343: {
+            Label_0343:
+            {
                 if (n > 0 && n2 > 0) {
                     this.v = this.createImage(n, n2);
                     if (!t) {
@@ -180,25 +187,29 @@ public class ob extends JPanel implements hb, cb
         }
         this.e.a(ob.H[1], null, this.c);
     }
-    
+
+    @Override
     public Dimension getPreferredSize() {
         return this.c;
     }
-    
+
+    @Override
     public Dimension getMaximumSize() {
         return this.c;
     }
-    
+
+    @Override
     public void paintComponent(final Graphics graphics) {
-        final boolean t = g.t;
+        final boolean t = com.avocent.kvm.b.g.t;
         if (!this.isShowing()) {
             return;
         }
-        final Graphics2D graphics2D = (Graphics2D)graphics;
+        final Graphics2D graphics2D = (Graphics2D) graphics;
         final Rectangle clipBounds = graphics.getClipBounds();
-        Label_0380: {
+        Label_0380:
+        {
             if ((this.u || this.x) && this.v != null) {
-                graphics.drawImage(this.v, 0, 0, (int)(this.v.getWidth(this) * this.n), (int)(this.v.getHeight(this) * this.n), this);
+                graphics.drawImage(this.v, 0, 0, (int) (this.v.getWidth(this) * this.n), (int) (this.v.getHeight(this) * this.n), this);
                 if (!t) {
                     break Label_0380;
                 }
@@ -217,8 +228,8 @@ public class ob extends JPanel implements hb, cb
                     if (this.D != null) {
                         graphics.setFont(this.i);
                         final Rectangle2D stringBounds = graphics.getFontMetrics().getStringBounds(this.D, graphics);
-                        final int n = (int)(this.getWidth() - stringBounds.getWidth()) / 2;
-                        final int n2 = (int)(this.getHeight() - stringBounds.getHeight()) / 2;
+                        final int n = (int) (this.getWidth() - stringBounds.getWidth()) / 2;
+                        final int n2 = (int) (this.getHeight() - stringBounds.getHeight()) / 2;
                         graphics.setColor(this.g);
                         graphics.fillRect(0, 0, this.getWidth(), this.getHeight());
                         graphics.setColor(this.h);
@@ -229,19 +240,22 @@ public class ob extends JPanel implements hb, cb
                     break Label_0380;
                 }
             }
-            graphics.drawImage(this.b, clipBounds.x, clipBounds.y, clipBounds.x + clipBounds.width, clipBounds.y + clipBounds.height, (int)(clipBounds.x / this.n), (int)(clipBounds.y / this.n), (int)((clipBounds.x + clipBounds.width) / this.n), (int)((clipBounds.y + clipBounds.height) / this.n), this);
+            graphics.drawImage(this.b, clipBounds.x, clipBounds.y, clipBounds.x + clipBounds.width, clipBounds.y + clipBounds.height, (int) (clipBounds.x / this.n), (int) (clipBounds.y / this.n), (int) ((clipBounds.x + clipBounds.width) / this.n), (int) ((clipBounds.y + clipBounds.height) / this.n), this);
         }
         ++this.q;
     }
-    
+
+    @Override
     public Component c() {
         return this;
     }
-    
+
+    @Override
     public boolean imageUpdate(final Image image, final int n, final int n2, final int n3, final int n4, final int n5) {
         return (n & 0x20) == 0x0 && (n & 0x80) == 0x0;
     }
-    
+
+    @Override
     public void b() {
         ++this.r;
         this.g();
@@ -249,11 +263,13 @@ public class ob extends JPanel implements hb, cb
             this.c(false);
         }
     }
-    
+
+    @Override
     public void a() {
         this.g();
     }
-    
+
+    @Override
     public void a(final int n, final int n2) {
         if (n != 0) {
             if (n2 != 0) {
@@ -261,13 +277,14 @@ public class ob extends JPanel implements hb, cb
             }
         }
     }
-    
+
+    @Override
     public void reshape(final int n, final int n2, final int n3, final int n4) {
         super.reshape(n, n2, this.c.width, this.c.height);
     }
-    
+
     public void c(final boolean b) {
-        final boolean t = g.t;
+        final boolean t = com.avocent.kvm.b.g.t;
         ++this.o;
         if (this.x && this.d != null) {
             final int g = this.d.g();
@@ -292,11 +309,9 @@ public class ob extends JPanel implements hb, cb
             try {
                 SwingUtilities.invokeAndWait(this.C);
                 return;
-            }
-            catch (InterruptedException ex) {
+            } catch (InterruptedException ex) {
                 return;
-            }
-            catch (InvocationTargetException ex2) {
+            } catch (InvocationTargetException ex2) {
                 if (!t) {
                     return;
                 }
@@ -310,7 +325,8 @@ public class ob extends JPanel implements hb, cb
             }
         }
     }
-    
+
+    @Override
     public void a(final int n, final int n2, final int n3, final int n4) {
         synchronized (this.j) {
             this.j.b(n, n2, n3, n4);
@@ -319,7 +335,7 @@ public class ob extends JPanel implements hb, cb
             this.c(false);
         }
     }
-    
+
     public void g() {
         if (this.d != null) {
             synchronized (this.j) {
@@ -327,32 +343,35 @@ public class ob extends JPanel implements hb, cb
             }
         }
     }
-    
+
+    @Override
     public RenderedImage d() {
         final Image image = this.createImage(this.d.c(), this.d.d());
         this.paint(image.getGraphics());
-        return (RenderedImage)image;
+        return (RenderedImage) image;
     }
-    
+
     void b(final int n, final int n2, final int n3, final int n4) {
         if (this.isShowing()) {
             this.a.newPixels(n, n2, n3, n4);
         }
     }
-    
+
+    @Override
     public void a(final String d) {
         synchronized (this) {
             this.D = d;
         }
         this.h();
     }
-    
+
+    @Override
     public void a(final u e) {
         this.e = e;
         if (e == null) {
             this.d = null;
             this.e();
-            if (!g.t) {
+            if (!com.avocent.kvm.b.g.t) {
                 return;
             }
         }
@@ -365,15 +384,16 @@ public class ob extends JPanel implements hb, cb
             e.h().a(this);
         }
     }
-    
+
+    @Override
     public void b(final boolean e) {
         this.E = e;
     }
-    
+
     public void h() {
         SwingUtilities.invokeLater(new n(this));
     }
-    
+
     static {
         final String[] h = new String[4];
         final int n = 0;
@@ -383,7 +403,8 @@ public class ob extends JPanel implements hb, cb
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -413,7 +434,7 @@ public class ob extends JPanel implements hb, cb
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -430,7 +451,8 @@ public class ob extends JPanel implements hb, cb
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -460,7 +482,7 @@ public class ob extends JPanel implements hb, cb
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -477,7 +499,8 @@ public class ob extends JPanel implements hb, cb
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -507,7 +530,7 @@ public class ob extends JPanel implements hb, cb
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -524,7 +547,8 @@ public class ob extends JPanel implements hb, cb
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0446: {
+            Label_0446:
+            {
                 if (n14 > 1) {
                     break Label_0446;
                 }
@@ -554,14 +578,14 @@ public class ob extends JPanel implements hb, cb
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
             if (n14 <= n16) {
                 h[n13] = new String(charArray4).intern();
                 H = h;
-                return;
+                break;
             }
             continue;
         }

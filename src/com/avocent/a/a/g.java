@@ -1,23 +1,26 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.a;
 
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowAdapter;
 
-class g extends WindowAdapter
-{
+class g extends WindowAdapter {
+
     final h a;
     private static final String z;
-    
+
     g(final h a) {
         this.a = a;
-        super();
     }
-    
+
+    @Override
     public void windowClosing(final WindowEvent windowEvent) {
         this.a.o.b().a(g.z);
         this.a.j();
     }
-    
+
     static {
         final char[] charArray = "I3a\u0001J\u001b&`\u001d\r\r*r\u0002B\u000ecd\u0007C\r,dND\u001acp\u0002B\u001a*}\t\u0003".toCharArray();
         int length;
@@ -25,7 +28,8 @@ class g extends WindowAdapter
         final int n = n2 = (length = charArray.length);
         int n3 = 0;
         while (true) {
-            Label_0094: {
+            Label_0094:
+            {
                 if (n > 1) {
                     break Label_0094;
                 }
@@ -55,13 +59,13 @@ class g extends WindowAdapter
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n3;
                 } while (n == 0);
             }
             if (n <= n3) {
                 z = new String(charArray).intern();
-                return;
+                break;
             }
             continue;
         }

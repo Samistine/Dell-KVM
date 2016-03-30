@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.lenovo.kvm.b;
 
 import java.awt.event.ActionEvent;
@@ -10,7 +13,6 @@ import java.awt.LayoutManager;
 import java.awt.GridBagLayout;
 import javax.swing.border.Border;
 import javax.swing.BorderFactory;
-import com.avocent.a.d;
 import java.awt.Component;
 import java.awt.Frame;
 import javax.swing.JRadioButton;
@@ -21,8 +23,8 @@ import javax.swing.ButtonGroup;
 import com.avocent.lenovo.kvm.c;
 import javax.swing.JDialog;
 
-public class d extends JDialog
-{
+public class d extends JDialog {
+
     protected c a;
     protected int b;
     private ButtonGroup c;
@@ -34,14 +36,14 @@ public class d extends JDialog
     private JRadioButton i;
     private JRadioButton j;
     private static final String[] z;
-    
+
     public d(final c a, final Frame locationRelativeTo) {
         super(locationRelativeTo, true);
         this.a = a;
         this.a();
         this.setLocationRelativeTo(locationRelativeTo);
     }
-    
+
     private void a() {
         this.c = new ButtonGroup();
         this.f = new JPanel();
@@ -53,16 +55,16 @@ public class d extends JDialog
         this.h = new JButton();
         this.setDefaultCloseOperation(2);
         this.a.d();
-        this.setTitle(d.b(d.z[6]));
+        this.setTitle(com.avocent.a.d.b(com.avocent.lenovo.kvm.b.d.z[6]));
         this.f.setBorder(BorderFactory.createTitledBorder(""));
         this.f.setLayout(new GridBagLayout());
-        this.g.setBackground(UIManager.getDefaults().getColor(d.z[3]));
+        this.g.setBackground(UIManager.getDefaults().getColor(com.avocent.lenovo.kvm.b.d.z[3]));
         this.g.setColumns(40);
         this.g.setEditable(false);
         this.g.setLineWrap(true);
         final JTextArea g = this.g;
         this.a.d();
-        g.setText(d.b(d.z[5]));
+        g.setText(com.avocent.a.d.b(com.avocent.lenovo.kvm.b.d.z[5]));
         this.g.setWrapStyleWord(true);
         final GridBagConstraints gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.gridwidth = 0;
@@ -74,7 +76,7 @@ public class d extends JDialog
         this.c.add(this.i);
         final JRadioButton i = this.i;
         this.a.d();
-        i.setText(d.b(d.z[2]));
+        i.setText(com.avocent.a.d.b(com.avocent.lenovo.kvm.b.d.z[2]));
         final GridBagConstraints gridBagConstraints2 = new GridBagConstraints();
         gridBagConstraints2.gridwidth = 0;
         gridBagConstraints2.fill = 2;
@@ -84,7 +86,7 @@ public class d extends JDialog
         this.c.add(this.j);
         final JRadioButton j = this.j;
         this.a.d();
-        j.setText(d.b(d.z[4]));
+        j.setText(com.avocent.a.d.b(com.avocent.lenovo.kvm.b.d.z[4]));
         final GridBagConstraints gridBagConstraints3 = new GridBagConstraints();
         gridBagConstraints3.gridwidth = 0;
         gridBagConstraints3.fill = 2;
@@ -95,32 +97,32 @@ public class d extends JDialog
         gridBagConstraints4.fill = 2;
         gridBagConstraints4.insets = new Insets(0, 10, 10, 10);
         this.f.add(this.e, gridBagConstraints4);
-        this.getContentPane().add(this.f, d.z[1]);
+        this.getContentPane().add(this.f, com.avocent.lenovo.kvm.b.d.z[1]);
         this.d.setLayout(new GridBagLayout());
-        this.h.setText(d.z[7]);
+        this.h.setText(com.avocent.lenovo.kvm.b.d.z[7]);
         this.h.addActionListener(new a(this));
         final GridBagConstraints gridBagConstraints5 = new GridBagConstraints();
         gridBagConstraints5.insets = new Insets(5, 5, 5, 5);
         this.d.add(this.h, gridBagConstraints5);
-        this.getContentPane().add(this.d, d.z[0]);
+        this.getContentPane().add(this.d, com.avocent.lenovo.kvm.b.d.z[0]);
         this.pack();
     }
-    
+
     private void a(final ActionEvent actionEvent) {
         this.b = (this.i.isSelected() ? 0 : 1);
         this.setVisible(false);
     }
-    
+
     public int b() {
         this.b = 1;
         this.setVisible(true);
         return this.b;
     }
-    
+
     static void a(final d d, final ActionEvent actionEvent) {
         d.a(actionEvent);
     }
-    
+
     static {
         final String[] z2 = new String[8];
         final int n = 0;
@@ -130,7 +132,8 @@ public class d extends JDialog
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0097: {
+            Label_0097:
+            {
                 if (n2 > 1) {
                     break Label_0097;
                 }
@@ -160,7 +163,7 @@ public class d extends JDialog
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -177,7 +180,8 @@ public class d extends JDialog
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0213: {
+            Label_0213:
+            {
                 if (n6 > 1) {
                     break Label_0213;
                 }
@@ -207,7 +211,7 @@ public class d extends JDialog
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -224,7 +228,8 @@ public class d extends JDialog
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0329: {
+            Label_0329:
+            {
                 if (n10 > 1) {
                     break Label_0329;
                 }
@@ -254,7 +259,7 @@ public class d extends JDialog
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -271,7 +276,8 @@ public class d extends JDialog
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0445: {
+            Label_0445:
+            {
                 if (n14 > 1) {
                     break Label_0445;
                 }
@@ -301,7 +307,7 @@ public class d extends JDialog
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -318,7 +324,8 @@ public class d extends JDialog
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0561: {
+            Label_0561:
+            {
                 if (n18 > 1) {
                     break Label_0561;
                 }
@@ -348,7 +355,7 @@ public class d extends JDialog
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
@@ -365,7 +372,8 @@ public class d extends JDialog
         final int n22 = n23 = (length6 = charArray6.length);
         int n24 = 0;
         while (true) {
-            Label_0677: {
+            Label_0677:
+            {
                 if (n22 > 1) {
                     break Label_0677;
                 }
@@ -395,7 +403,7 @@ public class d extends JDialog
                             break;
                         }
                     }
-                    charArray6[length6] = (char)(c11 ^ c12);
+                    charArray6[length6] = (char) (c11 ^ c12);
                     ++n24;
                 } while (n22 == 0);
             }
@@ -412,7 +420,8 @@ public class d extends JDialog
         final int n26 = n27 = (length7 = charArray7.length);
         int n28 = 0;
         while (true) {
-            Label_0793: {
+            Label_0793:
+            {
                 if (n26 > 1) {
                     break Label_0793;
                 }
@@ -442,7 +451,7 @@ public class d extends JDialog
                             break;
                         }
                     }
-                    charArray7[length7] = (char)(c13 ^ c14);
+                    charArray7[length7] = (char) (c13 ^ c14);
                     ++n28;
                 } while (n26 == 0);
             }
@@ -459,7 +468,8 @@ public class d extends JDialog
         final int n30 = n31 = (length8 = charArray8.length);
         int n32 = 0;
         while (true) {
-            Label_0909: {
+            Label_0909:
+            {
                 if (n30 > 1) {
                     break Label_0909;
                 }
@@ -489,14 +499,14 @@ public class d extends JDialog
                             break;
                         }
                     }
-                    charArray8[length8] = (char)(c15 ^ c16);
+                    charArray8[length8] = (char) (c15 ^ c16);
                     ++n32;
                 } while (n30 == 0);
             }
             if (n30 <= n32) {
                 z2[n29] = new String(charArray8).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

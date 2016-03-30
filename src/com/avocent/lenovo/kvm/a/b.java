@@ -1,22 +1,26 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.lenovo.kvm.a;
 
 import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 
-public class b extends AbstractAction
-{
+public class b extends AbstractAction {
+
     protected a a;
     private static final String z;
-    
+
     public b(final a a) {
         super(a.a().b(b.z));
         this.a = a;
     }
-    
+
+    @Override
     public void actionPerformed(final ActionEvent actionEvent) {
         this.a.f();
     }
-    
+
     static {
         final char[] charArray = "\u0002,\u0019o6'\u000e:E;.\u0000/".toCharArray();
         int length;
@@ -24,7 +28,8 @@ public class b extends AbstractAction
         final int n = n2 = (length = charArray.length);
         int n3 = 0;
         while (true) {
-            Label_0094: {
+            Label_0094:
+            {
                 if (n > 1) {
                     break Label_0094;
                 }
@@ -54,13 +59,13 @@ public class b extends AbstractAction
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n3;
                 } while (n == 0);
             }
             if (n <= n3) {
                 z = new String(charArray).intern();
-                return;
+                break;
             }
             continue;
         }

@@ -1,47 +1,49 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.b;
 
 import java.awt.Component;
 import com.avocent.a.j;
 import java.awt.event.WindowListener;
 import javax.swing.JDialog;
-import com.avocent.kvm.b.e.a;
 import javax.swing.Action;
 import com.avocent.kvm.b.nb;
 import com.avocent.a.k;
 import com.avocent.kvm.b.u;
 import com.avocent.a.e;
 
-public class a extends e
-{
+public class a extends e {
+
     protected u j;
     protected k k;
     protected nb l;
     protected Action m;
     public static int n;
     private static final String z;
-    
-    public a(final a a) {
-        super(a.z, (e)a);
+
+    public a(final com.avocent.kvm.b.e.a a) {
+        super(z, (e) a);
         this.m = new d(this);
         this.j = a.a();
     }
-    
-    public a a() {
-        return (a)this.f;
+
+    public com.avocent.kvm.b.e.a a() {
+        return (com.avocent.kvm.b.e.a) this.f;
     }
-    
+
     public void c() {
-        final int n = a.n;
+        int n = a.n;
         if (this.b == null) {
-            this.b = new e(this, false);
-            ((JDialog)this.b).addWindowListener(new b(this));
+            this.b = new com.avocent.a.b.e(this, false);
+            ((JDialog) this.b).addWindowListener(new b(this));
         }
         if (this.k != null) {
             this.k.b();
         }
-        this.k = new k(this.j, (j)this.b);
+        this.k = new k(this.j, (j) this.b);
         this.l = this.k.a();
-        ((e)this.b).a(this.l);
+        ((com.avocent.a.b.e) this.b).a(this.l);
         this.k.start();
         this.b.setVisible(true);
         if (n != 0) {
@@ -49,11 +51,11 @@ public class a extends e
             com.avocent.kvm.b.d.a.c = ++c;
         }
     }
-    
+
     static Component a(final a a) {
         return a.b;
     }
-    
+
     static {
         final char[] charArray = "5~\u0017 -\"c\u001781\u0001I\u0019:*\u0014e\u001a8;\u0014".toCharArray();
         int length;
@@ -61,7 +63,8 @@ public class a extends e
         final int n = n2 = (length = charArray.length);
         int n3 = 0;
         while (true) {
-            Label_0094: {
+            Label_0094:
+            {
                 if (n > 1) {
                     break Label_0094;
                 }
@@ -91,13 +94,13 @@ public class a extends e
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n3;
                 } while (n == 0);
             }
             if (n <= n3) {
                 z = new String(charArray).intern();
-                return;
+                break;
             }
             continue;
         }

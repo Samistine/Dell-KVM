@@ -1,10 +1,12 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.a;
 
 import java.awt.Component;
 import javax.swing.JOptionPane;
 import com.avocent.kvm.b.ob;
 import javax.swing.SwingUtilities;
-import com.avocent.kvm.a.l;
 import java.io.IOException;
 import com.avocent.a.c.c;
 import java.beans.PropertyChangeListener;
@@ -20,8 +22,8 @@ import javax.swing.JFrame;
 import com.avocent.kvm.b.e.a;
 import com.avocent.a.g;
 
-public class i extends g implements a
-{
+public class i extends g implements a {
+
     protected JFrame k;
     protected JFrame l;
     protected hb m;
@@ -36,7 +38,7 @@ public class i extends g implements a
     protected k v;
     protected j w;
     protected l x;
-    protected f y;
+    protected com.avocent.a.a.f y;
     protected com.avocent.a.c.b z;
     protected t A;
     protected s B;
@@ -46,17 +48,17 @@ public class i extends g implements a
     protected boolean F;
     public static boolean G;
     private static final String[] H;
-    
+
     public i() {
         super(i.H[0]);
-        this.y = new f(this);
+        this.y = new com.avocent.a.a.f(this);
         this.z = new n(this);
         this.A = new t(this);
         this.C = false;
         this.D = false;
         this.F = false;
     }
-    
+
     public void a(final s b, final d j, final String[] array) {
         final boolean g = i.G;
         this.B = b;
@@ -84,7 +86,7 @@ public class i extends g implements a
         this.w = new j(this);
         this.a(this.A);
     }
-    
+
     public void f() throws Exception {
         final boolean g = i.G;
         if (this.a(i.H[15], new Integer(0)) == 1) {
@@ -111,10 +113,10 @@ public class i extends g implements a
         this.v.a();
         this.E = System.currentTimeMillis();
         this.i();
-        this.r.a(this.B.a((Object)null));
+        this.r.a(this.B.a((Object) null));
         this.o.a(this.r.e());
         this.p.a(this.r.e());
-        this.a(i.H[14], (Object)Boolean.FALSE);
+        this.a(i.H[14], (Object) Boolean.FALSE);
         final Boolean a2 = this.a(i.H[16], Boolean.FALSE);
         this.r.g().a(this.n, true);
         this.r.g().a(this.m, a2);
@@ -122,25 +124,24 @@ public class i extends g implements a
             i.G = !g;
         }
     }
-    
+
     public void g() {
         this.a(this.a(i.H[14], Boolean.FALSE));
     }
-    
+
     public boolean h() {
         try {
             return new c().a((i.H[3] + this.e(i.H[5]) + "_" + this.a(i.H[4], new Integer(8192)) + "_" + this.a(i.H[7], new Integer(2068)) + "_" + System.getProperty(i.H[6])).replace(' ', '_'), this.z);
-        }
-        catch (IOException ex) {
+        } catch (IOException ex) {
             ex.printStackTrace();
             return false;
         }
     }
-    
+
     public void i() throws Exception {
         final boolean g = i.G;
         this.x = new l(this);
-        final l l = (l)this.a();
+        final com.avocent.kvm.a.l l = (com.avocent.kvm.a.l) this.a();
         l.a(this.x);
         final String e = this.e(i.H[41]);
         final String e2 = this.e(i.H[38]);
@@ -161,93 +162,94 @@ public class i extends g implements a
         l.h(a4);
         l.b(a3);
         l.c(a5);
-        q.a(i.H[37] + e3 + i.H[32] + a2 + i.H[43] + a);
+        com.avocent.a.a.q.a(i.H[37] + e3 + i.H[32] + a2 + i.H[43] + a);
         if (e4 != null) {
             l.a(e3, e4, a6, a3, a8);
             if (!g) {
-                return;
+                break;
             }
             int c = com.avocent.kvm.b.d.a.c;
             com.avocent.kvm.b.d.a.c = ++c;
         }
         l.a(e3, a7, a6, a3, a8);
     }
-    
+
     void j() throws Exception {
         final p p = new p(this);
         if (SwingUtilities.isEventDispatchThread()) {
             p.run();
             if (!i.G) {
-                return;
+                break;
             }
         }
         SwingUtilities.invokeAndWait(p);
     }
-    
+
     public j k() {
         return this.w;
     }
-    
+
     public bb l() {
         return this.o;
     }
-    
+
     public bb m() {
         return this.p;
     }
-    
+
     public f n() {
         return this.u;
     }
-    
+
+    @Override
     public u a() {
         return this.r;
     }
-    
+
     public hb o() {
         return this.m;
     }
-    
+
     public hb p() {
         return this.n;
     }
-    
+
     public b q() {
         return this.s;
     }
-    
+
     public JFrame r() {
         return this.k;
     }
-    
+
+    @Override
     public JFrame c() {
-        JFrame jFrame = null;
+        JFrame frame = null;
         if (this.l != null && this.l.isVisible()) {
-            jFrame = this.l;
+            frame = this.l;
+        } else if (this.k != null) {
+            frame = this.k;
         }
-        else if (this.k != null) {
-            jFrame = this.k;
-        }
-        return jFrame;
+        return frame;
     }
-    
+
     public void a(final boolean b) {
         final o o = new o(this, b);
         if (!SwingUtilities.isEventDispatchThread()) {
             SwingUtilities.invokeLater(o);
             if (!i.G) {
-                return;
+                break;
             }
         }
         o.run();
     }
-    
+
     public void s() {
         this.d();
-        this.f(d.b(i.H[30]));
+        this.f(com.avocent.a.d.b(i.H[30]));
         System.exit(0);
     }
-    
+
     public void a(final u u) {
         if (this.C) {
             this.b().a(i.H[20]);
@@ -257,7 +259,7 @@ public class i extends g implements a
             this.b().a(i.H[28] + n + i.H[22]);
             final hb o = this.o();
             if (o instanceof ob) {
-                final ob ob = (ob)o;
+                final ob ob = (ob) o;
                 this.b().a(i.H[26]);
                 this.b().a(i.H[29] + ob.o);
                 this.b().a(i.H[18] + ob.p);
@@ -269,21 +271,22 @@ public class i extends g implements a
             }
             System.exit(0);
             if (!i.G) {
-                return;
+                break;
             }
         }
         if (!this.F) {
             this.k.setVisible(true);
             this.l.setVisible(false);
-            JOptionPane.showMessageDialog(null, d.b(i.H[23]), d.b(i.H[1]), 0);
+            JOptionPane.showMessageDialog(null, com.avocent.a.d.b(i.H[23]), com.avocent.a.d.b(i.H[1]), 0);
             System.exit(0);
         }
     }
-    
+
     public void t() {
         try {
             final String b = this.r.b(i.H[8]);
-            Label_0061: {
+            Label_0061:
+            {
                 if (b != null && b.equalsIgnoreCase(i.H[9])) {
                     this.v.c();
                     if (!i.G) {
@@ -296,20 +299,20 @@ public class i extends g implements a
             this.k.setVisible(false);
             this.l.setVisible(false);
             this.a().f();
-        }
-        catch (IOException ex) {
+        } catch (IOException ex) {
             ex.printStackTrace();
         }
     }
-    
+
     public void f(final String s) {
-        JOptionPane.showMessageDialog(this.c(), s, d.b(i.H[1]), 1);
+        JOptionPane.showMessageDialog(this.c(), s, com.avocent.a.d.b(i.H[1]), 1);
     }
-    
+
+    @Override
     public void a(final String s) {
-        JOptionPane.showMessageDialog(this.c(), s, d.b(i.H[2]), 0);
+        JOptionPane.showMessageDialog(this.c(), s, com.avocent.a.d.b(i.H[2]), 0);
     }
-    
+
     static {
         final String[] h = new String[47];
         final int n = 0;
@@ -319,7 +322,8 @@ public class i extends g implements a
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -349,7 +353,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -366,7 +370,8 @@ public class i extends g implements a
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -396,7 +401,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -413,7 +418,8 @@ public class i extends g implements a
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -443,7 +449,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -460,7 +466,8 @@ public class i extends g implements a
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0446: {
+            Label_0446:
+            {
                 if (n14 > 1) {
                     break Label_0446;
                 }
@@ -490,7 +497,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -507,7 +514,8 @@ public class i extends g implements a
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0562: {
+            Label_0562:
+            {
                 if (n18 > 1) {
                     break Label_0562;
                 }
@@ -537,7 +545,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
@@ -554,7 +562,8 @@ public class i extends g implements a
         final int n22 = n23 = (length6 = charArray6.length);
         int n24 = 0;
         while (true) {
-            Label_0678: {
+            Label_0678:
+            {
                 if (n22 > 1) {
                     break Label_0678;
                 }
@@ -584,7 +593,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray6[length6] = (char)(c11 ^ c12);
+                    charArray6[length6] = (char) (c11 ^ c12);
                     ++n24;
                 } while (n22 == 0);
             }
@@ -601,7 +610,8 @@ public class i extends g implements a
         final int n26 = n27 = (length7 = charArray7.length);
         int n28 = 0;
         while (true) {
-            Label_0798: {
+            Label_0798:
+            {
                 if (n26 > 1) {
                     break Label_0798;
                 }
@@ -631,7 +641,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray7[length7] = (char)(c13 ^ c14);
+                    charArray7[length7] = (char) (c13 ^ c14);
                     ++n28;
                 } while (n26 == 0);
             }
@@ -648,7 +658,8 @@ public class i extends g implements a
         final int n30 = n31 = (length8 = charArray8.length);
         int n32 = 0;
         while (true) {
-            Label_0918: {
+            Label_0918:
+            {
                 if (n30 > 1) {
                     break Label_0918;
                 }
@@ -678,7 +689,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray8[length8] = (char)(c15 ^ c16);
+                    charArray8[length8] = (char) (c15 ^ c16);
                     ++n32;
                 } while (n30 == 0);
             }
@@ -695,7 +706,8 @@ public class i extends g implements a
         final int n34 = n35 = (length9 = charArray9.length);
         int n36 = 0;
         while (true) {
-            Label_1038: {
+            Label_1038:
+            {
                 if (n34 > 1) {
                     break Label_1038;
                 }
@@ -725,7 +737,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray9[length9] = (char)(c17 ^ c18);
+                    charArray9[length9] = (char) (c17 ^ c18);
                     ++n36;
                 } while (n34 == 0);
             }
@@ -742,7 +754,8 @@ public class i extends g implements a
         final int n38 = n39 = (length10 = charArray10.length);
         int n40 = 0;
         while (true) {
-            Label_1158: {
+            Label_1158:
+            {
                 if (n38 > 1) {
                     break Label_1158;
                 }
@@ -772,7 +785,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray10[length10] = (char)(c19 ^ c20);
+                    charArray10[length10] = (char) (c19 ^ c20);
                     ++n40;
                 } while (n38 == 0);
             }
@@ -789,7 +802,8 @@ public class i extends g implements a
         final int n42 = n43 = (length11 = charArray11.length);
         int n44 = 0;
         while (true) {
-            Label_1278: {
+            Label_1278:
+            {
                 if (n42 > 1) {
                     break Label_1278;
                 }
@@ -819,7 +833,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray11[length11] = (char)(c21 ^ c22);
+                    charArray11[length11] = (char) (c21 ^ c22);
                     ++n44;
                 } while (n42 == 0);
             }
@@ -836,7 +850,8 @@ public class i extends g implements a
         final int n46 = n47 = (length12 = charArray12.length);
         int n48 = 0;
         while (true) {
-            Label_1398: {
+            Label_1398:
+            {
                 if (n46 > 1) {
                     break Label_1398;
                 }
@@ -866,7 +881,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray12[length12] = (char)(c23 ^ c24);
+                    charArray12[length12] = (char) (c23 ^ c24);
                     ++n48;
                 } while (n46 == 0);
             }
@@ -883,7 +898,8 @@ public class i extends g implements a
         final int n50 = n51 = (length13 = charArray13.length);
         int n52 = 0;
         while (true) {
-            Label_1518: {
+            Label_1518:
+            {
                 if (n50 > 1) {
                     break Label_1518;
                 }
@@ -913,7 +929,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray13[length13] = (char)(c25 ^ c26);
+                    charArray13[length13] = (char) (c25 ^ c26);
                     ++n52;
                 } while (n50 == 0);
             }
@@ -930,7 +946,8 @@ public class i extends g implements a
         final int n54 = n55 = (length14 = charArray14.length);
         int n56 = 0;
         while (true) {
-            Label_1638: {
+            Label_1638:
+            {
                 if (n54 > 1) {
                     break Label_1638;
                 }
@@ -960,7 +977,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray14[length14] = (char)(c27 ^ c28);
+                    charArray14[length14] = (char) (c27 ^ c28);
                     ++n56;
                 } while (n54 == 0);
             }
@@ -977,7 +994,8 @@ public class i extends g implements a
         final int n58 = n59 = (length15 = charArray15.length);
         int n60 = 0;
         while (true) {
-            Label_1758: {
+            Label_1758:
+            {
                 if (n58 > 1) {
                     break Label_1758;
                 }
@@ -1007,7 +1025,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray15[length15] = (char)(c29 ^ c30);
+                    charArray15[length15] = (char) (c29 ^ c30);
                     ++n60;
                 } while (n58 == 0);
             }
@@ -1024,7 +1042,8 @@ public class i extends g implements a
         final int n62 = n63 = (length16 = charArray16.length);
         int n64 = 0;
         while (true) {
-            Label_1878: {
+            Label_1878:
+            {
                 if (n62 > 1) {
                     break Label_1878;
                 }
@@ -1054,7 +1073,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray16[length16] = (char)(c31 ^ c32);
+                    charArray16[length16] = (char) (c31 ^ c32);
                     ++n64;
                 } while (n62 == 0);
             }
@@ -1071,7 +1090,8 @@ public class i extends g implements a
         final int n66 = n67 = (length17 = charArray17.length);
         int n68 = 0;
         while (true) {
-            Label_1998: {
+            Label_1998:
+            {
                 if (n66 > 1) {
                     break Label_1998;
                 }
@@ -1101,7 +1121,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray17[length17] = (char)(c33 ^ c34);
+                    charArray17[length17] = (char) (c33 ^ c34);
                     ++n68;
                 } while (n66 == 0);
             }
@@ -1118,7 +1138,8 @@ public class i extends g implements a
         final int n70 = n71 = (length18 = charArray18.length);
         int n72 = 0;
         while (true) {
-            Label_2118: {
+            Label_2118:
+            {
                 if (n70 > 1) {
                     break Label_2118;
                 }
@@ -1148,7 +1169,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray18[length18] = (char)(c35 ^ c36);
+                    charArray18[length18] = (char) (c35 ^ c36);
                     ++n72;
                 } while (n70 == 0);
             }
@@ -1165,7 +1186,8 @@ public class i extends g implements a
         final int n74 = n75 = (length19 = charArray19.length);
         int n76 = 0;
         while (true) {
-            Label_2238: {
+            Label_2238:
+            {
                 if (n74 > 1) {
                     break Label_2238;
                 }
@@ -1195,7 +1217,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray19[length19] = (char)(c37 ^ c38);
+                    charArray19[length19] = (char) (c37 ^ c38);
                     ++n76;
                 } while (n74 == 0);
             }
@@ -1212,7 +1234,8 @@ public class i extends g implements a
         final int n78 = n79 = (length20 = charArray20.length);
         int n80 = 0;
         while (true) {
-            Label_2358: {
+            Label_2358:
+            {
                 if (n78 > 1) {
                     break Label_2358;
                 }
@@ -1242,7 +1265,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray20[length20] = (char)(c39 ^ c40);
+                    charArray20[length20] = (char) (c39 ^ c40);
                     ++n80;
                 } while (n78 == 0);
             }
@@ -1259,7 +1282,8 @@ public class i extends g implements a
         final int n82 = n83 = (length21 = charArray21.length);
         int n84 = 0;
         while (true) {
-            Label_2478: {
+            Label_2478:
+            {
                 if (n82 > 1) {
                     break Label_2478;
                 }
@@ -1289,7 +1313,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray21[length21] = (char)(c41 ^ c42);
+                    charArray21[length21] = (char) (c41 ^ c42);
                     ++n84;
                 } while (n82 == 0);
             }
@@ -1306,7 +1330,8 @@ public class i extends g implements a
         final int n86 = n87 = (length22 = charArray22.length);
         int n88 = 0;
         while (true) {
-            Label_2598: {
+            Label_2598:
+            {
                 if (n86 > 1) {
                     break Label_2598;
                 }
@@ -1336,7 +1361,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray22[length22] = (char)(c43 ^ c44);
+                    charArray22[length22] = (char) (c43 ^ c44);
                     ++n88;
                 } while (n86 == 0);
             }
@@ -1353,7 +1378,8 @@ public class i extends g implements a
         final int n90 = n91 = (length23 = charArray23.length);
         int n92 = 0;
         while (true) {
-            Label_2718: {
+            Label_2718:
+            {
                 if (n90 > 1) {
                     break Label_2718;
                 }
@@ -1383,7 +1409,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray23[length23] = (char)(c45 ^ c46);
+                    charArray23[length23] = (char) (c45 ^ c46);
                     ++n92;
                 } while (n90 == 0);
             }
@@ -1400,7 +1426,8 @@ public class i extends g implements a
         final int n94 = n95 = (length24 = charArray24.length);
         int n96 = 0;
         while (true) {
-            Label_2838: {
+            Label_2838:
+            {
                 if (n94 > 1) {
                     break Label_2838;
                 }
@@ -1430,7 +1457,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray24[length24] = (char)(c47 ^ c48);
+                    charArray24[length24] = (char) (c47 ^ c48);
                     ++n96;
                 } while (n94 == 0);
             }
@@ -1447,7 +1474,8 @@ public class i extends g implements a
         final int n98 = n99 = (length25 = charArray25.length);
         int n100 = 0;
         while (true) {
-            Label_2958: {
+            Label_2958:
+            {
                 if (n98 > 1) {
                     break Label_2958;
                 }
@@ -1477,7 +1505,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray25[length25] = (char)(c49 ^ c50);
+                    charArray25[length25] = (char) (c49 ^ c50);
                     ++n100;
                 } while (n98 == 0);
             }
@@ -1494,7 +1522,8 @@ public class i extends g implements a
         final int n102 = n103 = (length26 = charArray26.length);
         int n104 = 0;
         while (true) {
-            Label_3078: {
+            Label_3078:
+            {
                 if (n102 > 1) {
                     break Label_3078;
                 }
@@ -1524,7 +1553,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray26[length26] = (char)(c51 ^ c52);
+                    charArray26[length26] = (char) (c51 ^ c52);
                     ++n104;
                 } while (n102 == 0);
             }
@@ -1541,7 +1570,8 @@ public class i extends g implements a
         final int n106 = n107 = (length27 = charArray27.length);
         int n108 = 0;
         while (true) {
-            Label_3198: {
+            Label_3198:
+            {
                 if (n106 > 1) {
                     break Label_3198;
                 }
@@ -1571,7 +1601,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray27[length27] = (char)(c53 ^ c54);
+                    charArray27[length27] = (char) (c53 ^ c54);
                     ++n108;
                 } while (n106 == 0);
             }
@@ -1588,7 +1618,8 @@ public class i extends g implements a
         final int n110 = n111 = (length28 = charArray28.length);
         int n112 = 0;
         while (true) {
-            Label_3318: {
+            Label_3318:
+            {
                 if (n110 > 1) {
                     break Label_3318;
                 }
@@ -1618,7 +1649,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray28[length28] = (char)(c55 ^ c56);
+                    charArray28[length28] = (char) (c55 ^ c56);
                     ++n112;
                 } while (n110 == 0);
             }
@@ -1635,7 +1666,8 @@ public class i extends g implements a
         final int n114 = n115 = (length29 = charArray29.length);
         int n116 = 0;
         while (true) {
-            Label_3438: {
+            Label_3438:
+            {
                 if (n114 > 1) {
                     break Label_3438;
                 }
@@ -1665,7 +1697,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray29[length29] = (char)(c57 ^ c58);
+                    charArray29[length29] = (char) (c57 ^ c58);
                     ++n116;
                 } while (n114 == 0);
             }
@@ -1682,7 +1714,8 @@ public class i extends g implements a
         final int n118 = n119 = (length30 = charArray30.length);
         int n120 = 0;
         while (true) {
-            Label_3558: {
+            Label_3558:
+            {
                 if (n118 > 1) {
                     break Label_3558;
                 }
@@ -1712,7 +1745,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray30[length30] = (char)(c59 ^ c60);
+                    charArray30[length30] = (char) (c59 ^ c60);
                     ++n120;
                 } while (n118 == 0);
             }
@@ -1729,7 +1762,8 @@ public class i extends g implements a
         final int n122 = n123 = (length31 = charArray31.length);
         int n124 = 0;
         while (true) {
-            Label_3678: {
+            Label_3678:
+            {
                 if (n122 > 1) {
                     break Label_3678;
                 }
@@ -1759,7 +1793,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray31[length31] = (char)(c61 ^ c62);
+                    charArray31[length31] = (char) (c61 ^ c62);
                     ++n124;
                 } while (n122 == 0);
             }
@@ -1776,7 +1810,8 @@ public class i extends g implements a
         final int n126 = n127 = (length32 = charArray32.length);
         int n128 = 0;
         while (true) {
-            Label_3798: {
+            Label_3798:
+            {
                 if (n126 > 1) {
                     break Label_3798;
                 }
@@ -1806,7 +1841,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray32[length32] = (char)(c63 ^ c64);
+                    charArray32[length32] = (char) (c63 ^ c64);
                     ++n128;
                 } while (n126 == 0);
             }
@@ -1823,7 +1858,8 @@ public class i extends g implements a
         final int n130 = n131 = (length33 = charArray33.length);
         int n132 = 0;
         while (true) {
-            Label_3918: {
+            Label_3918:
+            {
                 if (n130 > 1) {
                     break Label_3918;
                 }
@@ -1853,7 +1889,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray33[length33] = (char)(c65 ^ c66);
+                    charArray33[length33] = (char) (c65 ^ c66);
                     ++n132;
                 } while (n130 == 0);
             }
@@ -1870,7 +1906,8 @@ public class i extends g implements a
         final int n134 = n135 = (length34 = charArray34.length);
         int n136 = 0;
         while (true) {
-            Label_4038: {
+            Label_4038:
+            {
                 if (n134 > 1) {
                     break Label_4038;
                 }
@@ -1900,7 +1937,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray34[length34] = (char)(c67 ^ c68);
+                    charArray34[length34] = (char) (c67 ^ c68);
                     ++n136;
                 } while (n134 == 0);
             }
@@ -1917,7 +1954,8 @@ public class i extends g implements a
         final int n138 = n139 = (length35 = charArray35.length);
         int n140 = 0;
         while (true) {
-            Label_4158: {
+            Label_4158:
+            {
                 if (n138 > 1) {
                     break Label_4158;
                 }
@@ -1947,7 +1985,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray35[length35] = (char)(c69 ^ c70);
+                    charArray35[length35] = (char) (c69 ^ c70);
                     ++n140;
                 } while (n138 == 0);
             }
@@ -1964,7 +2002,8 @@ public class i extends g implements a
         final int n142 = n143 = (length36 = charArray36.length);
         int n144 = 0;
         while (true) {
-            Label_4278: {
+            Label_4278:
+            {
                 if (n142 > 1) {
                     break Label_4278;
                 }
@@ -1994,7 +2033,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray36[length36] = (char)(c71 ^ c72);
+                    charArray36[length36] = (char) (c71 ^ c72);
                     ++n144;
                 } while (n142 == 0);
             }
@@ -2011,7 +2050,8 @@ public class i extends g implements a
         final int n146 = n147 = (length37 = charArray37.length);
         int n148 = 0;
         while (true) {
-            Label_4398: {
+            Label_4398:
+            {
                 if (n146 > 1) {
                     break Label_4398;
                 }
@@ -2041,7 +2081,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray37[length37] = (char)(c73 ^ c74);
+                    charArray37[length37] = (char) (c73 ^ c74);
                     ++n148;
                 } while (n146 == 0);
             }
@@ -2058,7 +2098,8 @@ public class i extends g implements a
         final int n150 = n151 = (length38 = charArray38.length);
         int n152 = 0;
         while (true) {
-            Label_4518: {
+            Label_4518:
+            {
                 if (n150 > 1) {
                     break Label_4518;
                 }
@@ -2088,7 +2129,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray38[length38] = (char)(c75 ^ c76);
+                    charArray38[length38] = (char) (c75 ^ c76);
                     ++n152;
                 } while (n150 == 0);
             }
@@ -2105,7 +2146,8 @@ public class i extends g implements a
         final int n154 = n155 = (length39 = charArray39.length);
         int n156 = 0;
         while (true) {
-            Label_4638: {
+            Label_4638:
+            {
                 if (n154 > 1) {
                     break Label_4638;
                 }
@@ -2135,7 +2177,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray39[length39] = (char)(c77 ^ c78);
+                    charArray39[length39] = (char) (c77 ^ c78);
                     ++n156;
                 } while (n154 == 0);
             }
@@ -2152,7 +2194,8 @@ public class i extends g implements a
         final int n158 = n159 = (length40 = charArray40.length);
         int n160 = 0;
         while (true) {
-            Label_4758: {
+            Label_4758:
+            {
                 if (n158 > 1) {
                     break Label_4758;
                 }
@@ -2182,7 +2225,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray40[length40] = (char)(c79 ^ c80);
+                    charArray40[length40] = (char) (c79 ^ c80);
                     ++n160;
                 } while (n158 == 0);
             }
@@ -2199,7 +2242,8 @@ public class i extends g implements a
         final int n162 = n163 = (length41 = charArray41.length);
         int n164 = 0;
         while (true) {
-            Label_4878: {
+            Label_4878:
+            {
                 if (n162 > 1) {
                     break Label_4878;
                 }
@@ -2229,7 +2273,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray41[length41] = (char)(c81 ^ c82);
+                    charArray41[length41] = (char) (c81 ^ c82);
                     ++n164;
                 } while (n162 == 0);
             }
@@ -2246,7 +2290,8 @@ public class i extends g implements a
         final int n166 = n167 = (length42 = charArray42.length);
         int n168 = 0;
         while (true) {
-            Label_4998: {
+            Label_4998:
+            {
                 if (n166 > 1) {
                     break Label_4998;
                 }
@@ -2276,7 +2321,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray42[length42] = (char)(c83 ^ c84);
+                    charArray42[length42] = (char) (c83 ^ c84);
                     ++n168;
                 } while (n166 == 0);
             }
@@ -2293,7 +2338,8 @@ public class i extends g implements a
         final int n170 = n171 = (length43 = charArray43.length);
         int n172 = 0;
         while (true) {
-            Label_5118: {
+            Label_5118:
+            {
                 if (n170 > 1) {
                     break Label_5118;
                 }
@@ -2323,7 +2369,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray43[length43] = (char)(c85 ^ c86);
+                    charArray43[length43] = (char) (c85 ^ c86);
                     ++n172;
                 } while (n170 == 0);
             }
@@ -2340,7 +2386,8 @@ public class i extends g implements a
         final int n174 = n175 = (length44 = charArray44.length);
         int n176 = 0;
         while (true) {
-            Label_5238: {
+            Label_5238:
+            {
                 if (n174 > 1) {
                     break Label_5238;
                 }
@@ -2370,7 +2417,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray44[length44] = (char)(c87 ^ c88);
+                    charArray44[length44] = (char) (c87 ^ c88);
                     ++n176;
                 } while (n174 == 0);
             }
@@ -2387,7 +2434,8 @@ public class i extends g implements a
         final int n178 = n179 = (length45 = charArray45.length);
         int n180 = 0;
         while (true) {
-            Label_5358: {
+            Label_5358:
+            {
                 if (n178 > 1) {
                     break Label_5358;
                 }
@@ -2417,7 +2465,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray45[length45] = (char)(c89 ^ c90);
+                    charArray45[length45] = (char) (c89 ^ c90);
                     ++n180;
                 } while (n178 == 0);
             }
@@ -2434,7 +2482,8 @@ public class i extends g implements a
         final int n182 = n183 = (length46 = charArray46.length);
         int n184 = 0;
         while (true) {
-            Label_5478: {
+            Label_5478:
+            {
                 if (n182 > 1) {
                     break Label_5478;
                 }
@@ -2464,7 +2513,7 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray46[length46] = (char)(c91 ^ c92);
+                    charArray46[length46] = (char) (c91 ^ c92);
                     ++n184;
                 } while (n182 == 0);
             }
@@ -2481,7 +2530,8 @@ public class i extends g implements a
         final int n186 = n187 = (length47 = charArray47.length);
         int n188 = 0;
         while (true) {
-            Label_5598: {
+            Label_5598:
+            {
                 if (n186 > 1) {
                     break Label_5598;
                 }
@@ -2511,14 +2561,14 @@ public class i extends g implements a
                             break;
                         }
                     }
-                    charArray47[length47] = (char)(c93 ^ c94);
+                    charArray47[length47] = (char) (c93 ^ c94);
                     ++n188;
                 } while (n186 == 0);
             }
             if (n186 <= n188) {
                 h[n185] = new String(charArray47).intern();
                 H = h;
-                return;
+                break;
             }
             continue;
         }

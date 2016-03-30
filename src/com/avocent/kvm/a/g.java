@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.a;
 
 import java.util.Random;
@@ -15,8 +18,8 @@ import java.io.IOException;
 import java.io.DataOutputStream;
 import java.io.DataInputStream;
 
-public class g
-{
+public class g {
+
     protected String a;
     protected int b;
     protected DataInputStream c;
@@ -25,31 +28,30 @@ public class g
     protected byte f;
     protected int g;
     private static final String[] z;
-    
+
     private g(final String a, final int b) {
-        super();
         this.e = 0;
         this.f = 0;
         this.g = 5;
         this.a = a;
         this.b = b;
     }
-    
+
     protected void a(final DataInputStream c, final DataOutputStream d) {
         this.c = c;
         this.d = d;
     }
-    
+
     protected void a(final int g) {
         this.g = g;
     }
-    
+
     void a(final byte b, final byte[] array) throws IOException {
         final int ab = l.Ab;
         if (array.length > 32) {
-            throw new IOException(g.z[0]);
+            throw new IOException(com.avocent.kvm.a.g.z[0]);
         }
-        this.d.writeBytes(g.z[1]);
+        this.d.writeBytes(com.avocent.kvm.a.g.z[1]);
         this.d.writeInt(53);
         this.d.writeShort(256);
         this.d.writeShort(0);
@@ -70,7 +72,7 @@ public class g
         }
         this.d.flush();
     }
-    
+
     Socket a(Socket socket) throws IOException, Exception {
         int ab = l.Ab;
         final byte[] array = new byte[4];
@@ -80,20 +82,20 @@ public class g
         do {
             try {
                 read = this.c.read(array);
+            } catch (SocketTimeoutException ex) {
             }
-            catch (SocketTimeoutException ex) {}
             --n;
         } while (read == 0 && n > 0);
         if (n == 0) {
-            throw new IOException(g.z[15]);
+            throw new IOException(com.avocent.kvm.a.g.z[15]);
         }
         socket.setSoTimeout(0);
         if (array[0] != 65 || array[1] != 80 || array[2] != 67 || array[3] != 80) {
-            throw new IOException(g.z[22]);
+            throw new IOException(com.avocent.kvm.a.g.z[22]);
         }
         this.c.readInt();
         if (this.c.readShort() != -32512) {
-            throw new IOException(g.z[2]);
+            throw new IOException(com.avocent.kvm.a.g.z[2]);
         }
         this.c.readShort();
         this.c.readByte();
@@ -113,7 +115,8 @@ public class g
         if (int1 == 0) {
             return null;
         }
-        Label_0338: {
+        Label_0338:
+        {
             if ((int1 & 0x1) > 0) {
                 this.g = 1;
                 if (ab == 0) {
@@ -126,36 +129,36 @@ public class g
                     break Label_0338;
                 }
             }
-            throw new IOException(g.z[19] + int1 + g.z[21]);
+            throw new IOException(com.avocent.kvm.a.g.z[19] + int1 + com.avocent.kvm.a.g.z[21]);
         }
         if (short1 != 0) {
             final InetAddress inetAddress = socket.getInetAddress();
-            b.a().a(g.z[13] + inetAddress + ":" + short1);
+            com.avocent.kvm.b.f.b.a().a(com.avocent.kvm.a.g.z[13] + inetAddress + ":" + short1);
             socket = new Socket(inetAddress, short1);
         }
         if (this.g == 4) {
-            final SSLContext instance = SSLContext.getInstance(g.z[17]);
-            instance.init(null, new TrustManager[] { new h(this) }, null);
+            final SSLContext instance = SSLContext.getInstance(com.avocent.kvm.a.g.z[17]);
+            instance.init(null, new TrustManager[]{new h(this)}, null);
             socket = instance.getSocketFactory().createSocket(socket, this.a, this.b, true);
             socket.setTcpNoDelay(true);
             socket.setReceiveBufferSize(32768);
-            ((SSLSocket)socket).setEnabledCipherSuites(new String[] { g.z[18], g.z[3], g.z[11], g.z[5], g.z[8], g.z[6], g.z[9], g.z[7], g.z[12], g.z[4], g.z[10], g.z[16], g.z[14], g.z[20] });
-            ((SSLSocket)socket).startHandshake();
+            ((SSLSocket) socket).setEnabledCipherSuites(new String[]{com.avocent.kvm.a.g.z[18], com.avocent.kvm.a.g.z[3], com.avocent.kvm.a.g.z[11], com.avocent.kvm.a.g.z[5], com.avocent.kvm.a.g.z[8], com.avocent.kvm.a.g.z[6], com.avocent.kvm.a.g.z[9], com.avocent.kvm.a.g.z[7], com.avocent.kvm.a.g.z[12], com.avocent.kvm.a.g.z[4], com.avocent.kvm.a.g.z[10], com.avocent.kvm.a.g.z[16], com.avocent.kvm.a.g.z[14], com.avocent.kvm.a.g.z[20]});
+            ((SSLSocket) socket).startHandshake();
         }
         final Socket socket2 = socket;
-        if (a.c != 0) {
+        if (com.avocent.kvm.b.d.a.c != 0) {
             l.Ab = ++ab;
         }
         return socket2;
     }
-    
+
     public static Socket a(final String s, final int n, final int n2) throws Exception {
         final Socket socket = new Socket(s, n);
         socket.setTcpNoDelay(true);
         socket.setReceiveBufferSize(32768);
         return a(socket, n2);
     }
-    
+
     static Socket a(final Socket socket, final int n) throws IOException, Exception {
         final byte[] array = new byte[32];
         new Random().nextBytes(array);
@@ -164,10 +167,10 @@ public class g
         final g g = new g(socket.getRemoteSocketAddress().toString(), socket.getLocalPort());
         g.a(a, b);
         g.a(n);
-        g.a(3, array);
+        g.a((byte) 3, array);
         return g.a(socket);
     }
-    
+
     public static Socket b(final String s, final int n, final int n2) throws Exception {
         final byte[] array = new byte[32];
         new Random().nextBytes(array);
@@ -179,10 +182,10 @@ public class g
         final g g = new g(s, n);
         g.a(a, b);
         g.a(n2);
-        g.a(4, array);
+        g.a((byte) 4, array);
         return g.a(socket);
     }
-    
+
     static {
         final String[] z2 = new String[23];
         final int n = 0;
@@ -192,7 +195,8 @@ public class g
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -222,7 +226,7 @@ public class g
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -239,7 +243,8 @@ public class g
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -269,7 +274,7 @@ public class g
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -286,7 +291,8 @@ public class g
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -316,7 +322,7 @@ public class g
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -333,7 +339,8 @@ public class g
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0446: {
+            Label_0446:
+            {
                 if (n14 > 1) {
                     break Label_0446;
                 }
@@ -363,7 +370,7 @@ public class g
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -380,7 +387,8 @@ public class g
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0562: {
+            Label_0562:
+            {
                 if (n18 > 1) {
                     break Label_0562;
                 }
@@ -410,7 +418,7 @@ public class g
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
@@ -427,7 +435,8 @@ public class g
         final int n22 = n23 = (length6 = charArray6.length);
         int n24 = 0;
         while (true) {
-            Label_0678: {
+            Label_0678:
+            {
                 if (n22 > 1) {
                     break Label_0678;
                 }
@@ -457,7 +466,7 @@ public class g
                             break;
                         }
                     }
-                    charArray6[length6] = (char)(c11 ^ c12);
+                    charArray6[length6] = (char) (c11 ^ c12);
                     ++n24;
                 } while (n22 == 0);
             }
@@ -474,7 +483,8 @@ public class g
         final int n26 = n27 = (length7 = charArray7.length);
         int n28 = 0;
         while (true) {
-            Label_0798: {
+            Label_0798:
+            {
                 if (n26 > 1) {
                     break Label_0798;
                 }
@@ -504,7 +514,7 @@ public class g
                             break;
                         }
                     }
-                    charArray7[length7] = (char)(c13 ^ c14);
+                    charArray7[length7] = (char) (c13 ^ c14);
                     ++n28;
                 } while (n26 == 0);
             }
@@ -521,7 +531,8 @@ public class g
         final int n30 = n31 = (length8 = charArray8.length);
         int n32 = 0;
         while (true) {
-            Label_0918: {
+            Label_0918:
+            {
                 if (n30 > 1) {
                     break Label_0918;
                 }
@@ -551,7 +562,7 @@ public class g
                             break;
                         }
                     }
-                    charArray8[length8] = (char)(c15 ^ c16);
+                    charArray8[length8] = (char) (c15 ^ c16);
                     ++n32;
                 } while (n30 == 0);
             }
@@ -568,7 +579,8 @@ public class g
         final int n34 = n35 = (length9 = charArray9.length);
         int n36 = 0;
         while (true) {
-            Label_1038: {
+            Label_1038:
+            {
                 if (n34 > 1) {
                     break Label_1038;
                 }
@@ -598,7 +610,7 @@ public class g
                             break;
                         }
                     }
-                    charArray9[length9] = (char)(c17 ^ c18);
+                    charArray9[length9] = (char) (c17 ^ c18);
                     ++n36;
                 } while (n34 == 0);
             }
@@ -615,7 +627,8 @@ public class g
         final int n38 = n39 = (length10 = charArray10.length);
         int n40 = 0;
         while (true) {
-            Label_1158: {
+            Label_1158:
+            {
                 if (n38 > 1) {
                     break Label_1158;
                 }
@@ -645,7 +658,7 @@ public class g
                             break;
                         }
                     }
-                    charArray10[length10] = (char)(c19 ^ c20);
+                    charArray10[length10] = (char) (c19 ^ c20);
                     ++n40;
                 } while (n38 == 0);
             }
@@ -662,7 +675,8 @@ public class g
         final int n42 = n43 = (length11 = charArray11.length);
         int n44 = 0;
         while (true) {
-            Label_1278: {
+            Label_1278:
+            {
                 if (n42 > 1) {
                     break Label_1278;
                 }
@@ -692,7 +706,7 @@ public class g
                             break;
                         }
                     }
-                    charArray11[length11] = (char)(c21 ^ c22);
+                    charArray11[length11] = (char) (c21 ^ c22);
                     ++n44;
                 } while (n42 == 0);
             }
@@ -709,7 +723,8 @@ public class g
         final int n46 = n47 = (length12 = charArray12.length);
         int n48 = 0;
         while (true) {
-            Label_1398: {
+            Label_1398:
+            {
                 if (n46 > 1) {
                     break Label_1398;
                 }
@@ -739,7 +754,7 @@ public class g
                             break;
                         }
                     }
-                    charArray12[length12] = (char)(c23 ^ c24);
+                    charArray12[length12] = (char) (c23 ^ c24);
                     ++n48;
                 } while (n46 == 0);
             }
@@ -756,7 +771,8 @@ public class g
         final int n50 = n51 = (length13 = charArray13.length);
         int n52 = 0;
         while (true) {
-            Label_1518: {
+            Label_1518:
+            {
                 if (n50 > 1) {
                     break Label_1518;
                 }
@@ -786,7 +802,7 @@ public class g
                             break;
                         }
                     }
-                    charArray13[length13] = (char)(c25 ^ c26);
+                    charArray13[length13] = (char) (c25 ^ c26);
                     ++n52;
                 } while (n50 == 0);
             }
@@ -803,7 +819,8 @@ public class g
         final int n54 = n55 = (length14 = charArray14.length);
         int n56 = 0;
         while (true) {
-            Label_1638: {
+            Label_1638:
+            {
                 if (n54 > 1) {
                     break Label_1638;
                 }
@@ -833,7 +850,7 @@ public class g
                             break;
                         }
                     }
-                    charArray14[length14] = (char)(c27 ^ c28);
+                    charArray14[length14] = (char) (c27 ^ c28);
                     ++n56;
                 } while (n54 == 0);
             }
@@ -850,7 +867,8 @@ public class g
         final int n58 = n59 = (length15 = charArray15.length);
         int n60 = 0;
         while (true) {
-            Label_1758: {
+            Label_1758:
+            {
                 if (n58 > 1) {
                     break Label_1758;
                 }
@@ -880,7 +898,7 @@ public class g
                             break;
                         }
                     }
-                    charArray15[length15] = (char)(c29 ^ c30);
+                    charArray15[length15] = (char) (c29 ^ c30);
                     ++n60;
                 } while (n58 == 0);
             }
@@ -897,7 +915,8 @@ public class g
         final int n62 = n63 = (length16 = charArray16.length);
         int n64 = 0;
         while (true) {
-            Label_1878: {
+            Label_1878:
+            {
                 if (n62 > 1) {
                     break Label_1878;
                 }
@@ -927,7 +946,7 @@ public class g
                             break;
                         }
                     }
-                    charArray16[length16] = (char)(c31 ^ c32);
+                    charArray16[length16] = (char) (c31 ^ c32);
                     ++n64;
                 } while (n62 == 0);
             }
@@ -944,7 +963,8 @@ public class g
         final int n66 = n67 = (length17 = charArray17.length);
         int n68 = 0;
         while (true) {
-            Label_1998: {
+            Label_1998:
+            {
                 if (n66 > 1) {
                     break Label_1998;
                 }
@@ -974,7 +994,7 @@ public class g
                             break;
                         }
                     }
-                    charArray17[length17] = (char)(c33 ^ c34);
+                    charArray17[length17] = (char) (c33 ^ c34);
                     ++n68;
                 } while (n66 == 0);
             }
@@ -991,7 +1011,8 @@ public class g
         final int n70 = n71 = (length18 = charArray18.length);
         int n72 = 0;
         while (true) {
-            Label_2118: {
+            Label_2118:
+            {
                 if (n70 > 1) {
                     break Label_2118;
                 }
@@ -1021,7 +1042,7 @@ public class g
                             break;
                         }
                     }
-                    charArray18[length18] = (char)(c35 ^ c36);
+                    charArray18[length18] = (char) (c35 ^ c36);
                     ++n72;
                 } while (n70 == 0);
             }
@@ -1038,7 +1059,8 @@ public class g
         final int n74 = n75 = (length19 = charArray19.length);
         int n76 = 0;
         while (true) {
-            Label_2238: {
+            Label_2238:
+            {
                 if (n74 > 1) {
                     break Label_2238;
                 }
@@ -1068,7 +1090,7 @@ public class g
                             break;
                         }
                     }
-                    charArray19[length19] = (char)(c37 ^ c38);
+                    charArray19[length19] = (char) (c37 ^ c38);
                     ++n76;
                 } while (n74 == 0);
             }
@@ -1085,7 +1107,8 @@ public class g
         final int n78 = n79 = (length20 = charArray20.length);
         int n80 = 0;
         while (true) {
-            Label_2358: {
+            Label_2358:
+            {
                 if (n78 > 1) {
                     break Label_2358;
                 }
@@ -1115,7 +1138,7 @@ public class g
                             break;
                         }
                     }
-                    charArray20[length20] = (char)(c39 ^ c40);
+                    charArray20[length20] = (char) (c39 ^ c40);
                     ++n80;
                 } while (n78 == 0);
             }
@@ -1132,7 +1155,8 @@ public class g
         final int n82 = n83 = (length21 = charArray21.length);
         int n84 = 0;
         while (true) {
-            Label_2478: {
+            Label_2478:
+            {
                 if (n82 > 1) {
                     break Label_2478;
                 }
@@ -1162,7 +1186,7 @@ public class g
                             break;
                         }
                     }
-                    charArray21[length21] = (char)(c41 ^ c42);
+                    charArray21[length21] = (char) (c41 ^ c42);
                     ++n84;
                 } while (n82 == 0);
             }
@@ -1179,7 +1203,8 @@ public class g
         final int n86 = n87 = (length22 = charArray22.length);
         int n88 = 0;
         while (true) {
-            Label_2598: {
+            Label_2598:
+            {
                 if (n86 > 1) {
                     break Label_2598;
                 }
@@ -1209,7 +1234,7 @@ public class g
                             break;
                         }
                     }
-                    charArray22[length22] = (char)(c43 ^ c44);
+                    charArray22[length22] = (char) (c43 ^ c44);
                     ++n88;
                 } while (n86 == 0);
             }
@@ -1226,7 +1251,8 @@ public class g
         final int n90 = n91 = (length23 = charArray23.length);
         int n92 = 0;
         while (true) {
-            Label_2718: {
+            Label_2718:
+            {
                 if (n90 > 1) {
                     break Label_2718;
                 }
@@ -1256,14 +1282,14 @@ public class g
                             break;
                         }
                     }
-                    charArray23[length23] = (char)(c45 ^ c46);
+                    charArray23[length23] = (char) (c45 ^ c46);
                     ++n92;
                 } while (n90 == 0);
             }
             if (n90 <= n92) {
                 z2[n89] = new String(charArray23).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

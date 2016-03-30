@@ -1,37 +1,42 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.a.a;
 
 import java.awt.datatransfer.DataFlavor;
 import java.awt.Image;
 import java.awt.datatransfer.Transferable;
 
-class a implements Transferable
-{
+class a implements Transferable {
+
     private Image a;
     private static final String[] z;
-    
+
     public a(final Image a) {
-        super();
         this.a = a;
     }
-    
+
+    @Override
     public Object getTransferData(final DataFlavor dataFlavor) {
-        System.out.println(a.z[1]);
+        System.out.println(com.avocent.a.a.a.a.z[1]);
         if (dataFlavor.equals(DataFlavor.imageFlavor)) {
             return this.a;
         }
         return null;
     }
-    
+
+    @Override
     public DataFlavor[] getTransferDataFlavors() {
-        System.out.println(a.z[0]);
-        return new DataFlavor[] { DataFlavor.imageFlavor };
+        System.out.println(com.avocent.a.a.a.a.z[0]);
+        return new DataFlavor[]{DataFlavor.imageFlavor};
     }
-    
+
+    @Override
     public boolean isDataFlavorSupported(final DataFlavor dataFlavor) {
-        System.out.println(a.z[2]);
+        System.out.println(com.avocent.a.a.a.a.z[2]);
         return dataFlavor.equals(DataFlavor.imageFlavor);
     }
-    
+
     static {
         final String[] z2 = new String[3];
         final int n = 0;
@@ -41,7 +46,8 @@ class a implements Transferable
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -71,7 +77,7 @@ class a implements Transferable
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -88,7 +94,8 @@ class a implements Transferable
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -118,7 +125,7 @@ class a implements Transferable
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -135,7 +142,8 @@ class a implements Transferable
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -165,14 +173,14 @@ class a implements Transferable
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
             if (n10 <= n12) {
                 z2[n9] = new String(charArray3).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

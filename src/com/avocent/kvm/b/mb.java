@@ -1,23 +1,27 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.b;
 
 import javax.swing.SwingUtilities;
 
-class mb extends Thread
-{
+class mb extends Thread {
+
     boolean a;
     final ob b;
     private static final String z;
-    
+
     mb(final ob b) {
-        this.b = b;
         super(mb.z);
+        this.b = b;
         this.a = false;
     }
-    
+
     public void a(final boolean b) {
         this.b.y |= b;
     }
-    
+
+    @Override
     public void run() {
         final boolean t = g.t;
         try {
@@ -33,12 +37,11 @@ class mb extends Thread
                     break;
                 }
             }
-        }
-        catch (InterruptedException ex) {
+        } catch (InterruptedException ex) {
             ex.printStackTrace();
         }
     }
-    
+
     static {
         final char[] charArray = "5\u001fp&?\b\\W3>\u0007\bg".toCharArray();
         int length;
@@ -46,7 +49,8 @@ class mb extends Thread
         final int n = n2 = (length = charArray.length);
         int n3 = 0;
         while (true) {
-            Label_0093: {
+            Label_0093:
+            {
                 if (n > 1) {
                     break Label_0093;
                 }
@@ -76,13 +80,13 @@ class mb extends Thread
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n3;
                 } while (n == 0);
             }
             if (n <= n3) {
                 z = new String(charArray).intern();
-                return;
+                break;
             }
             continue;
         }

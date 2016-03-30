@@ -1,39 +1,40 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import com.avocent.kvm.b.f.b;
-import com.avocent.kvm.b.f.e;
 import java.util.HashMap;
 import java.beans.PropertyChangeSupport;
 import java.awt.Component;
 
-public class e
-{
+public class e {
+
     protected String a;
     protected Component b;
     protected PropertyChangeSupport c;
     protected HashMap d;
     protected HashMap e;
     protected e f;
-    protected e g;
+    protected com.avocent.kvm.b.f.e g;
     protected d h;
     public static int i;
-    private static final String[] z;
-    
+    static String[] z;
+
     public e(final String a, final e f) {
-        super();
         this.c = new PropertyChangeSupport(this);
         this.d = new HashMap();
         this.e = new HashMap();
-        this.g = b.a();
+        this.g = com.avocent.kvm.b.f.b.a();
         this.a = a;
         this.f = f;
         if (f != null) {
             f.a(new h(this));
         }
     }
-    
+
     public d d() {
         if (this.h != null) {
             return this.h;
@@ -43,39 +44,39 @@ public class e
         }
         return null;
     }
-    
+
     public String b(final String s) {
-        return (this.d() != null) ? d.b(s) : (e.z[1] + s + e.z[0]);
+        return (this.d() != null) ? com.avocent.a.d.b(s) : (com.avocent.a.e.z[1] + s + com.avocent.a.e.z[0]);
     }
-    
+
     protected void a(final PropertyChangeEvent propertyChangeEvent) {
         if (this.e.get(propertyChangeEvent.getPropertyName()) == null) {
             this.c.firePropertyChange(propertyChangeEvent);
         }
     }
-    
+
     public void a(final PropertyChangeListener propertyChangeListener) {
         this.c.addPropertyChangeListener(propertyChangeListener);
     }
-    
+
     protected void a(final Component b) {
         this.b = b;
     }
-    
+
     public Component e() {
         return this.b;
     }
-    
+
     public void a(final String s, final Object o) {
         if (this.f != null) {
             this.f.a(s, o);
-            if (e.i == 0) {
+            if (com.avocent.a.e.i == 0) {
                 return;
             }
         }
         this.c.firePropertyChange(s, this.d.put(s, o), o);
     }
-    
+
     public Object c(final String s) {
         Object o = this.d(s);
         if (o == null) {
@@ -89,7 +90,7 @@ public class e
         }
         return null;
     }
-    
+
     public Object b(final String s, final Object o) {
         final Object c = this.c(s);
         Object o2 = o;
@@ -98,43 +99,43 @@ public class e
                 return o2;
             }
             this.a(s, o);
-            if (e.i == 0) {
+            if (com.avocent.a.e.i == 0) {
                 return o2;
             }
         }
         o2 = c;
         return o2;
     }
-    
+
     public Object d(final String s) {
         return this.e.get(s);
     }
-    
+
     public String e(final String s) {
         final Object c = this.c(s);
         return (c != null) ? c.toString() : null;
     }
-    
+
     public String a(final String s, final String s2) {
         final Object c = this.c(s);
         return (c != null) ? c.toString() : s2;
     }
-    
+
     public Integer a(final String s, final Integer n) {
-        final int i = e.i;
+        final int i = com.avocent.a.e.i;
         final Object c = this.c(s);
         Integer n2 = n;
         if (c == null) {
             if (n == null) {
                 return n2;
             }
-            this.a(s, (Object)n);
+            this.a(s, (Object) n);
             if (i == 0) {
                 return n2;
             }
         }
         if (c instanceof Integer) {
-            n2 = (Integer)c;
+            n2 = (Integer) c;
             if (i == 0) {
                 return n2;
             }
@@ -142,19 +143,19 @@ public class e
         n2 = new Integer(c.toString().trim());
         return n2;
     }
-    
+
     public Boolean a(final String s, final Boolean b) {
-        final int i = e.i;
+        final int i = com.avocent.a.e.i;
         final Object c = this.c(s);
         Boolean b2 = b;
         if (c == null) {
-            this.a(s, (Object)b);
+            this.a(s, (Object) b);
             if (i == 0) {
                 return b2;
             }
         }
         if (c instanceof Boolean) {
-            b2 = (Boolean)c;
+            b2 = (Boolean) c;
             if (i == 0) {
                 return b2;
             }
@@ -175,15 +176,15 @@ public class e
         b2 = new Boolean(trim);
         return b2;
     }
-    
-    public e b() {
+
+    public com.avocent.kvm.b.f.e b() {
         return this.g;
     }
-    
-    public void a(final e g) {
+
+    public void a(final com.avocent.kvm.b.f.e g) {
         this.g = g;
     }
-    
+
     static {
         final String[] z2 = new String[2];
         final int n = 0;
@@ -193,7 +194,8 @@ public class e
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -223,7 +225,7 @@ public class e
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -240,7 +242,8 @@ public class e
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -270,14 +273,14 @@ public class e
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
             if (n6 <= n8) {
                 z2[n5] = new String(charArray2).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

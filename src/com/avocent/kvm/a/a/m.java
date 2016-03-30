@@ -1,14 +1,17 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.a.a;
 
-public class m extends k
-{
+public class m extends k {
+
     private static final String z;
-    
+
     public m() {
         super(772, m.z);
         this.e = 16;
     }
-    
+
     static {
         final char[] charArray = "1g\u00162C\u0003n\u0007,O\u0006gS\u0015OS".toCharArray();
         int length;
@@ -16,7 +19,8 @@ public class m extends k
         final int n = n2 = (length = charArray.length);
         int n3 = 0;
         while (true) {
-            Label_0093: {
+            Label_0093:
+            {
                 if (n > 1) {
                     break Label_0093;
                 }
@@ -46,13 +50,13 @@ public class m extends k
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n3;
                 } while (n == 0);
             }
             if (n <= n3) {
                 z = new String(charArray).intern();
-                return;
+                break;
             }
             continue;
         }

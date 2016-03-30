@@ -1,35 +1,35 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.a;
 
 import java.beans.PropertyChangeEvent;
 import com.avocent.kvm.a.d;
 import com.avocent.kvm.a.c;
 
-public class l implements c, d
-{
+public class l implements c, d {
+
     protected i h;
     private static final String[] z;
-    
+
     public l(final i h) {
-        super();
         this.h = h;
     }
-    
+
+    @Override
     public void propertyChange(final PropertyChangeEvent propertyChangeEvent) {
         if (propertyChangeEvent.getPropertyName().equals(l.z[1])) {
             final Object newValue = propertyChangeEvent.getNewValue();
             String s = null;
             if (newValue.equals(l.a)) {
                 s = l.z[3];
-            }
-            else if (newValue.equals(l.b)) {
+            } else if (newValue.equals(l.b)) {
                 s = l.z[4];
-            }
-            else if (newValue.equals(l.c)) {
+            } else if (newValue.equals(l.c)) {
                 s = l.z[0];
-            }
-            else if (newValue.equals(l.g)) {
-                this.h.o().a((String)null);
-                this.h.p().a((String)null);
+            } else if (newValue.equals(l.g)) {
+                this.h.o().a((String) null);
+                this.h.p().a((String) null);
             }
             if (s != null) {
                 this.h.d();
@@ -45,7 +45,7 @@ public class l implements c, d
             }
         }
     }
-    
+
     static {
         final String[] z2 = new String[5];
         final int n = 0;
@@ -55,7 +55,8 @@ public class l implements c, d
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0097: {
+            Label_0097:
+            {
                 if (n2 > 1) {
                     break Label_0097;
                 }
@@ -85,7 +86,7 @@ public class l implements c, d
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -102,7 +103,8 @@ public class l implements c, d
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0213: {
+            Label_0213:
+            {
                 if (n6 > 1) {
                     break Label_0213;
                 }
@@ -132,7 +134,7 @@ public class l implements c, d
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -149,7 +151,8 @@ public class l implements c, d
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0329: {
+            Label_0329:
+            {
                 if (n10 > 1) {
                     break Label_0329;
                 }
@@ -179,7 +182,7 @@ public class l implements c, d
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -196,7 +199,8 @@ public class l implements c, d
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0445: {
+            Label_0445:
+            {
                 if (n14 > 1) {
                     break Label_0445;
                 }
@@ -226,7 +230,7 @@ public class l implements c, d
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -243,7 +247,8 @@ public class l implements c, d
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0561: {
+            Label_0561:
+            {
                 if (n18 > 1) {
                     break Label_0561;
                 }
@@ -273,14 +278,14 @@ public class l implements c, d
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
             if (n18 <= n20) {
                 z2[n17] = new String(charArray5).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

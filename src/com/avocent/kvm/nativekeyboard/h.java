@@ -1,47 +1,49 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.nativekeyboard;
 
 import java.awt.Component;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 
-class h implements FocusListener
-{
+class h implements FocusListener {
+
     final g a;
     private static final String[] z;
-    
+
     h(final g a) {
         this.a = a;
-        super();
     }
-    
+
+    @Override
     public void focusLost(final FocusEvent focusEvent) {
         System.out.println(h.z[0]);
         if (this.a.a(focusEvent.getComponent())) {
             final Component component = focusEvent.getComponent();
             try {
                 NativeKVM.a(component, false);
-            }
-            catch (Exception ex) {
+            } catch (Exception ex) {
                 ex.printStackTrace();
             }
         }
         this.a.c.a(false);
     }
-    
+
+    @Override
     public void focusGained(final FocusEvent focusEvent) {
         System.out.println(h.z[1]);
         if (this.a.a(focusEvent.getComponent())) {
             final Component component = focusEvent.getComponent();
             try {
                 NativeKVM.a(component, true);
-            }
-            catch (Exception ex) {
+            } catch (Exception ex) {
                 ex.printStackTrace();
             }
         }
         this.a.c.a(true);
     }
-    
+
     static {
         final String[] z2 = new String[2];
         final int n = 0;
@@ -51,7 +53,8 @@ class h implements FocusListener
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0097: {
+            Label_0097:
+            {
                 if (n2 > 1) {
                     break Label_0097;
                 }
@@ -81,7 +84,7 @@ class h implements FocusListener
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -98,7 +101,8 @@ class h implements FocusListener
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0213: {
+            Label_0213:
+            {
                 if (n6 > 1) {
                     break Label_0213;
                 }
@@ -128,14 +132,14 @@ class h implements FocusListener
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
             if (n6 <= n8) {
                 z2[n5] = new String(charArray2).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

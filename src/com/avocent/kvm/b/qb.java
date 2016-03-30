@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.b;
 
 import javax.swing.SwingUtilities;
@@ -10,16 +13,17 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.VolatileImage;
 
-public class qb extends ob
-{
+public class qb extends ob {
+
     VolatileImage H;
     q I;
-    
+
     public qb(final String s) {
         super(s);
         this.I = new q(this);
     }
-    
+
+    @Override
     public void paintComponent(final Graphics graphics) {
         if (this.H == null) {
             final Rectangle clipBounds = graphics.getClipBounds();
@@ -27,7 +31,7 @@ public class qb extends ob
             graphics.setColor(Color.white);
             graphics.fillRect(clipBounds.x, clipBounds.y, clipBounds.width, clipBounds.height);
             graphics.setColor(color);
-            if (!g.t) {
+            if (!com.avocent.kvm.b.g.t) {
                 return;
             }
         }
@@ -35,16 +39,17 @@ public class qb extends ob
         if (validate == 2 || validate == 1) {
             return;
         }
-        graphics.drawImage(this.H, 0, 0, (int)(this.d.c() * this.n), (int)(this.d.d() * this.n), this);
+        graphics.drawImage(this.H, 0, 0, (int) (this.d.c() * this.n), (int) (this.d.d() * this.n), this);
     }
-    
+
     void i() {
         final GraphicsConfiguration graphicsConfiguration = this.getGraphicsConfiguration();
         if (graphicsConfiguration != null) {
             this.H = graphicsConfiguration.createCompatibleVolatileImage(this.d.c(), this.d.d());
         }
     }
-    
+
+    @Override
     public void b() {
         if (this.B) {
             return;
@@ -56,7 +61,7 @@ public class qb extends ob
             if (this.H.validate(this.getGraphicsConfiguration()) == 2) {
                 this.i();
             }
-            final Graphics2D graphics2D = (Graphics2D)this.H.getGraphics();
+            final Graphics2D graphics2D = (Graphics2D) this.H.getGraphics();
             this.a.newPixels();
             graphics2D.drawImage(this.b, 0, 0, this);
         } while (this.H.contentsLost());

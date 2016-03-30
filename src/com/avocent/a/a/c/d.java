@@ -1,30 +1,34 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.a.c;
 
 import javax.swing.JMenuItem;
 import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 
-public class d extends AbstractAction
-{
+public class d extends AbstractAction {
+
     protected b a;
     protected a b;
     private static final String z;
-    
+
     public d(final b a, final a b) {
         super(b.a());
         this.b = b;
         this.a = a;
     }
-    
+
+    @Override
     public void actionPerformed(final ActionEvent actionEvent) {
         final Object source = actionEvent.getSource();
         if (!(source instanceof JMenuItem)) {
-            throw new RuntimeException(d.z + ((JMenuItem)source).getClass().getName() + ")");
+            throw new RuntimeException(d.z + ((JMenuItem) source).getClass().getName() + ")");
         }
-        final JMenuItem jMenuItem = (JMenuItem)source;
+        final JMenuItem menuItem = (JMenuItem) source;
         this.a.a(this.b);
     }
-    
+
     static {
         final char[] charArray = "n!J\u0019\u0001@0M\u0003.\u0003-J\u001a/H!@L&Q+IL.L*\u0004!%M1m\u0018%NdG\u0003-S+J\t.We\u0004L\u0003L)T\u0003.F*PL7B7\u0004\r`\u000b".toCharArray();
         int length;
@@ -32,7 +36,8 @@ public class d extends AbstractAction
         final int n = n2 = (length = charArray.length);
         int n3 = 0;
         while (true) {
-            Label_0094: {
+            Label_0094:
+            {
                 if (n > 1) {
                     break Label_0094;
                 }
@@ -62,13 +67,13 @@ public class d extends AbstractAction
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n3;
                 } while (n == 0);
             }
             if (n <= n3) {
                 z = new String(charArray).intern();
-                return;
+                break;
             }
             continue;
         }

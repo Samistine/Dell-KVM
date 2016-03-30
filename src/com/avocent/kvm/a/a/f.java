@@ -1,27 +1,33 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.a.a;
 
 import java.io.IOException;
 
-public class f extends b
-{
+public class f extends b {
+
     private static final String z;
-    
+
     public f() {
         super(516);
         this.e = 16;
     }
-    
+
+    @Override
     public byte[] b() {
         return new byte[8];
     }
-    
+
+    @Override
     public void a(final byte[] array, final byte[] array2) throws IOException {
     }
-    
+
+    @Override
     public String e() {
         return f.z;
     }
-    
+
     static {
         final char[] charArray = "\"`2-`\bw/oC,Ak\u001dj\u0018p.<{".toCharArray();
         int length;
@@ -29,7 +35,8 @@ public class f extends b
         final int n = n2 = (length = charArray.length);
         int n3 = 0;
         while (true) {
-            Label_0093: {
+            Label_0093:
+            {
                 if (n > 1) {
                     break Label_0093;
                 }
@@ -59,13 +66,13 @@ public class f extends b
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n3;
                 } while (n == 0);
             }
             if (n <= n3) {
                 z = new String(charArray).intern();
-                return;
+                break;
             }
             continue;
         }

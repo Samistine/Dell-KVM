@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.lenovo.kvm;
 
 import java.util.Iterator;
@@ -9,46 +12,48 @@ import com.avocent.a.a.c.b;
 import com.avocent.a.a.i;
 import com.avocent.a.a.d.a;
 
-public class n extends a
-{
+public class n extends a {
+
     private static final String[] z;
-    
+
     public n(final i i, final b b, final boolean b2) {
         super(i, b, b2);
     }
-    
+
+    @Override
     protected void b() {
-        final boolean cb = c.cb;
+        final boolean cb = com.avocent.lenovo.kvm.c.cb;
         super.b();
-        final JMenu jMenu = new JMenu(this.a.b(n.z[2]));
-        final JMenu jMenu2 = new JMenu(this.a.b(n.z[1]));
-        final Iterator a = this.q.a(n.z[3]);
+        final JMenu menu = new JMenu(this.a.b(z[2]));
+        final JMenu menu2 = new JMenu(this.a.b(z[1]));
+        final Iterator a = this.q.a(z[3]);
         while (a != null && a.hasNext()) {
-            jMenu.add(new JMenuItem(new d(this.q, a.next())));
+            menu.add(new JMenuItem(new d(this.q, a.next())));
             if (cb) {
                 break;
             }
         }
-        this.d().add(jMenu);
+        this.d().add(menu);
         final Iterator a2 = this.q.a(n.z[0]);
         while (a2 != null && a2.hasNext()) {
-            jMenu2.add(new JMenuItem(new d(this.q, a2.next())));
+            menu2.add(new JMenuItem(new d(this.q, a2.next())));
             if (cb) {
                 break;
             }
         }
-        this.d().add(jMenu2);
+        this.d().add(menu2);
         if (com.avocent.kvm.b.d.a.c != 0) {
-            c.cb = !cb;
+            com.avocent.lenovo.kvm.c.cb = !cb;
         }
     }
-    
+
+    @Override
     protected void a() {
         super.a();
-        final c c = (c)this.a;
-        final JMenu jMenu = new JMenu(this.a.b(n.z[4]));
+        final c c = (c) this.a;
+        final JMenu menu = new JMenu(this.a.b(n.z[4]));
     }
-    
+
     static {
         final String[] z2 = new String[5];
         final int n = 0;
@@ -58,7 +63,8 @@ public class n extends a
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -88,7 +94,7 @@ public class n extends a
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -105,7 +111,8 @@ public class n extends a
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -135,7 +142,7 @@ public class n extends a
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -152,7 +159,8 @@ public class n extends a
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -182,7 +190,7 @@ public class n extends a
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -199,7 +207,8 @@ public class n extends a
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0446: {
+            Label_0446:
+            {
                 if (n14 > 1) {
                     break Label_0446;
                 }
@@ -229,7 +238,7 @@ public class n extends a
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -246,7 +255,8 @@ public class n extends a
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0562: {
+            Label_0562:
+            {
                 if (n18 > 1) {
                     break Label_0562;
                 }
@@ -276,14 +286,14 @@ public class n extends a
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
             if (n18 <= n20) {
                 z2[n17] = new String(charArray5).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

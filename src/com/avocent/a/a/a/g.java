@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.a.a;
 
 import java.awt.Component;
@@ -7,24 +10,26 @@ import com.avocent.a.d;
 import com.avocent.a.a.i;
 import javax.swing.AbstractAction;
 
-public class g extends AbstractAction
-{
+public class g extends AbstractAction {
+
     i a;
     private static final String[] z;
-    
+
     public g(final i a) {
-        a.d();
         super(d.b(g.z[0]));
+
+        a.d();
         this.a = a;
     }
-    
+
+    @Override
     public void actionPerformed(final ActionEvent actionEvent) {
         this.a.d();
         final String b = d.b(g.z[0]);
         this.a.d();
         JOptionPane.showMessageDialog(this.a.c(), d.b(g.z[1]), b, 1);
     }
-    
+
     static {
         final String[] z2 = new String[2];
         final int n = 0;
@@ -34,7 +39,8 @@ public class g extends AbstractAction
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -64,7 +70,7 @@ public class g extends AbstractAction
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -81,7 +87,8 @@ public class g extends AbstractAction
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -111,14 +118,14 @@ public class g extends AbstractAction
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
             if (n6 <= n8) {
                 z2[n5] = new String(charArray2).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

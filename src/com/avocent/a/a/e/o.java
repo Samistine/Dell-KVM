@@ -1,25 +1,28 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.a.e;
 
 import java.beans.PropertyChangeEvent;
 import com.avocent.kvm.b.a.b;
 
-class o extends b
-{
+class o extends b {
+
     s b;
     private static final String z;
-    
+
     public o(final s b) {
-        super();
         this.b = b;
     }
-    
+
+    @Override
     public void propertyChange(final PropertyChangeEvent propertyChangeEvent) {
         System.out.println(o.z + propertyChangeEvent.getPropertyName());
         if (this.b != null) {
             this.b.propertyChange(propertyChangeEvent);
         }
     }
-    
+
     static {
         final char[] charArray = "L#Gf\fu\u001az#\u000es\fI.\u001di\u0012of\u001ah\u0007*".toCharArray();
         int length;
@@ -27,7 +30,8 @@ class o extends b
         final int n = n2 = (length = charArray.length);
         int n3 = 0;
         while (true) {
-            Label_0094: {
+            Label_0094:
+            {
                 if (n > 1) {
                     break Label_0094;
                 }
@@ -57,13 +61,13 @@ class o extends b
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n3;
                 } while (n == 0);
             }
             if (n <= n3) {
                 z = new String(charArray).intern();
-                return;
+                break;
             }
             continue;
         }

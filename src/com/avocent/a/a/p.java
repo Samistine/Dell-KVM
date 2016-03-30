@@ -1,17 +1,20 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.a;
 
 import java.util.prefs.Preferences;
 import java.awt.event.WindowListener;
 
-class p implements Runnable
-{
+class p implements Runnable {
+
     final i a;
-    
+
     p(final i a) {
         this.a = a;
-        super();
     }
-    
+
+    @Override
     public void run() {
         this.a.k = this.a.B.b(this.a);
         this.a.l = this.a.B.c(this.a);

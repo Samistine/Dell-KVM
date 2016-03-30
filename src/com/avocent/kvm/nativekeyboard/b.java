@@ -1,31 +1,34 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.nativekeyboard;
 
 import java.beans.PropertyChangeEvent;
 import com.avocent.kvm.b.a.b;
 
-class b extends b
-{
+class b extends com.avocent.kvm.b.a.b {
+
     final c b;
     private static final String[] z;
-    
+
     b(final c b) {
         this.b = b;
-        super();
     }
-    
+
+    @Override
     public void propertyChange(final PropertyChangeEvent propertyChangeEvent) {
-        if (propertyChangeEvent.getPropertyName().equalsIgnoreCase(b.z[1])) {
+        if (propertyChangeEvent.getPropertyName().equalsIgnoreCase(com.avocent.kvm.nativekeyboard.b.z[1])) {
             final Object newValue = propertyChangeEvent.getNewValue();
             if (newValue instanceof Integer) {
-                this.b.p = (int)newValue;
+                this.b.p = (int) newValue;
                 if (NativeKVM.b == 0) {
-                    return;
+                    break;
                 }
             }
-            this.b.f.b().a(b.z[0] + newValue);
+            this.b.f.b().a(com.avocent.kvm.nativekeyboard.b.z[0] + newValue);
         }
     }
-    
+
     static {
         final String[] z2 = new String[2];
         final int n = 0;
@@ -35,7 +38,8 @@ class b extends b
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -65,7 +69,7 @@ class b extends b
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -82,7 +86,8 @@ class b extends b
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -112,14 +117,14 @@ class b extends b
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
             if (n6 <= n8) {
                 z2[n5] = new String(charArray2).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

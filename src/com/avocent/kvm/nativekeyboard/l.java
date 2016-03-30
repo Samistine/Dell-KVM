@@ -1,25 +1,28 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.nativekeyboard;
 
-class l extends Thread
-{
+class l extends Thread {
+
     final e a;
     private static final String[] z;
-    
+
     l(final e a) {
         this.a = a;
-        super();
     }
-    
+
+    @Override
     public void run() {
         try {
             Thread.sleep(2000L);
+        } catch (InterruptedException ex) {
         }
-        catch (InterruptedException ex) {}
         this.setName(l.z[1]);
         NativeKVM.registerWindowById(this.a.d, this.a.b);
         System.out.println(l.z[0]);
     }
-    
+
     static {
         final String[] z2 = new String[2];
         final int n = 0;
@@ -29,7 +32,8 @@ class l extends Thread
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -59,7 +63,7 @@ class l extends Thread
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -76,7 +80,8 @@ class l extends Thread
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -106,14 +111,14 @@ class l extends Thread
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
             if (n6 <= n8) {
                 z2[n5] = new String(charArray2).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

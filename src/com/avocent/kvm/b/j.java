@@ -1,7 +1,10 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.b;
 
-public class j extends i
-{
+public class j extends i {
+
     protected int o;
     protected int p;
     protected short[][] q;
@@ -18,10 +21,9 @@ public class j extends i
     protected int[] B;
     protected int C;
     protected int D;
-    
+
     public j() {
-        final boolean t = g.t;
-        super();
+        final boolean t = com.avocent.kvm.b.g.t;
         this.y = false;
         this.o();
         this.q = new short[16][];
@@ -35,9 +37,9 @@ public class j extends i
         this.r = new int[16];
         this.s = false;
     }
-    
+
     public void a(final int n, final int n2, final int n3, final int n4, final int[] array) {
-        final boolean t = g.t;
+        final boolean t = com.avocent.kvm.b.g.t;
         int i = 0;
         while (i < n4) {
             final int n5 = (n2 + i) * this.d + n;
@@ -51,9 +53,9 @@ public class j extends i
         }
         this.l.b(n, n2, n + n3, n2 + n4);
     }
-    
+
     public void b(final int n, final int n2, final int n3, final int n4, final int[] array) {
-        final boolean t = g.t;
+        final boolean t = com.avocent.kvm.b.g.t;
         int i = 0;
         while (i < n4) {
             final int n5 = (n2 + i) * this.d + n;
@@ -67,9 +69,9 @@ public class j extends i
         }
         this.l.b(n, n2, n + n3, n2 + n4);
     }
-    
+
     public void c(final int n, final int n2, final int n3, final int n4, final int[] array) {
-        final boolean t = g.t;
+        final boolean t = com.avocent.kvm.b.g.t;
         int i = 0;
         while (i < n4) {
             System.arraycopy(this.m, (i + n2) * this.d + n, array, i * n3, n3);
@@ -80,7 +82,7 @@ public class j extends i
         }
         this.l.b(n, n2, n + n3, n2 + n4);
     }
-    
+
     public boolean a(final int n, final int n2, final int o, final int p5, final short[] array) {
         if (o <= 64 && p5 <= 64 && n >= 1 && n <= 16) {
             this.o = o;
@@ -91,7 +93,7 @@ public class j extends i
         }
         return false;
     }
-    
+
     public boolean a(final int n, final int n2, final int n3, final int n4, final int n5) {
         if (n < 1 || n > 16) {
             this.s = false;
@@ -100,7 +102,7 @@ public class j extends i
             this.v = n3;
             this.w = n4;
             this.x = n5;
-            if (!g.t) {
+            if (!com.avocent.kvm.b.g.t) {
                 return false;
             }
         }
@@ -112,16 +114,16 @@ public class j extends i
         this.x = n5;
         return true;
     }
-    
+
     public void p() {
         if (this.y) {
             this.a(this.C, this.D, this.z, this.A, this.B);
             this.y = false;
         }
     }
-    
+
     public void q() {
-        final boolean t = g.t;
+        final boolean t = com.avocent.kvm.b.g.t;
         if (this.s && this.u < this.d && this.v < this.e) {
             if (this.B == null || this.o * this.p > this.z * this.A) {
                 this.B = new int[this.o * this.p];
@@ -145,9 +147,9 @@ public class j extends i
                     while (j < this.z) {
                         if (j + this.C < this.d) {
                             final int n = (i + this.D) * this.d + (j + this.C);
-                            final short n2 = (short)(this.q[this.t][(i + this.x) * this.o + (j + this.w)] & 0xFFFF);
+                            final short n2 = (short) (this.q[this.t][(i + this.x) * this.o + (j + this.w)] & 0xFFFF);
                             final int n3 = (n2 & 0xF00) >> 4;
-                            final short n4 = (short)(n2 & 0xF0);
+                            final short n4 = (short) (n2 & 0xF0);
                             final int n5 = (n2 & 0xF) << 4;
                             final int n6 = this.m[n];
                             final int n7 = (n6 & 0xFF0000) >> 16;
@@ -162,7 +164,8 @@ public class j extends i
                             if (this.r[this.t] == 2) {
                                 final int n11 = (n2 & 0x8000) >> 15;
                                 final int n12 = (n2 & 0x4000) >> 14;
-                                if ((n11 != 0 || t) && (n12 != 0 || t)) {}
+                                if ((n11 != 0 || t) && (n12 != 0 || t)) {
+                                }
                             }
                         }
                         ++j;

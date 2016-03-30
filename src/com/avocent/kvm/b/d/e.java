@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.b.d;
 
 import java.io.IOException;
@@ -5,8 +8,8 @@ import java.util.Vector;
 import java.io.OutputStream;
 import com.avocent.kvm.b.u;
 
-public class e
-{
+public class e {
+
     protected u a;
     protected OutputStream b;
     protected Vector c;
@@ -15,9 +18,8 @@ public class e
     protected int f;
     protected h g;
     private static final String[] z;
-    
+
     public e(final u a, final OutputStream b, final int d, final int e) {
-        super();
         this.c = new Vector();
         this.d = -1;
         this.a = a;
@@ -26,21 +28,20 @@ public class e
         this.d = d;
         this.e = e;
     }
-    
+
     public void a(final d d) {
-        final boolean f = g.f;
+        final boolean f = com.avocent.kvm.b.d.g.f;
         synchronized (this.c) {
             if ((d.i() & 0x4) <= 0 && (d.i() & 0x8) <= 0) {
                 int i = this.c.size() - 1;
                 while (i >= 0) {
-                    final d d2 = this.c.elementAt(i);
+                    final d d2 = (d) this.c.elementAt(i);//Sam
                     if (d2.i() == d.i() && !d.c()) {
                         if (d2.a(d)) {
-                            return;
+                            break;
                         }
                         break;
-                    }
-                    else {
+                    } else {
                         --i;
                         if (f) {
                             break;
@@ -54,18 +55,17 @@ public class e
             this.c.notifyAll();
         }
     }
-    
+
     protected void b(final d d) throws IOException {
-        final boolean f = g.f;
+        final boolean f = com.avocent.kvm.b.d.g.f;
         while (this.e != -1 && this.f > this.e) {
             if (this.f > this.e) {
-                this.a.i().a(e.z[1] + this.e + e.z[2]);
+                this.a.i().a(com.avocent.kvm.b.d.e.z[1] + this.e + com.avocent.kvm.b.d.e.z[2]);
             }
             synchronized (this) {
                 try {
                     this.wait(1000L);
-                }
-                catch (Exception ex) {
+                } catch (Exception ex) {
                     ex.printStackTrace();
                 }
             }
@@ -88,21 +88,21 @@ public class e
         }
         ++this.f;
     }
-    
+
     public synchronized void a(final int n) {
         this.f -= n;
         this.notifyAll();
     }
-    
+
     protected void a(final Throwable t) {
-        this.a.i().a(e.z[0] + t.getMessage());
+        this.a.i().a(com.avocent.kvm.b.d.e.z[0] + t.getMessage());
         t.printStackTrace();
     }
-    
+
     public void a() {
         this.g.a();
     }
-    
+
     static {
         final String[] z2 = new String[3];
         final int n = 0;
@@ -112,7 +112,8 @@ public class e
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -142,7 +143,7 @@ public class e
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -159,7 +160,8 @@ public class e
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -189,7 +191,7 @@ public class e
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -206,7 +208,8 @@ public class e
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -236,14 +239,14 @@ public class e
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
             if (n10 <= n12) {
                 z2[n9] = new String(charArray3).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

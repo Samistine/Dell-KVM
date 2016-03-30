@@ -1,21 +1,23 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.a.e;
 
 import com.avocent.kvm.b.db;
-import com.avocent.kvm.b.r;
 import com.avocent.kvm.b.u;
 import java.beans.PropertyChangeEvent;
 import com.avocent.kvm.b.a.a;
 
-class j implements a
-{
+class j implements a {
+
     final r a;
     private static final String[] z;
-    
+
     j(final r a) {
         this.a = a;
-        super();
     }
-    
+
+    @Override
     public void propertyChange(final PropertyChangeEvent propertyChangeEvent) {
         final int t = c.t;
         if (!this.a.c) {
@@ -23,19 +25,19 @@ class j implements a
             if (propertyName.equals(j.z[0])) {
                 final Object newValue = propertyChangeEvent.getNewValue();
                 try {
-                    Label_0081: {
+                    Label_0081:
+                    {
                         if (newValue instanceof Integer) {
-                            this.a.a((Integer)newValue);
+                            this.a.a((Integer) newValue);
                             if (t == 0) {
                                 break Label_0081;
                             }
                         }
                         if (newValue instanceof String) {
-                            this.a.a(Integer.valueOf((String)newValue));
+                            this.a.a(Integer.valueOf((String) newValue));
                         }
                     }
-                }
-                catch (NumberFormatException ex) {
+                } catch (NumberFormatException ex) {
                     this.a.a.b().a(j.z[2] + newValue + j.z[3]);
                 }
                 this.a.a(true);
@@ -44,22 +46,27 @@ class j implements a
                     return;
                 }
             }
-            if (!propertyName.equalsIgnoreCase(j.z[1]) || this.a.a.a().a(j.z[1], null) != null) {}
+            if (!propertyName.equalsIgnoreCase(j.z[1]) || this.a.a.a().a(j.z[1], null) != null) {
+            }
         }
     }
-    
+
+    @Override
     public void b(final u u) {
     }
-    
-    public void a(final u u, final r r, final r r2) {
+
+    @Override
+    public void a(final u u, final com.avocent.kvm.b.r r, final com.avocent.kvm.b.r r2) {
     }
-    
+
+    @Override
     public void a(final u u) {
     }
-    
+
+    @Override
     public void a(final u u, final db db) {
     }
-    
+
     static {
         final String[] z2 = new String[4];
         final int n = 0;
@@ -69,7 +76,8 @@ class j implements a
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -99,7 +107,7 @@ class j implements a
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -116,7 +124,8 @@ class j implements a
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -146,7 +155,7 @@ class j implements a
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -163,7 +172,8 @@ class j implements a
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0330: {
+            Label_0330:
+            {
                 if (n10 > 1) {
                     break Label_0330;
                 }
@@ -193,7 +203,7 @@ class j implements a
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -210,7 +220,8 @@ class j implements a
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0446: {
+            Label_0446:
+            {
                 if (n14 > 1) {
                     break Label_0446;
                 }
@@ -240,14 +251,14 @@ class j implements a
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
             if (n14 <= n16) {
                 z2[n13] = new String(charArray4).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

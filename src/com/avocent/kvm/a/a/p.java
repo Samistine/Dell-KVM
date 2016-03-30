@@ -1,13 +1,16 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.a.a;
 
-public class p extends o
-{
+public class p extends o {
+
     private static final String z;
-    
+
     public p(final int n) {
-        super(522, p.z, (byte)(n & 0xFF));
+        super(522, p.z, (byte) (n & 0xFF));
     }
-    
+
     static {
         final char[] charArray = "\u000e3 r\u000e(%1~\u0002>38".toCharArray();
         int length;
@@ -15,7 +18,8 @@ public class p extends o
         final int n = n2 = (length = charArray.length);
         int n3 = 0;
         while (true) {
-            Label_0094: {
+            Label_0094:
+            {
                 if (n > 1) {
                     break Label_0094;
                 }
@@ -45,13 +49,13 @@ public class p extends o
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n3;
                 } while (n == 0);
             }
             if (n <= n3) {
                 z = new String(charArray).intern();
-                return;
+                break;
             }
             continue;
         }

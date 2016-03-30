@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.a;
 
 import java.awt.event.WindowListener;
@@ -9,44 +12,47 @@ import com.avocent.a.d;
 import com.avocent.a.e;
 import com.avocent.a.f;
 
-public class h extends f
-{
+public class h extends f {
+
     protected i o;
     public g p;
     private static final String[] z;
-    
+
     public h(final i o) {
-        super(h.z[1], o);
+        super(z[1], o); //Sam
         this.p = new g(this);
         this.o = o;
     }
-    
+
+    @Override
     public d d() {
         return this.o.d();
     }
-    
+
+    @Override
     public void g() {
         if (this.b == null) {
-            this.a((Component)new c(this, this.o.c()));
-            ((JDialog)this.b).addWindowListener(this.p);
+            this.a((Component) new c(this, this.o.c()));
+            ((JDialog) this.b).addWindowListener(this.p);
         }
         if (!this.b.isVisible()) {
-            ((JDialog)this.b).setLocationRelativeTo(this.o.c());
+            ((JDialog) this.b).setLocationRelativeTo(this.o.c());
             this.b.setVisible(true);
         }
-        ((JDialog)this.b).toFront();
+        ((JDialog) this.b).toFront();
     }
-    
+
     public void m() {
         this.b.setVisible(false);
         this.b = null;
     }
-    
+
+    @Override
     public void j() {
-        this.o.b().a(h.z[0]);
+        this.o.b().a(z[0]);//Sam
         System.exit(0);
     }
-    
+
     static {
         final String[] z2 = new String[2];
         final int n = 0;
@@ -56,7 +62,8 @@ public class h extends f
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0098: {
+            Label_0098:
+            {
                 if (n2 > 1) {
                     break Label_0098;
                 }
@@ -86,7 +93,7 @@ public class h extends f
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -103,7 +110,8 @@ public class h extends f
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0214: {
+            Label_0214:
+            {
                 if (n6 > 1) {
                     break Label_0214;
                 }
@@ -133,14 +141,14 @@ public class h extends f
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
             if (n6 <= n8) {
                 z2[n5] = new String(charArray2).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

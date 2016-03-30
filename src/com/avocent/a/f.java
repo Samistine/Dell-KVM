@@ -1,68 +1,78 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a;
 
-import java.awt.Dialog;
+import com.avocent.a.d;
+import com.avocent.a.e;
+import com.avocent.a.l;
+import com.avocent.a.m;
+import com.avocent.a.n;
+import com.avocent.a.o;
+import com.avocent.a.p;
 import com.avocent.kvm.b.d.a;
+import java.awt.Component;
+import java.awt.Dialog;
 import javax.swing.Action;
 
-public class f extends e
-{
+public class f extends e {
+
     protected Action j;
     protected Action k;
     protected Action l;
     protected Action m;
     protected Action n;
-    private static final String[] z;
-    
+
     public f(final String s, final e e) {
-        final int i = e.i;
         super(s, e);
-        this.j = new l(this, d.b(f.z[3]));
-        this.k = new m(this, d.b(f.z[1]));
-        this.l = new n(this, d.b(f.z[2]));
-        this.m = new o(this, d.b(f.z[0]));
-        this.n = new p(this, d.b(f.z[4]));
+        int i = com.avocent.a.e.i;
+        this.j = new l(this, com.avocent.a.d.b(z[3]));
+        this.k = new m(this, com.avocent.a.d.b(z[1]));
+        this.l = new n(this, com.avocent.a.d.b(z[2]));
+        this.m = new o(this, com.avocent.a.d.b(z[0]));
+        this.n = new p(this, com.avocent.a.d.b(z[4]));
         if (i != 0) {
-            int c = a.c;
-            a.c = ++c;
+            int c = com.avocent.kvm.b.d.a.c;
+            com.avocent.kvm.b.d.a.c = ++c;
         }
     }
-    
+
     public Action a() {
         return this.j;
     }
-    
+
     public Action c() {
         return this.l;
     }
-    
+
     public Action f() {
         return this.m;
     }
-    
+
     public void g() {
-        ((Dialog)this.b).pack();
+        ((Dialog) this.b).pack();
         this.b.setVisible(true);
     }
-    
+
     public void h() {
         this.i();
         this.k();
     }
-    
+
     public void i() {
     }
-    
+
     public void j() {
         this.e().setVisible(false);
     }
-    
+
     public void k() {
         this.e().setVisible(false);
     }
-    
+
     public void l() {
     }
-    
+
     static {
         final String[] z2 = new String[5];
         final int n = 0;
@@ -72,7 +82,8 @@ public class f extends e
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0097: {
+            Label_0097:
+            {
                 if (n2 > 1) {
                     break Label_0097;
                 }
@@ -102,7 +113,7 @@ public class f extends e
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -119,7 +130,8 @@ public class f extends e
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0213: {
+            Label_0213:
+            {
                 if (n6 > 1) {
                     break Label_0213;
                 }
@@ -149,7 +161,7 @@ public class f extends e
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -166,7 +178,8 @@ public class f extends e
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0329: {
+            Label_0329:
+            {
                 if (n10 > 1) {
                     break Label_0329;
                 }
@@ -196,7 +209,7 @@ public class f extends e
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -213,7 +226,8 @@ public class f extends e
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0445: {
+            Label_0445:
+            {
                 if (n14 > 1) {
                     break Label_0445;
                 }
@@ -243,7 +257,7 @@ public class f extends e
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -260,7 +274,8 @@ public class f extends e
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0561: {
+            Label_0561:
+            {
                 if (n18 > 1) {
                     break Label_0561;
                 }
@@ -290,14 +305,14 @@ public class f extends e
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
             if (n18 <= n20) {
                 z2[n17] = new String(charArray5).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

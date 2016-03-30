@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.a.a.e;
 
 import java.io.IOException;
@@ -20,8 +23,8 @@ import com.avocent.a.a.i;
 import java.beans.PropertyChangeListener;
 import javax.swing.JPanel;
 
-public class q extends JPanel implements PropertyChangeListener, k
-{
+public class q extends JPanel implements PropertyChangeListener, k {
+
     protected i a;
     protected c b;
     protected boolean c;
@@ -35,14 +38,13 @@ public class q extends JPanel implements PropertyChangeListener, k
     private JComboBox k;
     private JLabel l;
     private static final String[] z;
-    
+
     public q(final i a, final boolean b) {
-        super();
         this.c = false;
         this.d = false;
         this.a = a;
         this.g();
-        this.a.a((PropertyChangeListener)this);
+        this.a.a((PropertyChangeListener) this);
         if (b) {
             this.g.setVisible(true);
             (this.e = new DefaultComboBoxModel()).addElement(a.b(q.z[1]));
@@ -51,13 +53,13 @@ public class q extends JPanel implements PropertyChangeListener, k
             this.e.addElement(a.b(q.z[4]));
             this.e.addElement(a.b(q.z[2]));
             this.k.setModel(this.e);
-            if (c.t == 0) {
+            if (com.avocent.a.a.e.c.t == 0) {
                 return;
             }
         }
         this.g.setVisible(false);
     }
-    
+
     private void g() {
         this.h = new JPanel();
         this.i = new JCheckBox();
@@ -92,7 +94,7 @@ public class q extends JPanel implements PropertyChangeListener, k
         final GridBagConstraints gridBagConstraints4 = new GridBagConstraints();
         gridBagConstraints4.insets = new Insets(5, 10, 5, 5);
         this.g.add(this.l, gridBagConstraints4);
-        this.k.setModel(new DefaultComboBoxModel<String>(new String[] { q.z[10], q.z[14], q.z[13], q.z[12] }));
+        this.k.setModel(new DefaultComboBoxModel<String>(new String[]{q.z[10], q.z[14], q.z[13], q.z[12]}));
         this.k.addActionListener(new e(this));
         final GridBagConstraints gridBagConstraints5 = new GridBagConstraints();
         gridBagConstraints5.anchor = 17;
@@ -112,45 +114,49 @@ public class q extends JPanel implements PropertyChangeListener, k
         gridBagConstraints7.weighty = 1.0;
         this.add(this.f, gridBagConstraints7);
     }
-    
+
     private void a(final ActionEvent actionEvent) {
         this.d = true;
         this.b.n();
     }
-    
+
     private void b(final ActionEvent actionEvent) {
         this.d = true;
         this.b.n();
     }
-    
+
     public void h() {
         this.i.setSelected(this.a.a(q.z[7], Boolean.FALSE));
         if (this.g.isVisible()) {
             final Object a = this.a.a().a(q.z[16]);
             if (a != null) {
-                this.k.setSelectedIndex((int)a);
+                this.k.setSelectedIndex((int) a);
             }
         }
     }
-    
+
+    @Override
     public JPanel d() {
         return this;
     }
-    
+
+    @Override
     public String e() {
         return this.a.b(q.z[5]);
     }
-    
+
+    @Override
     public void c() {
         if (this.f() && !this.d) {
             this.h();
         }
         this.i();
     }
-    
+
     public void i() {
     }
-    
+
+    @Override
     public void propertyChange(final PropertyChangeEvent propertyChangeEvent) {
         final String propertyName = propertyChangeEvent.getPropertyName();
         if (propertyName.equals(q.z[7])) {
@@ -158,73 +164,75 @@ public class q extends JPanel implements PropertyChangeListener, k
             if (!(o instanceof Boolean)) {
                 o = Boolean.valueOf(o.toString());
             }
-            this.i.setSelected((boolean)o);
-            if (c.t == 0) {
+            this.i.setSelected((boolean) o);
+            if (com.avocent.a.a.e.c.t == 0) {
                 return;
             }
         }
         if (propertyName.equalsIgnoreCase(q.z[16])) {
             final Object a = this.a.a().a(q.z[16]);
             if (a != null) {
-                this.k.setSelectedIndex((int)a);
+                this.k.setSelectedIndex((int) a);
             }
         }
     }
-    
+
+    @Override
     public void a() {
         if (this.f()) {
             this.c = true;
             this.d = false;
             try {
-                this.a.a(q.z[7], (Object)(this.i.isSelected() ? Boolean.TRUE : Boolean.FALSE));
+                this.a.a(q.z[7], (Object) (this.i.isSelected() ? Boolean.TRUE : Boolean.FALSE));
                 if (this.g.isVisible()) {
                     this.a.a().a(2, new Integer(this.k.getSelectedIndex()), null);
                 }
-            }
-            catch (IOException ex) {
+            } catch (IOException ex) {
                 this.a.a(this.a.b(q.z[6]));
-            }
-            finally {
+            } finally {
                 this.c = false;
             }
         }
     }
-    
+
+    @Override
     public void b() {
         this.d = false;
         this.h();
     }
-    
+
+    @Override
     public boolean f() {
         boolean b = false;
         final Object b2 = this.a.b(q.z[7], null);
-        if (b2 == null || (boolean)b2 != this.i.isSelected()) {
+        if (b2 == null || (boolean) b2 != this.i.isSelected()) {
             b = true;
-            if (c.t == 0) {
+            if (com.avocent.a.a.e.c.t == 0) {
                 return b;
             }
         }
         if (this.g.isVisible()) {
             final Object a = this.a.a().a(q.z[16]);
-            if (a != null && (int)a != this.k.getSelectedIndex()) {
+            if (a != null && (int) a != this.k.getSelectedIndex()) {
                 b = true;
             }
         }
         return b;
     }
-    
+
+    @Override
     public void a(final c b) {
         this.b = b;
     }
-    
+
     static void a(final q q, final ActionEvent actionEvent) {
         q.b(actionEvent);
     }
-    
+
     static void b(final q q, final ActionEvent actionEvent) {
         q.a(actionEvent);
     }
-    
+
     static {
         final String[] z2 = new String[17];
         final int n = 0;
@@ -234,7 +242,8 @@ public class q extends JPanel implements PropertyChangeListener, k
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0097: {
+            Label_0097:
+            {
                 if (n2 > 1) {
                     break Label_0097;
                 }
@@ -264,7 +273,7 @@ public class q extends JPanel implements PropertyChangeListener, k
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -281,7 +290,8 @@ public class q extends JPanel implements PropertyChangeListener, k
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0213: {
+            Label_0213:
+            {
                 if (n6 > 1) {
                     break Label_0213;
                 }
@@ -311,7 +321,7 @@ public class q extends JPanel implements PropertyChangeListener, k
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -328,7 +338,8 @@ public class q extends JPanel implements PropertyChangeListener, k
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0329: {
+            Label_0329:
+            {
                 if (n10 > 1) {
                     break Label_0329;
                 }
@@ -358,7 +369,7 @@ public class q extends JPanel implements PropertyChangeListener, k
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -375,7 +386,8 @@ public class q extends JPanel implements PropertyChangeListener, k
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0445: {
+            Label_0445:
+            {
                 if (n14 > 1) {
                     break Label_0445;
                 }
@@ -405,7 +417,7 @@ public class q extends JPanel implements PropertyChangeListener, k
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -422,7 +434,8 @@ public class q extends JPanel implements PropertyChangeListener, k
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0561: {
+            Label_0561:
+            {
                 if (n18 > 1) {
                     break Label_0561;
                 }
@@ -452,7 +465,7 @@ public class q extends JPanel implements PropertyChangeListener, k
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
@@ -469,7 +482,8 @@ public class q extends JPanel implements PropertyChangeListener, k
         final int n22 = n23 = (length6 = charArray6.length);
         int n24 = 0;
         while (true) {
-            Label_0677: {
+            Label_0677:
+            {
                 if (n22 > 1) {
                     break Label_0677;
                 }
@@ -499,7 +513,7 @@ public class q extends JPanel implements PropertyChangeListener, k
                             break;
                         }
                     }
-                    charArray6[length6] = (char)(c11 ^ c12);
+                    charArray6[length6] = (char) (c11 ^ c12);
                     ++n24;
                 } while (n22 == 0);
             }
@@ -516,7 +530,8 @@ public class q extends JPanel implements PropertyChangeListener, k
         final int n26 = n27 = (length7 = charArray7.length);
         int n28 = 0;
         while (true) {
-            Label_0793: {
+            Label_0793:
+            {
                 if (n26 > 1) {
                     break Label_0793;
                 }
@@ -546,7 +561,7 @@ public class q extends JPanel implements PropertyChangeListener, k
                             break;
                         }
                     }
-                    charArray7[length7] = (char)(c13 ^ c14);
+                    charArray7[length7] = (char) (c13 ^ c14);
                     ++n28;
                 } while (n26 == 0);
             }
@@ -563,7 +578,8 @@ public class q extends JPanel implements PropertyChangeListener, k
         final int n30 = n31 = (length8 = charArray8.length);
         int n32 = 0;
         while (true) {
-            Label_0909: {
+            Label_0909:
+            {
                 if (n30 > 1) {
                     break Label_0909;
                 }
@@ -593,7 +609,7 @@ public class q extends JPanel implements PropertyChangeListener, k
                             break;
                         }
                     }
-                    charArray8[length8] = (char)(c15 ^ c16);
+                    charArray8[length8] = (char) (c15 ^ c16);
                     ++n32;
                 } while (n30 == 0);
             }
@@ -610,7 +626,8 @@ public class q extends JPanel implements PropertyChangeListener, k
         final int n34 = n35 = (length9 = charArray9.length);
         int n36 = 0;
         while (true) {
-            Label_1025: {
+            Label_1025:
+            {
                 if (n34 > 1) {
                     break Label_1025;
                 }
@@ -640,7 +657,7 @@ public class q extends JPanel implements PropertyChangeListener, k
                             break;
                         }
                     }
-                    charArray9[length9] = (char)(c17 ^ c18);
+                    charArray9[length9] = (char) (c17 ^ c18);
                     ++n36;
                 } while (n34 == 0);
             }
@@ -657,7 +674,8 @@ public class q extends JPanel implements PropertyChangeListener, k
         final int n38 = n39 = (length10 = charArray10.length);
         int n40 = 0;
         while (true) {
-            Label_1141: {
+            Label_1141:
+            {
                 if (n38 > 1) {
                     break Label_1141;
                 }
@@ -687,7 +705,7 @@ public class q extends JPanel implements PropertyChangeListener, k
                             break;
                         }
                     }
-                    charArray10[length10] = (char)(c19 ^ c20);
+                    charArray10[length10] = (char) (c19 ^ c20);
                     ++n40;
                 } while (n38 == 0);
             }
@@ -704,7 +722,8 @@ public class q extends JPanel implements PropertyChangeListener, k
         final int n42 = n43 = (length11 = charArray11.length);
         int n44 = 0;
         while (true) {
-            Label_1257: {
+            Label_1257:
+            {
                 if (n42 > 1) {
                     break Label_1257;
                 }
@@ -734,7 +753,7 @@ public class q extends JPanel implements PropertyChangeListener, k
                             break;
                         }
                     }
-                    charArray11[length11] = (char)(c21 ^ c22);
+                    charArray11[length11] = (char) (c21 ^ c22);
                     ++n44;
                 } while (n42 == 0);
             }
@@ -751,7 +770,8 @@ public class q extends JPanel implements PropertyChangeListener, k
         final int n46 = n47 = (length12 = charArray12.length);
         int n48 = 0;
         while (true) {
-            Label_1373: {
+            Label_1373:
+            {
                 if (n46 > 1) {
                     break Label_1373;
                 }
@@ -781,7 +801,7 @@ public class q extends JPanel implements PropertyChangeListener, k
                             break;
                         }
                     }
-                    charArray12[length12] = (char)(c23 ^ c24);
+                    charArray12[length12] = (char) (c23 ^ c24);
                     ++n48;
                 } while (n46 == 0);
             }
@@ -798,7 +818,8 @@ public class q extends JPanel implements PropertyChangeListener, k
         final int n50 = n51 = (length13 = charArray13.length);
         int n52 = 0;
         while (true) {
-            Label_1489: {
+            Label_1489:
+            {
                 if (n50 > 1) {
                     break Label_1489;
                 }
@@ -828,7 +849,7 @@ public class q extends JPanel implements PropertyChangeListener, k
                             break;
                         }
                     }
-                    charArray13[length13] = (char)(c25 ^ c26);
+                    charArray13[length13] = (char) (c25 ^ c26);
                     ++n52;
                 } while (n50 == 0);
             }
@@ -845,7 +866,8 @@ public class q extends JPanel implements PropertyChangeListener, k
         final int n54 = n55 = (length14 = charArray14.length);
         int n56 = 0;
         while (true) {
-            Label_1605: {
+            Label_1605:
+            {
                 if (n54 > 1) {
                     break Label_1605;
                 }
@@ -875,7 +897,7 @@ public class q extends JPanel implements PropertyChangeListener, k
                             break;
                         }
                     }
-                    charArray14[length14] = (char)(c27 ^ c28);
+                    charArray14[length14] = (char) (c27 ^ c28);
                     ++n56;
                 } while (n54 == 0);
             }
@@ -892,7 +914,8 @@ public class q extends JPanel implements PropertyChangeListener, k
         final int n58 = n59 = (length15 = charArray15.length);
         int n60 = 0;
         while (true) {
-            Label_1721: {
+            Label_1721:
+            {
                 if (n58 > 1) {
                     break Label_1721;
                 }
@@ -922,7 +945,7 @@ public class q extends JPanel implements PropertyChangeListener, k
                             break;
                         }
                     }
-                    charArray15[length15] = (char)(c29 ^ c30);
+                    charArray15[length15] = (char) (c29 ^ c30);
                     ++n60;
                 } while (n58 == 0);
             }
@@ -939,7 +962,8 @@ public class q extends JPanel implements PropertyChangeListener, k
         final int n62 = n63 = (length16 = charArray16.length);
         int n64 = 0;
         while (true) {
-            Label_1837: {
+            Label_1837:
+            {
                 if (n62 > 1) {
                     break Label_1837;
                 }
@@ -969,7 +993,7 @@ public class q extends JPanel implements PropertyChangeListener, k
                             break;
                         }
                     }
-                    charArray16[length16] = (char)(c31 ^ c32);
+                    charArray16[length16] = (char) (c31 ^ c32);
                     ++n64;
                 } while (n62 == 0);
             }
@@ -986,7 +1010,8 @@ public class q extends JPanel implements PropertyChangeListener, k
         final int n66 = n67 = (length17 = charArray17.length);
         int n68 = 0;
         while (true) {
-            Label_1953: {
+            Label_1953:
+            {
                 if (n66 > 1) {
                     break Label_1953;
                 }
@@ -1016,14 +1041,14 @@ public class q extends JPanel implements PropertyChangeListener, k
                             break;
                         }
                     }
-                    charArray17[length17] = (char)(c33 ^ c34);
+                    charArray17[length17] = (char) (c33 ^ c34);
                     ++n68;
                 } while (n66 == 0);
             }
             if (n66 <= n68) {
                 z2[n65] = new String(charArray17).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }

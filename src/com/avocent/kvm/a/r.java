@@ -1,3 +1,6 @@
+// 
+// Decompiled by Procyon v0.5.29
+// 
 package com.avocent.kvm.a;
 
 import com.avocent.kvm.b.d.c;
@@ -6,18 +9,19 @@ import com.avocent.kvm.b.g;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
-class r extends Thread
-{
+class r extends Thread {
+
     boolean a;
     final l b;
     private static final String[] z;
-    
+
     r(final l b) {
-        this.b = b;
         super(r.z[0]);
+        this.b = b;
         this.a = false;
     }
-    
+
+    @Override
     public void run() {
         final int ab = l.Ab;
         try {
@@ -31,8 +35,7 @@ class r extends Thread
                         System.out.println(r.z[6]);
                     }
                     a = this.b.ib.a(this.b.F, g.i ? l.a(this.b) : null, true);
-                }
-                catch (Throwable t) {
+                } catch (Throwable t) {
                     System.out.println(r.z[4] + simpleDateFormat.format(date).toString());
                     System.out.println(r.z[8] + t.toString());
                 }
@@ -70,8 +73,7 @@ class r extends Thread
                     break;
                 }
             }
-        }
-        catch (Throwable t2) {
+        } catch (Throwable t2) {
             System.out.println(r.z[7] + new SimpleDateFormat(r.z[5]).format(new Date()).toString());
             System.out.println(r.z[7] + t2.toString());
             t2.printStackTrace();
@@ -79,7 +81,7 @@ class r extends Thread
             this.b.l();
         }
     }
-    
+
     static {
         final String[] z2 = new String[11];
         final int n = 0;
@@ -89,7 +91,8 @@ class r extends Thread
         final int n2 = n3 = (length = charArray.length);
         int n4 = 0;
         while (true) {
-            Label_0097: {
+            Label_0097:
+            {
                 if (n2 > 1) {
                     break Label_0097;
                 }
@@ -119,7 +122,7 @@ class r extends Thread
                             break;
                         }
                     }
-                    charArray[length] = (char)(c ^ c2);
+                    charArray[length] = (char) (c ^ c2);
                     ++n4;
                 } while (n2 == 0);
             }
@@ -136,7 +139,8 @@ class r extends Thread
         final int n6 = n7 = (length2 = charArray2.length);
         int n8 = 0;
         while (true) {
-            Label_0213: {
+            Label_0213:
+            {
                 if (n6 > 1) {
                     break Label_0213;
                 }
@@ -166,7 +170,7 @@ class r extends Thread
                             break;
                         }
                     }
-                    charArray2[length2] = (char)(c3 ^ c4);
+                    charArray2[length2] = (char) (c3 ^ c4);
                     ++n8;
                 } while (n6 == 0);
             }
@@ -183,7 +187,8 @@ class r extends Thread
         final int n10 = n11 = (length3 = charArray3.length);
         int n12 = 0;
         while (true) {
-            Label_0329: {
+            Label_0329:
+            {
                 if (n10 > 1) {
                     break Label_0329;
                 }
@@ -213,7 +218,7 @@ class r extends Thread
                             break;
                         }
                     }
-                    charArray3[length3] = (char)(c5 ^ c6);
+                    charArray3[length3] = (char) (c5 ^ c6);
                     ++n12;
                 } while (n10 == 0);
             }
@@ -230,7 +235,8 @@ class r extends Thread
         final int n14 = n15 = (length4 = charArray4.length);
         int n16 = 0;
         while (true) {
-            Label_0445: {
+            Label_0445:
+            {
                 if (n14 > 1) {
                     break Label_0445;
                 }
@@ -260,7 +266,7 @@ class r extends Thread
                             break;
                         }
                     }
-                    charArray4[length4] = (char)(c7 ^ c8);
+                    charArray4[length4] = (char) (c7 ^ c8);
                     ++n16;
                 } while (n14 == 0);
             }
@@ -277,7 +283,8 @@ class r extends Thread
         final int n18 = n19 = (length5 = charArray5.length);
         int n20 = 0;
         while (true) {
-            Label_0561: {
+            Label_0561:
+            {
                 if (n18 > 1) {
                     break Label_0561;
                 }
@@ -307,7 +314,7 @@ class r extends Thread
                             break;
                         }
                     }
-                    charArray5[length5] = (char)(c9 ^ c10);
+                    charArray5[length5] = (char) (c9 ^ c10);
                     ++n20;
                 } while (n18 == 0);
             }
@@ -324,7 +331,8 @@ class r extends Thread
         final int n22 = n23 = (length6 = charArray6.length);
         int n24 = 0;
         while (true) {
-            Label_0677: {
+            Label_0677:
+            {
                 if (n22 > 1) {
                     break Label_0677;
                 }
@@ -354,7 +362,7 @@ class r extends Thread
                             break;
                         }
                     }
-                    charArray6[length6] = (char)(c11 ^ c12);
+                    charArray6[length6] = (char) (c11 ^ c12);
                     ++n24;
                 } while (n22 == 0);
             }
@@ -371,7 +379,8 @@ class r extends Thread
         final int n26 = n27 = (length7 = charArray7.length);
         int n28 = 0;
         while (true) {
-            Label_0793: {
+            Label_0793:
+            {
                 if (n26 > 1) {
                     break Label_0793;
                 }
@@ -401,7 +410,7 @@ class r extends Thread
                             break;
                         }
                     }
-                    charArray7[length7] = (char)(c13 ^ c14);
+                    charArray7[length7] = (char) (c13 ^ c14);
                     ++n28;
                 } while (n26 == 0);
             }
@@ -418,7 +427,8 @@ class r extends Thread
         final int n30 = n31 = (length8 = charArray8.length);
         int n32 = 0;
         while (true) {
-            Label_0909: {
+            Label_0909:
+            {
                 if (n30 > 1) {
                     break Label_0909;
                 }
@@ -448,7 +458,7 @@ class r extends Thread
                             break;
                         }
                     }
-                    charArray8[length8] = (char)(c15 ^ c16);
+                    charArray8[length8] = (char) (c15 ^ c16);
                     ++n32;
                 } while (n30 == 0);
             }
@@ -465,7 +475,8 @@ class r extends Thread
         final int n34 = n35 = (length9 = charArray9.length);
         int n36 = 0;
         while (true) {
-            Label_1025: {
+            Label_1025:
+            {
                 if (n34 > 1) {
                     break Label_1025;
                 }
@@ -495,7 +506,7 @@ class r extends Thread
                             break;
                         }
                     }
-                    charArray9[length9] = (char)(c17 ^ c18);
+                    charArray9[length9] = (char) (c17 ^ c18);
                     ++n36;
                 } while (n34 == 0);
             }
@@ -512,7 +523,8 @@ class r extends Thread
         final int n38 = n39 = (length10 = charArray10.length);
         int n40 = 0;
         while (true) {
-            Label_1141: {
+            Label_1141:
+            {
                 if (n38 > 1) {
                     break Label_1141;
                 }
@@ -542,7 +554,7 @@ class r extends Thread
                             break;
                         }
                     }
-                    charArray10[length10] = (char)(c19 ^ c20);
+                    charArray10[length10] = (char) (c19 ^ c20);
                     ++n40;
                 } while (n38 == 0);
             }
@@ -559,7 +571,8 @@ class r extends Thread
         final int n42 = n43 = (length11 = charArray11.length);
         int n44 = 0;
         while (true) {
-            Label_1257: {
+            Label_1257:
+            {
                 if (n42 > 1) {
                     break Label_1257;
                 }
@@ -589,14 +602,14 @@ class r extends Thread
                             break;
                         }
                     }
-                    charArray11[length11] = (char)(c21 ^ c22);
+                    charArray11[length11] = (char) (c21 ^ c22);
                     ++n44;
                 } while (n42 == 0);
             }
             if (n42 <= n44) {
                 z2[n41] = new String(charArray11).intern();
                 z = z2;
-                return;
+                break;
             }
             continue;
         }
