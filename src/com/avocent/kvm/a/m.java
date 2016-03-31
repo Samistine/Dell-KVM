@@ -31,17 +31,17 @@ public class m extends k {
         this.x = false;
         this.y = 0;
         this.z = 0;
-        final String property = System.getProperty(m.F[12]);
+        final String property = System.getProperty(/*m.*/F[12]);
         try {
             if (property == null) {
                 this.C = -1;
                 if (com.avocent.kvm.a.l.Ab == 0) {
-                    break;
+                    /*break;*/return;//Sam
                 }
             }
             this.C = Integer.parseInt(property.trim());
         } catch (NumberFormatException ex) {
-            u.i().a(m.F[11] + property);
+            u.i().a(/*m.*/F[11] + property);
         }
     }
 
@@ -96,9 +96,9 @@ public class m extends k {
             if (this.C >= 0 && this.k == this.C) {
                 try {
                     if (this.D == null) {
-                        final File file = new File(m.F[2] + this.C + m.F[0]);
-                        final File file2 = new File(m.F[2] + this.C + m.F[4]);
-                        com.avocent.kvm.b.f.b.a().a(m.F[5] + file.getPath());
+                        final File file = new File(/*m.*/F[2] + this.C + /*m.*/F[0]);
+                        final File file2 = new File(/*m.*/F[2] + this.C + /*m.*/F[4]);
+                        com.avocent.kvm.b.f.b.a().a(/*m.*/F[5] + file.getPath());
                         this.D = new PrintWriter(new FileOutputStream(file));
                         this.E = new FileOutputStream(file2);
                     }
@@ -107,7 +107,7 @@ public class m extends k {
                     int i = 0;
                     while (i < g) {
                         final String hexString = Integer.toHexString(b[i] & 0xFF);
-                        this.D.print(((hexString.length() == 1) ? m.F[3] : m.F[9]) + hexString);
+                        this.D.print(((hexString.length() == 1) ? /*m.*/F[3] : /*m.*/F[9]) + hexString);
                         if ((i + 1) % 16 == 0) {
                             this.D.println("");
                         }
@@ -119,7 +119,7 @@ public class m extends k {
                     this.E.write(b, 0, g);
                     break Label_0806;
                 } catch (IOException ex) {
-                    com.avocent.kvm.b.f.b.a().a(m.F[7] + ex.getMessage());
+                    com.avocent.kvm.b.f.b.a().a(/*m.*/F[7] + ex.getMessage());
                     if (ab == 0) {
                         break Label_0806;
                     }
@@ -127,13 +127,13 @@ public class m extends k {
             }
             if (this.D != null) {
                 try {
-                    com.avocent.kvm.b.f.b.a().a(m.F[8] + this.C + m.F[6]);
+                    com.avocent.kvm.b.f.b.a().a(/*m.*/F[8] + this.C + /*m.*/F[6]);
                     this.D.close();
                     this.E.close();
                     this.D = null;
                     this.E = null;
                     if (this.b.c() instanceof i) {
-                        final DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(m.F[2] + this.C + m.F[10]));
+                        final DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(/*m.*/F[2] + this.C + /*m.*/F[10]));
                         final i j = (i) this.b.c();
                         final int[] array = (int[]) j.e();
                         int k = 0;
@@ -147,7 +147,7 @@ public class m extends k {
                         dataOutputStream.close();
                     }
                 } catch (IOException ex2) {
-                    com.avocent.kvm.b.f.b.a().a(m.F[1] + ex2.getMessage() + ".");
+                    com.avocent.kvm.b.f.b.a().a(/*m.*/F[1] + ex2.getMessage() + ".");
                 }
             }
         }

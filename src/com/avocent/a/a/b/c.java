@@ -21,56 +21,56 @@ import javax.swing.JDialog;
 
 public class c extends JDialog implements PropertyChangeListener {
 
-    protected h a;
-    private JPanel b;
-    private JButton c;
-    private JPanel d;
-    private ButtonGroup e;
-    private JButton f;
-    private JLabel g;
+    protected h a;//Originally named a
+    private JPanel JPanel_b;//Originally named b
+    private JButton JButton_c;//Originally named c
+    private JPanel JPanel_d;//Originally named d
+    private ButtonGroup ButtonGroup_e;//Originally named e
+    private JButton JButton_F;//Originally named f
+    private JLabel JLabel_g;//Originally named g
     private static final String[] z;
 
     public c(final h a, final Frame frame) {
         super(frame, false);
         this.a = a;
         this.a();
-        this.c.setAction(this.a.c());
+        this.JButton_c.setAction(this.a.c());
         this.a.a(this);
     }
 
     private void a() {
-        this.e = new ButtonGroup();
-        this.f = new JButton();
-        this.d = new JPanel();
-        this.g = new JLabel();
-        this.b = new JPanel();
-        this.c = new JButton();
+        this.ButtonGroup_e = new ButtonGroup();
+        this.JButton_F = new JButton();
+        this.JPanel_d = new JPanel();
+        this.JLabel_g = new JLabel();
+        this.JPanel_b = new JPanel();
+        this.JButton_c = new JButton();
         this.setDefaultCloseOperation(2);
-        this.d.setLayout(new GridBagLayout());
-        final JLabel g = this.g;
+        this.JPanel_d.setLayout(new GridBagLayout());
+        final JLabel g = this.JLabel_g;
         this.a.d();
         g.setText(com.avocent.a.d.b(com.avocent.a.a.b.c.z[4]));
         final GridBagConstraints gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.gridwidth = 0;
         gridBagConstraints.fill = 2;
         gridBagConstraints.insets = new Insets(20, 20, 10, 20);
-        this.d.add(this.g, gridBagConstraints);
-        this.getContentPane().add(this.d, com.avocent.a.a.b.c.z[1]);
-        this.b.setLayout(new GridBagLayout());
-        final JButton c = this.c;
+        this.JPanel_d.add(this.JLabel_g, gridBagConstraints);
+        this.getContentPane().add(this.JPanel_d, com.avocent.a.a.b.c.z[1]);
+        this.JPanel_b.setLayout(new GridBagLayout());
+        final JButton c = this.JButton_c;
         this.a.d();
         c.setText(com.avocent.a.d.b(com.avocent.a.a.b.c.z[2]));
         final GridBagConstraints gridBagConstraints2 = new GridBagConstraints();
         gridBagConstraints2.insets = new Insets(10, 10, 10, 10);
-        this.b.add(this.c, gridBagConstraints2);
-        this.getContentPane().add(this.b, com.avocent.a.a.b.c.z[3]);
+        this.JPanel_b.add(this.JButton_c, gridBagConstraints2);
+        this.getContentPane().add(this.JPanel_b, com.avocent.a.a.b.c.z[3]);
         this.pack();
     }
 
     @Override
-    public void propertyChange(final PropertyChangeEvent propertyChangeEvent) {
+    public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
         if (propertyChangeEvent.getPropertyName().equals(com.avocent.a.a.b.c.z[0])) {
-            this.g.setText(propertyChangeEvent.getNewValue().toString());
+            this.JLabel_g.setText(propertyChangeEvent.getNewValue().toString());
         }
     }
 

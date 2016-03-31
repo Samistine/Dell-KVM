@@ -121,17 +121,17 @@ public class b extends gb {
 
     @Override
     public byte[] a() {
-        throw new RuntimeException(b.z[1]);
+        throw new RuntimeException(/*b.*/z[1]);
     }
 
     @Override
     public byte[] b() {
-        throw new RuntimeException(b.z[1]);
+        throw new RuntimeException(/*b.*/z[1]);
     }
 
     @Override
     public String e() {
-        return b.z[0];
+        return /*b.*/z[0];
     }
 
     static {

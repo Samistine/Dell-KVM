@@ -50,8 +50,8 @@ public class f extends e {
     }
 
     public void g() {
-        ((Dialog) this.b).pack();
-        this.b.setVisible(true);
+        ((Dialog) this.component_b).pack();
+        this.component_b.setVisible(true);
     }
 
     public void h() {
@@ -63,11 +63,11 @@ public class f extends e {
     }
 
     public void j() {
-        this.e().setVisible(false);
+        this.getComponent_b().setVisible(false);
     }
 
     public void k() {
-        this.e().setVisible(false);
+        this.getComponent_b().setVisible(false);
     }
 
     public void l() {

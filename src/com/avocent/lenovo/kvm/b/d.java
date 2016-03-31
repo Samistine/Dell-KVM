@@ -100,7 +100,7 @@ public class d extends JDialog {
         this.getContentPane().add(this.f, com.avocent.lenovo.kvm.b.d.z[1]);
         this.d.setLayout(new GridBagLayout());
         this.h.setText(com.avocent.lenovo.kvm.b.d.z[7]);
-        this.h.addActionListener(new a(this));
+        this.h.addActionListener(new ActionListener_a(this));
         final GridBagConstraints gridBagConstraints5 = new GridBagConstraints();
         gridBagConstraints5.insets = new Insets(5, 5, 5, 5);
         this.d.add(this.h, gridBagConstraints5);
@@ -511,4 +511,19 @@ public class d extends JDialog {
             continue;
         }
     }
+
+    private static class ActionListener_a implements ActionListener {
+
+        final d a;
+
+        ActionListener_a(d a) {
+            this.a = a;
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            a(this.a, actionEvent);
+        }
+    }
+
 }

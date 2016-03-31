@@ -10,7 +10,7 @@ class d extends m {
     final f e;
     private static final String[] z;
 
-    public d(final f e) {
+    public d(f e) {
         this.e = e;
         this.a(z[0], z[1]);
     }

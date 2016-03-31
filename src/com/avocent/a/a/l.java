@@ -4,10 +4,9 @@
 package com.avocent.a.a;
 
 import java.beans.PropertyChangeEvent;
-import com.avocent.kvm.a.d;
 import com.avocent.kvm.a.c;
 
-public class l implements c, d {
+public class l implements c {
 
     protected i h;
     private static final String[] z;
@@ -21,13 +20,13 @@ public class l implements c, d {
         if (propertyChangeEvent.getPropertyName().equals(l.z[1])) {
             final Object newValue = propertyChangeEvent.getNewValue();
             String s = null;
-            if (newValue.equals(l.a)) {
+            if (newValue.equals(0)) {
                 s = l.z[3];
-            } else if (newValue.equals(l.b)) {
+            } else if (newValue.equals(1)) {
                 s = l.z[4];
-            } else if (newValue.equals(l.c)) {
+            } else if (newValue.equals(2)) {
                 s = l.z[0];
-            } else if (newValue.equals(l.g)) {
+            } else if (newValue.equals(100)) {
                 this.h.o().a((String) null);
                 this.h.p().a((String) null);
             }

@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import com.avocent.a.a.s;
 import com.avocent.lenovo.kvm.a.a;
-import com.avocent.lenovo.kvm.a.d;
+import com.avocent.lenovo.kvm.a.AbstractAction_d;
 import com.avocent.a.a.i;
 
 public class c extends i {
@@ -15,29 +15,29 @@ public class c extends i {
     protected boolean H = false;
     protected boolean I = false;
     protected boolean J = false;
-    protected k K;
-    protected j L;
+    protected AbstractAction_k K;
+    protected AbstractAction_j L;
     protected i M;
-    protected l N;
-    protected g O;
-    protected g P;
-    protected g Q;
-    protected g R;
-    protected g S;
-    protected g T;
-    protected g U;
-    protected g V;
-    protected g W;
-    protected m X;
+    protected AbstractAction_l N;
+    protected AbstractAction_g O;
+    protected AbstractAction_g P;
+    protected AbstractAction_g Q;
+    protected AbstractAction_g R;
+    protected AbstractAction_g S;
+    protected AbstractAction_g T;
+    protected AbstractAction_g U;
+    protected AbstractAction_g V;
+    protected AbstractAction_g W;
+    protected AbstractAction_m X;
     protected com.avocent.a.b.c Y;
-    protected d Z;
+    protected AbstractAction_d Z;
     protected a ab;
-    protected h bb;
+    protected AbstractAction_h bb;
     public static boolean cb;
     private static final String[] db;
 
     public c() {
-        this.Z = new d(this);
+        this.Z = new AbstractAction_d(this);
         this.ab = new a(this);
     }
 
@@ -53,24 +53,24 @@ public class c extends i {
             }
         }
         if (!this.H) {
-            this.K = new k(this);
-            this.L = new j(this);
+            this.K = new AbstractAction_k(this);
+            this.L = new AbstractAction_j(this);
             //this.M = new i(this);
             this.M = new i();
-            this.N = new l(this);
-            this.O = new g(this, com.avocent.kvm.b.t.f, com.avocent.kvm.b.t.h);
-            this.P = new g(this, com.avocent.kvm.b.t.f, com.avocent.kvm.b.t.l);
-            this.Q = new g(this, com.avocent.kvm.b.t.f, com.avocent.kvm.b.t.m);
-            this.R = new g(this, com.avocent.kvm.b.t.f, com.avocent.kvm.b.t.n);
-            this.S = new g(this, com.avocent.kvm.b.t.f, com.avocent.kvm.b.t.o);
-            this.T = new g(this, com.avocent.kvm.b.t.g, com.avocent.kvm.b.t.i);
-            this.U = new g(this, com.avocent.kvm.b.t.g, com.avocent.kvm.b.t.j);
-            this.V = new g(this, com.avocent.kvm.b.t.g, com.avocent.kvm.b.t.k);
-            this.W = new g(this, com.avocent.kvm.b.t.g, com.avocent.kvm.b.t.l);
-            this.X = new m(this);
+            this.N = new AbstractAction_l(this);
+            this.O = new AbstractAction_g(this, 0, 3);
+            this.P = new AbstractAction_g(this, 0, 7);
+            this.Q = new AbstractAction_g(this, 0, 9);
+            this.R = new AbstractAction_g(this, 0, 12);
+            this.S = new AbstractAction_g(this, 0, 15);
+            this.T = new AbstractAction_g(this, 1, 4);
+            this.U = new AbstractAction_g(this, 1, 5);
+            this.V = new AbstractAction_g(this, 1, 6);
+            this.W = new AbstractAction_g(this, 1, 7);
+            this.X = new AbstractAction_m(this);
             this.Y = new com.avocent.a.b.c(this);
-            this.Z = new d(this);
-            this.bb = new h(this);
+            this.Z = new AbstractAction_d(this);
+            this.bb = new AbstractAction_h(this);
         }
         super.a(s, d, array);
     }

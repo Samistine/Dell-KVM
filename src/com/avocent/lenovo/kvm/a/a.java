@@ -5,21 +5,21 @@ package com.avocent.lenovo.kvm.a;
 
 public class a extends com.avocent.a.e {
 
-    protected f j;
-    protected b k;
-    protected e l;
-    protected c m;
+    protected JDialog_f j;
+    protected AbstractAction_b k;
+    protected AbstractAction_e l;
+    protected AbstractAction_c m;
     protected com.avocent.kvm.b.e.a n;
     public static int o;
     private static final String[] z;
 
-    public a(final com.avocent.kvm.b.e.a a) {
+    public a(com.avocent.kvm.b.e.a a) {
         super(/*z[3],*/ (com.avocent.a.e) a);
         int n = o;
         this.n = a;
-        this.k = new b(this);
-        this.l = new e(this);
-        this.m = new c(this);
+        this.k = new AbstractAction_b(this);
+        this.l = new AbstractAction_e(this);
+        this.m = new AbstractAction_c(this);
         if (com.avocent.kvm.b.d.a.c != 0) {
             o = ++n;
         }
@@ -29,9 +29,9 @@ public class a extends com.avocent.a.e {
         return this.n;
     }
 
-    public void a(final boolean visible) {
+    public void a(boolean visible) {
         if (visible && this.j == null) {
-            this.j = new f(this, this.n.c());
+            this.j = new JDialog_f(this, this.n.c());
             final String a = this.n.a(com.avocent.lenovo.kvm.a.a.z[0], "");
             final String a2 = this.n.a(com.avocent.lenovo.kvm.a.a.z[1], "");
             this.j.setTitle(com.avocent.lenovo.kvm.a.a.z[2] + a);

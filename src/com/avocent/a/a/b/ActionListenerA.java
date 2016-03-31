@@ -9,9 +9,9 @@ import java.awt.event.ActionListener;
 //Originally named a
 class ActionListenerA implements ActionListener {
 
-    private final b a;
+    private final JDialog_b a;
 
-    public ActionListenerA(b a) {
+    public ActionListenerA(JDialog_b a) {
         this.a = a;
     }
 

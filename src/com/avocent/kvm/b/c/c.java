@@ -8,7 +8,7 @@ import java.util.Hashtable;
 import java.util.Locale;
 import java.awt.Component;
 
-public class c implements a {
+public class c {
 
     protected Component a;
     protected Locale b;

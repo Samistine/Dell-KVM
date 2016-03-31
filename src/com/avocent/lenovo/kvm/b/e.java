@@ -806,4 +806,18 @@ public class e extends JDialog {
             continue;
         }
     }
+    
+    private static class b implements ActionListener {
+
+        final e a;
+
+        b(e a) {
+            this.a = a;
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            a(this.a, actionEvent);
+        }
+    }
 }

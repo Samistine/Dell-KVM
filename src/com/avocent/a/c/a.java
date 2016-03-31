@@ -8,11 +8,11 @@ public class a {
     protected b a;
     protected String b;
 
-    public a(final String b) {
+    public a(String b) {
         this.b = b;
     }
 
-    public void a(final b a) {
+    public void a(b a) {
         this.a = a;
     }
 

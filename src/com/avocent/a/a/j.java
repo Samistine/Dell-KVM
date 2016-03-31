@@ -4,63 +4,63 @@
 package com.avocent.a.a;
 
 import javax.swing.Action;
-import com.avocent.a.a.a.g;
-import com.avocent.a.a.a.f;
-import com.avocent.a.a.a.i;
-import com.avocent.a.a.a.k;
-import com.avocent.a.a.a.h;
-import com.avocent.a.a.a.e;
-import com.avocent.a.a.a.b;
-import com.avocent.a.a.a.c;
-import com.avocent.a.a.a.d;
+import com.avocent.a.a.a.AbstractAction_g;
+import com.avocent.a.a.a.AbstractAction_f;
+import com.avocent.a.a.a.AbstractAction_i;
+import com.avocent.a.a.a.AbstractAction_k;
+import com.avocent.a.a.a.AbstractAction_h;
+import com.avocent.a.a.a.AbstractAction_e;
+import com.avocent.a.a.a.AbstractAction_b;
+import com.avocent.a.a.a.AbstractAction_c;
+import com.avocent.a.a.a.AbstractAction_d;
 
 public class j {
 
-    protected d a;
-    protected c b;
-    protected b c;
-    protected com.avocent.a.a.a.j d;
-    protected e e;
-    protected h f;
-    protected k g;
-    protected i h;
-    protected f i;
-    protected g j;
+    protected AbstractAction_d a;
+    protected AbstractAction_c b;
+    protected AbstractAction_b c;
+    protected com.avocent.a.a.a.AbstractAction_j d;
+    protected AbstractAction_e e;
+    protected AbstractAction_h f;
+    protected AbstractAction_k g;
+    protected AbstractAction_i h;
+    protected AbstractAction_f i;
+    protected AbstractAction_g j;
 
     public j(final com.avocent.a.a.i i) {
-        this.a = new d(i);
-        this.b = new c(i);
-        this.c = new b(i);
-        this.d = new com.avocent.a.a.a.j(i);
-        this.e = new e(i);
-        this.f = new h(i);
-        this.g = new k(i);
-        this.h = new i(i);
-        this.i = new f(i);
-        this.j = new g(i);
+        this.a = new AbstractAction_d(i);
+        this.b = new AbstractAction_c(i);
+        this.c = new AbstractAction_b(i);
+        this.d = new com.avocent.a.a.a.AbstractAction_j(i);
+        this.e = new AbstractAction_e(i);
+        this.f = new AbstractAction_h(i);
+        this.g = new AbstractAction_k(i);
+        this.h = new AbstractAction_i(i);
+        this.i = new AbstractAction_f(i);
+        this.j = new AbstractAction_g(i);
     }
 
-    public c a() {
+    public AbstractAction_c a() {
         return this.b;
     }
 
-    public b b() {
+    public AbstractAction_b b() {
         return this.c;
     }
 
-    public com.avocent.a.a.a.j c() {
+    public com.avocent.a.a.a.AbstractAction_j c() {
         return this.d;
     }
 
-    public e d() {
+    public AbstractAction_e d() {
         return this.e;
     }
 
-    public h e() {
+    public AbstractAction_h e() {
         return this.f;
     }
 
-    public k f() {
+    public AbstractAction_k f() {
         return this.g;
     }
 

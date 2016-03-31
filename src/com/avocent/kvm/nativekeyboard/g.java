@@ -14,7 +14,7 @@ import com.avocent.kvm.b.r;
 public class g implements r {
 
     protected boolean a;
-    protected HashMap b;
+    protected HashMap<Component, Boolean> b;
     protected u c;
     protected NativeKeyEventListener d;
     protected FocusListener e;
@@ -47,7 +47,7 @@ public class g implements r {
     public void a(final hb hb, final boolean b) {
         try {
             System.out.println(g.z[0] + b + ")");
-            this.b.put(hb.c(), new Boolean(b));
+            this.b.put(hb.c(), b);
             final Component c = hb.c();
             if (c.isVisible() && c.isDisplayable()) {
                 NativeKVM.a(c, b);

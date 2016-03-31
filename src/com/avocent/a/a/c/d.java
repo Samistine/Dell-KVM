@@ -10,11 +10,11 @@ import javax.swing.AbstractAction;
 public class d extends AbstractAction {
 
     protected b a;
-    protected a b;
+    protected NamedArray b;
     private static final String z;
 
-    public d(final b a, final a b) {
-        super(b.a());
+    public d(final b a, final NamedArray b) {
+        super(b.getName());
         this.b = b;
         this.a = a;
     }

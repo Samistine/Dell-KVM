@@ -13,10 +13,10 @@ import com.avocent.a.a.i;
 public class b {
 
     protected i a;
-    protected ArrayList b;
-    protected HashMap c;
-    protected ArrayList d;
-    protected ArrayList e;
+    protected ArrayList<NamedArray> b;
+    protected HashMap<String, NamedArray> c;
+    protected ArrayList<NamedArray> d;
+    protected ArrayList<NamedArray> e;
     public static boolean f;
     private static final String[] z;
 
@@ -33,108 +33,108 @@ public class b {
 
     void a() {
         final boolean f = com.avocent.a.a.c.b.f;
-        final a a = new a(this.a.b(com.avocent.a.a.c.b.z[26]));
+        final NamedArray a = new NamedArray(this.a.b(com.avocent.a.a.c.b.z[26]));
         this.b.add(a);
-        a.a(new c(224, true));
-        a.a(new c(226, true));
-        a.a(new c(76, true));
-        a.a(new c(76, false));
-        a.a(new c(226, false));
-        a.a(new c(224, false));
-        final a a2 = new a(this.a.b(com.avocent.a.a.c.b.z[24]));
+        a.add(new c(224, true));
+        a.add(new c(226, true));
+        a.add(new c(76, true));
+        a.add(new c(76, false));
+        a.add(new c(226, false));
+        a.add(new c(224, false));
+        final NamedArray a2 = new NamedArray(this.a.b(com.avocent.a.a.c.b.z[24]));
         this.b.add(a2);
-        a2.a(new c(226, true));
-        a2.a(new c(43, true));
-        a2.a(new c(43, false));
-        a2.a(new c(226, false));
-        final a a3 = new a(this.a.b(com.avocent.a.a.c.b.z[18]));
+        a2.add(new c(226, true));
+        a2.add(new c(43, true));
+        a2.add(new c(43, false));
+        a2.add(new c(226, false));
+        final NamedArray a3 = new NamedArray(this.a.b(com.avocent.a.a.c.b.z[18]));
         this.b.add(a3);
-        a3.a(new c(226, true));
-        a3.a(new c(41, true));
-        a3.a(new c(41, false));
-        a3.a(new c(226, false));
-        final a a4 = new a(this.a.b(com.avocent.a.a.c.b.z[16]));
+        a3.add(new c(226, true));
+        a3.add(new c(41, true));
+        a3.add(new c(41, false));
+        a3.add(new c(226, false));
+        final NamedArray a4 = new NamedArray(this.a.b(com.avocent.a.a.c.b.z[16]));
         this.b.add(a4);
-        a4.a(new c(224, true));
-        a4.a(new c(41, true));
-        a4.a(new c(41, false));
-        a4.a(new c(224, false));
-        final a a5 = new a(this.a.b(com.avocent.a.a.c.b.z[15]));
+        a4.add(new c(224, true));
+        a4.add(new c(41, true));
+        a4.add(new c(41, false));
+        a4.add(new c(224, false));
+        final NamedArray a5 = new NamedArray(this.a.b(com.avocent.a.a.c.b.z[15]));
         this.b.add(a5);
-        a5.a(new c(226, true));
-        a5.a(new c(44, true));
-        a5.a(new c(44, false));
-        a5.a(new c(226, false));
-        final a a6 = new a(this.a.b(com.avocent.a.a.c.b.z[13]));
+        a5.add(new c(226, true));
+        a5.add(new c(44, true));
+        a5.add(new c(44, false));
+        a5.add(new c(226, false));
+        final NamedArray a6 = new NamedArray(this.a.b(com.avocent.a.a.c.b.z[13]));
         this.b.add(a6);
-        a6.a(new c(226, true));
-        a6.a(new c(40, true));
-        a6.a(new c(40, false));
-        a6.a(new c(226, false));
-        final a a7 = new a(this.a.b(com.avocent.a.a.c.b.z[22]));
+        a6.add(new c(226, true));
+        a6.add(new c(40, true));
+        a6.add(new c(40, false));
+        a6.add(new c(226, false));
+        final NamedArray a7 = new NamedArray(this.a.b(com.avocent.a.a.c.b.z[22]));
         this.b.add(a7);
-        a7.a(new c(226, true));
-        a7.a(new c(45, true));
-        a7.a(new c(45, false));
-        a7.a(new c(226, false));
-        final a a8 = new a(this.a.b(com.avocent.a.a.c.b.z[1]));
+        a7.add(new c(226, true));
+        a7.add(new c(45, true));
+        a7.add(new c(45, false));
+        a7.add(new c(226, false));
+        final NamedArray a8 = new NamedArray(this.a.b(com.avocent.a.a.c.b.z[1]));
         this.b.add(a8);
-        a8.a(new c(226, true));
-        a8.a(new c(61, true));
-        a8.a(new c(61, false));
-        a8.a(new c(226, false));
-        final a a9 = new a(this.a.b(com.avocent.a.a.c.b.z[14]));
+        a8.add(new c(226, true));
+        a8.add(new c(61, true));
+        a8.add(new c(61, false));
+        a8.add(new c(226, false));
+        final NamedArray a9 = new NamedArray(this.a.b(com.avocent.a.a.c.b.z[14]));
         this.b.add(a9);
-        a9.a(new c(70, true));
-        a9.a(new c(70, false));
-        final a a10 = new a(this.a.b(com.avocent.a.a.c.b.z[28]));
+        a9.add(new c(70, true));
+        a9.add(new c(70, false));
+        final NamedArray a10 = new NamedArray(this.a.b(com.avocent.a.a.c.b.z[28]));
         this.b.add(a10);
-        a10.a(new c(226, true));
-        a10.a(new c(70, true));
-        a10.a(new c(70, false));
-        a10.a(new c(226, false));
-        final a a11 = new a(this.a.b(com.avocent.a.a.c.b.z[27]));
+        a10.add(new c(226, true));
+        a10.add(new c(70, true));
+        a10.add(new c(70, false));
+        a10.add(new c(226, false));
+        final NamedArray a11 = new NamedArray(this.a.b(com.avocent.a.a.c.b.z[27]));
         this.b.add(a11);
-        a11.a(new c(58, true));
-        a11.a(new c(58, false));
-        final a a12 = new a(this.a.b(com.avocent.a.a.c.b.z[23]));
+        a11.add(new c(58, true));
+        a11.add(new c(58, false));
+        final NamedArray a12 = new NamedArray(this.a.b(com.avocent.a.a.c.b.z[23]));
         this.b.add(a12);
-        a12.a(new c(72, true));
-        a12.a(new c(72, false));
-        final a a13 = new a(this.a.b(com.avocent.a.a.c.b.z[21]));
+        a12.add(new c(72, true));
+        a12.add(new c(72, false));
+        final NamedArray a13 = new NamedArray(this.a.b(com.avocent.a.a.c.b.z[21]));
         this.b.add(a13);
-        a13.a(new c(43, true));
-        a13.a(new c(43, false));
-        final a a14 = new a(this.a.b(com.avocent.a.a.c.b.z[25]));
+        a13.add(new c(43, true));
+        a13.add(new c(43, false));
+        final NamedArray a14 = new NamedArray(this.a.b(com.avocent.a.a.c.b.z[25]));
         this.b.add(a14);
-        a14.a(new c(224, true));
-        a14.a(new c(40, true));
-        a14.a(new c(40, false));
-        a14.a(new c(224, false));
-        final a a15 = new a(this.a.b(com.avocent.a.a.c.b.z[20]));
+        a14.add(new c(224, true));
+        a14.add(new c(40, true));
+        a14.add(new c(40, false));
+        a14.add(new c(224, false));
+        final NamedArray a15 = new NamedArray(this.a.b(com.avocent.a.a.c.b.z[20]));
         this.b.add(a15);
-        a15.a(new c(70, true));
-        a15.a(new c(70, false));
-        final a a16 = new a(this.a.b(com.avocent.a.a.c.b.z[17]));
+        a15.add(new c(70, true));
+        a15.add(new c(70, false));
+        final NamedArray a16 = new NamedArray(this.a.b(com.avocent.a.a.c.b.z[17]));
         this.b.add(a16);
-        a16.a(new c(226, true));
-        a16.a(new c(70, true));
-        a16.a(new c(70, false));
-        a16.a(new c(226, false));
-        final a a17 = new a(this.a.b(com.avocent.a.a.c.b.z[19]));
+        a16.add(new c(226, true));
+        a16.add(new c(70, true));
+        a16.add(new c(70, false));
+        a16.add(new c(226, false));
+        final NamedArray a17 = new NamedArray(this.a.b(com.avocent.a.a.c.b.z[19]));
         this.b.add(a17);
-        a17.a(new c(226, true));
-        a17.a(new c(225, true));
-        a17.a(new c(229, true));
-        a17.a(new c(41, true));
-        a17.a(new c(41, false));
-        a17.a(new c(229, false));
-        a17.a(new c(225, false));
-        a17.a(new c(226, false));
+        a17.add(new c(226, true));
+        a17.add(new c(225, true));
+        a17.add(new c(229, true));
+        a17.add(new c(41, true));
+        a17.add(new c(41, false));
+        a17.add(new c(229, false));
+        a17.add(new c(225, false));
+        a17.add(new c(226, false));
         int i = 0;
         while (i < this.b.size()) {
-            final a a18 = this.b.get(i);
-            this.c.put(a18.a(), a18);
+            final NamedArray a18 = this.b.get(i);
+            this.c.put(a18.getName(), a18);
             ++i;
             if (f) {
                 int c = com.avocent.kvm.b.d.a.c;
@@ -150,11 +150,11 @@ public class b {
         final int[] array2 = {58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69};
         int i = 0;
         while (i < array.length) {
-            final a a = new a(this.a.b(array[i]));
-            a.a(new c(226, true));
-            a.a(new c(array2[i], true));
-            a.a(new c(array2[i], false));
-            a.a(new c(226, false));
+            final NamedArray a = new NamedArray(this.a.b(array[i]));
+            a.add(new c(226, true));
+            a.add(new c(array2[i], true));
+            a.add(new c(array2[i], false));
+            a.add(new c(226, false));
             this.d.add(a);
             ++i;
             if (f) {
@@ -163,11 +163,11 @@ public class b {
         }
         int j = 0;
         while (j < this.d.size()) {
-            final a a2 = this.d.get(j);
-            if (this.c.containsKey(a2.a())) {
-                this.a.b().a(com.avocent.a.a.c.b.z[6] + a2.a() + "\"");
+            final NamedArray a2 = this.d.get(j);
+            if (this.c.containsKey(a2.getName())) {
+                this.a.b().a(com.avocent.a.a.c.b.z[6] + a2.getName() + "\"");
             }
-            this.c.put(a2.a(), a2);
+            this.c.put(a2.getName(), a2);
             ++j;
             if (f) {
                 break;
@@ -181,13 +181,13 @@ public class b {
         final int[] array2 = {58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69};
         int i = 0;
         while (i < array.length) {
-            final a a = new a(this.a.b(array[i]));
-            a.a(new c(224, true));
-            a.a(new c(226, true));
-            a.a(new c(array2[i], true));
-            a.a(new c(array2[i], false));
-            a.a(new c(226, false));
-            a.a(new c(224, false));
+            final NamedArray a = new NamedArray(this.a.b(array[i]));
+            a.add(new c(224, true));
+            a.add(new c(226, true));
+            a.add(new c(array2[i], true));
+            a.add(new c(array2[i], false));
+            a.add(new c(226, false));
+            a.add(new c(224, false));
             this.e.add(a);
             ++i;
             if (f) {
@@ -196,11 +196,11 @@ public class b {
         }
         int j = 0;
         while (j < this.e.size()) {
-            final a a2 = this.e.get(j);
-            if (this.c.containsKey(a2.a())) {
-                this.a.b().a(com.avocent.a.a.c.b.z[6] + a2.a() + "\"");
+            final NamedArray a2 = this.e.get(j);
+            if (this.c.containsKey(a2.getName())) {
+                this.a.b().a(com.avocent.a.a.c.b.z[6] + a2.getName() + "\"");
             }
-            this.c.put(a2.a(), a2);
+            this.c.put(a2.getName(), a2);
             ++j;
             if (f) {
                 break;
@@ -215,11 +215,11 @@ public class b {
         return this.b.size();
     }
 
-    public a a(final int n) {
+    public NamedArray a(final int n) {
         return this.b.get(n);
     }
 
-    public Iterator a(final String s) {
+    public Iterator<NamedArray> a(final String s) {
         if (s.equalsIgnoreCase(com.avocent.a.a.c.b.z[43])) {
             return this.d.iterator();
         }
@@ -229,10 +229,10 @@ public class b {
         return null;
     }
 
-    public void a(final a a) {
+    public void a(final NamedArray a) {
         final boolean f = com.avocent.a.a.c.b.f;
         try {
-            final Iterator<c> iterator = (Iterator<c>) a.b().iterator();
+            final Iterator<c> iterator = (Iterator<c>) a.getList().iterator();
             final ib d = this.a.a().d();
             while (iterator.hasNext()) {
                 try {

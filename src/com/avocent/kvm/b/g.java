@@ -8,7 +8,7 @@ import java.beans.PropertyChangeListener;
 import com.avocent.kvm.b.a.a;
 import com.avocent.kvm.b.f.f;
 import java.util.ArrayList;
-import com.avocent.kvm.b.b.c;
+import com.avocent.kvm.b.b.Stream_c;
 import java.util.HashMap;
 import java.io.OutputStream;
 import com.avocent.kvm.b.f.e;
@@ -30,7 +30,7 @@ public abstract class g implements u {
     protected r k;
     protected bb l;
     protected s m;
-    protected c n;
+    protected Stream_c n;
     protected boolean o;
     protected int p;
     protected ArrayList q;

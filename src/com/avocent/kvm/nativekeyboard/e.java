@@ -8,7 +8,7 @@ import com.avocent.kvm.b.d.a;
 import javax.swing.SwingUtilities;
 import java.awt.Component;
 import java.awt.Window;
-import com.avocent.kvm.b.f.e;
+//import com.avocent.kvm.b.f.e;
 import java.awt.event.WindowListener;
 
 class e implements WindowListener {

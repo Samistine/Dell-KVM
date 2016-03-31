@@ -19,7 +19,7 @@ public class g extends e {
     }*/
 
     public JFrame c() {
-        return (JFrame) this.e();
+        return (JFrame) this.getComponent_b();
     }
 
     @Override

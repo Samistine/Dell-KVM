@@ -3,6 +3,7 @@
 // 
 package com.avocent.lenovo.kvm;
 
+import com.avocent.a.a.c.NamedArray;
 import java.util.Iterator;
 import javax.swing.Action;
 import javax.swing.JMenuItem;
@@ -26,7 +27,7 @@ public class n extends a {
         super.b();
         final JMenu menu = new JMenu(this.a.b(z[2]));
         final JMenu menu2 = new JMenu(this.a.b(z[1]));
-        final Iterator a = this.q.a(z[3]);
+        final Iterator<NamedArray> a = this.q.a(z[3]);
         while (a != null && a.hasNext()) {
             menu.add(new JMenuItem(new d(this.q, a.next())));
             if (cb) {

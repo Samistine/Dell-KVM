@@ -3,8 +3,6 @@
 // 
 package com.avocent.kvm.a.a;
 
-import com.avocent.kvm.b.t;
-
 public class q extends o {
 
     private static final String[] z;
@@ -32,31 +30,31 @@ public class q extends o {
 
     public void a(final Object o) {
         final int h = b.h;
-        if (o.equals(t.a)) {
+        if (o.equals(0)) {
             this.j = 0;
             if (h == 0) {
                 break;
             }
         }
-        if (o.equals(t.b)) {
+        if (o.equals(1)) {
             this.j = 1;
             if (h == 0) {
                 break;
             }
         }
-        if (o.equals(t.c)) {
+        if (o.equals(2)) {
             this.j = 2;
             if (h == 0) {
                 break;
             }
         }
-        if (o.equals(t.d)) {
+        if (o.equals(3)) {
             this.j = 3;
             if (h == 0) {
                 break;
             }
         }
-        if (o.equals(t.e)) {
+        if (o.equals(4)) {
             this.j = 4;
             if (h == 0) {
                 break;

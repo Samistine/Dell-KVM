@@ -31,7 +31,7 @@ public class c extends f {
         super(z, p);//Sam
         this.o = new ArrayList();
         this.p = p;
-        this.a(this.m());
+        this.setComponent_b(this.m());
     }
 
     public JDialog m() {
@@ -42,7 +42,7 @@ public class c extends f {
 
     public void a(final com.avocent.a.a.e.k k) {
         this.o.add(k);
-        ((p) this.b).a(k);
+        ((p) this.component_b).a(k);
         k.a(this);
     }
 
@@ -76,23 +76,23 @@ public class c extends f {
             if (this.r != null) {
                 this.r.b();
             }
-            this.r = new k(this.q, (j) this.b);
+            this.r = new k(this.q, (j) this.component_b);
             this.s = this.r.a();
             this.r.start();
         }
-        if (!this.b.isVisible()) {
-            final p p = (p) this.b;
+        if (!this.component_b.isVisible()) {
+            final p p = (p) this.component_b;
             p.pack();
             p.setLocationRelativeTo(((g) this.f).c());
             this.p();
             this.n();
-            this.b.setVisible(true);
+            this.component_b.setVisible(true);
             if (c.t == 0) {
                 break;
             }
         }
-        if (!this.b.isShowing()) {
-            ((JDialog) this.b).toFront();
+        if (!this.component_b.isShowing()) {
+            ((JDialog) this.component_b).toFront();
         }
     }
 

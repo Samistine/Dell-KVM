@@ -38,39 +38,39 @@ public class i extends g implements a {
     protected k v;
     protected j w;
     protected l x;
-    protected com.avocent.a.a.f y;
+    protected com.avocent.a.a.WindowsAdpater_f y;
     protected com.avocent.a.c.b z;
-    protected t A;
+    protected PropertyChangeListener_t A;
     protected s B;
     protected boolean C;
     protected boolean D;
     protected long E;
     protected boolean F;
     public static boolean G;
-    /*private static final String[] H;*/
+    private static final String[] H;
 
     public i() {
         super(/*i.H[0]*/);
-        this.y = new com.avocent.a.a.f(this);
+        this.y = new com.avocent.a.a.WindowsAdpater_f(this);
         this.z = new n(this);
-        this.A = new t(this);
+        this.A = new PropertyChangeListener_t(this);
         this.C = false;
         this.D = false;
         this.F = false;
     }
 
     public void a(final s b, final d j, final String[] array) {
-        final boolean g = i.G;
+        final boolean g = /*i.*/G;
         this.B = b;
         this.j = j;
         b.a().a(array, this);
         if (this.b() != null) {
-            final String a = this.a(i.H[46], i.H[45]);
-            final boolean b2 = !a.equalsIgnoreCase(i.H[45]) && !a.equalsIgnoreCase("0");
+            final String a = this.a(/*i.*/H[46], /*i.*/H[45]);
+            final boolean b2 = !a.equalsIgnoreCase(/*i.*/H[45]) && !a.equalsIgnoreCase("0");
             this.b().b(b2);
             this.b().a(b2);
             if (b2) {
-                this.b().a(i.H[44]);
+                this.b().a(/*i.*/H[44]);
                 int i = 0;
                 while (i < array.length) {
                     this.b().a(" " + array[i]);
@@ -88,20 +88,20 @@ public class i extends g implements a {
     }
 
     public void f() throws Exception {
-        final boolean g = i.G;
-        if (this.a(i.H[15], new Integer(0)) == 1) {
+        final boolean g = /*i.*/G;
+        if (this.a(/*i.*/H[15], new Integer(0)) == 1) {
             this.r.c().a(true);
         }
-        this.m = this.B.a(i.H[13]);
-        this.n = this.B.a(i.H[12]);
-        final Boolean a = this.a(i.H[11], Boolean.FALSE);
+        this.m = this.B.a(/*i.*/H[13]);
+        this.n = this.B.a(/*i.*/H[12]);
+        final Boolean a = this.a(/*i.*/H[11], Boolean.FALSE);
         this.m.b(a);
         this.n.b(a);
         this.j();
         this.u = this.B.a(this);
         final h h = new h(this);
         if (this.h()) {
-            this.b().a(i.H[17]);
+            this.b().a(/*i.*/H[17]);
             System.exit(0);
         }
         this.t = new r(this);
@@ -116,22 +116,22 @@ public class i extends g implements a {
         this.r.a(this.B.a((Object) null));
         this.o.a(this.r.e());
         this.p.a(this.r.e());
-        this.a(i.H[14], (Object) Boolean.FALSE);
-        final Boolean a2 = this.a(i.H[16], Boolean.FALSE);
+        this.a(/*i.*/H[14], (Object) Boolean.FALSE);
+        final Boolean a2 = this.a(/*i.*/H[16], Boolean.FALSE);
         this.r.g().a(this.n, true);
         this.r.g().a(this.m, a2);
         if (com.avocent.kvm.b.d.a.c != 0) {
-            i.G = !g;
+            /*i.*/G = !g;
         }
     }
 
     public void g() {
-        this.a(this.a(i.H[14], Boolean.FALSE));
+        this.a(this.a(/*i.*/H[14], Boolean.FALSE));
     }
 
     public boolean h() {
         try {
-            return new c().a((i.H[3] + this.e(i.H[5]) + "_" + this.a(i.H[4], new Integer(8192)) + "_" + this.a(i.H[7], new Integer(2068)) + "_" + System.getProperty(i.H[6])).replace(' ', '_'), this.z);
+            return new c().a((/*i.*/H[3] + this.e(/*i.*/H[5]) + "_" + this.a(/*i.*/H[4], new Integer(8192)) + "_" + this.a(/*i.*/H[7], new Integer(2068)) + "_" + System.getProperty(/*i.*/H[6])).replace(' ', '_'), this.z);
         } catch (IOException ex) {
             ex.printStackTrace();
             return false;
@@ -139,30 +139,30 @@ public class i extends g implements a {
     }
 
     public void i() throws Exception {
-        final boolean g = i.G;
+        final boolean g = /*i.*/G;
         this.x = new l(this);
         final com.avocent.kvm.a.l l = (com.avocent.kvm.a.l) this.a();
         l.a(this.x);
-        final String e = this.e(i.H[41]);
-        final String e2 = this.e(i.H[38]);
-        final String e3 = this.e(i.H[5]);
-        final Integer a = this.a(i.H[7], new Integer(2068));
-        final Integer a2 = this.a(i.H[4], new Integer(8192));
-        final Boolean a3 = this.a(i.H[36], Boolean.FALSE);
-        final Integer a4 = this.a(i.H[35], new Integer(1));
-        final Boolean a5 = this.a(i.H[40], Boolean.FALSE);
-        this.e(i.H[34]);
-        final String e4 = this.e(i.H[31]);
-        final Integer a6 = this.a(i.H[39], new Integer(0));
-        final Integer a7 = this.a(i.H[33], new Integer(1));
-        final Boolean a8 = this.a(i.H[42], Boolean.FALSE);
+        final String e = this.e(/*i.*/H[41]);
+        final String e2 = this.e(/*i.*/H[38]);
+        final String e3 = this.e(/*i.*/H[5]);
+        final Integer a = this.a(/*i.*/H[7], new Integer(2068));
+        final Integer a2 = this.a(/*i.*/H[4], new Integer(8192));
+        final Boolean a3 = this.a(/*i.*/H[36], Boolean.FALSE);
+        final Integer a4 = this.a(/*i.*/H[35], new Integer(1));
+        final Boolean a5 = this.a(/*i.*/H[40], Boolean.FALSE);
+        this.e(/*i.*/H[34]);
+        final String e4 = this.e(/*i.*/H[31]);
+        final Integer a6 = this.a(/*i.*/H[39], new Integer(0));
+        final Integer a7 = this.a(/*i.*/H[33], new Integer(1));
+        final Boolean a8 = this.a(/*i.*/H[42], Boolean.FALSE);
         l.a(e, e2);
         l.c(a2);
         l.d(a);
         l.h(a4);
         l.b(a3);
         l.c(a5);
-        com.avocent.a.a.q.a(i.H[37] + e3 + i.H[32] + a2 + i.H[43] + a);
+        com.avocent.a.a.q.a(/*i.*/H[37] + e3 + /*i.*/H[32] + a2 + /*i.*/H[43] + a);
         if (e4 != null) {
             l.a(e3, e4, a6, a3, a8);
             if (!g) {
@@ -175,10 +175,10 @@ public class i extends g implements a {
     }
 
     void j() throws Exception {
-        final p p = new p(this);
+        final Runnable_p p = new Runnable_p(this);
         if (SwingUtilities.isEventDispatchThread()) {
             p.run();
-            if (!i.G) {
+            if (!/*i.*/G) {
                 break;
             }
         }
@@ -234,10 +234,10 @@ public class i extends g implements a {
     }
 
     public void a(final boolean b) {
-        final o o = new o(this, b);
+        final Runnable_o o = new Runnable_o(this, b);
         if (!SwingUtilities.isEventDispatchThread()) {
             SwingUtilities.invokeLater(o);
-            if (!i.G) {
+            if (!/*i.*/G) {
                 break;
             }
         }
@@ -246,54 +246,54 @@ public class i extends g implements a {
 
     public void s() {
         this.d();
-        this.f(com.avocent.a.d.b(i.H[30]));
+        this.f(com.avocent.a.d.b(/*i.*/H[30]));
         System.exit(0);
     }
 
     public void a(final u u) {
         if (this.C) {
-            this.b().a(i.H[20]);
+            this.b().a(/*i.*/H[20]);
             System.out.flush();
             u.b().a(0);
             final double n = (System.currentTimeMillis() - this.E) / 1000.0;
-            this.b().a(i.H[28] + n + i.H[22]);
+            this.b().a(/*i.*/H[28] + n + /*i.*/H[22]);
             final hb o = this.o();
             if (o instanceof ob) {
                 final ob ob = (ob) o;
-                this.b().a(i.H[26]);
-                this.b().a(i.H[29] + ob.o);
-                this.b().a(i.H[18] + ob.p);
-                this.b().a(i.H[19] + ob.q);
-                this.b().a(i.H[24] + ob.r);
-                this.b().a(i.H[25] + (ob.r - ob.q));
-                this.b().a(i.H[21] + ob.r / n);
-                this.b().a(i.H[27] + ob.r / n);
+                this.b().a(/*i.*/H[26]);
+                this.b().a(/*i.*/H[29] + ob.o);
+                this.b().a(/*i.*/H[18] + ob.p);
+                this.b().a(/*i.*/H[19] + ob.q);
+                this.b().a(/*i.*/H[24] + ob.r);
+                this.b().a(/*i.*/H[25] + (ob.r - ob.q));
+                this.b().a(/*i.*/H[21] + ob.r / n);
+                this.b().a(/*i.*/H[27] + ob.r / n);
             }
             System.exit(0);
-            if (!i.G) {
+            if (!/*i.*/G) {
                 break;
             }
         }
         if (!this.F) {
             this.k.setVisible(true);
             this.l.setVisible(false);
-            JOptionPane.showMessageDialog(null, com.avocent.a.d.b(i.H[23]), com.avocent.a.d.b(i.H[1]), 0);
+            JOptionPane.showMessageDialog(null, com.avocent.a.d.b(/*i.*/H[23]), com.avocent.a.d.b(/*i.*/H[1]), 0);
             System.exit(0);
         }
     }
 
     public void t() {
         try {
-            final String b = this.r.b(i.H[8]);
+            final String b = this.r.b(/*i.*/H[8]);
             Label_0061:
             {
-                if (b != null && b.equalsIgnoreCase(i.H[9])) {
+                if (b != null && b.equalsIgnoreCase(/*i.*/H[9])) {
                     this.v.c();
                     if (!i.G) {
                         break Label_0061;
                     }
                 }
-                this.b().a(i.H[10]);
+                this.b().a(/*i.*/H[10]);
             }
             this.F = true;
             this.k.setVisible(false);
@@ -305,12 +305,12 @@ public class i extends g implements a {
     }
 
     public void f(final String s) {
-        JOptionPane.showMessageDialog(this.c(), s, com.avocent.a.d.b(i.H[1]), 1);
+        JOptionPane.showMessageDialog(this.c(), s, com.avocent.a.d.b(/*i.*/H[1]), 1);
     }
 
     @Override
     public void a(final String s) {
-        JOptionPane.showMessageDialog(this.c(), s, com.avocent.a.d.b(i.H[2]), 0);
+        JOptionPane.showMessageDialog(this.c(), s, com.avocent.a.d.b(/*i.*/H[2]), 0);
     }
 
     static {

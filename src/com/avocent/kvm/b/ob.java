@@ -28,13 +28,13 @@ public class ob extends JPanel implements hb, cb {
 
     MemoryImageSource a;
     Image b;
-    Dimension c;
+    Dimension dimensions;//Originally named c
     fb d;
     u e;
     o f;
-    protected Color g;
-    protected Color h;
-    protected Font i;
+    protected Color color_g;//Originally named g
+    protected Color color_h;//Originally named h
+    protected Font font;//Originally named i
     c j;
     mb k;
     int l;
@@ -54,20 +54,20 @@ public class ob extends JPanel implements hb, cb {
     protected boolean z;
     protected boolean A;
     protected boolean B;
-    protected p C;
+    protected Runnable_p C;
     protected String D;
     protected boolean E;
     protected Object F;
-    protected String G;
+    protected String name;//Originally named G
     private static final String[] H;
 
-    public ob(final String g) {
+    public ob(String g) {
         final boolean t = com.avocent.kvm.b.g.t;
-        this.c = new Dimension(1024, 768);
+        this.dimensions = new Dimension(1024, 768);
         this.f = new o(this);
-        this.g = new Color(36864);
-        this.h = Color.yellow;
-        this.i = new Font(ob.H[0], 1, 32);
+        this.color_g = new Color(36864);
+        this.color_h = Color.yellow;
+        this.font = new Font(ob.H[0], 1, 32);
         this.j = new c(1024, 768, 0, 0);
         this.n = 1.0;
         this.o = 0;
@@ -83,15 +83,15 @@ public class ob extends JPanel implements hb, cb {
         this.z = true;
         this.A = true;
         this.B = false;
-        this.C = new p(this);
+        this.C = new Runnable_p(this);
         this.D = "";
         this.F = new Object();
-        this.G = g;
+        this.name = g;
         this.setFocusable(true);
         (this.k = new mb(this)).start();
         this.setFocusable(true);
         this.setFocusCycleRoot(true);
-        this.setPreferredSize(this.c);
+        this.setPreferredSize(this.dimensions);
         this.setFocusTraversalKeysEnabled(false);
         if (t) {
             int c = com.avocent.kvm.b.d.a.c;
@@ -101,7 +101,7 @@ public class ob extends JPanel implements hb, cb {
 
     @Override
     public String getName() {
-        return this.G;
+        return this.name;
     }
 
     public void a(final fb d) {
@@ -161,8 +161,8 @@ public class ob extends JPanel implements hb, cb {
                 n += 2;
                 n2 += 2;
             }
-            this.setSize(this.c = new Dimension((int) (n * this.n), (int) (n2 * this.n)));
-            this.setPreferredSize(this.c);
+            this.setSize(this.dimensions = new Dimension((int) (n * this.n), (int) (n2 * this.n)));
+            this.setPreferredSize(this.dimensions);
             Label_0343:
             {
                 if (n > 0 && n2 > 0) {
@@ -185,17 +185,17 @@ public class ob extends JPanel implements hb, cb {
         if (root != null) {
             root.validate();
         }
-        this.e.a(ob.H[1], null, this.c);
+        this.e.a(ob.H[1], null, this.dimensions);
     }
 
     @Override
     public Dimension getPreferredSize() {
-        return this.c;
+        return this.dimensions;
     }
 
     @Override
     public Dimension getMaximumSize() {
-        return this.c;
+        return this.dimensions;
     }
 
     @Override
@@ -226,13 +226,13 @@ public class ob extends JPanel implements hb, cb {
             if (this.D != null && this.D.length() > 0) {
                 synchronized (this) {
                     if (this.D != null) {
-                        graphics.setFont(this.i);
+                        graphics.setFont(this.font);
                         final Rectangle2D stringBounds = graphics.getFontMetrics().getStringBounds(this.D, graphics);
                         final int n = (int) (this.getWidth() - stringBounds.getWidth()) / 2;
                         final int n2 = (int) (this.getHeight() - stringBounds.getHeight()) / 2;
-                        graphics.setColor(this.g);
+                        graphics.setColor(this.color_g);
                         graphics.fillRect(0, 0, this.getWidth(), this.getHeight());
-                        graphics.setColor(this.h);
+                        graphics.setColor(this.color_h);
                         graphics.drawString(this.D, n, n2);
                     }
                 }
@@ -280,7 +280,7 @@ public class ob extends JPanel implements hb, cb {
 
     @Override
     public void reshape(final int n, final int n2, final int n3, final int n4) {
-        super.reshape(n, n2, this.c.width, this.c.height);
+        super.reshape(n, n2, this.dimensions.width, this.dimensions.height);
     }
 
     public void c(final boolean b) {

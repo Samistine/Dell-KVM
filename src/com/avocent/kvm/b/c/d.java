@@ -5,19 +5,19 @@ package com.avocent.kvm.b.c;
 
 import java.util.Hashtable;
 
-public class d implements a {
+public class d {
 
-    static final Hashtable a;
+    static final Hashtable<b, Integer> a;
     static final Object[][] b;
-    static final Hashtable c;
+    static final Hashtable<b, Integer> c;
     static final Object[][] d;
-    static final Hashtable e;
+    static final Hashtable<b, Integer> e;
     static final Object[][] f;
-    static final Hashtable g;
+    static final Hashtable<b, Integer> g;
     static final Object[][] h;
-    static final Hashtable i;
+    static final Hashtable<b, Integer> i;
     static final Object[][] j;
-    static final Hashtable k;
+    static final Hashtable<b, Integer> k;
     static final Object[][] l;
 
     static {

@@ -107,7 +107,7 @@ public class l extends g {
     private static final String[] Bb;
 
     public l(final Component component) {
-        final int ab = l.Ab;
+        final int ab = /*l.*/Ab;
         this.u = true;
         this.v = false;
         this.y = false;
@@ -150,16 +150,16 @@ public class l extends g {
     protected void a(final Component component) {
         try {
             try {
-                final String property = System.getProperty(l.Bb[9]);
+                final String property = System.getProperty(/*l.*/Bb[9]);
                 if (property != null && !property.equalsIgnoreCase("0")) {
-                    this.yb = new PrintStream(new FileOutputStream(l.Bb[7]));
+                    this.yb = new PrintStream(new FileOutputStream(/*l.*/Bb[7]));
                 }
             } catch (Throwable t) {
             }
             this.b = new j();
             this.a = new m(this);
             this.gb = new PropertyChangeSupport(this);
-            this.a(l.Bb[6], l.Bb[10]);
+            this.a(/*l.*/Bb[6], /*l.*/Bb[10]);
             this.db = new f(this);
             this.cb = new com.avocent.kvm.a.e(this);
             if (this.vb != null) {
@@ -178,7 +178,7 @@ public class l extends g {
                 this.a(this.wb);
                 this.wb.a(this.b);
             }
-            final String property2 = System.getProperty(l.Bb[8]);
+            final String property2 = System.getProperty(/*l.*/Bb[8]);
             if (property2 != null && property2.equalsIgnoreCase("1")) {
                 this.b.a(true);
             }
@@ -241,15 +241,15 @@ public class l extends g {
     }
 
     public void a(final String eb, final String s, final int n, final boolean b, final boolean b2) throws IOException, Exception {
-        System.out.println(l.Bb[36]);
+        System.out.println(/*l.*/Bb[36]);
         this.eb = eb;
         (this.C = this.b(eb, this.Q, b)).setReceiveBufferSize(8192);
         InputStream inputStream = this.C.getInputStream();
-        if (l.x) {
-            inputStream = new com.avocent.kvm.b.b.c(inputStream);
+        if (/*l.*/x) {
+            inputStream = new com.avocent.kvm.b.b.Stream_c(inputStream);
         }
         this.F = new DataInputStream(this.F);
-        this.F = new com.avocent.kvm.b.b.a(inputStream, this.C);
+        this.F = new com.avocent.kvm.b.b.DataInputStream_a(inputStream, this.C);
         this.E = new DataOutputStream(new BufferedOutputStream(this.C.getOutputStream()));
         this.X = new n(this, this, this.E);
         this.Z = new e(this, this.E, 10, -1);
@@ -269,7 +269,7 @@ public class l extends g {
     }
 
     public void a(final String s, final int m, final int n, final boolean o, final boolean p5) throws Exception {
-        System.out.println(l.Bb[38]);
+        System.out.println(/*l.*/Bb[38]);
         this.L = s;
         this.M = m;
         this.N = n;
@@ -277,7 +277,7 @@ public class l extends g {
         this.P = p5;
         try {
             this.b(o);
-            this.a(l.Bb[6], l.Bb[32]);
+            this.a(/*l.*/Bb[6], /*l.*/Bb[32]);
             this.eb = s;
             Label_0140:
             {
@@ -285,7 +285,7 @@ public class l extends g {
                     (this.C = new Socket(s, this.Q)).setTcpNoDelay(true);
                     this.C.setReceiveBufferSize(32768);
                     this.C = com.avocent.kvm.a.g.a(this.C, this.kb);
-                    if (l.Ab == 0) {
+                    if (/*l.*/Ab == 0) {
                         break Label_0140;
                     }
                 }
@@ -294,16 +294,16 @@ public class l extends g {
             this.a(this.C, m, n, p5);
         } catch (ConnectException ex) {
             ex.printStackTrace();
-            this.a(l.Bb[6], l.Bb[5]);
+            this.a(/*l.*/Bb[6], /*l.*/Bb[5]);
         }
     }
 
     public void a(final Socket c, final int n, final int n2, final boolean b) throws Exception {
         try {
-            System.out.println(l.Bb[31]);
-            this.a(l.Bb[6], l.Bb[32]);
+            System.out.println(/*l.*/Bb[31]);
+            this.a(/*l.*/Bb[6], /*l.*/Bb[32]);
             this.C = c;
-            this.F = new com.avocent.kvm.b.b.a(this.C.getInputStream(), null);
+            this.F = new com.avocent.kvm.b.b.DataInputStream_a(this.C.getInputStream(), null);
             this.F = new DataInputStream(this.F);
             this.E = new DataOutputStream(new BufferedOutputStream(this.C.getOutputStream()));
             this.X = new o(this, this, this.E);
@@ -311,7 +311,7 @@ public class l extends g {
             (this.I = new r(this)).start();
         } catch (ConnectException ex) {
             ex.printStackTrace();
-            this.a(l.Bb[6], l.Bb[5]);
+            this.a(/*l.*/Bb[6], /*l.*/Bb[5]);
         }
         this.a(n, n2, b);
     }
@@ -328,7 +328,7 @@ public class l extends g {
             this.x().a(u);
         } catch (Exception ex) {
             ex.printStackTrace();
-            this.a(l.Bb[6], l.Bb[5]);
+            this.a(/*l.*/Bb[6], /*l.*/Bb[5]);
             this.f();
             throw new IOException(ex.getMessage());
         }
@@ -343,7 +343,7 @@ public class l extends g {
     }
 
     public void r() throws IOException {
-        this.a(l.Bb[6], l.Bb[37]);
+        this.a(/*l.*/Bb[6], /*l.*/Bb[37]);
         this.X.a(new x(true));
         this.X.a(new t(1024, 768));
         this.X.a(new com.avocent.kvm.a.a.m());
@@ -352,7 +352,7 @@ public class l extends g {
     }
 
     public void s() throws Exception {
-        final int ab = l.Ab;
+        final int ab = /*l.*/Ab;
         if (!this.y) {
             Label_0108:
             {
@@ -425,9 +425,9 @@ public class l extends g {
     }
 
     void a(InputStream inputStream, final OutputStream outputStream) throws Exception {
-        if (l.x) {
-            final com.avocent.kvm.b.b.c c = new com.avocent.kvm.b.b.c(inputStream);
-            c.a(this.w);
+        if (/*l.*/x) {
+            final com.avocent.kvm.b.b.Stream_c c = new com.avocent.kvm.b.b.Stream_c(inputStream);
+            c.setOutputStream(this.w);
             inputStream = c;
         }
         final BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(outputStream);
@@ -439,7 +439,7 @@ public class l extends g {
     }
 
     public void e(final int n) {
-        final int ab = l.Ab;
+        final int ab = /*l.*/Ab;
         try {
             synchronized (this.xb) {
                 this.V += n;
@@ -495,8 +495,8 @@ public class l extends g {
     }
 
     private Socket b(final String s, final int n, final boolean b) throws Exception {
-        final int ab = l.Ab;
-        System.out.println(l.Bb[23]);
+        final int ab = /*l.*/Ab;
+        System.out.println(/*l.*/Bb[23]);
         Socket socket;
         if (b) {
             socket = com.avocent.kvm.a.g.a(s, n, this.kb);
@@ -504,22 +504,22 @@ public class l extends g {
             socket = com.avocent.kvm.b.f.h.a(new Socket(s, n), s, n, 30000, null, null, null);
             socket.setTcpNoDelay(true);
         } else {
-            final SSLContext instance = SSLContext.getInstance(this.mb ? l.Bb[12] : l.Bb[17]);
-            this.i().a(l.Bb[18] + instance.getProtocol());
+            final SSLContext instance = SSLContext.getInstance(this.mb ? /*l.*/Bb[12] : /*l.*/Bb[17]);
+            this.i().a(/*l.*/Bb[18] + instance.getProtocol());
             instance.init(null, new TrustManager[]{new com.avocent.kvm.a.b(this)}, null);
             socket = instance.getSocketFactory().createSocket(new Socket(s, n), s, n, true);
-            final String[] enabledCipherSuites = {l.Bb[13], l.Bb[24], l.Bb[22], l.Bb[29], l.Bb[26], l.Bb[11], l.Bb[21], l.Bb[14], l.Bb[28], l.Bb[16], l.Bb[15], l.Bb[25], l.Bb[27], l.Bb[20]};
+            final String[] enabledCipherSuites = {/*l.*/Bb[13], /*l.*/Bb[24], /*l.*/Bb[22], /*l.*/Bb[29], /*l.*/Bb[26], /*l.*/Bb[11], /*l.*/Bb[21], /*l.*/Bb[14], /*l.*/Bb[28], /*l.*/Bb[16], /*l.*/Bb[15], /*l.*/Bb[25], /*l.*/Bb[27], /*l.*/Bb[20]};
             final String[] supportedProtocols = ((SSLSocket) socket).getSupportedProtocols();
             int i = 0;
             while (i < supportedProtocols.length) {
-                this.i().a(l.Bb[19] + supportedProtocols[i]);
+                this.i().a(/*l.*/Bb[19] + supportedProtocols[i]);
                 ++i;
                 if (ab != 0) {
                     break;
                 }
             }
             if (this.mb) {
-                ((SSLSocket) socket).setEnabledProtocols(new String[]{l.Bb[12]});
+                ((SSLSocket) socket).setEnabledProtocols(new String[]{/*l.*/Bb[12]});
             }
             ((SSLSocket) socket).setEnabledCipherSuites(enabledCipherSuites);
         }
@@ -561,18 +561,18 @@ public class l extends g {
             case 1:
             case 2: {
                 this.bb = bb;
-                if (l.Ab != 0) {
+                if (/*l.*/Ab != 0) {
                     break;
                 }
                 break;
             }
         }
-        throw new RuntimeException(l.Bb[33] + bb);
+        throw new RuntimeException(/*l.*/Bb[33] + bb);
     }
 
     @Override
     public void a() throws IOException {
-        this.i().a(l.Bb[30]);
+        this.i().a(/*l.*/Bb[30]);
         final com.avocent.kvm.b.d.g x = this.x();
         if (x != null) {
             x.a(new com.avocent.kvm.a.a.l());
@@ -580,7 +580,7 @@ public class l extends g {
     }
 
     public void i(final int n) {
-        this.i().a(l.Bb[35] + n + l.Bb[34]);
+        this.i().a(/*l.*/Bb[35] + n + /*l.*/Bb[34]);
         final com.avocent.kvm.b.d.g x = this.x();
         if (x != null) {
             x.a(new com.avocent.kvm.a.a.p(n));
@@ -589,7 +589,7 @@ public class l extends g {
 
     @Override
     public void a(final boolean b) {
-        this.i().a(l.Bb[4] + b);
+        this.i().a(/*l.*/Bb[4] + b);
         final com.avocent.kvm.b.d.g x = this.x();
         if (x != null) {
             this.k.a(b);
@@ -599,7 +599,7 @@ public class l extends g {
 
     @Override
     public int a(final int n, final Object o, final Object o2) throws IOException {
-        final int ab = l.Ab;
+        final int ab = /*l.*/Ab;
         int n2 = 0;
         com.avocent.kvm.a.a.b b = null;
         Label_0219:
@@ -607,7 +607,7 @@ public class l extends g {
             switch (n) {
                 case 1: {
                     if (this.pb == null) {
-                        this.i().a(l.Bb[3]);
+                        this.i().a(/*l.*/Bb[3]);
                         n2 = 1;
                         if (ab == 0) {
                             break;
@@ -621,12 +621,12 @@ public class l extends g {
                 case 2: {
                     b = new com.avocent.kvm.a.a.q();
                     ((com.avocent.kvm.a.a.q) b).a(o);
-                    this.a(l.Bb[2], o);
+                    this.a(/*l.*/Bb[2], o);
                     break;
                 }
                 case 3: {
                     b = new com.avocent.kvm.a.a.i();
-                    ((com.avocent.kvm.a.a.i) b).b(o.equals(com.avocent.kvm.b.t.f));
+                    ((com.avocent.kvm.a.a.i) b).b(o.equals(0));
                     ((com.avocent.kvm.a.a.i) b).c((int) o2);
                     break;
                 }
@@ -650,7 +650,7 @@ public class l extends g {
                     break;
                 }
                 default: {
-                    this.i().a(l.Bb[1], l.Bb[0] + n);
+                    this.i().a(/*l.*/Bb[1], /*l.*/Bb[0] + n);
                     break;
                 }
             }
@@ -2596,7 +2596,7 @@ public class l extends g {
             if (n154 <= n156) {
                 bb[n153] = new String(charArray39).intern();
                 Bb = bb;
-                l.x = false;
+                /*l.*/x = false;
                 break;
             }
             continue;

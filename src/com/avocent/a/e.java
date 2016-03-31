@@ -13,20 +13,20 @@ import java.awt.Component;
 public class e {
 
     /*protected String a;*/
-    protected Component b;
-    protected PropertyChangeSupport c;
-    protected HashMap d;
-    protected HashMap e;
-    protected e f;
-    protected com.avocent.kvm.b.f.e g;
-    protected d h;
-    public static int i;
+    protected Component component_b;//Originally named b
+    protected PropertyChangeSupport c;//Originally named c
+    protected HashMap hashmap_d;//Originally named d
+    protected HashMap hashmap_e;//Originally named e
+    protected e f;//Originally named f
+    protected com.avocent.kvm.b.f.e g;//Originally named g
+    protected d h;//Originally named h
+    public static int i;//Originally named i
     static String[] z;
 
     public e(/*final String a,*/ final e f) {
         this.c = new PropertyChangeSupport(this);
-        this.d = new HashMap();
-        this.e = new HashMap();
+        this.hashmap_d = new HashMap();
+        this.hashmap_e = new HashMap();
         this.g = com.avocent.kvm.b.f.b.a();
         /*this.a = a;*/
         this.f = f;
@@ -49,22 +49,22 @@ public class e {
         return (this.d() != null) ? com.avocent.a.d.b(s) : (com.avocent.a.e.z[1] + s + com.avocent.a.e.z[0]);
     }
 
-    protected void a(final PropertyChangeEvent propertyChangeEvent) {
-        if (this.e.get(propertyChangeEvent.getPropertyName()) == null) {
+    protected void a(PropertyChangeEvent propertyChangeEvent) {
+        if (this.hashmap_e.get(propertyChangeEvent.getPropertyName()) == null) {
             this.c.firePropertyChange(propertyChangeEvent);
         }
     }
 
-    public void a(final PropertyChangeListener propertyChangeListener) {
+    public void a(PropertyChangeListener propertyChangeListener) {
         this.c.addPropertyChangeListener(propertyChangeListener);
     }
 
-    protected void a(final Component b) {
-        this.b = b;
+    protected void setComponent_b(Component b) {
+        this.component_b = b;
     }
 
-    public Component e() {
-        return this.b;
+    public Component getComponent_b() {
+        return this.component_b;
     }
 
     public void a(final String s, final Object o) {
@@ -74,13 +74,13 @@ public class e {
                 return;
             }
         }
-        this.c.firePropertyChange(s, this.d.put(s, o), o);
+        this.c.firePropertyChange(s, this.hashmap_d.put(s, o), o);
     }
 
     public Object c(final String s) {
         Object o = this.d(s);
         if (o == null) {
-            o = this.d.get(s);
+            o = this.hashmap_d.get(s);
         }
         if (o != null) {
             return o;
@@ -107,11 +107,11 @@ public class e {
         return o2;
     }
 
-    public Object d(final String s) {
-        return this.e.get(s);
+    public Object d(String s) {
+        return this.hashmap_e.get(s);
     }
 
-    public String e(final String s) {
+    public String e(String s) {
         final Object c = this.c(s);
         return (c != null) ? c.toString() : null;
     }

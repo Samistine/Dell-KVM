@@ -6,7 +6,7 @@ package com.avocent.lenovo.kvm;
 import com.avocent.a.a.m;
 import com.avocent.kvm.b.bb;
 import java.awt.Component;
-import com.avocent.a.a.b.d;
+import com.avocent.a.a.b.JFrameD;
 import javax.swing.JMenuBar;
 import com.avocent.a.a.b.e;
 import javax.swing.JFrame;
@@ -87,7 +87,7 @@ public class f implements s {
 
     @Override
     public JFrame c(final i i) {
-        final d d = new d(i);
+        final JFrameD d = new JFrameD(i);
         d.setJMenuBar(new n(i, i.q(), true));
         return d;
     }

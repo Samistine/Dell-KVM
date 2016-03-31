@@ -12,7 +12,7 @@ public class Main {
 
     private static final String z;
 
-    void a(final String[] array) throws Exception {
+    void a(String[] array) throws Exception {
         final e a = b.a();
         final f f = new f();
         final d d = new d();
@@ -23,7 +23,7 @@ public class Main {
         c.f();
     }
 
-    public static void main(final String[] array) {
+    public static void main(String[] array) {
         try {
             new Main().a(array);
         } catch (Throwable t) {

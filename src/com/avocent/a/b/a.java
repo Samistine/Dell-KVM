@@ -12,6 +12,7 @@ import com.avocent.kvm.b.nb;
 import com.avocent.a.k;
 import com.avocent.kvm.b.u;
 import com.avocent.a.e;
+import java.awt.event.WindowEvent;
 
 public class a extends e {
 
@@ -34,18 +35,18 @@ public class a extends e {
 
     public void c() {
         int n = a.n;
-        if (this.b == null) {
-            this.b = new com.avocent.a.b.e(this, false);
-            ((JDialog) this.b).addWindowListener(new b(this));
+        if (this.component_b == null) {
+            this.component_b = new com.avocent.a.b.e(this, false);
+            ((JDialog) this.component_b).addWindowListener(new WindowListener_b(this));
         }
         if (this.k != null) {
             this.k.b();
         }
-        this.k = new k(this.j, (j) this.b);
+        this.k = new k(this.j, (j) this.component_b);
         this.l = this.k.a();
-        ((com.avocent.a.b.e) this.b).a(this.l);
+        ((com.avocent.a.b.e) this.component_b).a(this.l);
         this.k.start();
-        this.b.setVisible(true);
+        this.component_b.setVisible(true);
         if (n != 0) {
             int c = com.avocent.kvm.b.d.a.c;
             com.avocent.kvm.b.d.a.c = ++c;
@@ -53,8 +54,53 @@ public class a extends e {
     }
 
     static Component a(final a a) {
-        return a.b;
+        return a.component_b;
     }
+
+    //Originally named b
+    static class WindowListener_b implements WindowListener {
+
+        final a a;
+
+        WindowListener_b(a a) {
+            this.a = a;
+        }
+
+        @Override
+        public void windowActivated(WindowEvent windowEvent) {
+        }
+
+        @Override
+        public void windowClosed(WindowEvent windowEvent) {
+            if (this.a.k != null) {
+                this.a.k.b();
+            }
+        }
+
+        @Override
+        public void windowClosing(WindowEvent windowEvent) {
+            if (this.a.k != null) {
+                this.a.k.b();
+            }
+        }
+
+        @Override
+        public void windowDeactivated(WindowEvent windowEvent) {
+        }
+
+        @Override
+        public void windowDeiconified(WindowEvent windowEvent) {
+        }
+
+        @Override
+        public void windowIconified(WindowEvent windowEvent) {
+        }
+
+        @Override
+        public void windowOpened(WindowEvent windowEvent) {
+        }
+    }
+
 
     /*static {
         final char[] charArray = "5~\u0017 -\"c\u001781\u0001I\u0019:*\u0014e\u001a8;\u0014".toCharArray();

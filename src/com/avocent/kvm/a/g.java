@@ -162,8 +162,8 @@ public class g {
     static Socket a(final Socket socket, final int n) throws IOException, Exception {
         final byte[] array = new byte[32];
         new Random().nextBytes(array);
-        final com.avocent.kvm.b.b.a a = new com.avocent.kvm.b.b.a(socket.getInputStream(), socket);
-        final com.avocent.kvm.b.b.b b = new com.avocent.kvm.b.b.b(socket.getOutputStream());
+        final com.avocent.kvm.b.b.DataInputStream_a a = new com.avocent.kvm.b.b.DataInputStream_a(socket.getInputStream(), socket);
+        final com.avocent.kvm.b.b.DataOutputStream_b b = new com.avocent.kvm.b.b.DataOutputStream_b(socket.getOutputStream());
         final g g = new g(socket.getRemoteSocketAddress().toString(), socket.getLocalPort());
         g.a(a, b);
         g.a(n);
@@ -177,8 +177,8 @@ public class g {
         final Socket socket = new Socket(s, n);
         socket.setTcpNoDelay(true);
         socket.setReceiveBufferSize(32768);
-        final com.avocent.kvm.b.b.a a = new com.avocent.kvm.b.b.a(socket.getInputStream(), socket);
-        final com.avocent.kvm.b.b.b b = new com.avocent.kvm.b.b.b(socket.getOutputStream());
+        final com.avocent.kvm.b.b.DataInputStream_a a = new com.avocent.kvm.b.b.DataInputStream_a(socket.getInputStream(), socket);
+        final com.avocent.kvm.b.b.DataOutputStream_b b = new com.avocent.kvm.b.b.DataOutputStream_b(socket.getOutputStream());
         final g g = new g(s, n);
         g.a(a, b);
         g.a(n2);

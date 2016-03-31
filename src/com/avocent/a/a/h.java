@@ -15,12 +15,12 @@ import com.avocent.a.f;
 public class h extends f {
 
     protected i o;
-    public g p;
+    public WindowAdpater_g p;
     private static final String[] z;
 
     public h(final i o) {
         super(z[1], o); //Sam
-        this.p = new g(this);
+        this.p = new WindowAdpater_g(this);
         this.o = o;
     }
 
@@ -31,20 +31,20 @@ public class h extends f {
 
     @Override
     public void g() {
-        if (this.b == null) {
-            this.a((Component) new c(this, this.o.c()));
-            ((JDialog) this.b).addWindowListener(this.p);
+        if (this.component_b == null) {
+            this.setComponent_b((Component) new c(this, this.o.c()));
+            ((JDialog) this.component_b).addWindowListener(this.p);
         }
-        if (!this.b.isVisible()) {
-            ((JDialog) this.b).setLocationRelativeTo(this.o.c());
-            this.b.setVisible(true);
+        if (!this.component_b.isVisible()) {
+            ((JDialog) this.component_b).setLocationRelativeTo(this.o.c());
+            this.component_b.setVisible(true);
         }
-        ((JDialog) this.b).toFront();
+        ((JDialog) this.component_b).toFront();
     }
 
     public void m() {
-        this.b.setVisible(false);
-        this.b = null;
+        this.component_b.setVisible(false);
+        this.component_b = null;
     }
 
     @Override

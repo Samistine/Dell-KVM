@@ -25,7 +25,7 @@ import com.avocent.kvm.a.a.mb;
 import com.avocent.kvm.a.a.kb;
 import com.avocent.kvm.b.d.c;
 
-public class i implements d {
+public class i {
 
     protected l h;
     protected boolean i;
@@ -327,7 +327,7 @@ public class i implements d {
     void a(final z z) {
         if (this.i) {
             this.i = false;
-            this.h.c(com.avocent.kvm.a.i.z[0], com.avocent.kvm.a.i.g);
+            this.h.c(com.avocent.kvm.a.i.z[0], 100);
         }
         this.h.u();
     }
@@ -335,19 +335,19 @@ public class i implements d {
     void a(final gb gb) {
         if (this.i) {
             this.i = false;
-            this.h.c(com.avocent.kvm.a.i.z[0], com.avocent.kvm.a.i.g);
+            this.h.c(com.avocent.kvm.a.i.z[0], 100);
         }
         this.h.b().a(gb);
         this.h.u();
     }
 
     void a(final nb nb) throws Exception {
-        this.h.a(com.avocent.kvm.a.i.z[26], (Object) new Integer(nb.l()));
-        this.h.a(com.avocent.kvm.a.i.z[22], (Object) new Integer(nb.j()));
-        this.h.a(com.avocent.kvm.a.i.z[24], (Object) new Integer(nb.k()));
-        this.h.a(com.avocent.kvm.a.i.z[21], (Object) new Integer(nb.i()));
-        this.h.a(com.avocent.kvm.a.i.z[25], (Object) new Integer(nb.h()));
-        this.h.a(com.avocent.kvm.a.i.z[23], (Object) new Integer(nb.m()));
+        this.h.a(com.avocent.kvm.a.i.z[26], (Object) nb.l());
+        this.h.a(com.avocent.kvm.a.i.z[22], (Object) nb.j());
+        this.h.a(com.avocent.kvm.a.i.z[24], (Object) nb.k());
+        this.h.a(com.avocent.kvm.a.i.z[21], (Object) nb.i());
+        this.h.a(com.avocent.kvm.a.i.z[25], (Object) nb.h());
+        this.h.a(com.avocent.kvm.a.i.z[23], (Object) nb.m());
     }
 
     void a(final r r) throws Exception {
@@ -355,40 +355,40 @@ public class i implements d {
         this.i = true;
         Label_0101:
         {
-            if (r.h() == com.avocent.kvm.a.i.a) {
-                this.h.c(com.avocent.kvm.a.i.z[0], com.avocent.kvm.a.i.a);
+            if (r.h() == 0) {
+                this.h.c(com.avocent.kvm.a.i.z[0], 0);
                 if (ab == 0) {
                     break Label_0101;
                 }
             }
-            if (r.h() == com.avocent.kvm.a.i.b) {
-                this.h.c(com.avocent.kvm.a.i.z[0], com.avocent.kvm.a.i.b);
+            if (r.h() == 1) {
+                this.h.c(com.avocent.kvm.a.i.z[0], 1);
                 if (ab == 0) {
                     break Label_0101;
                 }
             }
-            if (r.h() == com.avocent.kvm.a.i.c) {
-                this.h.c(com.avocent.kvm.a.i.z[0], com.avocent.kvm.a.i.c);
+            if (r.h() == 2) {
+                this.h.c(com.avocent.kvm.a.i.z[0], 2);
             }
         }
         this.h.u();
     }
 
-    void a(final eb eb) throws Exception {
-        this.h.a(com.avocent.kvm.a.i.z[20], (Object) new Integer(eb.h()));
+    void a(eb eb) throws Exception {
+        this.h.a(com.avocent.kvm.a.i.z[20], (Object) eb.h());
     }
 
-    void a(final com.avocent.kvm.a.a.c c) throws Exception {
+    void a(com.avocent.kvm.a.a.c c) throws Exception {
     }
 
-    void a(final qb qb) throws Exception {
+    void a(qb qb) throws Exception {
         this.h.pb = qb.h();
     }
 
-    void a(final rb rb) throws Exception {
+    void a(rb rb) throws Exception {
     }
 
-    void a(final tb tb) throws Exception {
+    void a(tb tb) throws Exception {
         this.h.a(tb.h(), tb.i(), tb.j());
     }
 

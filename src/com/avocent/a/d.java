@@ -13,11 +13,11 @@ public class d {
     static ResourceBundle a;
     private static final String[] z;
 
-    public void a(final String s) {
+    public void a(String s) {
         d.a = ResourceBundle.getBundle(s);
     }
 
-    public static String b(final String s) {
+    public static String b(String s) {
         String s2 = c(s);
         if (s2 == null) {
             s2 = d.z[1] + s + d.z[0];
@@ -25,7 +25,7 @@ public class d {
         return s2;
     }
 
-    public static String a(final String s, final Object[] array) {
+    public static String a(String s, Object[] array) {
         String s2 = c(s);
         if (s2 != null && array != null) {
             s2 = MessageFormat.format(s2, array);
@@ -33,7 +33,7 @@ public class d {
         return s2;
     }
 
-    private static String c(final String s) {
+    private static String c(String s) {
         String string = null;
         if (d.a != null) {
             try {
