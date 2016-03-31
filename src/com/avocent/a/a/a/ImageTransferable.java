@@ -1,55 +1,47 @@
 // 
 // Decompiled by Procyon v0.5.29
 // 
-package com.avocent.lenovo.kvm.a;
+package com.avocent.a.a.a;
 
-public class a extends com.avocent.a.e {
+import java.awt.datatransfer.DataFlavor;
+import java.awt.Image;
+import java.awt.datatransfer.Transferable;
 
-    protected f j;
-    protected b k;
-    protected e l;
-    protected c m;
-    protected com.avocent.kvm.b.e.a n;
-    public static int o;
-    private static final String[] z;
+//Originally named a
+public class ImageTransferable implements Transferable {
 
-    public a(final com.avocent.kvm.b.e.a a) {
-        super(/*z[3],*/ (com.avocent.a.e) a);
-        int n = o;
-        this.n = a;
-        this.k = new b(this);
-        this.l = new e(this);
-        this.m = new c(this);
-        if (com.avocent.kvm.b.d.a.c != 0) {
-            o = ++n;
+    private Image a;
+    /*private static final String[] z;*/
+
+    public ImageTransferable(Image a) {
+        this.a = a;
+    }
+
+    @Override
+    public Object getTransferData(final DataFlavor dataFlavor) {
+        //System.out.println(com.avocent.a.a.a.ImageTransferable.z[1]);
+        if (dataFlavor.equals(DataFlavor.imageFlavor)) {
+            return this.a;
         }
+        return null;
     }
 
-    public com.avocent.kvm.b.e.a a() {
-        return this.n;
+    @Override
+    public DataFlavor[] getTransferDataFlavors() {
+        //System.out.println(com.avocent.a.a.a.ImageTransferable.z[0]);
+        return new DataFlavor[]{DataFlavor.imageFlavor};
     }
 
-    public void a(final boolean visible) {
-        if (visible && this.j == null) {
-            this.j = new f(this, this.n.c());
-            final String a = this.n.a(com.avocent.lenovo.kvm.a.a.z[0], "");
-            final String a2 = this.n.a(com.avocent.lenovo.kvm.a.a.z[1], "");
-            this.j.setTitle(com.avocent.lenovo.kvm.a.a.z[2] + a);
-            this.j.a(a2);
-        }
-        this.j.setVisible(visible);
+    @Override
+    public boolean isDataFlavorSupported(final DataFlavor dataFlavor) {
+        //System.out.println(com.avocent.a.a.a.ImageTransferable.z[2]);
+        return dataFlavor.equals(DataFlavor.imageFlavor);
     }
 
-    public void c() {
-    }
-
-    public void f() {
-    }
-
-    static {
-        final String[] z2 = new String[4];
+    /*static {
+        final String[] z2 = new String[3];
         final int n = 0;
-        final char[] charArray = "o`\u001bI".toCharArray();
+        final char[] charArray = "_C1b\u001d\rE:e/\u001aV\u0010w=\u001eb8w?\u0010V'".toCharArray();
         int length;
         int n3;
         final int n2 = n3 = (length = charArray.length);
@@ -66,23 +58,23 @@ public class a extends com.avocent.a.e {
                     char c2 = '\0';
                     switch (n4 % 5) {
                         case 0: {
-                            c2 = '\'';
+                            c2 = '\u007f';
                             break;
                         }
                         case 1: {
-                            c2 = '/';
+                            c2 = '$';
                             break;
                         }
                         case 2: {
-                            c2 = 'H';
+                            c2 = 'T';
                             break;
                         }
                         case 3: {
-                            c2 = '\u001d';
+                            c2 = '\u0016';
                             break;
                         }
                         default: {
-                            c2 = '\u0018';
+                            c2 = 'I';
                             break;
                         }
                     }
@@ -97,7 +89,7 @@ public class a extends com.avocent.a.e {
         }
         z2[n] = new String(charArray).intern();
         final int n5 = 1;
-        final char[] charArray2 = "r|\rOVfb\r".toCharArray();
+        final char[] charArray2 = "_C1b\u001d\rE:e/\u001aV\u0010w=\u001e".toCharArray();
         int length2;
         int n7;
         final int n6 = n7 = (length2 = charArray2.length);
@@ -114,23 +106,23 @@ public class a extends com.avocent.a.e {
                     char c4 = '\0';
                     switch (n8 % 5) {
                         case 0: {
-                            c4 = '\'';
+                            c4 = '\u007f';
                             break;
                         }
                         case 1: {
-                            c4 = '/';
+                            c4 = '$';
                             break;
                         }
                         case 2: {
-                            c4 = 'H';
+                            c4 = 'T';
                             break;
                         }
                         case 3: {
-                            c4 = '\u001d';
+                            c4 = '\u0016';
                             break;
                         }
                         default: {
-                            c4 = '\u0018';
+                            c4 = 'I';
                             break;
                         }
                     }
@@ -145,7 +137,7 @@ public class a extends com.avocent.a.e {
         }
         z2[n5] = new String(charArray2).intern();
         final int n9 = 2;
-        final char[] charArray3 = "nbr=".toCharArray();
+        final char[] charArray3 = "_M'R(\u000bE\u0012z(\tK&E<\u000fT;d=\u001a@".toCharArray();
         int length3;
         int n11;
         final int n10 = n11 = (length3 = charArray3.length);
@@ -162,23 +154,23 @@ public class a extends com.avocent.a.e {
                     char c6 = '\0';
                     switch (n12 % 5) {
                         case 0: {
-                            c6 = '\'';
+                            c6 = '\u007f';
                             break;
                         }
                         case 1: {
-                            c6 = '/';
+                            c6 = '$';
                             break;
                         }
                         case 2: {
-                            c6 = 'H';
+                            c6 = 'T';
                             break;
                         }
                         case 3: {
-                            c6 = '\u001d';
+                            c6 = '\u0016';
                             break;
                         }
                         default: {
-                            c6 = '\u0018';
+                            c6 = 'I';
                             break;
                         }
                     }
@@ -186,60 +178,12 @@ public class a extends com.avocent.a.e {
                     ++n12;
                 } while (n10 == 0);
             }
-            if (n10 > n12) {
-                continue;
-            }
-            break;
-        }
-        z2[n9] = new String(charArray3).intern();
-        final int n13 = 3;
-        final char[] charArray4 = "nb\ftyK@/".toCharArray();
-        int length4;
-        int n15;
-        final int n14 = n15 = (length4 = charArray4.length);
-        int n16 = 0;
-        while (true) {
-            Label_0446:
-            {
-                if (n14 > 1) {
-                    break Label_0446;
-                }
-                length4 = (n15 = n16);
-                do {
-                    final char c7 = charArray4[n15];
-                    char c8 = '\0';
-                    switch (n16 % 5) {
-                        case 0: {
-                            c8 = '\'';
-                            break;
-                        }
-                        case 1: {
-                            c8 = '/';
-                            break;
-                        }
-                        case 2: {
-                            c8 = 'H';
-                            break;
-                        }
-                        case 3: {
-                            c8 = '\u001d';
-                            break;
-                        }
-                        default: {
-                            c8 = '\u0018';
-                            break;
-                        }
-                    }
-                    charArray4[length4] = (char) (c7 ^ c8);
-                    ++n16;
-                } while (n14 == 0);
-            }
-            if (n14 <= n16) {
-                z2[n13] = new String(charArray4).intern();
+            if (n10 <= n12) {
+                z2[n9] = new String(charArray3).intern();
                 z = z2;
                 break;
             }
             continue;
         }
-    }
+    }*/
 }

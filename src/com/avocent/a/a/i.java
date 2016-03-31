@@ -47,10 +47,10 @@ public class i extends g implements a {
     protected long E;
     protected boolean F;
     public static boolean G;
-    private static final String[] H;
+    /*private static final String[] H;*/
 
     public i() {
-        super(i.H[0]);
+        super(/*i.H[0]*/);
         this.y = new com.avocent.a.a.f(this);
         this.z = new n(this);
         this.A = new t(this);

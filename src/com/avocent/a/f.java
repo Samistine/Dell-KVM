@@ -24,7 +24,7 @@ public class f extends e {
     protected Action n;
 
     public f(final String s, final e e) {
-        super(s, e);
+        super(/*s,*/ e);
         int i = com.avocent.a.e.i;
         this.j = new l(this, com.avocent.a.d.b(z[3]));
         this.k = new m(this, com.avocent.a.d.b(z[1]));

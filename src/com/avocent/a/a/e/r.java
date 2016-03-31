@@ -142,7 +142,7 @@ public class r extends JPanel implements k {
         if (a2 != null && a2 instanceof Integer) {
             this.f.setSelectedItem(com.avocent.a.c.e.a((int) a2));
         }
-        this.a(a.a(r.z[11], com.avocent.kvm.c.a.a));
+        this.a(a.a(r.z[11], 0));
     }
 
     protected void i() {
@@ -174,19 +174,19 @@ public class r extends JPanel implements k {
         final int t = com.avocent.a.a.e.c.t;
         Label_0078:
         {
-            if (n.equals(com.avocent.kvm.c.a.a)) {
+            if (n.equals(0)) {
                 this.i.setSelected(true);
                 if (t == 0) {
                     break Label_0078;
                 }
             }
-            if (n.equals(com.avocent.kvm.c.a.c)) {
+            if (n.equals(2)) {
                 this.h.setSelected(true);
                 if (t == 0) {
                     break Label_0078;
                 }
             }
-            if (n.equals(com.avocent.kvm.c.a.b)) {
+            if (n.equals(1)) {
                 this.m.setSelected(true);
                 if (t == 0) {
                     break Label_0078;
@@ -217,17 +217,17 @@ public class r extends JPanel implements k {
     @Override
     public void a() {
         if (this.f()) {
-            Integer n = com.avocent.kvm.c.a.a;
+            Integer n = 0;
             Label_0045:
             {
                 if (this.h.isSelected()) {
-                    n = com.avocent.kvm.c.a.c;
+                    n = 2;
                     if (com.avocent.a.a.e.c.t == 0) {
                         break Label_0045;
                     }
                 }
                 if (this.m.isSelected()) {
-                    n = com.avocent.kvm.c.a.b;
+                    n = 1;
                 }
             }
             this.c = true;
@@ -272,7 +272,7 @@ public class r extends JPanel implements k {
     @Override
     public boolean f() {
         final Integer n = (Integer) this.a.a().a(r.z[11]);
-        if (n != null && ((n.equals(com.avocent.kvm.c.a.a) && !this.i.isSelected()) || (n.equals(com.avocent.kvm.c.a.c) && !this.h.isSelected()) || (n.equals(com.avocent.kvm.c.a.b) && !this.m.isSelected()))) {
+        if (n != null && ((n.equals(0) && !this.i.isSelected()) || (n.equals(2) && !this.h.isSelected()) || (n.equals(1) && !this.m.isSelected()))) {
             return true;
         }
         final Integer a = this.a.a().a(r.z[10], null);

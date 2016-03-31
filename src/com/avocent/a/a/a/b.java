@@ -33,7 +33,7 @@ public class b extends AbstractAction {
             if (renderedImage != null) {
                 try {
                     Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-                    clipboard.setContents(new a((Image) renderedImage), null);
+                    clipboard.setContents(new ImageTransferable((Image) renderedImage), null);
                     break block3;
                 } catch (IllegalStateException var3_4) {
                     com.avocent.kvm.b.f.b.a().a(z[2] + var3_4.getMessage());

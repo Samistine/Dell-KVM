@@ -13,7 +13,7 @@ public class k extends AbstractAction {
     i a;
     private static final String z;
 
-    public k(final i a) {
+    public k(i a) {
         super(d.b(k.z));
 
         a.d();

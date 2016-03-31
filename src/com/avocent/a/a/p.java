@@ -8,9 +8,9 @@ import java.awt.event.WindowListener;
 
 class p implements Runnable {
 
-    final i a;
+    private final i a;
 
-    p(final i a) {
+    public p(i a) {
         this.a = a;
     }
 

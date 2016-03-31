@@ -8,15 +8,15 @@ import javax.swing.JFrame;
 public class g extends e {
 
     protected d j = new d();
-    private static final String z;
+    /*private static final String z;*/
 
     public g() {
-        super(z, null);
+        super(/*z,*/ null);
     }
 
-    public g(final String s) {
+    /*public g(String s) {
         super(s, null);
-    }
+    }*/
 
     public JFrame c() {
         return (JFrame) this.e();
@@ -27,7 +27,7 @@ public class g extends e {
         return this.j;
     }
 
-    static {
+    /*static {
         final char[] charArray = "-o.b-\u000f`3~\u0001\fb\"~".toCharArray();
         int length;
         int n2;
@@ -75,5 +75,5 @@ public class g extends e {
             }
             continue;
         }
-    }
+    }*/
 }

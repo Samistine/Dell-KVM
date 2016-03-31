@@ -13,9 +13,9 @@ public class e implements ib {
 
     protected l a;
     protected ArrayList b;
-    private static final String[] z;
+    /*private static final String[] z;*/
 
-    public e(final l a) {
+    public e(l a) {
         this.b = new ArrayList();
         this.a = a;
     }
@@ -34,7 +34,7 @@ public class e implements ib {
                 break;
             }
         }
-        System.out.println(e.z[0] + b + e.z[1] + (this.a != null) + e.z[2] + this.a.x() != null);
+        //System.out.println(e.z[0] + b + e.z[1] + (this.a != null) + e.z[2] + this.a.x() != null);
         if (b && this.a != null && this.a.x() != null) {
             this.a.x().a(new com.avocent.kvm.a.a.e(n, true));
         }
@@ -64,7 +64,7 @@ public class e implements ib {
         this.b.add(d);
     }
 
-    static {
+    /*static {
         final String[] z2 = new String[3];
         final int n = 0;
         final char[] charArray = "\u001c7%@@OnSV\\\u001c".toCharArray();
@@ -211,5 +211,5 @@ public class e implements ib {
             }
             continue;
         }
-    }
+    }*/
 }

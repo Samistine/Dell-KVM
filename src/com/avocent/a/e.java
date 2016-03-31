@@ -12,7 +12,7 @@ import java.awt.Component;
 
 public class e {
 
-    protected String a;
+    /*protected String a;*/
     protected Component b;
     protected PropertyChangeSupport c;
     protected HashMap d;
@@ -23,12 +23,12 @@ public class e {
     public static int i;
     static String[] z;
 
-    public e(final String a, final e f) {
+    public e(/*final String a,*/ final e f) {
         this.c = new PropertyChangeSupport(this);
         this.d = new HashMap();
         this.e = new HashMap();
         this.g = com.avocent.kvm.b.f.b.a();
-        this.a = a;
+        /*this.a = a;*/
         this.f = f;
         if (f != null) {
             f.a(new h(this));

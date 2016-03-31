@@ -14,11 +14,11 @@ import javax.swing.JPanel;
 
 class f extends JPanel implements Scrollable {
 
-    Component a;
-    Dimension b;
-    final e c;
+    private Component a;
+    private final Dimension b;
+    private final e c;
 
-    f(final e c) {
+    public f(e c) {
         this.c = c;
         this.b = new Dimension(800, 600);
         this.setLayout(new GridBagLayout());
@@ -26,7 +26,7 @@ class f extends JPanel implements Scrollable {
     }
 
     @Override
-    public Component add(final Component a) {
+    public Component add(Component a) {
         this.a = a;
         return super.add(a);
     }
@@ -37,7 +37,7 @@ class f extends JPanel implements Scrollable {
     }
 
     @Override
-    public int getScrollableBlockIncrement(final Rectangle rectangle, final int n, final int n2) {
+    public int getScrollableBlockIncrement(Rectangle rectangle, int n, int n2) {
         return 10;
     }
 
@@ -52,7 +52,7 @@ class f extends JPanel implements Scrollable {
     }
 
     @Override
-    public int getScrollableUnitIncrement(final Rectangle rectangle, final int n, final int n2) {
+    public int getScrollableUnitIncrement(Rectangle rectangle, int n, int n2) {
         return 10;
     }
 }

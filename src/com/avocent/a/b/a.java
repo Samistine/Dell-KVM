@@ -20,10 +20,10 @@ public class a extends e {
     protected nb l;
     protected Action m;
     public static int n;
-    private static final String z;
+    /*private static final String z;*/
 
     public a(final com.avocent.kvm.b.e.a a) {
-        super(z, (e) a);
+        super(/*z,*/ (e) a);
         this.m = new d(this);
         this.j = a.a();
     }
@@ -56,7 +56,7 @@ public class a extends e {
         return a.b;
     }
 
-    static {
+    /*static {
         final char[] charArray = "5~\u0017 -\"c\u001781\u0001I\u0019:*\u0014e\u001a8;\u0014".toCharArray();
         int length;
         int n2;
@@ -104,5 +104,5 @@ public class a extends e {
             }
             continue;
         }
-    }
+    }*/
 }

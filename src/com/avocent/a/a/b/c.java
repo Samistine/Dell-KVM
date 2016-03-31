@@ -35,7 +35,7 @@ public class c extends JDialog implements PropertyChangeListener {
         this.a = a;
         this.a();
         this.c.setAction(this.a.c());
-        this.a.a((PropertyChangeListener) this);
+        this.a.a(this);
     }
 
     private void a() {

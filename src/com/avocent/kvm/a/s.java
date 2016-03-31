@@ -11,11 +11,11 @@ import java.text.SimpleDateFormat;
 
 class s extends Thread {
 
-    boolean a;
-    final l b;
+    private boolean a;
+    private final l b;
     private static final String[] z;
 
-    s(final l b) {
+    public s(l b) {
         super(s.z[7]);
         this.b = b;
         this.a = false;
@@ -32,12 +32,12 @@ class s extends Thread {
                 try {
                     a = this.b.jb.a(this.b.H, g.i ? l.g(this.b) : null, false);
                 } catch (Throwable t) {
-                    System.out.println(s.z[3] + simpleDateFormat.format(date).toString());
+                    System.out.println(s.z[3] + simpleDateFormat.format(date));
                     System.out.println(s.z[6] + t.toString());
                 }
                 if (a == null) {
                     System.out.println(s.z[0]);
-                    System.out.println(s.z[2] + simpleDateFormat.format(date).toString());
+                    System.out.println(s.z[2] + simpleDateFormat.format(date));
                     this.b.f();
                     if (ab == 0) {
                         break;

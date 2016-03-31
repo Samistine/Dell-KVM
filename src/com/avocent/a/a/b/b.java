@@ -35,7 +35,7 @@ public class b extends JDialog {
         this.a = a;
         this.a();
         this.e.setBackground(UIManager.getDefaults().getColor(com.avocent.a.a.b.b.z[0]));
-        this.g.addActionListener(new a(this));
+        this.g.addActionListener(new ActionListenerA(this));
     }
 
     private void a() {
