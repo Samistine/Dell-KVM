@@ -113,7 +113,7 @@ public class c {
     private static final String[] Yb;
 
     public static void a(final char[] array, final byte b, final char[] array2) {
-        final int xb = /*c.*/Xb;
+        final int xb = /*c.*/ Xb;
         final boolean b2 = false;
         int i = 0;
         while (i < 64) {
@@ -126,7 +126,7 @@ public class c {
             }
             array2[/*c.*/vb[i]] = (char) (n & 0xFFL);
             if (b2) {
-                System.out.println(/*c.*/Yb[35] + i + /*c.*/Yb[1] + (short) (/*c.*/vb[i] & '\u00ff') + /*c.*/Yb[36] + i + /*c.*/Yb[34] + (short) (array2[/*c.*/vb[i]] & '\u00ff'));
+                System.out.println(/*c.*/Yb[35] + i + /*c.*/ Yb[1] + (short) (/*c.*/vb[i] & '\u00ff') + /*c.*/ Yb[36] + i + /*c.*/ Yb[34] + (short) (array2[/*c.*/vb[i]] & '\u00ff'));
             }
             ++i;
             if (xb != 0) {
@@ -136,51 +136,51 @@ public class c {
     }
 
     public static void a(final float[] array) {
-        final int xb = /*c.*/Xb;
+        final int xb = /*c.*/ Xb;
         final float[] array2 = {1.0f, 1.3870399f, 1.306563f, 1.1758755f, 1.0f, 0.78569496f, 0.5411961f, 0.27589938f};
         final char[] array3 = new char[64];
         char[] array4 = null;
         final boolean b = false;
         switch (/*c.*/W) {
             case 0: {
-                array4 = /*c.*/Sb;
+                array4 = /*c.*/ Sb;
                 break;
             }
             case 1: {
-                array4 = /*c.*/Qb;
+                array4 = /*c.*/ Qb;
                 break;
             }
             case 2: {
-                array4 = /*c.*/Ob;
+                array4 = /*c.*/ Ob;
                 break;
             }
             case 3: {
-                array4 = /*c.*/Mb;
+                array4 = /*c.*/ Mb;
                 break;
             }
             case 4: {
-                array4 = /*c.*/Kb;
+                array4 = /*c.*/ Kb;
                 break;
             }
             case 5: {
-                array4 = /*c.*/Ib;
+                array4 = /*c.*/ Ib;
                 break;
             }
             case 6: {
-                array4 = /*c.*/Gb;
+                array4 = /*c.*/ Gb;
                 break;
             }
             case 7: {
-                array4 = /*c.*/Eb;
+                array4 = /*c.*/ Eb;
                 break;
             }
         }
-        a(array4, /*c.*/S, array3);
+        a(array4, /*c.*/ S, array3);
         int i = 0;
         while (i <= 63) {
             array[i] = (array3[/*c.*/vb[i] & '\u00ff'] & '\u00ff');
             if (b) {
-                System.out.println(/*c.*/Yb[6] + i + /*c.*/Yb[1] + array[i]);
+                System.out.println(/*c.*/Yb[6] + i + /*c.*/ Yb[1] + array[i]);
             }
             ++i;
             if (xb != 0) {
@@ -195,7 +195,7 @@ public class c {
                 final int n2 = n;
                 array[n2] *= array2[j] * array2[k];
                 if (b) {
-                    System.out.println(/*c.*/Yb[6] + n + /*c.*/Yb[1] + array[n]);
+                    System.out.println(/*c.*/Yb[6] + n + /*c.*/ Yb[1] + array[n]);
                 }
                 ++n;
                 ++k;
@@ -208,11 +208,12 @@ public class c {
                 break;
             }
         }
-        /*c.*/D += 64;
+        /*c.*/
+        D += 64;
     }
 
     public static void b(final float[] array) {
-        final int xb = /*c.*/Xb;
+        final int xb = /*c.*/ Xb;
         final float[] array2 = {1.0f, 1.3870399f, 1.306563f, 1.1758755f, 1.0f, 0.78569496f, 0.5411961f, 0.27589938f};
         final char[] array3 = new char[64];
         char[] array4 = null;
@@ -220,80 +221,80 @@ public class c {
         if (/*c.*/Z == 1) {
             switch (/*c.*/X) {
                 case 0: {
-                    array4 = /*c.*/Sb;
+                    array4 = /*c.*/ Sb;
                     break;
                 }
                 case 1: {
-                    array4 = /*c.*/Qb;
+                    array4 = /*c.*/ Qb;
                     break;
                 }
                 case 2: {
-                    array4 = /*c.*/Ob;
+                    array4 = /*c.*/ Ob;
                     break;
                 }
                 case 3: {
-                    array4 = /*c.*/Mb;
+                    array4 = /*c.*/ Mb;
                     break;
                 }
                 case 4: {
-                    array4 = /*c.*/Kb;
+                    array4 = /*c.*/ Kb;
                     break;
                 }
                 case 5: {
-                    array4 = /*c.*/Ib;
+                    array4 = /*c.*/ Ib;
                     break;
                 }
                 case 6: {
-                    array4 = /*c.*/Gb;
+                    array4 = /*c.*/ Gb;
                     break;
                 }
                 case 7: {
-                    array4 = /*c.*/Eb;
+                    array4 = /*c.*/ Eb;
                     break;
                 }
             }
         } else {
             switch (/*c.*/X) {
                 case 0: {
-                    array4 = /*c.*/Tb;
+                    array4 = /*c.*/ Tb;
                     break;
                 }
                 case 1: {
-                    array4 = /*c.*/Rb;
+                    array4 = /*c.*/ Rb;
                     break;
                 }
                 case 2: {
-                    array4 = /*c.*/Pb;
+                    array4 = /*c.*/ Pb;
                     break;
                 }
                 case 3: {
-                    array4 = /*c.*/Nb;
+                    array4 = /*c.*/ Nb;
                     break;
                 }
                 case 4: {
-                    array4 = /*c.*/Lb;
+                    array4 = /*c.*/ Lb;
                     break;
                 }
                 case 5: {
-                    array4 = /*c.*/Jb;
+                    array4 = /*c.*/ Jb;
                     break;
                 }
                 case 6: {
-                    array4 = /*c.*/Hb;
+                    array4 = /*c.*/ Hb;
                     break;
                 }
                 case 7: {
-                    array4 = /*c.*/Fb;
+                    array4 = /*c.*/ Fb;
                     break;
                 }
             }
         }
-        a(array4, /*c.*/T, array3);
+        a(array4, /*c.*/ T, array3);
         int i = 0;
         while (i <= 63) {
             array[i] = (array3[/*c.*/vb[i] & '\u00ff'] & '\u00ff');
             if (b) {
-                System.out.println(/*c.*/Yb[41] + i + /*c.*/Yb[1] + array[i]);
+                System.out.println(/*c.*/Yb[41] + i + /*c.*/ Yb[1] + array[i]);
             }
             ++i;
             if (xb != 0) {
@@ -308,7 +309,7 @@ public class c {
                 final int n2 = n;
                 array[n2] *= array2[j] * array2[k];
                 if (b) {
-                    System.out.println(/*c.*/Yb[41] + n + /*c.*/Yb[1] + array[n]);
+                    System.out.println(/*c.*/Yb[41] + n + /*c.*/ Yb[1] + array[n]);
                 }
                 ++n;
                 ++k;
@@ -321,55 +322,56 @@ public class c {
                 break;
             }
         }
-        /*c.*/D += 64;
+        /*c.*/
+        D += 64;
     }
 
     public static void c(final float[] array) {
-        final int xb = /*c.*/Xb;
+        final int xb = /*c.*/ Xb;
         final float[] array2 = {1.0f, 1.3870399f, 1.306563f, 1.1758755f, 1.0f, 0.78569496f, 0.5411961f, 0.27589938f};
         final char[] array3 = new char[64];
         char[] array4 = null;
         final boolean b = false;
         switch (/*c.*/Y) {
             case 0: {
-                array4 = /*c.*/Sb;
+                array4 = /*c.*/ Sb;
                 break;
             }
             case 1: {
-                array4 = /*c.*/Qb;
+                array4 = /*c.*/ Qb;
                 break;
             }
             case 2: {
-                array4 = /*c.*/Ob;
+                array4 = /*c.*/ Ob;
                 break;
             }
             case 3: {
-                array4 = /*c.*/Mb;
+                array4 = /*c.*/ Mb;
                 break;
             }
             case 4: {
-                array4 = /*c.*/Kb;
+                array4 = /*c.*/ Kb;
                 break;
             }
             case 5: {
-                array4 = /*c.*/Ib;
+                array4 = /*c.*/ Ib;
                 break;
             }
             case 6: {
-                array4 = /*c.*/Gb;
+                array4 = /*c.*/ Gb;
                 break;
             }
             case 7: {
-                array4 = /*c.*/Eb;
+                array4 = /*c.*/ Eb;
                 break;
             }
         }
-        a(array4, /*c.*/U, array3);
+        a(array4, /*c.*/ U, array3);
         int i = 0;
         while (i <= 63) {
             array[i] = (array3[/*c.*/vb[i] & '\u00ff'] & '\u00ff');
             if (b) {
-                System.out.println(/*c.*/Yb[55] + i + /*c.*/Yb[1] + array[i]);
+                System.out.println(/*c.*/Yb[55] + i + /*c.*/ Yb[1] + array[i]);
             }
             ++i;
             if (xb != 0) {
@@ -384,7 +386,7 @@ public class c {
                 final int n2 = n;
                 array[n2] *= array2[j] * array2[k];
                 if (b) {
-                    System.out.println(/*c.*/Yb[55] + n + /*c.*/Yb[1] + array[n]);
+                    System.out.println(/*c.*/Yb[55] + n + /*c.*/ Yb[1] + array[n]);
                 }
                 ++n;
                 ++k;
@@ -397,11 +399,12 @@ public class c {
                 break;
             }
         }
-        /*c.*/D += 64;
+        /*c.*/
+        D += 64;
     }
 
     public static void d(final float[] array) {
-        final int xb = /*c.*/Xb;
+        final int xb = /*c.*/ Xb;
         final float[] array2 = {1.0f, 1.3870399f, 1.306563f, 1.1758755f, 1.0f, 0.78569496f, 0.5411961f, 0.27589938f};
         char[] array3 = null;
         final char[] array4 = new char[64];
@@ -409,80 +412,80 @@ public class c {
         if (/*c.*/Z == 1) {
             switch (/*c.*/Y) {
                 case 0: {
-                    array3 = /*c.*/Sb;
+                    array3 = /*c.*/ Sb;
                     break;
                 }
                 case 1: {
-                    array3 = /*c.*/Qb;
+                    array3 = /*c.*/ Qb;
                     break;
                 }
                 case 2: {
-                    array3 = /*c.*/Ob;
+                    array3 = /*c.*/ Ob;
                     break;
                 }
                 case 3: {
-                    array3 = /*c.*/Mb;
+                    array3 = /*c.*/ Mb;
                     break;
                 }
                 case 4: {
-                    array3 = /*c.*/Kb;
+                    array3 = /*c.*/ Kb;
                     break;
                 }
                 case 5: {
-                    array3 = /*c.*/Ib;
+                    array3 = /*c.*/ Ib;
                     break;
                 }
                 case 6: {
-                    array3 = /*c.*/Gb;
+                    array3 = /*c.*/ Gb;
                     break;
                 }
                 case 7: {
-                    array3 = /*c.*/Eb;
+                    array3 = /*c.*/ Eb;
                     break;
                 }
             }
         } else {
             switch (/*c.*/Y) {
                 case 0: {
-                    array3 = /*c.*/Tb;
+                    array3 = /*c.*/ Tb;
                     break;
                 }
                 case 1: {
-                    array3 = /*c.*/Rb;
+                    array3 = /*c.*/ Rb;
                     break;
                 }
                 case 2: {
-                    array3 = /*c.*/Pb;
+                    array3 = /*c.*/ Pb;
                     break;
                 }
                 case 3: {
-                    array3 = /*c.*/Nb;
+                    array3 = /*c.*/ Nb;
                     break;
                 }
                 case 4: {
-                    array3 = /*c.*/Lb;
+                    array3 = /*c.*/ Lb;
                     break;
                 }
                 case 5: {
-                    array3 = /*c.*/Jb;
+                    array3 = /*c.*/ Jb;
                     break;
                 }
                 case 6: {
-                    array3 = /*c.*/Hb;
+                    array3 = /*c.*/ Hb;
                     break;
                 }
                 case 7: {
-                    array3 = /*c.*/Fb;
+                    array3 = /*c.*/ Fb;
                     break;
                 }
             }
         }
-        a(array3, /*c.*/V, array4);
+        a(array3, /*c.*/ V, array4);
         int i = 0;
         while (i <= 63) {
             array[i] = (array4[/*c.*/vb[i] & '\u00ff'] & '\u00ff');
             if (b) {
-                System.out.println(/*c.*/Yb[15] + i + /*c.*/Yb[1] + array[i]);
+                System.out.println(/*c.*/Yb[15] + i + /*c.*/ Yb[1] + array[i]);
             }
             ++i;
             if (xb != 0) {
@@ -497,7 +500,7 @@ public class c {
                 final int n2 = n;
                 array[n2] *= array2[j] * array2[k];
                 if (b) {
-                    System.out.println(/*c.*/Yb[15] + n + /*c.*/Yb[1] + array[n]);
+                    System.out.println(/*c.*/Yb[15] + n + /*c.*/ Yb[1] + array[n]);
                 }
                 ++n;
                 ++k;
@@ -510,7 +513,8 @@ public class c {
                 break;
             }
         }
-        /*c.*/D += 64;
+        /*c.*/
+        D += 64;
     }
 
     public static int a(final double n, final int n2) {
@@ -518,28 +522,32 @@ public class c {
     }
 
     public static void a() {
-        final int xb = /*c.*/Xb;
+        final int xb = /*c.*/ Xb;
         final int n = 65536;
         final int n2 = n >> 1;
         final boolean b = false;
         int i = 0;
         int n3 = -128;
         while (i < 256) {
-            /*c.*/E[i] = a(1.597656, n) * n3 + n2 >> 16;
+            /*c.*/
+            E[i] = a(1.597656, n) * n3 + n2 >> 16;
             if (b) {
-                System.out.println(/*c.*/Yb[5] + i + /*c.*/Yb[1] + /*c.*/E[i]);
+                System.out.println(/*c.*/Yb[5] + i + /*c.*/ Yb[1] + /*c.*/ E[i]);
             }
-            /*c.*/F[i] = a(2.015625, n) * n3 + n2 >> 16;
+            /*c.*/
+            F[i] = a(2.015625, n) * n3 + n2 >> 16;
             if (b) {
-                System.out.println(/*c.*/Yb[4] + i + /*c.*/Yb[1] + /*c.*/F[i]);
+                System.out.println(/*c.*/Yb[4] + i + /*c.*/ Yb[1] + /*c.*/ F[i]);
             }
-            /*c.*/G[i] = -a(0.8125, n) * n3;
+            /*c.*/
+            G[i] = -a(0.8125, n) * n3;
             if (b) {
-                System.out.println(/*c.*/Yb[3] + i + /*c.*/Yb[1] + /*c.*/G[i]);
+                System.out.println(/*c.*/Yb[3] + i + /*c.*/ Yb[1] + /*c.*/ G[i]);
             }
-            /*c.*/H[i] = -a(0.390625, n) * n3 + n2;
+            /*c.*/
+            H[i] = -a(0.390625, n) * n3 + n2;
             if (b) {
-                System.out.println(/*c.*/Yb[2] + i + /*c.*/Yb[1] + /*c.*/H[i]);
+                System.out.println(/*c.*/Yb[2] + i + /*c.*/ Yb[1] + /*c.*/ H[i]);
             }
             ++i;
             ++n3;
@@ -550,9 +558,10 @@ public class c {
         int j = 0;
         int n4 = -16;
         while (j < 256) {
-            /*c.*/I[j] = a(1.164, n) * n4 + n2 >> 16;
+            /*c.*/
+            I[j] = a(1.164, n) * n4 + n2 >> 16;
             if (b) {
-                System.out.println(/*c.*/Yb[0] + j + /*c.*/Yb[1] + /*c.*/I[j]);
+                System.out.println(/*c.*/Yb[0] + j + /*c.*/ Yb[1] + /*c.*/ I[j]);
             }
             ++j;
             ++n4;
@@ -563,13 +572,14 @@ public class c {
     }
 
     public static void b() {
-        final int xb = /*c.*/Xb;
+        final int xb = /*c.*/ Xb;
         final boolean b = false;
         int i = 0;
         while (i < 256) {
-            /*c.*/qb[i] = '\0';
+            /*c.*/
+            qb[i] = '\0';
             if (b) {
-                System.out.println(/*c.*/Yb[8] + i + /*c.*/Yb[1] + (short) (/*c.*/qb[i] & '\u00ff'));
+                System.out.println(/*c.*/Yb[8] + i + /*c.*/ Yb[1] + (short) (/*c.*/qb[i] & '\u00ff'));
             }
             ++i;
             if (xb != 0) {
@@ -578,9 +588,10 @@ public class c {
         }
         int j = 0;
         while (j < 256) {
-            /*c.*/qb[j + 256] = (char) (j & 0xFF);
+            /*c.*/
+            qb[j + 256] = (char) (j & 0xFF);
             if (b) {
-                System.out.println(/*c.*/Yb[8] + (j + 256) + /*c.*/Yb[1] + (short) (/*c.*/qb[j + 256] & '\u00ff'));
+                System.out.println(/*c.*/Yb[8] + (j + 256) + /*c.*/ Yb[1] + (short) (/*c.*/qb[j + 256] & '\u00ff'));
             }
             ++j;
             if (xb != 0) {
@@ -589,9 +600,10 @@ public class c {
         }
         int k = 256;
         while (k < 640) {
-            /*c.*/qb[k + 256] = '\u00ff';
+            /*c.*/
+            qb[k + 256] = '\u00ff';
             if (b) {
-                System.out.println(/*c.*/Yb[8] + (k + 256) + /*c.*/Yb[1] + (short) (/*c.*/qb[k + 256] & '\u00ff'));
+                System.out.println(/*c.*/Yb[8] + (k + 256) + /*c.*/ Yb[1] + (short) (/*c.*/qb[k + 256] & '\u00ff'));
             }
             ++k;
             if (xb != 0) {
@@ -600,9 +612,10 @@ public class c {
         }
         int l = 0;
         while (l < 384) {
-            /*c.*/qb[l + 256 + 640] = '\0';
+            /*c.*/
+            qb[l + 256 + 640] = '\0';
             if (b) {
-                System.out.println(/*c.*/Yb[8] + (l + 256 + 640) + /*c.*/Yb[1] + (short) (/*c.*/qb[l + 256 + 640] & '\u00ff'));
+                System.out.println(/*c.*/Yb[8] + (l + 256 + 640) + /*c.*/ Yb[1] + (short) (/*c.*/qb[l + 256 + 640] & '\u00ff'));
             }
             ++l;
             if (xb != 0) {
@@ -611,9 +624,10 @@ public class c {
         }
         int n = 0;
         while (n < 128) {
-            /*c.*/qb[n + 256 + 1024] = (char) (n & 0xFF);
+            /*c.*/
+            qb[n + 256 + 1024] = (char) (n & 0xFF);
             if (b) {
-                System.out.println(/*c.*/Yb[8] + (n + 256 + 1024) + /*c.*/Yb[1] + (short) (/*c.*/qb[n + 256 + 1024] & '\u00ff'));
+                System.out.println(/*c.*/Yb[8] + (n + 256 + 1024) + /*c.*/ Yb[1] + (short) (/*c.*/qb[n + 256 + 1024] & '\u00ff'));
             }
             ++n;
             if (xb != 0) {
@@ -625,13 +639,13 @@ public class c {
     public static int a(final char c, final char c2) {
         final char c3 = (char) (((c << 8 & '\uffff') | c2) & '\uffff');
         if (false) {
-            System.out.println(/*c.*/Yb[42] + (int) c + "," + (int) c2 + /*c.*/Yb[43] + (int) c3);
+            System.out.println(/*c.*/Yb[42] + (int) c + "," + (int) c2 + /*c.*/ Yb[43] + (int) c3);
         }
         return c3;
     }
 
     public static void a(final e e, final char[] array, final char[] array2) {
-        final int xb = /*c.*/Xb;
+        final int xb = /*c.*/ Xb;
         final boolean b = false;
         if (b) {
             System.out.println(/*c.*/Yb[52]);
@@ -640,7 +654,7 @@ public class c {
         while (i <= 16) {
             e.a[i] = (char) (array[i] & '\u00ff');
             if (b) {
-                System.out.println(/*c.*/Yb[51] + i + /*c.*/Yb[1] + (int) e.a[i]);
+                System.out.println(/*c.*/Yb[51] + i + /*c.*/ Yb[1] + (int) e.a[i]);
             }
             i = (char) (i + 1);
             if (xb != 0) {
@@ -763,7 +777,8 @@ public class c {
             }
             this.lb += 64L;
             if (com.avocent.kvm.d.c.Xb == 0) {
-                /*break;*/return;//sam
+                /*break;*/
+                return;//sam
             }
         }
         ++this.jb;
@@ -827,12 +842,12 @@ public class c {
     }
 
     public static void a(final short[] array, final char[] array2, final char c) {
-        final int xb = /*c.*/Xb;
-        final int[] pb = /*c.*/pb;
+        final int xb = /*c.*/ Xb;
+        final int[] pb = /*c.*/ pb;
         int n = 0;
         final int n2 = 8;
         final boolean b = false;
-        final float[] array3 = /*c.*/C[c & '\u00ff'];
+        final float[] array3 = /*c.*/ C[c & '\u00ff'];
         int i = 8;
         while (i > 0) {
             Label_0757:
@@ -915,35 +930,35 @@ public class c {
             final int n47 = n44 + n46;
             array2[n30 + 0] = (char) (/*c.*/qb[384 + b(n35 + n43, 3) & 0x3FF] & '\u00ff');
             if (b) {
-                System.out.println(/*c.*/Yb[54] + (n30 + 0) + /*c.*/Yb[1] + (array2[n30 + 0] & '\uffff'));
+                System.out.println(/*c.*/Yb[54] + (n30 + 0) + /*c.*/ Yb[1] + (array2[n30 + 0] & '\uffff'));
             }
             array2[n30 + 7] = (char) (/*c.*/qb[384 + b(n35 - n43, 3) & 0x3FF] & '\u00ff');
             if (b) {
-                System.out.println(/*c.*/Yb[54] + (n30 + 7) + /*c.*/Yb[1] + (array2[n30 + 7] & '\uffff'));
+                System.out.println(/*c.*/Yb[54] + (n30 + 7) + /*c.*/ Yb[1] + (array2[n30 + 7] & '\uffff'));
             }
             array2[n30 + 1] = (char) (/*c.*/qb[384 + b(n37 + n45, 3) & 0x3FF] & '\u00ff');
             if (b) {
-                System.out.println(/*c.*/Yb[54] + (n30 + 1) + /*c.*/Yb[1] + (array2[n30 + 1] & '\uffff'));
+                System.out.println(/*c.*/Yb[54] + (n30 + 1) + /*c.*/ Yb[1] + (array2[n30 + 1] & '\uffff'));
             }
             array2[n30 + 6] = (char) (/*c.*/qb[384 + b(n37 - n45, 3) & 0x3FF] & '\u00ff');
             if (b) {
-                System.out.println(/*c.*/Yb[54] + (n30 + 6) + /*c.*/Yb[1] + (array2[n30 + 6] & '\uffff'));
+                System.out.println(/*c.*/Yb[54] + (n30 + 6) + /*c.*/ Yb[1] + (array2[n30 + 6] & '\uffff'));
             }
             array2[n30 + 2] = (char) (/*c.*/qb[384 + b(n38 + n46, 3) & 0x3FF] & '\u00ff');
             if (b) {
-                System.out.println(/*c.*/Yb[54] + (n30 + 2) + /*c.*/Yb[1] + (array2[n30 + 2] & '\uffff'));
+                System.out.println(/*c.*/Yb[54] + (n30 + 2) + /*c.*/ Yb[1] + (array2[n30 + 2] & '\uffff'));
             }
             array2[n30 + 5] = (char) (/*c.*/qb[384 + b(n38 - n46, 3) & 0x3FF] & '\u00ff');
             if (b) {
-                System.out.println(/*c.*/Yb[54] + (n30 + 5) + /*c.*/Yb[1] + (array2[n30 + 5] & '\uffff'));
+                System.out.println(/*c.*/Yb[54] + (n30 + 5) + /*c.*/ Yb[1] + (array2[n30 + 5] & '\uffff'));
             }
             array2[n30 + 4] = (char) (/*c.*/qb[384 + b(n36 + n47, 3) & 0x3FF] & '\u00ff');
             if (b) {
-                System.out.println(/*c.*/Yb[54] + (n30 + 4) + /*c.*/Yb[1] + (array2[n30 + 4] & '\uffff'));
+                System.out.println(/*c.*/Yb[54] + (n30 + 4) + /*c.*/ Yb[1] + (array2[n30 + 4] & '\uffff'));
             }
             array2[n30 + 3] = (char) (/*c.*/qb[384 + b(n36 - n47, 3) & 0x3FF] & '\u00ff');
             if (b) {
-                System.out.println(/*c.*/Yb[54] + (n30 + 3) + /*c.*/Yb[1] + (array2[n30 + 3] & '\uffff'));
+                System.out.println(/*c.*/Yb[54] + (n30 + 3) + /*c.*/ Yb[1] + (array2[n30 + 3] & '\uffff'));
             }
             n29 += n2;
             ++j;
@@ -1280,7 +1295,7 @@ public class c {
 
     public boolean a(final int n, final int n2, final int[] array, final char c) {
         if (n > this.fb / 8L || n2 > this.gb / 8L) {
-            System.out.println(/*c.*/Yb[32] + n + /*c.*/Yb[33] + n2 + /*c.*/Yb[30] + this.fb + /*c.*/Yb[31] + this.gb);
+            System.out.println(/*c.*/Yb[32] + n + /*c.*/ Yb[33] + n2 + /*c.*/ Yb[30] + this.fb + /*c.*/ Yb[31] + this.gb);
             return false;
         }
         this.a(0, 0, this.P);
@@ -1312,7 +1327,7 @@ public class c {
     }
 
     public boolean b(final int n, final int n2, final int[] array, final char c) {
-        final int xb = /*c.*/Xb;
+        final int xb = /*c.*/ Xb;
         System.out.println(/*c.*/Yb[44]);
         Label_0302:
         {
@@ -5564,32 +5579,57 @@ public class c {
             if (n342 <= n344) {
                 yb2[n341] = new String(charArray86).intern();
                 Yb = yb2;
-                /*c.*/C = new float[4][64];
-                /*c.*/E = new int[256];
-                /*c.*/F = new int[256];
-                /*c.*/G = new int[256];
-                /*c.*/H = new int[256];
-                /*c.*/I = new int[256];
-                /*c.*/J = new int[17];
+                /*c.*/
+                C = new float[4][64];
+                /*c.*/
+                E = new int[256];
+                /*c.*/
+                F = new int[256];
+                /*c.*/
+                G = new int[256];
+                /*c.*/
+                H = new int[256];
+                /*c.*/
+                I = new int[256];
+                /*c.*/
+                J = new int[17];
                 K = new short[]{0, -1, -3, -7, -15, -31, -63, -127, -255, -511, -1023, -2047, -4095, -8191, -16383, -32767};
-                /*c.*/L = new short[256];
-                /*c.*/M = new short[256];
-                /*c.*/N = new short[65536];
-                /*c.*/O = new short[64];
-                /*c.*/S = 16;
-                /*c.*/T = 16;
-                /*c.*/U = 16;
-                /*c.*/V = 16;
-                /*c.*/W = 0;
-                /*c.*/X = 0;
-                /*c.*/Y = 0;
-                /*c.*/Z = 0;
-                /*c.*/bb = 0;
-                /*c.*/cb = 0;
-                /*c.*/db = 0;
-                /*c.*/eb = 0;
-                /*c.*/pb = new int[64];
-                /*c.*/qb = new char[1408];
+                /*c.*/
+                L = new short[256];
+                /*c.*/
+                M = new short[256];
+                /*c.*/
+                N = new short[65536];
+                /*c.*/
+                O = new short[64];
+                /*c.*/
+                S = 16;
+                /*c.*/
+                T = 16;
+                /*c.*/
+                U = 16;
+                /*c.*/
+                V = 16;
+                /*c.*/
+                W = 0;
+                /*c.*/
+                X = 0;
+                /*c.*/
+                Y = 0;
+                /*c.*/
+                Z = 0;
+                /*c.*/
+                bb = 0;
+                /*c.*/
+                cb = 0;
+                /*c.*/
+                db = 0;
+                /*c.*/
+                eb = 0;
+                /*c.*/
+                pb = new int[64];
+                /*c.*/
+                qb = new char[1408];
                 vb = new char[]{'\0', '\u0001', '\u0005', '\u0006', '\u000e', '\u000f', '\u001b', '\u001c', '\u0002', '\u0004', '\u0007', '\r', '\u0010', '\u001a', '\u001d', '*', '\u0003', '\b', '\f', '\u0011', '\u0019', '\u001e', ')', '+', '\t', '\u000b', '\u0012', '\u0018', '\u001f', '(', ',', '5', '\n', '\u0013', '\u0017', ' ', '\'', '-', '4', '6', '\u0014', '\u0016', '!', '&', '.', '3', '7', '<', '\u0015', '\"', '%', '/', '2', '8', ';', '=', '#', '$', '0', '1', '9', ':', '>', '?'};
                 wb = new char[]{'\0', '\0', '\u0001', '\u0005', '\u0001', '\u0001', '\u0001', '\u0001', '\u0001', '\u0001', '\0', '\0', '\0', '\0', '\0', '\0', '\0'};
                 xb = new char[]{'\0', '\u0001', '\u0002', '\u0003', '\u0004', '\u0005', '\u0006', '\u0007', '\b', '\t', '\n', '\u000b'};
@@ -5601,7 +5641,8 @@ public class c {
                 Db = new char[]{'\0', '\u0001', '\u0002', '\u0003', '\u0011', '\u0004', '\u0005', '!', '1', '\u0006', '\u0012', 'A', 'Q', '\u0007', 'a', 'q', '\u0013', '\"', '2', '\u0081', '\b', '\u0014', 'B', '\u0091', '¡', '±', '\u00c1', '\t', '#', '3', 'R', '\u00f0', '\u0015', 'b', 'r', '\u00d1', '\n', '\u0016', '$', '4', '\u00e1', '%', '\u00f1', '\u0017', '\u0018', '\u0019', '\u001a', '&', '\'', '(', ')', '*', '5', '6', '7', '8', '9', ':', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '\u0082', '\u0083', '\u0084', '\u0085', '\u0086', '\u0087', '\u0088', '\u0089', '\u008a', '\u0092', '\u0093', '\u0094', '\u0095', '\u0096', '\u0097', '\u0098', '\u0099', '\u009a', '¢', '£', '¤', '¥', '¦', '§', '¨', '©', 'ª', '²', '³', '´', 'µ', '¶', '·', '¸', '¹', 'º', '\u00c2', '\u00c3', '\u00c4', '\u00c5', '\u00c6', '\u00c7', '\u00c8', '\u00c9', '\u00ca', '\u00d2', '\u00d3', '\u00d4', '\u00d5', '\u00d6', '\u00d7', '\u00d8', '\u00d9', '\u00da', '\u00e2', '\u00e3', '\u00e4', '\u00e5', '\u00e6', '\u00e7', '\u00e8', '\u00e9', '\u00ea', '\u00f2', '\u00f3', '\u00f4', '\u00f5', '\u00f6', '\u00f7', '\u00f8', '\u00f9', '\u00fa'};
                 Eb = new char[]{'\u0002', '\u0001', '\u0001', '\u0002', '\u0003', '\u0005', '\u0006', '\u0007', '\u0001', '\u0001', '\u0001', '\u0002', '\u0003', '\u0007', '\u0007', '\u0006', '\u0001', '\u0001', '\u0002', '\u0003', '\u0005', '\u0007', '\b', '\u0007', '\u0001', '\u0002', '\u0002', '\u0003', '\u0006', '\n', '\n', '\u0007', '\u0002', '\u0002', '\u0004', '\u0007', '\b', '\r', '\f', '\t', '\u0003', '\u0004', '\u0006', '\b', '\n', '\r', '\u000e', '\u000b', '\u0006', '\b', '\t', '\n', '\f', '\u000f', '\u000f', '\f', '\t', '\u000b', '\u000b', '\f', '\u000e', '\f', '\f', '\f'};
                 Fb = new char[]{'\u0003', '\u0003', '\u0004', '\b', '\u0012', '\u0012', '\u0012', '\u0012', '\u0003', '\u0003', '\u0004', '\f', '\u0012', '\u0012', '\u0012', '\u0012', '\u0004', '\u0004', '\n', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\b', '\f', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012', '\u0012'};
-                /*c.*/Gb = new char[]{'\u0003', '\u0002', '\u0001', '\u0003', '\u0004', '\u0007', '\t', '\u000b', '\u0002', '\u0002', '\u0002', '\u0003', '\u0004', '\n', '\u000b', '\n', '\u0002', '\u0002', '\u0003', '\u0004', '\u0007', '\n', '\f', '\n', '\u0002', '\u0003', '\u0004', '\u0005', '\t', '\u0010', '\u000f', '\u000b', '\u0003', '\u0004', '\u0006', '\n', '\f', '\u0014', '\u0013', '\u000e', '\u0004', '\u0006', '\n', '\f', '\u000f', '\u0013', '\u0015', '\u0011', '\t', '\f', '\u000e', '\u0010', '\u0013', '\u0016', '\u0016', '\u0012', '\r', '\u0011', '\u0011', '\u0012', '\u0015', '\u0012', '\u0013', '\u0012'};
+                /*c.*/
+                Gb = new char[]{'\u0003', '\u0002', '\u0001', '\u0003', '\u0004', '\u0007', '\t', '\u000b', '\u0002', '\u0002', '\u0002', '\u0003', '\u0004', '\n', '\u000b', '\n', '\u0002', '\u0002', '\u0003', '\u0004', '\u0007', '\n', '\f', '\n', '\u0002', '\u0003', '\u0004', '\u0005', '\t', '\u0010', '\u000f', '\u000b', '\u0003', '\u0004', '\u0006', '\n', '\f', '\u0014', '\u0013', '\u000e', '\u0004', '\u0006', '\n', '\f', '\u000f', '\u0013', '\u0015', '\u0011', '\t', '\f', '\u000e', '\u0010', '\u0013', '\u0016', '\u0016', '\u0012', '\r', '\u0011', '\u0011', '\u0012', '\u0015', '\u0012', '\u0013', '\u0012'};
                 Hb = new char[]{'\u0004', '\u0005', '\u0006', '\r', '\u001b', '\u001b', '\u001b', '\u001b', '\u0005', '\u0005', '\u0007', '\u0012', '\u001b', '\u001b', '\u001b', '\u001b', '\u0006', '\u0007', '\u000f', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\r', '\u0012', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b', '\u001b'};
                 Ib = new char[]{'\u0006', '\u0004', '\u0003', '\u0006', '\t', '\u000f', '\u0013', '\u0016', '\u0004', '\u0004', '\u0005', '\u0007', '\t', '\u0015', '\u0016', '\u0014', '\u0005', '\u0004', '\u0006', '\t', '\u000f', '\u0015', '\u0019', '\u0015', '\u0005', '\u0006', '\b', '\n', '\u0013', ' ', '\u001e', '\u0017', '\u0006', '\b', '\r', '\u0015', '\u0019', '(', '&', '\u001c', '\t', '\r', '\u0014', '\u0018', '\u001e', '\'', '*', '\"', '\u0012', '\u0018', '\u001d', ' ', '&', '-', '-', '%', '\u001b', '\"', '#', '$', '*', '%', '&', '%'};
                 Jb = new char[]{'\t', '\n', '\r', '\u001a', '7', '7', '7', '7', '\n', '\u000b', '\u000e', '%', '7', '7', '7', '7', '\r', '\u000e', '\u001f', '7', '7', '7', '7', '7', '\u001a', '%', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7'};

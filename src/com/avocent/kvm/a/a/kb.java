@@ -17,7 +17,7 @@ public class kb extends y {
     protected boolean q;
     protected boolean r;
     protected boolean s;
-    private static final String[] z;
+    private static final String[] z = {"UserLoginResponse getPayload() Misc. status bit field : ", "UserLoginResponse setData() Misc. status bit field : ", "User Login Response"};
 
     public kb() {
         super(33536);

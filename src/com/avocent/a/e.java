@@ -21,9 +21,9 @@ public class e {
     protected com.avocent.kvm.b.f.e g;//Originally named g
     protected d h;//Originally named h
     public static int i;//Originally named i
-    static String[] z;
+    static String[] z = {">>", "<<"};
 
-    public e(/*final String a,*/ final e f) {
+    public e(/*final String a,*/final e f) {
         this.c = new PropertyChangeSupport(this);
         this.hashmap_d = new HashMap();
         this.hashmap_e = new HashMap();
@@ -185,104 +185,4 @@ public class e {
         this.g = g;
     }
 
-    static {
-        final String[] z2 = new String[2];
-        final int n = 0;
-        final char[] charArray = ".O".toCharArray();
-        int length;
-        int n3;
-        final int n2 = n3 = (length = charArray.length);
-        int n4 = 0;
-        while (true) {
-            Label_0098:
-            {
-                if (n2 > 1) {
-                    break Label_0098;
-                }
-                length = (n3 = n4);
-                do {
-                    final char c = charArray[n3];
-                    char c2 = '\0';
-                    switch (n4 % 5) {
-                        case 0: {
-                            c2 = '\u0010';
-                            break;
-                        }
-                        case 1: {
-                            c2 = 'q';
-                            break;
-                        }
-                        case 2: {
-                            c2 = '{';
-                            break;
-                        }
-                        case 3: {
-                            c2 = 'r';
-                            break;
-                        }
-                        default: {
-                            c2 = 'a';
-                            break;
-                        }
-                    }
-                    charArray[length] = (char) (c ^ c2);
-                    ++n4;
-                } while (n2 == 0);
-            }
-            if (n2 > n4) {
-                continue;
-            }
-            break;
-        }
-        z2[n] = new String(charArray).intern();
-        final int n5 = 1;
-        final char[] charArray2 = ",M".toCharArray();
-        int length2;
-        int n7;
-        final int n6 = n7 = (length2 = charArray2.length);
-        int n8 = 0;
-        while (true) {
-            Label_0214:
-            {
-                if (n6 > 1) {
-                    break Label_0214;
-                }
-                length2 = (n7 = n8);
-                do {
-                    final char c3 = charArray2[n7];
-                    char c4 = '\0';
-                    switch (n8 % 5) {
-                        case 0: {
-                            c4 = '\u0010';
-                            break;
-                        }
-                        case 1: {
-                            c4 = 'q';
-                            break;
-                        }
-                        case 2: {
-                            c4 = '{';
-                            break;
-                        }
-                        case 3: {
-                            c4 = 'r';
-                            break;
-                        }
-                        default: {
-                            c4 = 'a';
-                            break;
-                        }
-                    }
-                    charArray2[length2] = (char) (c3 ^ c4);
-                    ++n8;
-                } while (n6 == 0);
-            }
-            if (n6 <= n8) {
-                z2[n5] = new String(charArray2).intern();
-                z = z2;
-                break;
-            }
-            continue;
-        }
-    }
 }

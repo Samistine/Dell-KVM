@@ -16,7 +16,7 @@ public class AbstractAction_f extends AbstractAction {
 
     i a;
     protected JDialog_b b;
-    private static final String z;
+    private static final String z = "MainMenu_Help_About";
 
     public AbstractAction_f(i a) {
         super(d.b(AbstractAction_f.z));
@@ -32,55 +32,5 @@ public class AbstractAction_f extends AbstractAction {
         }
         this.b.setLocationRelativeTo(this.a.c());
         this.b.setVisible(true);
-    }
-
-    static {
-        final char[] charArray = "\u0004Eb\u00039,J~2<,H{25+K~\u0019".toCharArray();
-        int length;
-        int n2;
-        final int n = n2 = (length = charArray.length);
-        int n3 = 0;
-        while (true) {
-            Label_0094:
-            {
-                if (n > 1) {
-                    break Label_0094;
-                }
-                length = (n2 = n3);
-                do {
-                    final char c = charArray[n2];
-                    char c2 = '\0';
-                    switch (n3 % 5) {
-                        case 0: {
-                            c2 = 'I';
-                            break;
-                        }
-                        case 1: {
-                            c2 = '$';
-                            break;
-                        }
-                        case 2: {
-                            c2 = '\u000b';
-                            break;
-                        }
-                        case 3: {
-                            c2 = 'm';
-                            break;
-                        }
-                        default: {
-                            c2 = 't';
-                            break;
-                        }
-                    }
-                    charArray[length] = (char) (c ^ c2);
-                    ++n3;
-                } while (n == 0);
-            }
-            if (n <= n3) {
-                z = new String(charArray).intern();
-                break;
-            }
-            continue;
-        }
     }
 }

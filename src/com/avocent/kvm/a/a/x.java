@@ -7,7 +7,7 @@ public class x extends h {
 
     boolean j;
     int k;
-    private static final String z;
+    private static final String z = "Video Enable Request";
 
     public x(final boolean j) {
         super(782);
@@ -39,53 +39,4 @@ public class x extends h {
         return array;
     }
 
-    static {
-        final char[] charArray = "\u001b kG_m\faCR!,/pU<<jQD".toCharArray();
-        int length;
-        int n2;
-        final int n = n2 = (length = charArray.length);
-        int n3 = 0;
-        while (true) {
-            Label_0094:
-            {
-                if (n > 1) {
-                    break Label_0094;
-                }
-                length = (n2 = n3);
-                do {
-                    final char c = charArray[n2];
-                    char c2 = '\0';
-                    switch (n3 % 5) {
-                        case 0: {
-                            c2 = 'M';
-                            break;
-                        }
-                        case 1: {
-                            c2 = 'I';
-                            break;
-                        }
-                        case 2: {
-                            c2 = '\u000f';
-                            break;
-                        }
-                        case 3: {
-                            c2 = '\"';
-                            break;
-                        }
-                        default: {
-                            c2 = '0';
-                            break;
-                        }
-                    }
-                    charArray[length] = (char) (c ^ c2);
-                    ++n3;
-                } while (n == 0);
-            }
-            if (n <= n3) {
-                z = new String(charArray).intern();
-                break;
-            }
-            continue;
-        }
-    }
 }

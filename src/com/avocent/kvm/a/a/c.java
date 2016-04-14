@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class c extends b {
 
     protected ArrayList i;
-    private static final String[] z;
+    private static final String[] z = {"Method not implemented.", "AvailableServerNames"};
 
     public c() {
         super(33840);

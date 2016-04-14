@@ -12,7 +12,7 @@ public class vb extends b implements d {
 
     int f;
     int g;
-    private static final String z;
+    private static final String z = "Mouse Data Request";
 
     public vb() {
         super(63);
@@ -76,53 +76,4 @@ public class vb extends b implements d {
         return 16;
     }
 
-    static {
-        final char[] charArray = "|_%l\u0001\u0011t1k\u0005\u0011b5n\u0011TC$".toCharArray();
-        int length;
-        int n2;
-        final int n = n2 = (length = charArray.length);
-        int n3 = 0;
-        while (true) {
-            Label_0094:
-            {
-                if (n > 1) {
-                    break Label_0094;
-                }
-                length = (n2 = n3);
-                do {
-                    final char c = charArray[n2];
-                    char c2 = '\0';
-                    switch (n3 % 5) {
-                        case 0: {
-                            c2 = '1';
-                            break;
-                        }
-                        case 1: {
-                            c2 = '0';
-                            break;
-                        }
-                        case 2: {
-                            c2 = 'P';
-                            break;
-                        }
-                        case 3: {
-                            c2 = '\u001f';
-                            break;
-                        }
-                        default: {
-                            c2 = 'd';
-                            break;
-                        }
-                    }
-                    charArray[length] = (char) (c ^ c2);
-                    ++n3;
-                } while (n == 0);
-            }
-            if (n <= n3) {
-                z = new String(charArray).intern();
-                break;
-            }
-            continue;
-        }
-    }
 }

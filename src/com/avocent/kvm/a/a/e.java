@@ -9,7 +9,7 @@ public class e extends b {
 
     protected int i;
     protected boolean j;
-    private static final String z;
+    private static final String z = "KeyboardDataRequest";
 
     public e() {
         super(512);
@@ -39,53 +39,4 @@ public class e extends b {
         return e.z;
     }
 
-    static {
-        final char[] charArray = "~[5\"\fTL(\u0004\u0002A_\u001e%\u0012@[?4".toCharArray();
-        int length;
-        int n2;
-        final int n = n2 = (length = charArray.length);
-        int n3 = 0;
-        while (true) {
-            Label_0094:
-            {
-                if (n > 1) {
-                    break Label_0094;
-                }
-                length = (n2 = n3);
-                do {
-                    final char c = charArray[n2];
-                    char c2 = '\0';
-                    switch (n3 % 5) {
-                        case 0: {
-                            c2 = '5';
-                            break;
-                        }
-                        case 1: {
-                            c2 = '>';
-                            break;
-                        }
-                        case 2: {
-                            c2 = 'L';
-                            break;
-                        }
-                        case 3: {
-                            c2 = '@';
-                            break;
-                        }
-                        default: {
-                            c2 = 'c';
-                            break;
-                        }
-                    }
-                    charArray[length] = (char) (c ^ c2);
-                    ++n3;
-                } while (n == 0);
-            }
-            if (n <= n3) {
-                z = new String(charArray).intern();
-                break;
-            }
-            continue;
-        }
-    }
 }

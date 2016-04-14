@@ -8,7 +8,7 @@ public class tb extends b {
     int i;
     int j;
     String k;
-    private static final String z;
+    private static final String z = "SharingRequest";
 
     public tb() {
         super(33793);
@@ -45,19 +45,8 @@ public class tb extends b {
         return tb.z;
     }
 
-    static {
-        final char[] charArray = "ub\u0002~EHm1i]So\u0010x".toCharArray();
-        int length;
-        int n2;
-        final int n = n2 = (length = charArray.length);
-        int n3 = 0;
-        while (true) {
-            Label_0094:
-            {
-                if (n > 1) {
-                    break Label_0094;
-                }
-                length = (n2 = n3);
+}
+length = (n2 = n3);
                 do {
                     final char c = charArray[n2];
                     char c2 = '\0';

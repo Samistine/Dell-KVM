@@ -17,7 +17,7 @@ public class nb extends y {
     protected int q;
     protected int r;
     protected int s;
-    private static final String z;
+    private static final String z = "VideoSetupData";
 
     public nb() {
         super(33282);
@@ -83,53 +83,4 @@ public class nb extends y {
         return this.s;
     }
 
-    static {
-        final char[] charArray = "\u0019nP\u0017O\u001cb@\u0007P\u000bf@\u0013".toCharArray();
-        int length;
-        int n2;
-        final int n = n2 = (length = charArray.length);
-        int n3 = 0;
-        while (true) {
-            Label_0094:
-            {
-                if (n > 1) {
-                    break Label_0094;
-                }
-                length = (n2 = n3);
-                do {
-                    final char c = charArray[n2];
-                    char c2 = '\0';
-                    switch (n3 % 5) {
-                        case 0: {
-                            c2 = 'O';
-                            break;
-                        }
-                        case 1: {
-                            c2 = '\u0007';
-                            break;
-                        }
-                        case 2: {
-                            c2 = '4';
-                            break;
-                        }
-                        case 3: {
-                            c2 = 'r';
-                            break;
-                        }
-                        default: {
-                            c2 = ' ';
-                            break;
-                        }
-                    }
-                    charArray[length] = (char) (c ^ c2);
-                    ++n3;
-                } while (n == 0);
-            }
-            if (n <= n3) {
-                z = new String(charArray).intern();
-                break;
-            }
-            continue;
-        }
-    }
 }

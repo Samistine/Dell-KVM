@@ -21,7 +21,7 @@ public class u extends h {
     protected int q;
     protected boolean r;
     protected int s;
-    private static final String[] z;
+    private static final String[] z = {"RIP ID contains non-hex characters", "Login Request", " Client random in request: ", "UTF-8", "UserLoginRequest setShareMode() ", "Unexpected share mode value: "};
 
     public u() {
         super(256);

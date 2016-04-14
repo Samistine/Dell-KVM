@@ -13,7 +13,7 @@ public abstract class b extends a {
     int f;
     protected String g;
     public static int h;
-    private static final String z;
+    private static final String z = "BEEF";
 
     public b(final int d) {
         this.f = 0;
@@ -63,53 +63,4 @@ public abstract class b extends a {
         return new byte[]{66, 69, 69, 70, (byte) (n >>> 8 & 0xFF), (byte) (n & 0xFF), (byte) (n2 >>> 8 & 0xFF), (byte) (n2 & 0xFF)};
     }
 
-    static {
-        final char[] charArray = "cCHZ".toCharArray();
-        int length;
-        int n2;
-        final int n = n2 = (length = charArray.length);
-        int n3 = 0;
-        while (true) {
-            Label_0094:
-            {
-                if (n > 1) {
-                    break Label_0094;
-                }
-                length = (n2 = n3);
-                do {
-                    final char c = charArray[n2];
-                    char c2 = '\0';
-                    switch (n3 % 5) {
-                        case 0: {
-                            c2 = '!';
-                            break;
-                        }
-                        case 1: {
-                            c2 = '\u0006';
-                            break;
-                        }
-                        case 2: {
-                            c2 = '\r';
-                            break;
-                        }
-                        case 3: {
-                            c2 = '\u001c';
-                            break;
-                        }
-                        default: {
-                            c2 = ' ';
-                            break;
-                        }
-                    }
-                    charArray[length] = (char) (c ^ c2);
-                    ++n3;
-                } while (n == 0);
-            }
-            if (n <= n3) {
-                z = new String(charArray).intern();
-                break;
-            }
-            continue;
-        }
-    }
 }

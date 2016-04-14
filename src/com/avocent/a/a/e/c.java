@@ -25,7 +25,7 @@ public class c extends f {
     protected k r;
     protected nb s;
     public static int t;
-    private static final String z;
+    private static final String z = "TabbedOptionsDialog";
 
     public c(final i p) {
         super(z, p);//Sam
@@ -137,55 +137,5 @@ public class c extends f {
             }
         }
         super.j();
-    }
-
-    static {
-        final char[] charArray = "1TT\u0017\u0012\u0001zF\u0001\u001e\n[E1\u001e\u0004YY\u0012".toCharArray();
-        int length;
-        int n2;
-        final int n = n2 = (length = charArray.length);
-        int n3 = 0;
-        while (true) {
-            Label_0094:
-            {
-                if (n > 1) {
-                    break Label_0094;
-                }
-                length = (n2 = n3);
-                do {
-                    final char c = charArray[n2];
-                    char c2 = '\0';
-                    switch (n3 % 5) {
-                        case 0: {
-                            c2 = 'e';
-                            break;
-                        }
-                        case 1: {
-                            c2 = '5';
-                            break;
-                        }
-                        case 2: {
-                            c2 = '6';
-                            break;
-                        }
-                        case 3: {
-                            c2 = 'u';
-                            break;
-                        }
-                        default: {
-                            c2 = 'w';
-                            break;
-                        }
-                    }
-                    charArray[length] = (char) (c ^ c2);
-                    ++n3;
-                } while (n == 0);
-            }
-            if (n <= n3) {
-                z = new String(charArray).intern();
-                break;
-            }
-            continue;
-        }
     }
 }

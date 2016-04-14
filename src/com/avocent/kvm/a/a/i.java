@@ -12,7 +12,7 @@ public class i extends h {
     protected int k;
     protected boolean l;
     protected boolean m;
-    private static final String z;
+    private static final String z = "SetDVCColorDepthMessage";
 
     public i() {
         super(1027);
@@ -48,53 +48,4 @@ public class i extends h {
         this.m = ((array2[3] & 0xFF) > 0);
     }
 
-    static {
-        final char[] charArray = "\u0015j^8\u0002\u0005LE\u0010;4KO\f .BO\u000f''hO".toCharArray();
-        int length;
-        int n2;
-        final int n = n2 = (length = charArray.length);
-        int n3 = 0;
-        while (true) {
-            Label_0094:
-            {
-                if (n > 1) {
-                    break Label_0094;
-                }
-                length = (n2 = n3);
-                do {
-                    final char c = charArray[n2];
-                    char c2 = '\0';
-                    switch (n3 % 5) {
-                        case 0: {
-                            c2 = 'F';
-                            break;
-                        }
-                        case 1: {
-                            c2 = '\u000f';
-                            break;
-                        }
-                        case 2: {
-                            c2 = '*';
-                            break;
-                        }
-                        case 3: {
-                            c2 = '|';
-                            break;
-                        }
-                        default: {
-                            c2 = 'T';
-                            break;
-                        }
-                    }
-                    charArray[length] = (char) (c ^ c2);
-                    ++n3;
-                } while (n == 0);
-            }
-            if (n <= n3) {
-                z = new String(charArray).intern();
-                break;
-            }
-            continue;
-        }
-    }
 }

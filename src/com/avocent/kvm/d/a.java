@@ -34,7 +34,8 @@ public class a extends v implements db {
         if (fb instanceof j) {
             this.r = (j) fb;
             if (com.avocent.kvm.d.c.Xb == 0) {
-                /*break;*/return;//Sam
+                /*break;*/
+                return;//Sam
             }
         }
         throw new RuntimeException(a.C[0] + fb.getClass().getName());
@@ -136,13 +137,14 @@ public class a extends v implements db {
         n3 /= 4;
         this.u = false;
         if (n % 8 != 0) {
-            System.out.println(/*a.*/C[3] + n + /*a.*/C[6] + n2);
+            System.out.println(/*a.*/C[3] + n + /*a.*/ C[6] + n2);
             System.out.println(/*a.*/C[2]);
-            /*break;*/return;//Sam
+            /*break;*/
+            return;//Sam
         }
         z &= 0x1;
         if (this.z != z || this.A != a || this.B != b) {
-            System.out.println(/*a.*/C[1] + z + /*a.*/C[4] + a + /*a.*/C[5] + b);
+            System.out.println(/*a.*/C[1] + z + /*a.*/ C[4] + a + /*a.*/ C[5] + b);
             this.s.a(z, a, b);
             this.b.a().a(/*a.*/C[9], Integer.toString(z));
             this.b.a().a(/*a.*/C[7], Integer.toString(a));

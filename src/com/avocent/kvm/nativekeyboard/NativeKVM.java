@@ -15,7 +15,7 @@ public class NativeKVM {
 
     protected static HashMap a;
     public static int b;
-    private static final String[] z;
+    private static final String[] z = {"1.4", "Java Version    [", "1.5", "getContentWindow", " Native window ID: ", "xGetInputFocus", "Window Peer     [", "Did not find Java 1.5 X11 peer component class.", "sun.awt.X11ComponentPeer", " Peer component is not an instance of a X11ComponentPeer", "sun.awt.X11.XFramePeer", "Peer Class Name [", "java.version", " VideoPanel native hook being set before panel was added to a Window."};
 
     public static void a(final Component component, final boolean b) throws Exception {
         final Window windowAncestor = SwingUtilities.getWindowAncestor(component);
@@ -141,56 +141,8 @@ public class NativeKVM {
 
     static native void setCursorLocation(final long p0, final int p1, final int p2);
 
-    static {
-        final String[] z2 = new String[14];
-        final int n = 0;
-        final char[] charArray = "x\u000f<".toCharArray();
-        int length;
-        int n3;
-        final int n2 = n3 = (length = charArray.length);
-        int n4 = 0;
-        while (true) {
-            Label_0098:
-            {
-                if (n2 > 1) {
-                    break Label_0098;
-                }
-                length = (n3 = n4);
-                do {
-                    final char c = charArray[n3];
-                    char c2 = '\0';
-                    switch (n4 % 5) {
-                        case 0: {
-                            c2 = 'I';
-                            break;
-                        }
-                        case 1: {
-                            c2 = '!';
-                            break;
-                        }
-                        case 2: {
-                            c2 = '\b';
-                            break;
-                        }
-                        case 3: {
-                            c2 = '\u0007';
-                            break;
-                        }
-                        default: {
-                            c2 = '\u0013';
-                            break;
-                        }
-                    }
-                    charArray[length] = (char) (c ^ c2);
-                    ++n4;
-                } while (n2 == 0);
-            }
-            if (n2 > n4) {
-                continue;
-            }
-            break;
-        }
-        z2[n] = new String(charArray).intern();
+}
+z2[n] = new String(charArray).intern();
         final int n5 = 1;
         final char[] charArray2 = "\u0003@~f3\u001fDztz&O('3iz".toCharArray();
         int length2;

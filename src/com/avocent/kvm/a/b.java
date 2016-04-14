@@ -13,7 +13,7 @@ import javax.net.ssl.X509TrustManager;
 class b implements X509TrustManager {
 
     final l a;
-    private static final String[] z;
+    private static final String[] z = {" SSL: checkClientTrusted() called.","Failed to authenticate server connection."," SSL: checkServerTrusted() called."," SSL: getAcceptedIssuers() called."};
 
     b(final l a) throws CertificateException {
         this.a = a;

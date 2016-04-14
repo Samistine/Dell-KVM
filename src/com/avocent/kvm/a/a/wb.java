@@ -12,7 +12,7 @@ public class wb extends b implements d {
 
     int f;
     int g;
-    private static final String z;
+    private static final String z = "Mouse Delta Request";
 
     public wb() {
         super(63);
@@ -73,53 +73,4 @@ public class wb extends b implements d {
         return 16;
     }
 
-    static {
-        final char[] charArray = "t$`'\u0016\u0019\u000fp8\u0007XkG1\u0002L.f ".toCharArray();
-        int length;
-        int n2;
-        final int n = n2 = (length = charArray.length);
-        int n3 = 0;
-        while (true) {
-            Label_0094:
-            {
-                if (n > 1) {
-                    break Label_0094;
-                }
-                length = (n2 = n3);
-                do {
-                    final char c = charArray[n2];
-                    char c2 = '\0';
-                    switch (n3 % 5) {
-                        case 0: {
-                            c2 = '9';
-                            break;
-                        }
-                        case 1: {
-                            c2 = 'K';
-                            break;
-                        }
-                        case 2: {
-                            c2 = '\u0015';
-                            break;
-                        }
-                        case 3: {
-                            c2 = 'T';
-                            break;
-                        }
-                        default: {
-                            c2 = 's';
-                            break;
-                        }
-                    }
-                    charArray[length] = (char) (c ^ c2);
-                    ++n3;
-                } while (n == 0);
-            }
-            if (n <= n3) {
-                z = new String(charArray).intern();
-                break;
-            }
-            continue;
-        }
-    }
 }

@@ -27,7 +27,7 @@ public class g {
     protected byte e;
     protected byte f;
     protected int g;
-    private static final String[] z;
+    private static final String[] z = {"Random number too long","APCP","Incorrect message type","SSL_DH_anon_WITH_RC4_128_MD5","SSL_RSA_WITH_DES_CBC_SHA","SSL_DH_anon_EXPORT_WITH_RC4_40_MD5","SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA","SSL_RSA_WITH_RC4_128_MD5","SSL_DHE_DSS_WITH_DES_CBC_SHA","SSL_DHE_DSS_EXPORT_WITH_DES40_CBC_SHA","SSL_RSA_WITH_3DES_EDE_CBC_SHA","SSL_DH_anon_EXPORT_WITH_DES40_CBC_SHA","SSL_RSA_WITH_RC4_128_SHA"," Connecting to: ","SSL_RSA_WITH_NULL_SHA","Header read timed out","SSL_RSA_WITH_NULL_MD5","SSL","SSL_DH_anon_WITH_3DES_EDE_CBC_SHA","Unsupported connection type requested (capabilities=","SSL_RSA_EXPORT_WITH_RC4_40_MD5",").","Header incorrect"};
 
     private g(final String a, final int b) {
         this.e = 0;

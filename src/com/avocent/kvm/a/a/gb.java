@@ -5,7 +5,7 @@ package com.avocent.kvm.a.a;
 
 class gb extends y {
 
-    private static final String[] z;
+    private static final String[] z = {"Not implemented", "NoOpResponse"};
 
     gb() {
         super(65535);
@@ -35,42 +35,8 @@ class gb extends y {
         return 0;
     }
 
-    static {
-        final String[] z2 = new String[2];
-        final int n = 0;
-        final char[] charArray = "\u0017yo\u0018O4fw]K<xo]B".toCharArray();
-        int length;
-        int n3;
-        final int n2 = n3 = (length = charArray.length);
-        int n4 = 0;
-        while (true) {
-            Label_0098:
-            {
-                if (n2 > 1) {
-                    break Label_0098;
-                }
-                length = (n3 = n4);
-                do {
-                    final char c = charArray[n3];
-                    char c2 = '\0';
-                    switch (n4 % 5) {
-                        case 0: {
-                            c2 = 'Y';
-                            break;
-                        }
-                        case 1: {
-                            c2 = '\u0016';
-                            break;
-                        }
-                        case 2: {
-                            c2 = '\u001b';
-                            break;
-                        }
-                        case 3: {
-                            c2 = '8';
-                            break;
-                        }
-                        default: {
+}
+default: {
                             c2 = '&';
                             break;
                         }
